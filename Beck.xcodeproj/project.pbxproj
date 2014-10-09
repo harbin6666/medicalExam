@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D99448519E6AB80009A1A1F /* HomepageCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99448419E6AB80009A1A1F /* HomepageCVC.m */; };
-		3D99448819E6ABA9009A1A1F /* HomepageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99448719E6ABA9009A1A1F /* HomepageCollectionViewCell.m */; };
-		3D99448B19E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99448A19E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
+		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
+		3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */; };
+		3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449619E6B68B009A1A1F /* HomepageView.m */; };
 		3DC1C57719E645FD004F23E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57619E645FD004F23E1 /* main.m */; };
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1C58119E645FD004F23E1 /* Main.storyboard */; };
@@ -28,13 +28,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D99448319E6AB80009A1A1F /* HomepageCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageCVC.h; sourceTree = "<group>"; };
-		3D99448419E6AB80009A1A1F /* HomepageCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageCVC.m; sourceTree = "<group>"; };
-		3D99448619E6ABA9009A1A1F /* HomepageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageCollectionViewCell.h; sourceTree = "<group>"; };
-		3D99448719E6ABA9009A1A1F /* HomepageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageCollectionViewCell.m; sourceTree = "<group>"; };
-		3D99448919E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		3D99448A19E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3D99448F19E6B54D009A1A1F /* HomepageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTVC.h; sourceTree = "<group>"; };
+		3D99449019E6B54D009A1A1F /* HomepageTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageTVC.m; sourceTree = "<group>"; };
+		3D99449219E6B562009A1A1F /* HomepageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTableViewCell.h; sourceTree = "<group>"; };
+		3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageTableViewCell.m; sourceTree = "<group>"; };
+		3D99449519E6B68B009A1A1F /* HomepageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageView.h; sourceTree = "<group>"; };
+		3D99449619E6B68B009A1A1F /* HomepageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageView.m; sourceTree = "<group>"; };
 		3DC1C57119E645FD004F23E1 /* Beck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1C57519E645FD004F23E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1C57619E645FD004F23E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,12 +68,12 @@
 		3D99448119E6AB51009A1A1F /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
-				3D99448319E6AB80009A1A1F /* HomepageCVC.h */,
-				3D99448419E6AB80009A1A1F /* HomepageCVC.m */,
-				3D99448619E6ABA9009A1A1F /* HomepageCollectionViewCell.h */,
-				3D99448719E6ABA9009A1A1F /* HomepageCollectionViewCell.m */,
-				3D99448919E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.h */,
-				3D99448A19E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.m */,
+				3D99448F19E6B54D009A1A1F /* HomepageTVC.h */,
+				3D99449019E6B54D009A1A1F /* HomepageTVC.m */,
+				3D99449219E6B562009A1A1F /* HomepageTableViewCell.h */,
+				3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */,
+				3D99449519E6B68B009A1A1F /* HomepageView.h */,
+				3D99449619E6B68B009A1A1F /* HomepageView.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -110,6 +111,7 @@
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
 				3DC1C58119E645FD004F23E1 /* Main.storyboard */,
+				3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */,
 				3D99448C19E6AD27009A1A1F /* Media.xcassets */,
 				3DC1C57419E645FD004F23E1 /* Supporting Files */,
 			);
@@ -241,11 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D99448819E6ABA9009A1A1F /* HomepageCollectionViewCell.m in Sources */,
-				3D99448B19E6ABBE009A1A1F /* HomepageCollectionViewFlowLayout.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
-				3D99448519E6AB80009A1A1F /* HomepageCVC.m in Sources */,
+				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
+				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
+				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +362,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Beck/PrefixHeader.pch;
 				INFOPLIST_FILE = Beck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -372,6 +376,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Beck/PrefixHeader.pch;
 				INFOPLIST_FILE = Beck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

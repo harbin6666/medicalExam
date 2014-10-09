@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
@@ -23,43 +23,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-781" y="195"/>
-        </scene>
-        <!--Home CVC-->
-        <scene sceneID="FNb-Xu-mFI">
-            <objects>
-                <collectionViewController id="k68-FT-OhV" userLabel="Home CVC" customClass="HomepageCVC" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="E4z-J5-Xae">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oXC-9k-Rmr" customClass="HomepageCollectionViewFlowLayout">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomepageCell" id="Gm5-4r-Une" customClass="HomepageCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="k68-FT-OhV" id="4XG-rc-oJ5"/>
-                            <outlet property="delegate" destination="k68-FT-OhV" id="cAg-ps-oTr"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="贝克职业药师培训考试" id="dJ4-zb-jHy"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pev-T2-PmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1158" y="-519"/>
+            <point key="canvasLocation" x="-416.5333333333333" y="184.59999999999999"/>
         </scene>
         <!--Home NC-->
         <scene sceneID="nqy-LN-4QV">
@@ -71,12 +35,58 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="k68-FT-OhV" kind="relationship" relationship="rootViewController" id="kRQ-Am-DkW"/>
+                        <segue destination="Do7-YS-AQX" kind="relationship" relationship="rootViewController" id="IRS-G4-nBC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUE-hM-LcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="-519"/>
+            <point key="canvasLocation" x="188.80000000000001" y="-491.31999999999999"/>
+        </scene>
+        <!--HomepageTVC-->
+        <scene sceneID="8p1-Xf-Ano">
+            <objects>
+                <tableViewController id="Do7-YS-AQX" customClass="HomepageTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="107" sectionHeaderHeight="22" sectionFooterHeight="22" id="NLm-Xm-VLa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomepageCell" rowHeight="107" id="7MZ-X6-Ddm" customClass="HomepageTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7MZ-X6-Ddm" id="dOv-Wj-biS">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7S3-sr-Aka" customClass="HomepageView">
+                                            <rect key="frame" x="36" y="29" width="50" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsP-sR-8az" customClass="HomepageView">
+                                            <rect key="frame" x="135" y="29" width="50" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-Os-nE4" customClass="HomepageView">
+                                            <rect key="frame" x="236" y="29" width="50" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="leftView" destination="7S3-sr-Aka" id="pKZ-t7-UQp"/>
+                                    <outlet property="middleView" destination="dsP-sR-8az" id="ulC-cY-hoi"/>
+                                    <outlet property="rightView" destination="Rbf-Os-nE4" id="mVO-zy-AJE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Do7-YS-AQX" id="cgW-mt-6VZ"/>
+                            <outlet property="delegate" destination="Do7-YS-AQX" id="LAn-s7-EbJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Za4-gA-dxv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="-492"/>
         </scene>
         <!--MyAccount-->
         <scene sceneID="tfN-wq-MVd">
@@ -90,7 +100,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdJ-bl-bPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="195"/>
+            <point key="canvasLocation" x="188.80000000000001" y="184.59999999999999"/>
         </scene>
         <!--Other NC-->
         <scene sceneID="qoi-xk-I2X">
@@ -104,7 +114,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3S-gE-edM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="1029"/>
+            <point key="canvasLocation" x="188.80000000000001" y="974.12"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
