@@ -25,6 +25,6 @@
 @property (strong, nonatomic) HomepageView *middleView;
 @property (strong, nonatomic) HomepageView *rightView;
 
-- (void)updateCellWithData:(NSArray *)data;
+- (void)updateCellWithNames:(NSArray *)names imageView:(NSArray *)imageViews;
 
 @end

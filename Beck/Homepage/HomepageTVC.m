@@ -12,6 +12,8 @@
 
 @interface HomepageTVC () <HomepageTableViewCellDelegate>
 
+@property (nonatomic, strong) NSArray *names;
+
 @end
 
 @implementation HomepageTVC
@@ -20,6 +22,9 @@
 {
     CGFloat width = [UIScreen mainScreen].currentMode.size.width / 2 / 3;
     self.tableView.rowHeight = width;
+    
+    self.names = @[@"学习模式",@"考试模式",@"只能出题",@"高频考点",@"错题重做",@"题目收藏",@"笔记总结",@"练习历史",@"统计分析",@"考点资讯",@"考点交流",@"设置"];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)viewDidLoad {
@@ -41,7 +46,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomepageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomepageCell" forIndexPath:indexPath];
     cell.delegate = self;
-    [cell updateCellWithData:@[[UIColor redColor], [UIColor greenColor], [UIColor yellowColor]]];
+    [cell updateCellWithNames:[self.names subarrayWithRange:NSMakeRange(indexPath.row * 3, 3)] imageView:@[[UIColor redColor], [UIColor greenColor], [UIColor yellowColor]]];
     return cell;
 }
 

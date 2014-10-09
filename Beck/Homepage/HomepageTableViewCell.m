@@ -34,16 +34,25 @@
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.leftView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeWidth multiplier:1.f / 3 constant:0.f]];    
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.middleView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeWidth multiplier:1.f / 3 constant:0.f]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeWidth multiplier:1.f / 3 constant:0.f]];
+    
+    self.leftView.layer.borderWidth = .5f;
+    self.leftView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.middleView.layer.borderWidth = .5f;
+    self.middleView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.rightView.layer.borderWidth = .5f;
+    self.rightView.layer.borderColor = [UIColor grayColor].CGColor;
 }
 
-- (void)updateCellWithData:(NSArray *)data
+- (void)updateCellWithNames:(NSArray *)names imageView:(NSArray *)imageViews
 {
-    [self.leftView setBackgroundImage:[UIImage imageWithColor:data[0]] forState:UIControlStateNormal];
-    [self.leftView setTitle:@"0" forState:UIControlStateNormal];
-    [self.middleView setBackgroundImage:[UIImage imageWithColor:data[1]] forState:UIControlStateNormal];
-    [self.middleView setTitle:@"1" forState:UIControlStateNormal];
-    [self.rightView setBackgroundImage:[UIImage imageWithColor:data[2]] forState:UIControlStateNormal];
-    [self.rightView setTitle:@"2" forState:UIControlStateNormal];
+    [self.leftView setTitle:names[0] forState:UIControlStateNormal];
+//    [self.leftView setBackgroundImage:[UIImage imageWithColor:imageViews[0]] forState:UIControlStateNormal];
+    [self.middleView setTitle:names[1] forState:UIControlStateNormal];
+//    [self.middleView setBackgroundImage:[UIImage imageWithColor:imageViews[1]] forState:UIControlStateNormal];
+    [self.rightView setTitle:names[2] forState:UIControlStateNormal];
+//    [self.rightView setBackgroundImage:[UIImage imageWithColor:imageViews[2]] forState:UIControlStateNormal];
 }
 
 - (void)onPressedBtn:(HomepageView *)sender
