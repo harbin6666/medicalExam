@@ -63,11 +63,51 @@
                             <outlet property="delegate" destination="Do7-YS-AQX" id="LAn-s7-EbJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="贝克职业药师培训考试" id="Za4-gA-dxv"/>
+                    <navigationItem key="navigationItem" title="贝克职业药师培训考试" id="Za4-gA-dxv">
+                        <barButtonItem key="backBarButtonItem" title="首页" id="chE-ln-GTX"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ptM-ot-WLn" kind="push" identifier="toSetting" id="lkC-UO-XR6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="599" y="-492"/>
+            <point key="canvasLocation" x="655" y="-492"/>
+        </scene>
+        <!--SettingTVC-->
+        <scene sceneID="RWu-GB-7No">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="ptM-ot-WLn" customClass="SettingTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="b3y-DT-lhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingCell" textLabel="OpQ-Nd-lt2" style="IBUITableViewCellStyleDefault" id="Viq-5i-FEn">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Viq-5i-FEn" id="Gc5-By-ueE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OpQ-Nd-lt2">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ptM-ot-WLn" id="dbH-1E-WIk"/>
+                            <outlet property="delegate" destination="ptM-ot-WLn" id="VNu-8J-yh0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qUn-Ja-7t2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-uc-csV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1163" y="-492"/>
         </scene>
         <!--MyAccount-->
         <scene sceneID="tfN-wq-MVd">

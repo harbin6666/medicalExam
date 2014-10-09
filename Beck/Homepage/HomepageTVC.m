@@ -55,9 +55,13 @@
     NSIndexPath *path = [self.tableView indexPathForCell:aCell];
     NSInteger index = path.row * 3 + aIndex;
     NSLog(@"%d",(int)index);
+    
+    if (index == 11) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -65,6 +69,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
