@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  HomepageCollectionViewCell.h
 //  Beck
 //
 //  Created by Aimy on 10/9/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface HomepageCollectionViewCell : UICollectionViewCell
 
 @end
-

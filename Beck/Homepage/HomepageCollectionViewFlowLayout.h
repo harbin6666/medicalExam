@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  HomepageCollectionViewFlowLayout.h
 //  Beck
 //
 //  Created by Aimy on 10/9/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface HomepageCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @end
-
