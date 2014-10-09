@@ -12,7 +12,6 @@
 
 - (void)awakeFromNib {
 
-//    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.leftView = [HomepageView autolayoutView];
     self.leftView.tag = 0;
     [self.contentView addSubview:self.leftView];
@@ -40,8 +39,11 @@
 - (void)updateCellWithData:(NSArray *)data
 {
     [self.leftView setBackgroundImage:[UIImage imageWithColor:data[0]] forState:UIControlStateNormal];
+    [self.leftView setTitle:@"0" forState:UIControlStateNormal];
     [self.middleView setBackgroundImage:[UIImage imageWithColor:data[1]] forState:UIControlStateNormal];
+    [self.middleView setTitle:@"1" forState:UIControlStateNormal];
     [self.rightView setBackgroundImage:[UIImage imageWithColor:data[2]] forState:UIControlStateNormal];
+    [self.rightView setTitle:@"2" forState:UIControlStateNormal];
 }
 
 - (void)onPressedBtn:(HomepageView *)sender

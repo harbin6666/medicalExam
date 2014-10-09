@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="188.80000000000001" y="-491.31999999999999"/>
         </scene>
-        <!--HomepageTVC-->
+        <!--贝克职业药师培训考试-->
         <scene sceneID="8p1-Xf-Ano">
             <objects>
                 <tableViewController id="Do7-YS-AQX" customClass="HomepageTVC" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                             <outlet property="delegate" destination="Do7-YS-AQX" id="LAn-s7-EbJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Za4-gA-dxv"/>
+                    <navigationItem key="navigationItem" title="贝克职业药师培训考试" id="Za4-gA-dxv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
