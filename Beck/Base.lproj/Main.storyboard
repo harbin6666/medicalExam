@@ -68,11 +68,43 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ptM-ot-WLn" kind="push" identifier="toSetting" id="lkC-UO-XR6"/>
+                        <segue destination="NFD-gf-GkT" kind="push" identifier="toStudyMode" id="7tB-Vj-DD0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="655" y="-492"/>
+        </scene>
+        <!--Study ModeVC-->
+        <scene sceneID="NhE-3P-mkL">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="NFD-gf-GkT" customClass="StudyModeVC" sceneMemberID="viewController">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
+                        <barButtonItem title="上一题" id="kSh-lX-Mf0"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Ffe-tR-SYN"/>
+                        <barButtonItem title="收藏" id="dxZ-dW-KTh" userLabel="收藏"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vdf-8a-cB7"/>
+                        <barButtonItem title="1/100" id="aWq-dv-fgh" userLabel="1/100"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lX2-I2-c3f"/>
+                        <barButtonItem title="查看答案" id="iSf-QH-kFX" userLabel="查看答案"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9mI-BO-4Zo"/>
+                        <barButtonItem title="下一题" id="OQl-i3-MTu"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="a5q-AA-fmp"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Bvn-Dx-Svc"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="answerBtn" destination="iSf-QH-kFX" id="hQ2-S0-Cr8"/>
+                        <outlet property="favorateBtn" destination="dxZ-dW-KTh" id="LqW-Rd-H5W"/>
+                        <outlet property="nextBtn" destination="OQl-i3-MTu" id="nF3-c5-5CJ"/>
+                        <outlet property="pageBtn" destination="aWq-dv-fgh" id="VsI-f0-8ev"/>
+                        <outlet property="previousBtn" destination="kSh-lX-Mf0" id="1Z6-Gh-N05"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSZ-Cc-jjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="-736"/>
         </scene>
         <!--SettingTVC-->
         <scene sceneID="RWu-GB-7No">
@@ -122,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-uc-csV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1163" y="-492"/>
+            <point key="canvasLocation" x="1094" y="-80"/>
         </scene>
         <!--MyAccount-->
         <scene sceneID="tfN-wq-MVd">

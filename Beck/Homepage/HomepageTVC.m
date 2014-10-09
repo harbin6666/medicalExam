@@ -61,7 +61,10 @@
     NSInteger index = path.row * 3 + aIndex;
     NSLog(@"%d",(int)index);
     
-    if (index == 11) {
+    if (index == 0) {
+        [self performSegueWithIdentifier:@"toStudyMode" sender:nil];
+    }
+    else if (index == 11) {
         [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
 }
