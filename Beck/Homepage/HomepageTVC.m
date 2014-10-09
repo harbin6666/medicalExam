@@ -10,7 +10,7 @@
 
 #import "HomepageTableViewCell.h"
 
-@interface HomepageTVC ()
+@interface HomepageTVC () <HomepageTableViewCellDelegate>
 
 @end
 
@@ -40,7 +40,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HomepageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomepageCell" forIndexPath:indexPath];
-    
+    cell.delegate = self;
     [cell updateCellWithData:@[[UIColor redColor], [UIColor greenColor], [UIColor yellowColor]]];
     return cell;
 }
@@ -48,6 +48,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)homepageTableViewCell:(HomepageTableViewCell *)aCell didSelectedAtIndex:(NSInteger)aIndex
+{
+    NSIndexPath *path = [self.tableView indexPathForCell:aCell];
+    NSInteger index = path.row * 3 + aIndex;
+    NSLog(@"%d",(int)index);
 }
 
 /*

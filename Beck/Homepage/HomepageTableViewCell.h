@@ -9,11 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "HomepageView.h"
 
+@class HomepageTableViewCell;
+
+@protocol HomepageTableViewCellDelegate <NSObject>
+
+- (void)homepageTableViewCell:(HomepageTableViewCell *)aCell didSelectedAtIndex:(NSInteger)aIndex;
+
+@end
+
 @interface HomepageTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet HomepageView *leftView;
-@property (weak, nonatomic) IBOutlet HomepageView *middleView;
-@property (weak, nonatomic) IBOutlet HomepageView *rightView;
+@property (nonatomic, weak) id <HomepageTableViewCellDelegate> delegate;
+
+@property (strong, nonatomic) HomepageView *leftView;
+@property (strong, nonatomic) HomepageView *middleView;
+@property (strong, nonatomic) HomepageView *rightView;
 
 - (void)updateCellWithData:(NSArray *)data;
 

@@ -9,5 +9,7 @@
 #ifndef Beck_PrefixHeader_pch
 #define Beck_PrefixHeader_pch
 
+#import "UIView+create.h"
+#import "UIImage+tool.h"
 
 #endif

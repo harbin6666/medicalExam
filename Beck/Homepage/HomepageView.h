@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomepageView : UIView
+@interface HomepageView : UIButton
 
 @end

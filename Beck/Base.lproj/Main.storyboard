@@ -55,26 +55,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7MZ-X6-Ddm" id="dOv-Wj-biS">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7S3-sr-Aka" customClass="HomepageView">
-                                            <rect key="frame" x="36" y="29" width="50" height="50"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsP-sR-8az" customClass="HomepageView">
-                                            <rect key="frame" x="135" y="29" width="50" height="50"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-Os-nE4" customClass="HomepageView">
-                                            <rect key="frame" x="236" y="29" width="50" height="50"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="leftView" destination="7S3-sr-Aka" id="pKZ-t7-UQp"/>
-                                    <outlet property="middleView" destination="dsP-sR-8az" id="ulC-cY-hoi"/>
-                                    <outlet property="rightView" destination="Rbf-Os-nE4" id="mVO-zy-AJE"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
