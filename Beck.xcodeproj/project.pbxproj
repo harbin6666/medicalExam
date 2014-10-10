@@ -119,59 +119,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D214A0219E7FA7800830255 /* AutoItems */ = {
+		3D214A0219E7FA7800830255 /* 智能出题 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856CB19E80ADA00A17F41 /* AutoItemsVC.h */,
 				3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */,
 			);
+			name = "智能出题";
 			path = AutoItems;
 			sourceTree = "<group>";
 		};
-		3D214A0319E7FA7800830255 /* ErrorItems */ = {
+		3D214A0319E7FA7800830255 /* 错题重做 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856D419E8144A00A17F41 /* ErrorItemsTVC.h */,
 				3DD856D519E8144A00A17F41 /* ErrorItemsTVC.m */,
 			);
+			name = "错题重做";
 			path = ErrorItems;
 			sourceTree = "<group>";
 		};
-		3D214A0419E7FA7800830255 /* ExamMode */ = {
+		3D214A0419E7FA7800830255 /* 考试模式 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856C819E80AC400A17F41 /* ExamModeVC.h */,
 				3DD856C919E80AC400A17F41 /* ExamModeVC.m */,
 			);
+			name = "考试模式";
 			path = ExamMode;
 			sourceTree = "<group>";
 		};
-		3D214A0519E7FA7800830255 /* Exchange */ = {
+		3D214A0519E7FA7800830255 /* 考点交流 */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "考点交流";
 			path = Exchange;
 			sourceTree = "<group>";
 		};
-		3D214A0619E7FA7800830255 /* FavorateItems */ = {
+		3D214A0619E7FA7800830255 /* 题目收藏 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856D719E8146200A17F41 /* FavorateItemsTVC.h */,
 				3DD856D819E8146200A17F41 /* FavorateItemsTVC.m */,
 			);
+			name = "题目收藏";
 			path = FavorateItems;
 			sourceTree = "<group>";
 		};
-		3D214A0719E7FA7800830255 /* History */ = {
+		3D214A0719E7FA7800830255 /* 练习历史 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856DD19E8148C00A17F41 /* HistoryTVC.h */,
 				3DD856DE19E8148C00A17F41 /* HistoryTVC.m */,
 			);
+			name = "练习历史";
 			path = History;
 			sourceTree = "<group>";
 		};
-		3D214A0819E7FA7800830255 /* News */ = {
+		3D214A0819E7FA7800830255 /* 考点资讯 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856CE19E80DCD00A17F41 /* NewsTVC.h */,
@@ -179,19 +185,21 @@
 				3DD856D119E80EAC00A17F41 /* NewsCategoryTVC.h */,
 				3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */,
 			);
+			name = "考点资讯";
 			path = News;
 			sourceTree = "<group>";
 		};
-		3D214A0919E7FA7800830255 /* Notes */ = {
+		3D214A0919E7FA7800830255 /* 笔记总结 */ = {
 			isa = PBXGroup;
 			children = (
 				3DD856DA19E8147A00A17F41 /* NotesTVC.h */,
 				3DD856DB19E8147A00A17F41 /* NotesTVC.m */,
 			);
+			name = "笔记总结";
 			path = Notes;
 			sourceTree = "<group>";
 		};
-		3D214A0A19E7FA7800830255 /* Statistics */ = {
+		3D214A0A19E7FA7800830255 /* 统计分析 */ = {
 			isa = PBXGroup;
 			children = (
 				3D214A1519E806BC00830255 /* StatisticTVC.h */,
@@ -199,10 +207,11 @@
 				3D214A1819E8072300830255 /* StatisticTableViewCell.h */,
 				3D214A1919E8072300830255 /* StatisticTableViewCell.m */,
 			);
+			name = "统计分析";
 			path = Statistics;
 			sourceTree = "<group>";
 		};
-		3D214A0B19E7FA7800830255 /* TestingCentre */ = {
+		3D214A0B19E7FA7800830255 /* 高频考点 */ = {
 			isa = PBXGroup;
 			children = (
 				3D214A0C19E7FB8F00830255 /* TestingCentreTVC.h */,
@@ -212,24 +221,25 @@
 				3D214A1219E7FBC100830255 /* TestingCentreDetailVC.h */,
 				3D214A1319E7FBC100830255 /* TestingCentreDetailVC.m */,
 			);
+			name = "高频考点";
 			path = TestingCentre;
 			sourceTree = "<group>";
 		};
 		3D99448119E6AB51009A1A1F /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
-				3D214A0219E7FA7800830255 /* AutoItems */,
-				3D214A0319E7FA7800830255 /* ErrorItems */,
-				3D214A0419E7FA7800830255 /* ExamMode */,
-				3D214A0519E7FA7800830255 /* Exchange */,
-				3D214A0619E7FA7800830255 /* FavorateItems */,
-				3D214A0719E7FA7800830255 /* History */,
-				3D214A0819E7FA7800830255 /* News */,
-				3D214A0919E7FA7800830255 /* Notes */,
-				3D214A0A19E7FA7800830255 /* Statistics */,
-				3D214A0B19E7FA7800830255 /* TestingCentre */,
-				3D9944AA19E6CF74009A1A1F /* Setting */,
-				3D9944AD19E6CF74009A1A1F /* StudyMode */,
+				3D9944AD19E6CF74009A1A1F /* 学习模式 */,
+				3D214A0419E7FA7800830255 /* 考试模式 */,
+				3D214A0219E7FA7800830255 /* 智能出题 */,
+				3D214A0B19E7FA7800830255 /* 高频考点 */,
+				3D214A0319E7FA7800830255 /* 错题重做 */,
+				3D214A0619E7FA7800830255 /* 题目收藏 */,
+				3D214A0919E7FA7800830255 /* 笔记总结 */,
+				3D214A0719E7FA7800830255 /* 练习历史 */,
+				3D214A0A19E7FA7800830255 /* 统计分析 */,
+				3D214A0819E7FA7800830255 /* 考点资讯 */,
+				3D214A0519E7FA7800830255 /* 考点交流 */,
+				3D9944AA19E6CF74009A1A1F /* 设置 */,
 				3D99448F19E6B54D009A1A1F /* HomepageTVC.h */,
 				3D99449019E6B54D009A1A1F /* HomepageTVC.m */,
 				3D99449219E6B562009A1A1F /* HomepageTableViewCell.h */,
@@ -260,21 +270,23 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		3D9944AA19E6CF74009A1A1F /* Setting */ = {
+		3D9944AA19E6CF74009A1A1F /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
 				3D9944AB19E6CF74009A1A1F /* SettingTVC.h */,
 				3D9944AC19E6CF74009A1A1F /* SettingTVC.m */,
 			);
+			name = "设置";
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		3D9944AD19E6CF74009A1A1F /* StudyMode */ = {
+		3D9944AD19E6CF74009A1A1F /* 学习模式 */ = {
 			isa = PBXGroup;
 			children = (
 				3D9944AE19E6CF74009A1A1F /* StudyModeVC.h */,
 				3D9944AF19E6CF74009A1A1F /* StudyModeVC.m */,
 			);
+			name = "学习模式";
 			path = StudyMode;
 			sourceTree = "<group>";
 		};
