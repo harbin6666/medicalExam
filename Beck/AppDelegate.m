@@ -17,6 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:160.f / 255.f green:136.f / 255.f blue:186.f / 255.f alpha:1.f]] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:160.f / 255.f green:136.f / 255.f blue:186.f / 255.f alpha:1.f], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont boldSystemFontOfSize:20.f]}];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
+    else {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    }
+    
     return YES;
 }
 
