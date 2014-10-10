@@ -92,7 +92,7 @@
         [self performSegueWithIdentifier:@"toNews" sender:nil];
     }
     else if (index == 10) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toExchange" sender:nil];
     }
     else if (index == 11) {
         [self performSegueWithIdentifier:@"toSetting" sender:nil];

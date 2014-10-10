@@ -33,6 +33,7 @@
 		3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D819E8146200A17F41 /* FavorateItemsTVC.m */; };
 		3DD856DC19E8147A00A17F41 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856DB19E8147A00A17F41 /* NotesTVC.m */; };
 		3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856DE19E8148C00A17F41 /* HistoryTVC.m */; };
+		3DD856E219E817F800A17F41 /* ExchangeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856E119E817F800A17F41 /* ExchangeTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		3DD856DB19E8147A00A17F41 /* NotesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTVC.m; sourceTree = "<group>"; };
 		3DD856DD19E8148C00A17F41 /* HistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTVC.h; sourceTree = "<group>"; };
 		3DD856DE19E8148C00A17F41 /* HistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTVC.m; sourceTree = "<group>"; };
+		3DD856E019E817F800A17F41 /* ExchangeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeTVC.h; sourceTree = "<group>"; };
+		3DD856E119E817F800A17F41 /* ExchangeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 		3D214A0519E7FA7800830255 /* 考点交流 */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856E019E817F800A17F41 /* ExchangeTVC.h */,
+				3DD856E119E817F800A17F41 /* ExchangeTVC.m */,
 			);
 			name = "考点交流";
 			path = Exchange;
@@ -449,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD856E219E817F800A17F41 /* ExchangeTVC.m in Sources */,
 				3DD856CA19E80AC400A17F41 /* ExamModeVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
