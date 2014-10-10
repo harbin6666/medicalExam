@@ -21,6 +21,8 @@
 
 @property (nonatomic, weak) id <HomepageTableViewCellDelegate> delegate;
 
+@property (strong, nonatomic) NSArray *views;//list <HomepageView>
+
 @property (strong, nonatomic) HomepageView *leftView;
 @property (strong, nonatomic) HomepageView *middleView;
 @property (strong, nonatomic) HomepageView *rightView;

@@ -42,14 +42,14 @@
             </objects>
             <point key="canvasLocation" x="188.80000000000001" y="-491.31999999999999"/>
         </scene>
-        <!--贝克职业药师培训考试-->
+        <!--首页-->
         <scene sceneID="8p1-Xf-Ano">
             <objects>
                 <tableViewController id="Do7-YS-AQX" customClass="HomepageTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="107" sectionHeaderHeight="22" sectionFooterHeight="22" id="NLm-Xm-VLa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomepageCell" rowHeight="107" id="7MZ-X6-Ddm" customClass="HomepageTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -63,12 +63,13 @@
                             <outlet property="delegate" destination="Do7-YS-AQX" id="LAn-s7-EbJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="贝克职业药师培训考试" id="Za4-gA-dxv">
-                        <barButtonItem key="backBarButtonItem" title="首页" id="chE-ln-GTX"/>
+                    <navigationItem key="navigationItem" title="首页" id="Za4-gA-dxv">
+                        <barButtonItem key="backBarButtonItem" title="haha" id="M4J-dP-5W8"/>
                     </navigationItem>
                     <connections>
                         <segue destination="ptM-ot-WLn" kind="push" identifier="toSetting" id="lkC-UO-XR6"/>
                         <segue destination="NFD-gf-GkT" kind="push" identifier="toStudyMode" id="7tB-Vj-DD0"/>
+                        <segue destination="GUD-8S-lkt" kind="push" identifier="toTestingCentre" id="fKH-I8-SCi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="1094" y="-736"/>
         </scene>
-        <!--SettingTVC-->
+        <!--设置-->
         <scene sceneID="RWu-GB-7No">
             <objects>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="ptM-ot-WLn" customClass="SettingTVC" sceneMemberID="viewController">
@@ -150,11 +151,120 @@
                             <outlet property="delegate" destination="ptM-ot-WLn" id="VNu-8J-yh0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qUn-Ja-7t2"/>
+                    <navigationItem key="navigationItem" title="设置" id="qUn-Ja-7t2">
+                        <barButtonItem key="backBarButtonItem" title="设置" id="GiY-t5-oRC"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-uc-csV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1094" y="-80"/>
+        </scene>
+        <!--Testing CentreTVC-->
+        <scene sceneID="9QC-4t-Oqc">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="GUD-8S-lkt" customClass="TestingCentreTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cso-2m-LGO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TestingCentreCell" textLabel="QZm-KR-b8l" style="IBUITableViewCellStyleDefault" id="Iq6-Ch-C70">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iq6-Ch-C70" id="VlZ-tm-quZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QZm-KR-b8l">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GUD-8S-lkt" id="2MV-th-vox"/>
+                            <outlet property="delegate" destination="GUD-8S-lkt" id="2Nh-6I-anJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HHg-ze-Tac">
+                        <barButtonItem key="backBarButtonItem" title="高频考点" id="pJc-U5-PRE"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="5vi-MZ-3yG" kind="push" identifier="toTestingCentreCategory" id="tPp-6f-0QQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddr-80-1VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="600"/>
+        </scene>
+        <!--Testing Centre CategoryTVC-->
+        <scene sceneID="Gle-0s-MYW">
+            <objects>
+                <tableViewController id="5vi-MZ-3yG" customClass="TestingCentreCategoryTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pt3-jt-rZo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestingCentreCategoryCell" textLabel="rwe-pj-U3i" detailTextLabel="DpK-xZ-acY" style="IBUITableViewCellStyleSubtitle" id="Veo-Xo-2Bm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Veo-Xo-2Bm" id="3eW-Ao-GrO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rwe-pj-U3i">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DpK-xZ-acY">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5vi-MZ-3yG" id="Bj2-2Z-5Nr"/>
+                            <outlet property="delegate" destination="5vi-MZ-3yG" id="SUS-bK-1FC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yuj-it-aXa">
+                        <barButtonItem key="backBarButtonItem" title="高频考点列表" id="LaA-KL-jWU"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="u61-SL-FWt" kind="push" identifier="toTestingCentreDetail" id="gB0-u3-HHX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5F-z6-M5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="600"/>
+        </scene>
+        <!--Testing Centre DetailVC-->
+        <scene sceneID="Cq4-B0-YPf">
+            <objects>
+                <viewController id="u61-SL-FWt" customClass="TestingCentreDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="psh-dq-yPq"/>
+                        <viewControllerLayoutGuide type="bottom" id="TBv-E3-KkB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zeS-Pd-mVk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JRh-5T-kh2">
+                        <barButtonItem key="backBarButtonItem" title="高频考点详情" id="SJu-xY-IAf"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYn-Us-EKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="600"/>
         </scene>
         <!--MyAccount-->
         <scene sceneID="tfN-wq-MVd">

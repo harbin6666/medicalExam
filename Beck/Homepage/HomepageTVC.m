@@ -22,15 +22,13 @@
 {
     CGFloat width = [UIScreen mainScreen].currentMode.size.width / 2 / 3;
     self.tableView.rowHeight = width;
-    
-    self.names = @[@"学习模式",@"考试模式",@"只能出题",@"高频考点",@"错题重做",@"题目收藏",@"笔记总结",@"练习历史",@"统计分析",@"考点资讯",@"考点交流",@"设置"];
+
+    self.names = @[@"学习模式",@"考试模式",@"智能出题",@"高频考点",@"错题重做",@"题目收藏",@"笔记总结",@"练习历史",@"统计分析",@"考点资讯",@"考点交流",@"设置"];
     self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
 
 #pragma mark - Table view data source
@@ -61,8 +59,41 @@
     NSInteger index = path.row * 3 + aIndex;
     NSLog(@"%d",(int)index);
     
+    HomepageView *view = aCell.views[aIndex];
+    self.navigationItem.backBarButtonItem.title = [view titleForState:UIControlStateNormal];
+    
     if (index == 0) {
         [self performSegueWithIdentifier:@"toStudyMode" sender:nil];
+    }
+    else if (index == 1) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 2) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 3) {
+        [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
+    }
+    else if (index == 4) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 5) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 6) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 7) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 8) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 9) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+    }
+    else if (index == 10) {
+        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 11) {
         [self performSegueWithIdentifier:@"toSetting" sender:nil];

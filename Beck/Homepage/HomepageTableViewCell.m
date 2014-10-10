@@ -43,6 +43,8 @@
     
     self.rightView.layer.borderWidth = .5f;
     self.rightView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.views = @[self.leftView, self.middleView, self.rightView];
 }
 
 - (void)updateCellWithNames:(NSArray *)names imageView:(NSArray *)imageViews
