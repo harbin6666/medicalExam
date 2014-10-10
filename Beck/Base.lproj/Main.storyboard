@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-416.5333333333333" y="184.59999999999999"/>
         </scene>
-        <!--Home NC-->
+        <!--首页 NC-->
         <scene sceneID="nqy-LN-4QV">
             <objects>
-                <navigationController id="kzW-fA-oox" userLabel="Home NC" sceneMemberID="viewController">
+                <navigationController id="kzW-fA-oox" userLabel="首页 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" id="3Ya-59-Shk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oqH-dF-Dy2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -64,22 +64,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="首页" id="Za4-gA-dxv">
-                        <barButtonItem key="backBarButtonItem" title="haha" id="M4J-dP-5W8"/>
+                        <barButtonItem key="backBarButtonItem" title="首页" id="TsH-6t-KYQ"/>
                     </navigationItem>
                     <connections>
                         <segue destination="ptM-ot-WLn" kind="push" identifier="toSetting" id="lkC-UO-XR6"/>
                         <segue destination="NFD-gf-GkT" kind="push" identifier="toStudyMode" id="7tB-Vj-DD0"/>
                         <segue destination="GUD-8S-lkt" kind="push" identifier="toTestingCentre" id="fKH-I8-SCi"/>
+                        <segue destination="fyD-yY-it3" kind="push" identifier="toStatistics" id="1Fm-uX-BuL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="655" y="-492"/>
         </scene>
-        <!--Study ModeVC-->
+        <!--学习模式-->
         <scene sceneID="NhE-3P-mkL">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="NFD-gf-GkT" customClass="StudyModeVC" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="NFD-gf-GkT" userLabel="学习模式" customClass="StudyModeVC" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
                         <barButtonItem title="上一题" id="kSh-lX-Mf0"/>
@@ -93,7 +94,9 @@
                         <barButtonItem title="下一题" id="OQl-i3-MTu"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="a5q-AA-fmp"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="Bvn-Dx-Svc"/>
+                    <navigationItem key="navigationItem" id="Bvn-Dx-Svc">
+                        <barButtonItem key="backBarButtonItem" title="学习模式" id="xzH-lY-OQh"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="answerBtn" destination="iSf-QH-kFX" id="hQ2-S0-Cr8"/>
@@ -110,7 +113,7 @@
         <!--设置-->
         <scene sceneID="RWu-GB-7No">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="ptM-ot-WLn" customClass="SettingTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="ptM-ot-WLn" userLabel="设置" customClass="SettingTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="b3y-DT-lhG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +154,7 @@
                             <outlet property="delegate" destination="ptM-ot-WLn" id="VNu-8J-yh0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="设置" id="qUn-Ja-7t2">
+                    <navigationItem key="navigationItem" id="qUn-Ja-7t2">
                         <barButtonItem key="backBarButtonItem" title="设置" id="GiY-t5-oRC"/>
                     </navigationItem>
                 </tableViewController>
@@ -159,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="1094" y="-80"/>
         </scene>
-        <!--Testing CentreTVC-->
+        <!--高频考点-->
         <scene sceneID="9QC-4t-Oqc">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="GUD-8S-lkt" customClass="TestingCentreTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="GUD-8S-lkt" userLabel="高频考点" customClass="TestingCentreTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cso-2m-LGO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="1114" y="600"/>
         </scene>
-        <!--Testing Centre CategoryTVC-->
+        <!--高频考点分类-->
         <scene sceneID="Gle-0s-MYW">
             <objects>
-                <tableViewController id="5vi-MZ-3yG" customClass="TestingCentreCategoryTVC" sceneMemberID="viewController">
+                <tableViewController id="5vi-MZ-3yG" userLabel="高频考点分类" customClass="TestingCentreCategoryTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pt3-jt-rZo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1630" y="600"/>
         </scene>
-        <!--Testing Centre DetailVC-->
+        <!--高频考点详情-->
         <scene sceneID="Cq4-B0-YPf">
             <objects>
-                <viewController id="u61-SL-FWt" customClass="TestingCentreDetailVC" sceneMemberID="viewController">
+                <viewController id="u61-SL-FWt" userLabel="高频考点详情" customClass="TestingCentreDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="psh-dq-yPq"/>
                         <viewControllerLayoutGuide type="bottom" id="TBv-E3-KkB"/>
@@ -266,10 +269,10 @@
             </objects>
             <point key="canvasLocation" x="2094" y="600"/>
         </scene>
-        <!--MyAccount-->
+        <!--我的账户 NC-->
         <scene sceneID="tfN-wq-MVd">
             <objects>
-                <navigationController id="xgi-AG-Knu" userLabel="MyAccount" sceneMemberID="viewController">
+                <navigationController id="xgi-AG-Knu" userLabel="我的账户 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" id="dmu-Sp-1yM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aWF-nN-JPt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -280,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="188.80000000000001" y="184.59999999999999"/>
         </scene>
-        <!--Other NC-->
+        <!--其他 NC-->
         <scene sceneID="qoi-xk-I2X">
             <objects>
-                <navigationController id="Sb7-d5-EKo" userLabel="Other NC" sceneMemberID="viewController">
+                <navigationController id="Sb7-d5-EKo" userLabel="其他 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="更多" id="nlM-4R-wSN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaq-5T-KHI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -293,6 +296,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3S-gE-edM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188.80000000000001" y="974.12"/>
+        </scene>
+        <!--统计分析-->
+        <scene sceneID="jy4-rM-Zj0">
+            <objects>
+                <tableViewController id="fyD-yY-it3" userLabel="统计分析" customClass="StatisticTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZDA-At-KQX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatisticCell" id="cKM-sk-LZp" customClass="StatisticTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cKM-sk-LZp" id="2kQ-DC-6w1">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fyD-yY-it3" id="ywK-Zc-YI9"/>
+                            <outlet property="delegate" destination="fyD-yY-it3" id="whU-zp-vBR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="O9i-kt-I7p"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GnW-3S-Ube" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="1270"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

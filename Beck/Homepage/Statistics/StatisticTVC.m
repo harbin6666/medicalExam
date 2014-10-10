@@ -1,18 +1,20 @@
 //
-//  TestingCentreTVC.m
+//  StatisticTVC.m
 //  Beck
 //
 //  Created by Aimy on 10/10/14.
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import "TestingCentreTVC.h"
+#import "StatisticTVC.h"
 
-@interface TestingCentreTVC ()
+#import "StatisticTableViewCell.h"
+
+@interface StatisticTVC ()
 
 @end
 
-@implementation TestingCentreTVC
+@implementation StatisticTVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +33,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestingCentreCell" forIndexPath:indexPath];
+    StatisticTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticCell" forIndexPath:indexPath];
     
     cell.textLabel.text = @(indexPath.row).stringValue;
     
@@ -41,20 +43,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    self.navigationItem.backBarButtonItem.title = cell.textLabel.text;
-    [self performSegueWithIdentifier:@"toTestingCentreCategory" sender:self];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 @end

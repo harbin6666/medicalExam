@@ -10,6 +10,8 @@
 		3D214A0E19E7FB8F00830255 /* TestingCentreTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A0D19E7FB8F00830255 /* TestingCentreTVC.m */; };
 		3D214A1119E7FBAC00830255 /* TestingCentreCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1019E7FBAC00830255 /* TestingCentreCategoryTVC.m */; };
 		3D214A1419E7FBC100830255 /* TestingCentreDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1319E7FBC100830255 /* TestingCentreDetailVC.m */; };
+		3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1619E806BC00830255 /* StatisticTVC.m */; };
+		3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1919E8072300830255 /* StatisticTableViewCell.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
 		3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */; };
@@ -42,6 +44,10 @@
 		3D214A1019E7FBAC00830255 /* TestingCentreCategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingCentreCategoryTVC.m; sourceTree = "<group>"; };
 		3D214A1219E7FBC100830255 /* TestingCentreDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingCentreDetailVC.h; sourceTree = "<group>"; };
 		3D214A1319E7FBC100830255 /* TestingCentreDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingCentreDetailVC.m; sourceTree = "<group>"; };
+		3D214A1519E806BC00830255 /* StatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTVC.h; sourceTree = "<group>"; };
+		3D214A1619E806BC00830255 /* StatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTVC.m; sourceTree = "<group>"; };
+		3D214A1819E8072300830255 /* StatisticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTableViewCell.h; sourceTree = "<group>"; };
+		3D214A1919E8072300830255 /* StatisticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTableViewCell.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3D99448F19E6B54D009A1A1F /* HomepageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTVC.h; sourceTree = "<group>"; };
@@ -148,6 +154,10 @@
 		3D214A0A19E7FA7800830255 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				3D214A1519E806BC00830255 /* StatisticTVC.h */,
+				3D214A1619E806BC00830255 /* StatisticTVC.m */,
+				3D214A1819E8072300830255 /* StatisticTableViewCell.h */,
+				3D214A1919E8072300830255 /* StatisticTableViewCell.m */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
+				3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
 				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
 				3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */,
@@ -399,6 +410,7 @@
 				3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
 				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
+				3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */,
 				3D214A0E19E7FB8F00830255 /* TestingCentreTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

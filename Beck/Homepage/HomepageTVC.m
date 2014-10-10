@@ -57,7 +57,6 @@
 {
     NSIndexPath *path = [self.tableView indexPathForCell:aCell];
     NSInteger index = path.row * 3 + aIndex;
-    NSLog(@"%d",(int)index);
     
     HomepageView *view = aCell.views[aIndex];
     self.navigationItem.backBarButtonItem.title = [view titleForState:UIControlStateNormal];
@@ -66,34 +65,34 @@
         [self performSegueWithIdentifier:@"toStudyMode" sender:nil];
     }
     else if (index == 1) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 2) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 3) {
         [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
     }
     else if (index == 4) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 5) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 6) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 7) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 8) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toStatistics" sender:nil];
     }
     else if (index == 9) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 10) {
-        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
     }
     else if (index == 11) {
         [self performSegueWithIdentifier:@"toSetting" sender:nil];
