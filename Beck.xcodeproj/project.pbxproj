@@ -29,6 +29,10 @@
 		3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */; };
 		3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CF19E80DCD00A17F41 /* NewsTVC.m */; };
 		3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */; };
+		3DD856D619E8144A00A17F41 /* ErrorItemsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D519E8144A00A17F41 /* ErrorItemsTVC.m */; };
+		3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D819E8146200A17F41 /* FavorateItemsTVC.m */; };
+		3DD856DC19E8147A00A17F41 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856DB19E8147A00A17F41 /* NotesTVC.m */; };
+		3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856DE19E8148C00A17F41 /* HistoryTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,14 @@
 		3DD856CF19E80DCD00A17F41 /* NewsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTVC.m; sourceTree = "<group>"; };
 		3DD856D119E80EAC00A17F41 /* NewsCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCategoryTVC.h; sourceTree = "<group>"; };
 		3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCategoryTVC.m; sourceTree = "<group>"; };
+		3DD856D419E8144A00A17F41 /* ErrorItemsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorItemsTVC.h; sourceTree = "<group>"; };
+		3DD856D519E8144A00A17F41 /* ErrorItemsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorItemsTVC.m; sourceTree = "<group>"; };
+		3DD856D719E8146200A17F41 /* FavorateItemsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorateItemsTVC.h; sourceTree = "<group>"; };
+		3DD856D819E8146200A17F41 /* FavorateItemsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorateItemsTVC.m; sourceTree = "<group>"; };
+		3DD856DA19E8147A00A17F41 /* NotesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesTVC.h; sourceTree = "<group>"; };
+		3DD856DB19E8147A00A17F41 /* NotesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTVC.m; sourceTree = "<group>"; };
+		3DD856DD19E8148C00A17F41 /* HistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTVC.h; sourceTree = "<group>"; };
+		3DD856DE19E8148C00A17F41 /* HistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,8 @@
 		3D214A0319E7FA7800830255 /* ErrorItems */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856D419E8144A00A17F41 /* ErrorItemsTVC.h */,
+				3DD856D519E8144A00A17F41 /* ErrorItemsTVC.m */,
 			);
 			path = ErrorItems;
 			sourceTree = "<group>";
@@ -142,6 +156,8 @@
 		3D214A0619E7FA7800830255 /* FavorateItems */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856D719E8146200A17F41 /* FavorateItemsTVC.h */,
+				3DD856D819E8146200A17F41 /* FavorateItemsTVC.m */,
 			);
 			path = FavorateItems;
 			sourceTree = "<group>";
@@ -149,6 +165,8 @@
 		3D214A0719E7FA7800830255 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856DD19E8148C00A17F41 /* HistoryTVC.h */,
+				3DD856DE19E8148C00A17F41 /* HistoryTVC.m */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -167,6 +185,8 @@
 		3D214A0919E7FA7800830255 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856DA19E8147A00A17F41 /* NotesTVC.h */,
+				3DD856DB19E8147A00A17F41 /* NotesTVC.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -420,6 +440,7 @@
 				3DD856CA19E80AC400A17F41 /* ExamModeVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
+				3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
 				3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */,
 				3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */,
@@ -428,12 +449,15 @@
 				3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
 				3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */,
+				3DD856D619E8144A00A17F41 /* ErrorItemsTVC.m in Sources */,
 				3D214A1119E7FBAC00830255 /* TestingCentreCategoryTVC.m in Sources */,
 				3D214A1419E7FBC100830255 /* TestingCentreDetailVC.m in Sources */,
 				3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
 				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
+				3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */,
 				3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */,
+				3DD856DC19E8147A00A17F41 /* NotesTVC.m in Sources */,
 				3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */,
 				3D214A0E19E7FB8F00830255 /* TestingCentreTVC.m in Sources */,
 			);

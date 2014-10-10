@@ -74,16 +74,16 @@
         [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
     }
     else if (index == 4) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toErrorItems" sender:nil];
     }
     else if (index == 5) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toFavorateItems" sender:nil];
     }
     else if (index == 6) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toNotes" sender:nil];
     }
     else if (index == 7) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toHistory" sender:nil];
     }
     else if (index == 8) {
         [self performSegueWithIdentifier:@"toStatistics" sender:nil];
