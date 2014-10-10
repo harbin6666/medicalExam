@@ -65,10 +65,10 @@
         [self performSegueWithIdentifier:@"toStudyMode" sender:nil];
     }
     else if (index == 1) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toExamMode" sender:nil];
     }
     else if (index == 2) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toAutoItems" sender:nil];
     }
     else if (index == 3) {
         [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
@@ -89,7 +89,7 @@
         [self performSegueWithIdentifier:@"toStatistics" sender:nil];
     }
     else if (index == 9) {
-//        [self performSegueWithIdentifier:@"toSetting" sender:nil];
+        [self performSegueWithIdentifier:@"toNews" sender:nil];
     }
     else if (index == 10) {
 //        [self performSegueWithIdentifier:@"toSetting" sender:nil];

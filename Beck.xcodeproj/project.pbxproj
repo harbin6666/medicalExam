@@ -25,6 +25,10 @@
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1C58119E645FD004F23E1 /* Main.storyboard */; };
 		3DC1C59419E645FD004F23E1 /* BeckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C59319E645FD004F23E1 /* BeckTests.m */; };
+		3DD856CA19E80AC400A17F41 /* ExamModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856C919E80AC400A17F41 /* ExamModeVC.m */; };
+		3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */; };
+		3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CF19E80DCD00A17F41 /* NewsTVC.m */; };
+		3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,14 @@
 		3DC1C58D19E645FD004F23E1 /* BeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1C59219E645FD004F23E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1C59319E645FD004F23E1 /* BeckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeckTests.m; sourceTree = "<group>"; };
+		3DD856C819E80AC400A17F41 /* ExamModeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamModeVC.h; sourceTree = "<group>"; };
+		3DD856C919E80AC400A17F41 /* ExamModeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamModeVC.m; sourceTree = "<group>"; };
+		3DD856CB19E80ADA00A17F41 /* AutoItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoItemsVC.h; sourceTree = "<group>"; };
+		3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoItemsVC.m; sourceTree = "<group>"; };
+		3DD856CE19E80DCD00A17F41 /* NewsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTVC.h; sourceTree = "<group>"; };
+		3DD856CF19E80DCD00A17F41 /* NewsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTVC.m; sourceTree = "<group>"; };
+		3DD856D119E80EAC00A17F41 /* NewsCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCategoryTVC.h; sourceTree = "<group>"; };
+		3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCategoryTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +110,8 @@
 		3D214A0219E7FA7800830255 /* AutoItems */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856CB19E80ADA00A17F41 /* AutoItemsVC.h */,
+				3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */,
 			);
 			path = AutoItems;
 			sourceTree = "<group>";
@@ -112,6 +126,8 @@
 		3D214A0419E7FA7800830255 /* ExamMode */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856C819E80AC400A17F41 /* ExamModeVC.h */,
+				3DD856C919E80AC400A17F41 /* ExamModeVC.m */,
 			);
 			path = ExamMode;
 			sourceTree = "<group>";
@@ -140,6 +156,10 @@
 		3D214A0819E7FA7800830255 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				3DD856CE19E80DCD00A17F41 /* NewsTVC.h */,
+				3DD856CF19E80DCD00A17F41 /* NewsTVC.m */,
+				3DD856D119E80EAC00A17F41 /* NewsCategoryTVC.h */,
+				3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -397,20 +417,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD856CA19E80AC400A17F41 /* ExamModeVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
+				3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */,
 				3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
 				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
 				3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
+				3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */,
 				3D214A1119E7FBAC00830255 /* TestingCentreCategoryTVC.m in Sources */,
 				3D214A1419E7FBC100830255 /* TestingCentreDetailVC.m in Sources */,
 				3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
 				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
 				3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */,
+				3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */,
 				3D214A0E19E7FB8F00830255 /* TestingCentreTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

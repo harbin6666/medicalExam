@@ -23,7 +23,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-416.5333333333333" y="184.59999999999999"/>
+            <point key="canvasLocation" x="255" y="-1373"/>
         </scene>
         <!--首页 NC-->
         <scene sceneID="nqy-LN-4QV">
@@ -35,12 +35,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Do7-YS-AQX" kind="relationship" relationship="rootViewController" id="IRS-G4-nBC"/>
+                        <segue destination="Do7-YS-AQX" kind="relationship" relationship="rootViewController" id="cxA-j3-6gi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUE-hM-LcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188.80000000000001" y="-491.31999999999999"/>
+            <point key="canvasLocation" x="415" y="-669"/>
         </scene>
         <!--首页-->
         <scene sceneID="8p1-Xf-Ano">
@@ -71,16 +71,19 @@
                         <segue destination="NFD-gf-GkT" kind="push" identifier="toStudyMode" id="7tB-Vj-DD0"/>
                         <segue destination="GUD-8S-lkt" kind="push" identifier="toTestingCentre" id="fKH-I8-SCi"/>
                         <segue destination="fyD-yY-it3" kind="push" identifier="toStatistics" id="1Fm-uX-BuL"/>
+                        <segue destination="Tbj-Rw-dnW" kind="push" identifier="toExamMode" id="srs-w1-Hke"/>
+                        <segue destination="syt-lw-Ami" kind="push" identifier="toAutoItems" id="2DV-Er-5Zp"/>
+                        <segue destination="V1a-DK-plr" kind="push" identifier="toNews" id="1RB-Nt-QgR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="-492"/>
+            <point key="canvasLocation" x="415" y="35"/>
         </scene>
         <!--学习模式-->
         <scene sceneID="NhE-3P-mkL">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="NFD-gf-GkT" userLabel="学习模式" customClass="StudyModeVC" sceneMemberID="viewController">
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="NFD-gf-GkT" userLabel="学习模式" customClass="StudyModeVC" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
                         <barButtonItem title="上一题" id="kSh-lX-Mf0"/>
@@ -108,7 +111,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSZ-Cc-jjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="-736"/>
+            <point key="canvasLocation" x="415" y="875"/>
         </scene>
         <!--设置-->
         <scene sceneID="RWu-GB-7No">
@@ -160,7 +163,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-uc-csV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="-80"/>
+            <point key="canvasLocation" x="3457" y="875"/>
         </scene>
         <!--高频考点-->
         <scene sceneID="9QC-4t-Oqc">
@@ -200,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddr-80-1VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="600"/>
+            <point key="canvasLocation" x="1575" y="875"/>
         </scene>
         <!--高频考点分类-->
         <scene sceneID="Gle-0s-MYW">
@@ -246,7 +249,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5F-z6-M5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="600"/>
+            <point key="canvasLocation" x="1575" y="1578"/>
         </scene>
         <!--高频考点详情-->
         <scene sceneID="Cq4-B0-YPf">
@@ -267,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYn-Us-EKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2094" y="600"/>
+            <point key="canvasLocation" x="1575" y="2283"/>
         </scene>
         <!--我的账户 NC-->
         <scene sceneID="tfN-wq-MVd">
@@ -281,7 +284,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdJ-bl-bPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188.80000000000001" y="184.59999999999999"/>
+            <point key="canvasLocation" x="-641" y="-669"/>
         </scene>
         <!--其他 NC-->
         <scene sceneID="qoi-xk-I2X">
@@ -295,12 +298,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3S-gE-edM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188.80000000000001" y="974.12"/>
+            <point key="canvasLocation" x="-101" y="-669"/>
         </scene>
         <!--统计分析-->
         <scene sceneID="jy4-rM-Zj0">
             <objects>
-                <tableViewController id="fyD-yY-it3" userLabel="统计分析" customClass="StatisticTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="fyD-yY-it3" userLabel="统计分析" customClass="StatisticTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZDA-At-KQX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,7 +325,152 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnW-3S-Ube" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="1270"/>
+            <point key="canvasLocation" x="2592" y="875"/>
+        </scene>
+        <!--考试模式-->
+        <scene sceneID="RdD-0i-D47">
+            <objects>
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Tbj-Rw-dnW" userLabel="考试模式" customClass="ExamModeVC" sceneMemberID="viewController">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="39m-vg-JC4"/>
+                        <barButtonItem title="上一题" id="EGF-se-cn7"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9Zy-5C-nsy"/>
+                        <barButtonItem title="收藏" id="qfy-H0-WiC" userLabel="收藏"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="02v-ec-7dC"/>
+                        <barButtonItem title="1/100" id="pve-yX-7yG" userLabel="1/100"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="TPO-zV-th3"/>
+                        <barButtonItem title="交卷" id="M6b-0o-Fgz"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OqA-yb-Vgm"/>
+                        <barButtonItem title="下一题" id="4eQ-T7-CG3"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xWL-fa-7xT"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="cqA-2c-1Ak">
+                        <barButtonItem key="backBarButtonItem" title="学习模式" id="9cc-pH-pmi"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favorateBtn" destination="qfy-H0-WiC" id="L2c-FF-kgb"/>
+                        <outlet property="nextBtn" destination="4eQ-T7-CG3" id="hHz-ht-Ond"/>
+                        <outlet property="pageBtn" destination="pve-yX-7yG" id="n6x-aL-PU8"/>
+                        <outlet property="previousBtn" destination="EGF-se-cn7" id="6Lv-Aj-Y4y"/>
+                        <outlet property="submitBtn" destination="M6b-0o-Fgz" id="zkf-CL-jnu"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIU-yS-Vg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="875"/>
+        </scene>
+        <!--智能出题-->
+        <scene sceneID="SeR-5l-Adu">
+            <objects>
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="syt-lw-Ami" userLabel="智能出题" customClass="AutoItemsVC" sceneMemberID="viewController">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EYC-wZ-Fr8"/>
+                        <barButtonItem title="上一题" id="YxJ-qL-JHT"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="txp-dM-rFY"/>
+                        <barButtonItem title="收藏" id="o8J-eZ-ERL" userLabel="收藏"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="W7O-CF-053"/>
+                        <barButtonItem title="1/100" id="Zd4-78-n8o" userLabel="1/100"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="q4h-ao-xri"/>
+                        <barButtonItem title="查看答案" id="3q8-IG-bvG" userLabel="查看答案"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2jr-Z7-O3h"/>
+                        <barButtonItem title="下一题" id="0K3-2N-NcX"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EpY-1U-Osy"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="1wA-s1-abA">
+                        <barButtonItem key="backBarButtonItem" title="学习模式" id="DAo-rn-krX"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="answerBtn" destination="3q8-IG-bvG" id="Mpv-uz-K1D"/>
+                        <outlet property="favorateBtn" destination="o8J-eZ-ERL" id="kTe-ls-0mK"/>
+                        <outlet property="nextBtn" destination="0K3-2N-NcX" id="p4E-4N-aHu"/>
+                        <outlet property="pageBtn" destination="Zd4-78-n8o" id="uXU-ud-Ejk"/>
+                        <outlet property="previousBtn" destination="YxJ-qL-JHT" id="RLb-h1-wGK"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SH2-CK-6hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="875"/>
+        </scene>
+        <!--统计分析-->
+        <scene sceneID="W4m-Ka-Dh7">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="V1a-DK-plr" userLabel="统计分析" customClass="NewsTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4It-pp-oFW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NewsCell" textLabel="ZI3-aO-lFq" style="IBUITableViewCellStyleDefault" id="0a7-Ts-s89" customClass="StatisticTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0a7-Ts-s89" id="C9b-E5-5hq">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZI3-aO-lFq">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="V1a-DK-plr" id="mG6-14-6Tm"/>
+                            <outlet property="delegate" destination="V1a-DK-plr" id="J4y-iw-37s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hsJ-U4-i1h"/>
+                    <connections>
+                        <segue destination="ggW-Lf-i4Z" kind="push" identifier="toNewsCategory" id="7kz-4j-Ean"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xy-CY-8VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3017" y="875"/>
+        </scene>
+        <!--考点资讯分类-->
+        <scene sceneID="hzP-yF-1QG">
+            <objects>
+                <tableViewController id="ggW-Lf-i4Z" userLabel="考点资讯分类" customClass="NewsCategoryTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QcE-Qf-GfF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCategoryCell" textLabel="bBl-OS-h6B" detailTextLabel="DYe-56-LNA" style="IBUITableViewCellStyleSubtitle" id="cfB-4h-sbR">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cfB-4h-sbR" id="daI-9G-Blf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bBl-OS-h6B">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DYe-56-LNA">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ggW-Lf-i4Z" id="5HB-xN-8OB"/>
+                            <outlet property="delegate" destination="ggW-Lf-i4Z" id="EHk-Hu-S2e"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NxH-hs-yg0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RMv-7c-JUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3017" y="1568"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
