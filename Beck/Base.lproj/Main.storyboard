@@ -79,7 +79,7 @@
                         <segue destination="xa0-l3-4lP" kind="push" identifier="toHistory" id="utX-Vc-uFI"/>
                         <segue destination="RsS-0m-0pT" kind="push" identifier="toExchange" id="Anh-Iw-eUd"/>
                         <segue destination="jwX-D8-6vq" kind="push" identifier="toExamMode" id="tWG-iv-EXk"/>
-                        <segue destination="5fx-vZ-ivw" kind="push" identifier="toStudyMode" id="nxH-jF-cB2"/>
+                        <segue destination="5fx-vZ-ivw" kind="push" identifier="toChooseQuestionBank" id="nxH-jF-cB2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqi-Nn-EHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -770,7 +770,7 @@
         <!--选择题库-->
         <scene sceneID="afx-ge-o8b">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="5fx-vZ-ivw" userLabel="选择题库" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="5fx-vZ-ivw" userLabel="选择题库" customClass="ChooseQuestionBankTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8La-ao-Hfw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -798,7 +798,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="b2b-9m-9L7"/>
                     <connections>
-                        <segue destination="qnW-BQ-c4g" kind="push" id="etc-RG-hsb"/>
+                        <segue destination="qnW-BQ-c4g" kind="push" identifier="toChooseSection" id="etc-RG-hsb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Itf-7w-Jje" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -808,13 +808,13 @@
         <!--选择章节-->
         <scene sceneID="MpK-ei-sry">
             <objects>
-                <tableViewController id="qnW-BQ-c4g" userLabel="选择章节" sceneMemberID="viewController">
+                <tableViewController id="qnW-BQ-c4g" userLabel="选择章节" customClass="ChooseSectionTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jTH-Zx-MYl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="1Rg-C8-f9s" detailTextLabel="sSF-m7-7gu" style="IBUITableViewCellStyleValue1" id="PJc-pg-4Dn">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SectionCell" textLabel="1Rg-C8-f9s" detailTextLabel="sSF-m7-7gu" style="IBUITableViewCellStyleValue1" id="PJc-pg-4Dn">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PJc-pg-4Dn" id="Thh-8L-fWE">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -834,6 +834,26 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonCell" id="CYz-LC-Or4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CYz-LC-Or4" id="eCN-4H-NPZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMA-Uw-N3h">
+                                            <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                            <color key="backgroundColor" red="0.62745098040000002" green="0.53333333329999999" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="开始测试">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onPressedStart:" destination="qnW-BQ-c4g" eventType="touchUpInside" id="T7b-4K-7Ub"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="qnW-BQ-c4g" id="UO1-bP-A0E"/>
@@ -842,7 +862,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="747-O9-iEK"/>
                     <connections>
-                        <segue destination="NFD-gf-GkT" kind="push" id="fbp-lo-ojN"/>
+                        <segue destination="NFD-gf-GkT" kind="push" identifier="toStudyMode" id="fbp-lo-ojN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLI-cT-bHp" userLabel="First Responder" sceneMemberID="firstResponder"/>

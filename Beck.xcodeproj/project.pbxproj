@@ -25,6 +25,8 @@
 		3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944A019E6C29E009A1A1F /* OTSBorder.m */; };
 		3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944AC19E6CF74009A1A1F /* SettingTVC.m */; };
 		3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944AF19E6CF74009A1A1F /* StudyModeVC.m */; };
+		3DA247BD19EAA4A9009897C0 /* ChooseQuestionBankTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA247BC19EAA4A9009897C0 /* ChooseQuestionBankTVC.m */; };
+		3DA247C019EAA4F2009897C0 /* ChooseSectionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA247BF19EAA4F2009897C0 /* ChooseSectionTVC.m */; };
 		3DC1C57719E645FD004F23E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57619E645FD004F23E1 /* main.m */; };
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1C58119E645FD004F23E1 /* Main.storyboard */; };
@@ -90,6 +92,10 @@
 		3D9944AC19E6CF74009A1A1F /* SettingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTVC.m; sourceTree = "<group>"; };
 		3D9944AE19E6CF74009A1A1F /* StudyModeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyModeVC.h; sourceTree = "<group>"; };
 		3D9944AF19E6CF74009A1A1F /* StudyModeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyModeVC.m; sourceTree = "<group>"; };
+		3DA247BB19EAA4A9009897C0 /* ChooseQuestionBankTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseQuestionBankTVC.h; sourceTree = "<group>"; };
+		3DA247BC19EAA4A9009897C0 /* ChooseQuestionBankTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseQuestionBankTVC.m; sourceTree = "<group>"; };
+		3DA247BE19EAA4F2009897C0 /* ChooseSectionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseSectionTVC.h; sourceTree = "<group>"; };
+		3DA247BF19EAA4F2009897C0 /* ChooseSectionTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseSectionTVC.m; sourceTree = "<group>"; };
 		3DC1C57119E645FD004F23E1 /* Beck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1C57519E645FD004F23E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1C57619E645FD004F23E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -317,6 +323,10 @@
 			children = (
 				3D9944AE19E6CF74009A1A1F /* StudyModeVC.h */,
 				3D9944AF19E6CF74009A1A1F /* StudyModeVC.m */,
+				3DA247BB19EAA4A9009897C0 /* ChooseQuestionBankTVC.h */,
+				3DA247BC19EAA4A9009897C0 /* ChooseQuestionBankTVC.m */,
+				3DA247BE19EAA4F2009897C0 /* ChooseSectionTVC.h */,
+				3DA247BF19EAA4F2009897C0 /* ChooseSectionTVC.m */,
 			);
 			name = "学习模式";
 			path = StudyMode;
@@ -545,6 +555,7 @@
 				3DD856CA19E80AC400A17F41 /* ExamModeVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
+				3DA247BD19EAA4A9009897C0 /* ChooseQuestionBankTVC.m in Sources */,
 				3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */,
 				3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
@@ -554,6 +565,7 @@
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
 				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
 				3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */,
+				3DA247C019EAA4F2009897C0 /* ChooseSectionTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
 				3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */,
 				3DD856D619E8144A00A17F41 /* ErrorItemsTVC.m in Sources */,
