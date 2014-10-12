@@ -36,13 +36,13 @@
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.rightView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeWidth multiplier:1.f / 3 constant:0.f]];
     
     self.leftView.layer.borderWidth = .5f;
-    self.leftView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.leftView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     self.middleView.layer.borderWidth = .5f;
-    self.middleView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.middleView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     self.rightView.layer.borderWidth = .5f;
-    self.rightView.layer.borderColor = [UIColor grayColor].CGColor;
+    self.rightView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     self.views = @[self.leftView, self.middleView, self.rightView];
 }

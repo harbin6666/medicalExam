@@ -27,6 +27,8 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont boldSystemFontOfSize:20.f]}];
     
+    [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]]];
+    
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
