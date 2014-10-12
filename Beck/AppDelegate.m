@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "imlib/Headers/iOS_IMLib/RCIMClient.h"
+
 #import "Item.h"
 
 @interface AppDelegate ()
@@ -18,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [RCIMClient init:@"" deviceToken:nil];;
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:160.f / 255.f green:136.f / 255.f blue:186.f / 255.f alpha:1.f]] forBarMetrics:UIBarMetricsDefault];
     

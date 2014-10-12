@@ -31,6 +31,24 @@
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1C58119E645FD004F23E1 /* Main.storyboard */; };
 		3DC1C59419E645FD004F23E1 /* BeckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C59319E645FD004F23E1 /* BeckTests.m */; };
+		3DC36E5719EAB74E00B7B5FF /* Rong_IMLib_v1_0_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E5619EAB74E00B7B5FF /* Rong_IMLib_v1_0_3.a */; };
+		3DC36E5919EAB82F00B7B5FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E5819EAB82F00B7B5FF /* AudioToolbox.framework */; };
+		3DC36E5B19EAB83600B7B5FF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E5A19EAB83600B7B5FF /* AVFoundation.framework */; };
+		3DC36E5D19EAB83C00B7B5FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E5C19EAB83C00B7B5FF /* CFNetwork.framework */; };
+		3DC36E5F19EAB84600B7B5FF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E5E19EAB84600B7B5FF /* CoreAudio.framework */; };
+		3DC36E6119EAB84C00B7B5FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6019EAB84C00B7B5FF /* CoreGraphics.framework */; };
+		3DC36E6319EAB85300B7B5FF /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6219EAB85300B7B5FF /* CoreImage.framework */; };
+		3DC36E6519EAB85A00B7B5FF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6419EAB85A00B7B5FF /* CoreMedia.framework */; };
+		3DC36E6719EAB86000B7B5FF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6619EAB86000B7B5FF /* CoreVideo.framework */; };
+		3DC36E6919EAB86800B7B5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6819EAB86800B7B5FF /* Foundation.framework */; };
+		3DC36E6B19EAB87100B7B5FF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6A19EAB87100B7B5FF /* libc++.dylib */; };
+		3DC36E6D19EAB87A00B7B5FF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
+		3DC36E6F19EAB88500B7B5FF /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */; };
+		3DC36E7119EAB89000B7B5FF /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7019EAB89000B7B5FF /* libz.1.dylib */; };
+		3DC36E7319EAB89700B7B5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7219EAB89700B7B5FF /* OpenGLES.framework */; };
+		3DC36E7519EAB89D00B7B5FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7419EAB89D00B7B5FF /* QuartzCore.framework */; };
+		3DC36E7719EAB8A600B7B5FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7619EAB8A600B7B5FF /* SystemConfiguration.framework */; };
+		3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */; };
 		3DD856CA19E80AC400A17F41 /* ExamModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856C919E80AC400A17F41 /* ExamModeVC.m */; };
 		3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */; };
 		3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CF19E80DCD00A17F41 /* NewsTVC.m */; };
@@ -105,6 +123,37 @@
 		3DC1C58D19E645FD004F23E1 /* BeckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1C59219E645FD004F23E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1C59319E645FD004F23E1 /* BeckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeckTests.m; sourceTree = "<group>"; };
+		3DC36E4919EAB74E00B7B5FF /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
+		3DC36E4A19EAB74E00B7B5FF /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
+		3DC36E4B19EAB74E00B7B5FF /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
+		3DC36E4C19EAB74E00B7B5FF /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
+		3DC36E4D19EAB74E00B7B5FF /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
+		3DC36E4E19EAB74E00B7B5FF /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
+		3DC36E4F19EAB74E00B7B5FF /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
+		3DC36E5019EAB74E00B7B5FF /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
+		3DC36E5119EAB74E00B7B5FF /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
+		3DC36E5219EAB74E00B7B5FF /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
+		3DC36E5319EAB74E00B7B5FF /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
+		3DC36E5419EAB74E00B7B5FF /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
+		3DC36E5519EAB74E00B7B5FF /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
+		3DC36E5619EAB74E00B7B5FF /* Rong_IMLib_v1_0_3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = Rong_IMLib_v1_0_3.a; sourceTree = "<group>"; };
+		3DC36E5819EAB82F00B7B5FF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3DC36E5A19EAB83600B7B5FF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3DC36E5C19EAB83C00B7B5FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3DC36E5E19EAB84600B7B5FF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		3DC36E6019EAB84C00B7B5FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DC36E6219EAB85300B7B5FF /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		3DC36E6419EAB85A00B7B5FF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3DC36E6619EAB86000B7B5FF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3DC36E6819EAB86800B7B5FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DC36E6A19EAB87100B7B5FF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		3DC36E7019EAB89000B7B5FF /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = usr/lib/libz.1.dylib; sourceTree = SDKROOT; };
+		3DC36E7219EAB89700B7B5FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3DC36E7419EAB89D00B7B5FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3DC36E7619EAB8A600B7B5FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3DD856C819E80AC400A17F41 /* ExamModeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamModeVC.h; sourceTree = "<group>"; };
 		3DD856C919E80AC400A17F41 /* ExamModeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamModeVC.m; sourceTree = "<group>"; };
 		3DD856CB19E80ADA00A17F41 /* AutoItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoItemsVC.h; sourceTree = "<group>"; };
@@ -135,7 +184,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */,
+				3DC36E7719EAB8A600B7B5FF /* SystemConfiguration.framework in Frameworks */,
+				3DC36E7519EAB89D00B7B5FF /* QuartzCore.framework in Frameworks */,
+				3DC36E7319EAB89700B7B5FF /* OpenGLES.framework in Frameworks */,
+				3DC36E7119EAB89000B7B5FF /* libz.1.dylib in Frameworks */,
+				3DC36E6F19EAB88500B7B5FF /* libstdc++.dylib in Frameworks */,
+				3DC36E6D19EAB87A00B7B5FF /* libsqlite3.dylib in Frameworks */,
+				3DC36E6B19EAB87100B7B5FF /* libc++.dylib in Frameworks */,
+				3DC36E6919EAB86800B7B5FF /* Foundation.framework in Frameworks */,
+				3DC36E6719EAB86000B7B5FF /* CoreVideo.framework in Frameworks */,
+				3DC36E6519EAB85A00B7B5FF /* CoreMedia.framework in Frameworks */,
+				3DC36E6319EAB85300B7B5FF /* CoreImage.framework in Frameworks */,
+				3DC36E6119EAB84C00B7B5FF /* CoreGraphics.framework in Frameworks */,
+				3DC36E5F19EAB84600B7B5FF /* CoreAudio.framework in Frameworks */,
+				3DC36E5D19EAB83C00B7B5FF /* CFNetwork.framework in Frameworks */,
+				3DC36E5B19EAB83600B7B5FF /* AVFoundation.framework in Frameworks */,
+				3DC36E5919EAB82F00B7B5FF /* AudioToolbox.framework in Frameworks */,
 				8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */,
+				3DC36E5719EAB74E00B7B5FF /* Rong_IMLib_v1_0_3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +422,7 @@
 		3DC1C57319E645FD004F23E1 /* Beck */ = {
 			isa = PBXGroup;
 			children = (
+				3DC36E4619EAB74E00B7B5FF /* imlib */,
 				3DF5B86319E8E6420050165F /* VO */,
 				3D99449819E6BF31009A1A1F /* Base */,
 				3D99448119E6AB51009A1A1F /* Homepage */,
@@ -398,6 +466,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3DC36E4619EAB74E00B7B5FF /* imlib */ = {
+			isa = PBXGroup;
+			children = (
+				3DC36E4719EAB74E00B7B5FF /* Headers */,
+				3DC36E5619EAB74E00B7B5FF /* Rong_IMLib_v1_0_3.a */,
+			);
+			path = imlib;
+			sourceTree = "<group>";
+		};
+		3DC36E4719EAB74E00B7B5FF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3DC36E4819EAB74E00B7B5FF /* iOS_IMLib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		3DC36E4819EAB74E00B7B5FF /* iOS_IMLib */ = {
+			isa = PBXGroup;
+			children = (
+				3DC36E4919EAB74E00B7B5FF /* RCClientDelegate.h */,
+				3DC36E4A19EAB74E00B7B5FF /* RCConversation.h */,
+				3DC36E4B19EAB74E00B7B5FF /* RCDiscussion.h */,
+				3DC36E4C19EAB74E00B7B5FF /* RCGroup.h */,
+				3DC36E4D19EAB74E00B7B5FF /* RCImageMessage.h */,
+				3DC36E4E19EAB74E00B7B5FF /* RCIMClient.h */,
+				3DC36E4F19EAB74E00B7B5FF /* RCIMClientHeader.h */,
+				3DC36E5019EAB74E00B7B5FF /* RCMessage.h */,
+				3DC36E5119EAB74E00B7B5FF /* RCMessageContent.h */,
+				3DC36E5219EAB74E00B7B5FF /* RCStatusDefine.h */,
+				3DC36E5319EAB74E00B7B5FF /* RCTextMessage.h */,
+				3DC36E5419EAB74E00B7B5FF /* RCUserInfo.h */,
+				3DC36E5519EAB74E00B7B5FF /* RCVoiceMessage.h */,
+			);
+			path = iOS_IMLib;
+			sourceTree = "<group>";
+		};
 		3DF5B86319E8E6420050165F /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +515,23 @@
 		F024A33A6D9C41E5B103CF43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */,
+				3DC36E7619EAB8A600B7B5FF /* SystemConfiguration.framework */,
+				3DC36E7419EAB89D00B7B5FF /* QuartzCore.framework */,
+				3DC36E7219EAB89700B7B5FF /* OpenGLES.framework */,
+				3DC36E7019EAB89000B7B5FF /* libz.1.dylib */,
+				3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */,
+				3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */,
+				3DC36E6A19EAB87100B7B5FF /* libc++.dylib */,
+				3DC36E6819EAB86800B7B5FF /* Foundation.framework */,
+				3DC36E6619EAB86000B7B5FF /* CoreVideo.framework */,
+				3DC36E6419EAB85A00B7B5FF /* CoreMedia.framework */,
+				3DC36E6219EAB85300B7B5FF /* CoreImage.framework */,
+				3DC36E6019EAB84C00B7B5FF /* CoreGraphics.framework */,
+				3DC36E5E19EAB84600B7B5FF /* CoreAudio.framework */,
+				3DC36E5C19EAB83C00B7B5FF /* CFNetwork.framework */,
+				3DC36E5A19EAB83600B7B5FF /* AVFoundation.framework */,
+				3DC36E5819EAB82F00B7B5FF /* AudioToolbox.framework */,
 				457D5D4D704E4BA88EBD7F48 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -701,7 +823,13 @@
 				INFOPLIST_FILE = Beck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beck/imlib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -716,7 +844,12 @@
 				INFOPLIST_FILE = Beck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beck/imlib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
