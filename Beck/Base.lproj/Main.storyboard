@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
@@ -85,10 +85,89 @@
             </objects>
             <point key="canvasLocation" x="415" y="35"/>
         </scene>
+        <!--题目界面-->
+        <scene sceneID="nIk-O8-5qo">
+            <objects>
+                <tableViewController storyboardIdentifier="ItemTVC" id="bzh-ih-GCu" userLabel="题目界面" customClass="ItemTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vew-eS-cwd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubjectCell" textLabel="eED-FS-FDH" style="IBUITableViewCellStyleDefault" id="4yk-hj-1Xx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4yk-hj-1Xx" id="PRV-Lt-JUQ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eED-FS-FDH">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionCell" textLabel="rW0-aO-vnX" style="IBUITableViewCellStyleDefault" id="bta-Gx-bOE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bta-Gx-bOE" id="gn2-va-EeW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rW0-aO-vnX">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="OptionCell" textLabel="KR3-79-dlE" style="IBUITableViewCellStyleDefault" id="TEI-RM-XsQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TEI-RM-XsQ" id="Vx8-3O-yEK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KR3-79-dlE">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ButtonCell" id="jeC-VI-Duo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jeC-VI-Duo" id="apf-vQ-P9q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AnswerCell" id="u2E-g3-Oo6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u2E-g3-Oo6" id="pAw-du-EVA">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bzh-ih-GCu" id="eMu-bO-PgB"/>
+                            <outlet property="delegate" destination="bzh-ih-GCu" id="jii-Sz-Acc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P10-S1-uex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-53"/>
+        </scene>
         <!--学习模式-->
         <scene sceneID="NhE-3P-mkL">
             <objects>
-                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="NFD-gf-GkT" userLabel="学习模式" customClass="StudyModeVC" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSZ-Cc-jjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NFD-gf-GkT" userLabel="学习模式" customClass="StudyModeVC" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
                         <barButtonItem title="上一题" id="kSh-lX-Mf0"/>
@@ -114,7 +193,6 @@
                         <outlet property="previousBtn" destination="kSh-lX-Mf0" id="1Z6-Gh-N05"/>
                     </connections>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PSZ-Cc-jjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="415" y="875"/>
         </scene>
@@ -210,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="1575" y="875"/>
         </scene>
-        <!--Error ItemsTVC-->
+        <!--错题重做-->
         <scene sceneID="fTz-rL-9zH">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="7de-nV-Qcq" customClass="ErrorItemsTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="7de-nV-Qcq" userLabel="错题重做" customClass="ErrorItemsTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yEz-3M-IJr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -376,7 +454,7 @@
         <!--考试模式-->
         <scene sceneID="RdD-0i-D47">
             <objects>
-                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Tbj-Rw-dnW" userLabel="考试模式" customClass="ExamModeVC" sceneMemberID="viewController">
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Tbj-Rw-dnW" userLabel="考试模式" customClass="ExamModeVC" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="39m-vg-JC4"/>
                         <barButtonItem title="上一题" id="EGF-se-cn7"/>
@@ -409,7 +487,7 @@
         <!--智能出题-->
         <scene sceneID="SeR-5l-Adu">
             <objects>
-                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="syt-lw-Ami" userLabel="智能出题" customClass="AutoItemsVC" sceneMemberID="viewController">
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="syt-lw-Ami" userLabel="智能出题" customClass="AutoItemsVC" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="EYC-wZ-Fr8"/>
                         <barButtonItem title="上一题" id="YxJ-qL-JHT"/>
@@ -477,10 +555,10 @@
             </objects>
             <point key="canvasLocation" x="3973" y="882"/>
         </scene>
-        <!--ExchangeTVC-->
+        <!--考点交流-->
         <scene sceneID="Jx5-Oc-el7">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="RsS-0m-0pT" customClass="ExchangeTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="RsS-0m-0pT" userLabel="考点交流" customClass="ExchangeTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="whg-AL-qVd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -545,10 +623,10 @@
             </objects>
             <point key="canvasLocation" x="3973" y="1606"/>
         </scene>
-        <!--Favorate ItemsTVC-->
+        <!--题目收藏-->
         <scene sceneID="gLl-3m-H4I">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="zFO-54-tZ9" customClass="FavorateItemsTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="zFO-54-tZ9" userLabel="题目收藏" customClass="FavorateItemsTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pA9-Av-USc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -586,10 +664,10 @@
             </objects>
             <point key="canvasLocation" x="2397" y="875"/>
         </scene>
-        <!--NotesTVC-->
+        <!--笔记总结-->
         <scene sceneID="gsn-EB-PjQ">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="vlc-pQ-e8S" customClass="NotesTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="vlc-pQ-e8S" userLabel="笔记总结" customClass="NotesTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pFW-oM-PXd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,10 +705,10 @@
             </objects>
             <point key="canvasLocation" x="2791" y="875"/>
         </scene>
-        <!--HistoryTVC-->
+        <!--练习历史-->
         <scene sceneID="BYU-KR-N3W">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="xa0-l3-4lP" customClass="HistoryTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="xa0-l3-4lP" userLabel="练习历史" customClass="HistoryTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3vL-8X-aRl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

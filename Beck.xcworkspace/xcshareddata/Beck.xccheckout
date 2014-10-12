@@ -10,14 +10,14 @@
 	<string>Beck</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7AE05902F96B12D642D462C2CA5F040313A7E384</key>
+		<key>B3500B928B228DDB2DCB01D10E9F4818604C2A43</key>
 		<string>https://github.com/harbin6666/medicalExam.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Beck.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7AE05902F96B12D642D462C2CA5F040313A7E384</key>
+		<key>B3500B928B228DDB2DCB01D10E9F4818604C2A43</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7AE05902F96B12D642D462C2CA5F040313A7E384</string>
+	<string>B3500B928B228DDB2DCB01D10E9F4818604C2A43</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7AE05902F96B12D642D462C2CA5F040313A7E384</string>
+			<string>B3500B928B228DDB2DCB01D10E9F4818604C2A43</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Beck</string>
 		</dict>

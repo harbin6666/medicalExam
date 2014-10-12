@@ -12,6 +12,7 @@
 		3D214A1419E7FBC100830255 /* TestingCentreDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1319E7FBC100830255 /* TestingCentreDetailVC.m */; };
 		3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1619E806BC00830255 /* StatisticTVC.m */; };
 		3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1919E8072300830255 /* StatisticTableViewCell.m */; };
+		3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34BDA319EA177F002A0D3F /* ItemTVC.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
 		3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */; };
@@ -60,6 +61,8 @@
 		3D214A1619E806BC00830255 /* StatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTVC.m; sourceTree = "<group>"; };
 		3D214A1819E8072300830255 /* StatisticTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTableViewCell.h; sourceTree = "<group>"; };
 		3D214A1919E8072300830255 /* StatisticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTableViewCell.m; sourceTree = "<group>"; };
+		3D34BDA219EA177F002A0D3F /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
+		3D34BDA319EA177F002A0D3F /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3D99448F19E6B54D009A1A1F /* HomepageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTVC.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */,
 				3D99449519E6B68B009A1A1F /* HomepageView.h */,
 				3D99449619E6B68B009A1A1F /* HomepageView.m */,
+				3D34BDA219EA177F002A0D3F /* ItemTVC.h */,
+				3D34BDA319EA177F002A0D3F /* ItemTVC.m */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
 				3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */,
+				3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
 				3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */,
 				3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */,

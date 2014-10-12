@@ -8,7 +8,9 @@
 
 #import "StudyModeVC.h"
 
-@interface StudyModeVC ()
+#import "ItemTVC.h"
+
+@interface StudyModeVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *favorateBtn;
@@ -56,6 +58,11 @@
     [btn5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn5.titleLabel.font = [UIFont systemFontOfSize:10.f];
     self.nextBtn.customView = btn5;
+    
+    self.delegate = self;
+    self.dataSource = self;
+    
+    self.edgesForExtendedLayout = UIRectEdgeBottom;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -74,7 +81,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:NO
+                  completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,6 +115,23 @@
 - (void)onPressedNext:(UIBarButtonItem *)sender {
     
 }
+
+#pragma mark - <UIPageViewControllerDataSource>
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    return vc;
+}
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    return vc;
+}
+
+#pragma mark - <UIPageViewControllerDelegate>
 
 /*
 #pragma mark - Navigation
