@@ -10,6 +10,8 @@
 
 @interface TestingCentreTVC ()
 
+@property (nonatomic, strong) NSArray *names;
+
 @end
 
 @implementation TestingCentreTVC
@@ -18,6 +20,8 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [UIView new];
+    
+    self.names = @[@"药事管理与法规", @"药理学", @"药物分析", @"药剂学", @"药物化学", @"药学综合知识与技能"];
 }
 
 #pragma mark - Table view data source
@@ -27,13 +31,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.names.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestingCentreCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @(indexPath.row).stringValue;
+    cell.textLabel.text = self.names[indexPath.row];
     
     return cell;
 }

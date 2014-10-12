@@ -58,6 +58,8 @@
     [btn5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn5.titleLabel.font = [UIFont systemFontOfSize:10.f];
     self.nextBtn.customView = btn5;
+    
+    
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 }
 
