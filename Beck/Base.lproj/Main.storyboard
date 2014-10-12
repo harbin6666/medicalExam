@@ -9,7 +9,7 @@
         <!--Beck TBC-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" userLabel="Beck TBC" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" userLabel="Beck TBC" customClass="BeckTBC" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -24,7 +24,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-1373"/>
+            <point key="canvasLocation" x="252" y="-1388"/>
         </scene>
         <!--首页 NC-->
         <scene sceneID="nqy-LN-4QV">

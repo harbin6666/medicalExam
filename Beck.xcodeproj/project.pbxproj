@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0BED8919EA2AF300B794B5 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BED8819EA2AF300B794B5 /* AnswerCVC.m */; };
+		3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BEDC019EA443700B794B5 /* BeckTBC.m */; };
 		3D214A0E19E7FB8F00830255 /* TestingCentreTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A0D19E7FB8F00830255 /* TestingCentreTVC.m */; };
 		3D214A1119E7FBAC00830255 /* TestingCentreCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1019E7FBAC00830255 /* TestingCentreCategoryTVC.m */; };
 		3D214A1419E7FBC100830255 /* TestingCentreDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1319E7FBC100830255 /* TestingCentreDetailVC.m */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		3D0BED8719EA2AF300B794B5 /* AnswerCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVC.h; sourceTree = "<group>"; };
 		3D0BED8819EA2AF300B794B5 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
+		3D0BEDBF19EA443700B794B5 /* BeckTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTBC.h; sourceTree = "<group>"; };
+		3D0BEDC019EA443700B794B5 /* BeckTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTBC.m; sourceTree = "<group>"; };
 		3D214A0C19E7FB8F00830255 /* TestingCentreTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingCentreTVC.h; sourceTree = "<group>"; };
 		3D214A0D19E7FB8F00830255 /* TestingCentreTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestingCentreTVC.m; sourceTree = "<group>"; };
 		3D214A0F19E7FBAC00830255 /* TestingCentreCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingCentreCategoryTVC.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 				3D99448219E6AB51009A1A1F /* MyAccount */,
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
+				3D0BEDBF19EA443700B794B5 /* BeckTBC.h */,
+				3D0BEDC019EA443700B794B5 /* BeckTBC.m */,
 				3DC1C58119E645FD004F23E1 /* Main.storyboard */,
 				3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */,
 				3D99448C19E6AD27009A1A1F /* Media.xcassets */,
@@ -552,6 +557,7 @@
 				3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
 				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
+				3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */,
 				3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */,
 				3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */,
 				3DD856DC19E8147A00A17F41 /* NotesTVC.m in Sources */,
