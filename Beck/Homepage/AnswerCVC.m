@@ -14,7 +14,7 @@
 
 @implementation AnswerCVC
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"AnswerCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,11 +26,6 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
@@ -46,20 +41,27 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    return 100;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    UILabel *label = (UILabel *)[cell viewWithTag:999];
+    if (!label) {
+        label = [UILabel viewWithFrame:cell.contentView.bounds];
+        label.tag = 999;
+        label.textAlignment = NSTextAlignmentCenter;
+        [cell.contentView addSubview:label];
+        cell.backgroundColor = [UIColor grayColor];
+        cell.layer.cornerRadius = 5.f;
+    }
     
-    // Configure the cell
+    label.text = @(indexPath.row + 1).stringValue;
     
     return cell;
 }

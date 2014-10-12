@@ -10,6 +10,8 @@
 
 #import "ItemTVC.h"
 
+#import "AnswerCVC.h"
+
 @interface StudyModeVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousBtn;
@@ -51,6 +53,7 @@
     [btn4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn4.titleLabel.font = [UIFont systemFontOfSize:10.f];
     self.answerBtn.customView = btn4;
+    [btn4 addTarget:self action:@selector(onPressedAnswer:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn5 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn5.frame = CGRectMake(0, 0, 44, 44);
@@ -109,7 +112,9 @@
 }
 
 - (void)onPressedAnswer:(UIBarButtonItem *)sender {
-    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)onPressedNext:(UIBarButtonItem *)sender {
