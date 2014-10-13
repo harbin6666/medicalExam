@@ -8,7 +8,7 @@
 
 #import "StatisticTVC.h"
 
-#import "StatisticTableViewCell.h"
+#import "ExamResultCell.h"
 
 @interface StatisticTVC ()
 
@@ -33,9 +33,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    StatisticTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticCell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @(indexPath.row).stringValue;
+    ExamResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExamResultCell" forIndexPath:indexPath];
     
     return cell;
 }

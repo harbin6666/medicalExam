@@ -8,6 +8,8 @@
 
 #import "HistoryTVC.h"
 
+#import "ExamResultCell.h"
+
 @interface HistoryTVC ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
@@ -49,9 +51,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HistoryCell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @(indexPath.row).stringValue;
+    ExamResultCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExamResultCell" forIndexPath:indexPath];
     
     return cell;
 }
