@@ -1329,10 +1329,10 @@
             </objects>
             <point key="canvasLocation" x="3166" y="875"/>
         </scene>
-        <!--错题重做分类-->
+        <!--题目收藏分类-->
         <scene sceneID="1zx-Cv-quq">
             <objects>
-                <tableViewController id="8fh-P7-piv" userLabel="错题重做分类" customClass="FavorateItemsCategoryTVC" sceneMemberID="viewController">
+                <tableViewController id="8fh-P7-piv" userLabel="题目收藏分类" customClass="FavorateItemsCategoryTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Awy-7F-koN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1356,10 +1356,10 @@
             </objects>
             <point key="canvasLocation" x="2397" y="1578"/>
         </scene>
-        <!--错题重做分类-->
+        <!--笔记总结分类-->
         <scene sceneID="vaA-GJ-x6S">
             <objects>
-                <tableViewController id="2gf-CF-2Cb" userLabel="错题重做分类" customClass="FavorateItemsCategoryTVC" sceneMemberID="viewController">
+                <tableViewController id="2gf-CF-2Cb" userLabel="笔记总结分类" customClass="NotesCategoryTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rbU-fi-Iec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
