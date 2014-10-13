@@ -10,9 +10,27 @@
 
 @interface HistoryTVC ()
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
 @end
 
 @implementation HistoryTVC
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.segmentedControl = (UISegmentedControl *)self.tableView.tableHeaderView;
+    CGRect rc = self.segmentedControl.bounds;
+    rc.size.height = 44;
+    self.segmentedControl.bounds = rc;
+    
+    [self.segmentedControl setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    [self.segmentedControl setDividerImage:[UIImage imageWithColor:[UIColor clearColor]] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    [self.segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor]} forState:UIControlStateNormal];
+    [self.segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor brownColor]} forState:UIControlStateSelected];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

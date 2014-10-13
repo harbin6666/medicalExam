@@ -16,6 +16,8 @@
 		3D214A1719E806BC00830255 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1619E806BC00830255 /* StatisticTVC.m */; };
 		3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D214A1919E8072300830255 /* StatisticTableViewCell.m */; };
 		3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34BDA319EA177F002A0D3F /* ItemTVC.m */; };
+		3D389D8C19EC004700BDDAAD /* FavorateItemsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D8B19EC004700BDDAAD /* FavorateItemsCategoryTVC.m */; };
+		3D389D8F19EC012C00BDDAAD /* NotesCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D8E19EC012C00BDDAAD /* NotesCategoryTVC.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
 		3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */; };
@@ -27,6 +29,7 @@
 		3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944AF19E6CF74009A1A1F /* StudyModeVC.m */; };
 		3DA247BD19EAA4A9009897C0 /* ChooseQuestionBankTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA247BC19EAA4A9009897C0 /* ChooseQuestionBankTVC.m */; };
 		3DA247C019EAA4F2009897C0 /* ChooseSectionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA247BF19EAA4F2009897C0 /* ChooseSectionTVC.m */; };
+		3DB42E8519EBF5B50097A9C8 /* ErrorItemsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB42E8419EBF5B50097A9C8 /* ErrorItemsCategoryTVC.m */; };
 		3DC1C57719E645FD004F23E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57619E645FD004F23E1 /* main.m */; };
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1C58119E645FD004F23E1 /* Main.storyboard */; };
@@ -92,6 +95,10 @@
 		3D214A1919E8072300830255 /* StatisticTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTableViewCell.m; sourceTree = "<group>"; };
 		3D34BDA219EA177F002A0D3F /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
 		3D34BDA319EA177F002A0D3F /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
+		3D389D8A19EC004700BDDAAD /* FavorateItemsCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorateItemsCategoryTVC.h; sourceTree = "<group>"; };
+		3D389D8B19EC004700BDDAAD /* FavorateItemsCategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorateItemsCategoryTVC.m; sourceTree = "<group>"; };
+		3D389D8D19EC012C00BDDAAD /* NotesCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesCategoryTVC.h; sourceTree = "<group>"; };
+		3D389D8E19EC012C00BDDAAD /* NotesCategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesCategoryTVC.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3D99448F19E6B54D009A1A1F /* HomepageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTVC.h; sourceTree = "<group>"; };
@@ -114,6 +121,8 @@
 		3DA247BC19EAA4A9009897C0 /* ChooseQuestionBankTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseQuestionBankTVC.m; sourceTree = "<group>"; };
 		3DA247BE19EAA4F2009897C0 /* ChooseSectionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseSectionTVC.h; sourceTree = "<group>"; };
 		3DA247BF19EAA4F2009897C0 /* ChooseSectionTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseSectionTVC.m; sourceTree = "<group>"; };
+		3DB42E8319EBF5B50097A9C8 /* ErrorItemsCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorItemsCategoryTVC.h; sourceTree = "<group>"; };
+		3DB42E8419EBF5B50097A9C8 /* ErrorItemsCategoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorItemsCategoryTVC.m; sourceTree = "<group>"; };
 		3DC1C57119E645FD004F23E1 /* Beck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1C57519E645FD004F23E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1C57619E645FD004F23E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -231,6 +240,8 @@
 			children = (
 				3DD856D419E8144A00A17F41 /* ErrorItemsTVC.h */,
 				3DD856D519E8144A00A17F41 /* ErrorItemsTVC.m */,
+				3DB42E8319EBF5B50097A9C8 /* ErrorItemsCategoryTVC.h */,
+				3DB42E8419EBF5B50097A9C8 /* ErrorItemsCategoryTVC.m */,
 			);
 			name = "错题重做";
 			path = ErrorItems;
@@ -263,6 +274,8 @@
 			children = (
 				3DD856D719E8146200A17F41 /* FavorateItemsTVC.h */,
 				3DD856D819E8146200A17F41 /* FavorateItemsTVC.m */,
+				3D389D8A19EC004700BDDAAD /* FavorateItemsCategoryTVC.h */,
+				3D389D8B19EC004700BDDAAD /* FavorateItemsCategoryTVC.m */,
 			);
 			name = "题目收藏";
 			path = FavorateItems;
@@ -295,6 +308,8 @@
 			children = (
 				3DD856DA19E8147A00A17F41 /* NotesTVC.h */,
 				3DD856DB19E8147A00A17F41 /* NotesTVC.m */,
+				3D389D8D19EC012C00BDDAAD /* NotesCategoryTVC.h */,
+				3D389D8E19EC012C00BDDAAD /* NotesCategoryTVC.m */,
 			);
 			name = "笔记总结";
 			path = Notes;
@@ -681,17 +696,20 @@
 				3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */,
 				3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
+				3D389D8C19EC004700BDDAAD /* FavorateItemsCategoryTVC.m in Sources */,
 				3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */,
 				3D214A1A19E8072300830255 /* StatisticTableViewCell.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
 				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
 				3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */,
+				3DB42E8519EBF5B50097A9C8 /* ErrorItemsCategoryTVC.m in Sources */,
 				3DA247C019EAA4F2009897C0 /* ChooseSectionTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
 				3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */,
 				3DD856D619E8144A00A17F41 /* ErrorItemsTVC.m in Sources */,
 				3D214A1119E7FBAC00830255 /* TestingCentreCategoryTVC.m in Sources */,
+				3D389D8F19EC012C00BDDAAD /* NotesCategoryTVC.m in Sources */,
 				3D214A1419E7FBC100830255 /* TestingCentreDetailVC.m in Sources */,
 				3D9944B119E6CF74009A1A1F /* StudyModeVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
@@ -827,9 +845,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Beck/imlib",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -849,7 +867,7 @@
 					"$(PROJECT_DIR)/Beck/imlib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
