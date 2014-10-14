@@ -450,7 +450,6 @@
         <!--错题重做-->
         <scene sceneID="fTz-rL-9zH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RtZ-qN-tlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="7de-nV-Qcq" userLabel="错题重做" customClass="ErrorItemsTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yEz-3M-IJr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -502,6 +501,7 @@
                         <segue destination="ukW-QZ-obl" kind="push" identifier="toErrorItemsCategory" id="hZP-fD-UCp"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RtZ-qN-tlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1967" y="875"/>
         </scene>
