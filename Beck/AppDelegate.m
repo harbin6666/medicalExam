@@ -12,6 +12,8 @@
 
 #import "Item.h"
 
+#import <AFNetworking/AFNetworking.h>
+
 @interface AppDelegate ()
 
 @end
@@ -43,6 +45,23 @@
     }
     
     
+    [RCIMClient init:@"pwe86ga5er666" deviceToken:nil];
+    
+    NSDictionary *dict = @{@"userId": @123456, @"name": @"aimy", @"portraitUri": @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png"};
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager.requestSerializer setValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
+    [manager.requestSerializer setValue:@"pwe86ga5er666" forHTTPHeaderField:@"appKey"];
+    [manager.requestSerializer setValue:@"y3hsSd5F7Pm" forHTTPHeaderField:@"appSecret"];
+    
+    AFHTTPRequestOperation *operation = [manager POST:@"https://api.cn.rong.io/user/getToken.json" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+    [operation start];
 //    {
 //        News *news = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
 
