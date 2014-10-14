@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "imlib/Headers/iOS_IMLib/RCIMClient.h"
+#import "RCIM.h"
 
 #import "Item.h"
 
@@ -22,8 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [RCIMClient init:@"" deviceToken:nil];;
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithRed:160.f / 255.f green:136.f / 255.f blue:186.f / 255.f alpha:1.f]] forBarMetrics:UIBarMetricsDefault];
     
@@ -45,81 +43,90 @@
     }
     
     
-    [RCIMClient init:@"pwe86ga5er666" deviceToken:nil];
+    [RCIM initWithAppKey:@"pwe86ga5er666" deviceToken:nil];
     
-    NSDictionary *dict = @{@"userId": @123456, @"name": @"aimy", @"portraitUri": @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png"};
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    [manager.requestSerializer setValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
-    [manager.requestSerializer setValue:@"pwe86ga5er666" forHTTPHeaderField:@"appKey"];
-    [manager.requestSerializer setValue:@"y3hsSd5F7Pm" forHTTPHeaderField:@"appSecret"];
+    //    NSDictionary *dict = @{@"userId": @123456, @"name": @"aimy", @"portraitUri": @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png"};
+    //    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    //    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    //    [manager.requestSerializer setValue:@"pwe86ga5er666" forHTTPHeaderField:@"appKey"];
+    //    [manager.requestSerializer setValue:@"y3hsSd5F7Pm" forHTTPHeaderField:@"appSecret"];
     
-    AFHTTPRequestOperation *operation = [manager POST:@"https://api.cn.rong.io/user/getToken.json" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
+    //    WEAK_SELF;
+    //    AFHTTPRequestOperation *operation = [manager POST:@"https://api.cn.rong.io/user/getToken.json" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //        NSLog(@"%@", responseObject);
+    //        STRONG_SELF;
+    //        [RCIMClient connect:responseObject[@"token"] delegate:self];
+    //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    //        NSLog(@"%@", error);
+    //    }];
+    //
+    //    [operation start];
+    
+    [RCIM connectWithToken:@"mrDlYu9f8VpSuRLBn3s43jE1Wl4wjK89+puRBExEr0u0BchCuWSQNVdik4ShR+R0ZGq3pHHcwIutZoJ1GTEIcQ==" completion:^(NSString *userId) {
+        
+    } error:^(RCConnectErrorCode status) {
+        
     }];
     
-    [operation start];
-//    {
-//        News *news = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
-
-//        news.title = @"今日头条";
-//        news.date = [NSDate date];
-//        news.count = @20;
-//    }
-//
-//    {
-//        NSError *error = nil;
-//        BOOL isSave =   [self.managedObjectContext save:&error];
-//        if (!isSave) {
-//            NSLog(@"error:%@,%@",error,[error userInfo]);
-//        }
-//        else{
-//            NSLog(@"保存成功");
-//        }
-//    }
+    //    {
+    //        News *news = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
     
-//    {
-//        //创建取回数据请求
-//        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//        //设置要检索哪种类型的实体对象
-//        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Item"inManagedObjectContext:self.managedObjectContext];
-//        //设置请求实体
-//        [request setEntity:entity];
-//        //指定对结果的排序方式
-//        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"ascending:NO];
-//        NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
-//        [request setSortDescriptors:sortDescriptions];
-//        NSError *error = nil;
-//        //执行获取数据请求，返回数组
-//        NSMutableArray *mutableFetchResult = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-//        if (mutableFetchResult == nil) {
-//            NSLog(@"Error: %@,%@",error,[error userInfo]);
-//        }
-//        
-//        NSLog(@"%@",mutableFetchResult);
-//    }
-//    
-//    NSLog(@"\n");
-//    
-//    {
-//        //创建取回数据请求
-//        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
-//        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-//        NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
-//        [request setSortDescriptors:sortDescriptions];
-//        
-//        NSError *error = nil;
-//        //执行获取数据请求，返回数组
-//        NSMutableArray *mutableFetchResult = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-//        if (mutableFetchResult == nil) {
-//            NSLog(@"Error: %@,%@",error,[error userInfo]);
-//        }
-//        
-//        NSLog(@"%@",mutableFetchResult);
-//    }
+    //        news.title = @"今日头条";
+    //        news.date = [NSDate date];
+    //        news.count = @20;
+    //    }
+    //
+    //    {
+    //        NSError *error = nil;
+    //        BOOL isSave =   [self.managedObjectContext save:&error];
+    //        if (!isSave) {
+    //            NSLog(@"error:%@,%@",error,[error userInfo]);
+    //        }
+    //        else{
+    //            NSLog(@"保存成功");
+    //        }
+    //    }
+    
+    //    {
+    //        //创建取回数据请求
+    //        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    //        //设置要检索哪种类型的实体对象
+    //        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Item"inManagedObjectContext:self.managedObjectContext];
+    //        //设置请求实体
+    //        [request setEntity:entity];
+    //        //指定对结果的排序方式
+    //        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"ascending:NO];
+    //        NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
+    //        [request setSortDescriptors:sortDescriptions];
+    //        NSError *error = nil;
+    //        //执行获取数据请求，返回数组
+    //        NSMutableArray *mutableFetchResult = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    //        if (mutableFetchResult == nil) {
+    //            NSLog(@"Error: %@,%@",error,[error userInfo]);
+    //        }
+    //
+    //        NSLog(@"%@",mutableFetchResult);
+    //    }
+    //
+    //    NSLog(@"\n");
+    //
+    //    {
+    //        //创建取回数据请求
+    //        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
+    //        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    //        NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
+    //        [request setSortDescriptors:sortDescriptions];
+    //
+    //        NSError *error = nil;
+    //        //执行获取数据请求，返回数组
+    //        NSMutableArray *mutableFetchResult = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
+    //        if (mutableFetchResult == nil) {
+    //            NSLog(@"Error: %@,%@",error,[error userInfo]);
+    //        }
+    //
+    //        NSLog(@"%@",mutableFetchResult);
+    //    }
     
     return YES;
 }
