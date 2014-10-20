@@ -22,6 +22,7 @@
 		3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521CC19F533D900FC72A7 /* PayTVC.m */; };
 		3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */; };
 		3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D219F5340800FC72A7 /* AlipayTVC.m */; };
+		3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */; };
 		3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34BDA319EA177F002A0D3F /* ItemTVC.m */; };
 		3D389D8C19EC004700BDDAAD /* FavorateItemsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D8B19EC004700BDDAAD /* FavorateItemsCategoryTVC.m */; };
 		3D389D8F19EC012C00BDDAAD /* NotesCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D8E19EC012C00BDDAAD /* NotesCategoryTVC.m */; };
@@ -115,6 +116,8 @@
 		3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTVC.m; sourceTree = "<group>"; };
 		3D2521D119F5340800FC72A7 /* AlipayTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayTVC.h; sourceTree = "<group>"; };
 		3D2521D219F5340800FC72A7 /* AlipayTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayTVC.m; sourceTree = "<group>"; };
+		3D2521D419F53A4800FC72A7 /* PractiseHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseHomeTVC.h; sourceTree = "<group>"; };
+		3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseHomeTVC.m; sourceTree = "<group>"; };
 		3D34BDA219EA177F002A0D3F /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
 		3D34BDA319EA177F002A0D3F /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
 		3D389D8A19EC004700BDDAAD /* FavorateItemsCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorateItemsCategoryTVC.h; sourceTree = "<group>"; };
@@ -385,6 +388,8 @@
 		3D2521BE19F52A4800FC72A7 /* PracticeMode */ = {
 			isa = PBXGroup;
 			children = (
+				3D2521D419F53A4800FC72A7 /* PractiseHomeTVC.h */,
+				3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */,
 			);
 			path = PracticeMode;
 			sourceTree = "<group>";
@@ -769,6 +774,7 @@
 				3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
 				3D389D8C19EC004700BDDAAD /* FavorateItemsCategoryTVC.m in Sources */,
+				3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */,
 				3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,

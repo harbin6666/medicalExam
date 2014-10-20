@@ -1,26 +1,26 @@
 //
-//  ExamHomeTVC.m
+//  PractiseHomeTVC.m
 //  Beck
 //
 //  Created by Aimy on 14/10/20.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "ExamHomeTVC.h"
+#import "PractiseHomeTVC.h"
 
-@interface ExamHomeTVC ()
+@interface PractiseHomeTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
 @end
 
-@implementation ExamHomeTVC
+@implementation PractiseHomeTVC
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     
-    self.names = @[@"模拟考试", @"真题考试"];
+    self.names = @[@"章节练习", @"题型练习"];
 }
 
 - (void)viewDidLoad {
@@ -55,12 +55,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
-    }
-    else {
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-    }
+//    if (indexPath.row == 0) {
+//        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
+//    }
+//    else {
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
 }
 
 @end

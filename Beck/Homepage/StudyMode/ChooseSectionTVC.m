@@ -53,12 +53,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     self.navigationItem.backBarButtonItem.title = @"学习模式";
-    [self performSegueWithIdentifier:@"toStudyMode" sender:self];
 }
 
-- (IBAction)onPressedStart:(id)sender {
-    [self performSegueWithIdentifier:@"toStudyMode" sender:self];
-}
 
 /*
 #pragma mark - Navigation
