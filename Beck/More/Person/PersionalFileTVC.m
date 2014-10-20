@@ -1,26 +1,26 @@
 //
-//  MoreHomeTVC.m
+//  PersionalFileTVC.m
 //  Beck
 //
 //  Created by Aimy on 14/10/20.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "MoreHomeTVC.h"
+#import "PersionalFileTVC.h"
 
-@interface MoreHomeTVC ()
+@interface PersionalFileTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
 @end
 
-@implementation MoreHomeTVC
+@implementation PersionalFileTVC
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     
-    self.names = @[@"高频考点", @"考试科目", @"意见反馈", @"使用帮助", @"软件分享", @"版本更新", @"个人档案"];
+    self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
 }
 
 - (void)viewDidLoad {
@@ -55,27 +55,27 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
-    }
-    else if (indexPath.row == 1){
-        [self performSegueWithIdentifier:@"toChooseExam" sender:nil];
-    }
-    else if (indexPath.row == 2){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-    }
-    else if (indexPath.row == 3){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-    }
-    else if (indexPath.row == 4){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-    }
-    else if (indexPath.row == 5){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-    }
-    else {
-        [self performSegueWithIdentifier:@"toPersonalFile" sender:nil];
-    }
+//    if (indexPath.row == 0) {
+//        [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
+//    }
+//    else if (indexPath.row == 1){
+//        [self performSegueWithIdentifier:@"toChooseExam" sender:nil];
+//    }
+//    else if (indexPath.row == 2){
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
+//    else if (indexPath.row == 3){
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
+//    else if (indexPath.row == 4){
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
+//    else if (indexPath.row == 5){
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
+//    else {
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
 }
 
 @end

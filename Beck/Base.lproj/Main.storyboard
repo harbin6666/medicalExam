@@ -440,6 +440,41 @@
             </objects>
             <point key="canvasLocation" x="-1517" y="1207"/>
         </scene>
+        <!--个人档案-->
+        <scene sceneID="bhc-cw-xxA">
+            <objects>
+                <tableViewController id="bXo-ye-c7Z" userLabel="个人档案" customClass="PersionalFileTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JP7-b7-5A3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="rs1-Em-piJ" style="IBUITableViewCellStyleDefault" id="hCR-oT-lXi">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hCR-oT-lXi" id="UqL-Tm-bfm">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rs1-Em-piJ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bXo-ye-c7Z" id="20W-Za-L5I"/>
+                            <outlet property="delegate" destination="bXo-ye-c7Z" id="sLe-a2-eUR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="kov-Ry-XEz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7G-Rc-6Fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-360" y="1222"/>
+        </scene>
         <!--更多-->
         <scene sceneID="Y9k-sR-dkw">
             <objects>
@@ -473,6 +508,7 @@
                     <connections>
                         <segue destination="GUD-8S-lkt" kind="push" identifier="toTestingCentre" id="WGd-Rl-9wX"/>
                         <segue destination="RgT-hn-ikT" kind="push" identifier="toChooseExam" id="fWq-5B-I59"/>
+                        <segue destination="bXo-ye-c7Z" kind="push" identifier="toPersonalFile" id="DvG-gg-bST"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lo-x2-iKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -648,10 +684,10 @@
             </objects>
             <point key="canvasLocation" x="347" y="-1697"/>
         </scene>
-        <!--My Account HomeTVC-->
+        <!--个人中心-->
         <scene sceneID="ehr-ae-EVh">
             <objects>
-                <tableViewController id="Eyt-oG-CkL" customClass="MyAccountHomeTVC" sceneMemberID="viewController">
+                <tableViewController id="Eyt-oG-CkL" userLabel="个人中心" customClass="MyAccountHomeTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="a3T-Ic-Xyv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -689,10 +725,10 @@
             </objects>
             <point key="canvasLocation" x="966" y="-1702"/>
         </scene>
-        <!--StatisticTVC-->
+        <!--统计-->
         <scene sceneID="HeC-Ll-2rh">
             <objects>
-                <tableViewController id="reo-dS-N2g" customClass="StatisticTVC" sceneMemberID="viewController">
+                <tableViewController id="reo-dS-N2g" userLabel="统计" customClass="StatisticTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ukV-xr-FP6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
