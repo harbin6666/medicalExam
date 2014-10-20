@@ -1,26 +1,26 @@
 //
-//  ExamHomeTVC.m
+//  SimulationExamTVC.m
 //  Beck
 //
 //  Created by Aimy on 14/10/20.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "ExamHomeTVC.h"
+#import "SimulationExamTVC.h"
 
-@interface ExamHomeTVC ()
+@interface SimulationExamTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
 @end
 
-@implementation ExamHomeTVC
+@implementation SimulationExamTVC
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     
-    self.names = @[@"模拟考试", @"真题考试"];
+    self.names = @[@"药理学", @"药剂学", @"药物化学"];
 }
 
 - (void)viewDidLoad {
@@ -54,13 +54,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
-    }
-    else {
-        [self performSegueWithIdentifier:@"toExamMode" sender:nil];
-    }
 }
 
 @end

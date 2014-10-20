@@ -1,26 +1,26 @@
 //
-//  ExamHomeTVC.m
+//  PayTVC.m
 //  Beck
 //
 //  Created by Aimy on 14/10/20.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "ExamHomeTVC.h"
+#import "PayTVC.h"
 
-@interface ExamHomeTVC ()
+@interface PayTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
 @end
 
-@implementation ExamHomeTVC
+@implementation PayTVC
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     
-    self.names = @[@"模拟考试", @"真题考试"];
+    self.names = @[@"积分支付", @"支付宝支付"];
 }
 
 - (void)viewDidLoad {
@@ -56,10 +56,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
+        [self performSegueWithIdentifier:@"toPayByIntegration" sender:nil];
     }
     else {
-        [self performSegueWithIdentifier:@"toExamMode" sender:nil];
+        [self performSegueWithIdentifier:@"toPayByAlipay" sender:nil];
     }
 }
 

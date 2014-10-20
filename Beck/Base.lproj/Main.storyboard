@@ -78,7 +78,6 @@
                         <segue destination="vlc-pQ-e8S" kind="push" identifier="toNotes" id="cWd-nz-ih2"/>
                         <segue destination="xa0-l3-4lP" kind="push" identifier="toHistory" id="utX-Vc-uFI"/>
                         <segue destination="RsS-0m-0pT" kind="push" identifier="toExchange" id="Anh-Iw-eUd"/>
-                        <segue destination="jwX-D8-6vq" kind="push" identifier="toExamMode" id="tWG-iv-EXk"/>
                         <segue destination="5fx-vZ-ivw" kind="push" identifier="toChooseQuestionBank" id="nxH-jF-cB2"/>
                     </connections>
                 </tableViewController>
@@ -445,7 +444,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddr-80-1VG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1841" y="865"/>
+            <point key="canvasLocation" x="-1914" y="554"/>
         </scene>
         <!--错题重做-->
         <scene sceneID="fTz-rL-9zH">
@@ -646,6 +645,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="PkX-yh-o8j"/>
+                    <connections>
+                        <segue destination="jwX-D8-6vq" kind="push" identifier="toExamMode" id="Eys-nz-eVw"/>
+                        <segue destination="7uc-ux-CnB" kind="push" identifier="toSimulationExam" id="CsP-Rs-zhs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2a-VN-0wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -994,6 +997,137 @@
             </objects>
             <point key="canvasLocation" x="415" y="1578"/>
         </scene>
+        <!--模拟考试-->
+        <scene sceneID="ESI-qR-SC8">
+            <objects>
+                <tableViewController id="7uc-ux-CnB" userLabel="模拟考试" customClass="SimulationExamTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vmI-C8-pwP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="fDf-6J-Dsr" style="IBUITableViewCellStyleDefault" id="RBo-Xa-Wyv">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RBo-Xa-Wyv" id="qgx-jj-Wgg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fDf-6J-Dsr">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Txp-xn-ynk" kind="push" id="zIL-cA-t6e"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7uc-ux-CnB" id="dFw-pI-Khq"/>
+                            <outlet property="delegate" destination="7uc-ux-CnB" id="Boc-Rg-EJh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="fJh-nB-pCO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jN0-ms-FBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="-3041"/>
+        </scene>
+        <!--支付-->
+        <scene sceneID="Zff-aq-5m7">
+            <objects>
+                <tableViewController id="Txp-xn-ynk" userLabel="支付" customClass="PayTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="E2t-mR-yV4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="Vx9-sH-S9l" style="IBUITableViewCellStyleDefault" id="Ztw-Qg-rAR">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ztw-Qg-rAR" id="1JI-Cg-7ZM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vx9-sH-S9l">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Txp-xn-ynk" id="FeQ-5N-HFZ"/>
+                            <outlet property="delegate" destination="Txp-xn-ynk" id="Fdd-Fd-CkC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qLf-Vu-MDF"/>
+                    <connections>
+                        <segue destination="Sal-I1-j3H" kind="push" identifier="toPayByAlipay" id="qsb-xt-6Wg"/>
+                        <segue destination="btg-g7-M6P" kind="push" identifier="toPayByIntegration" id="nTf-RW-093"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uik-dY-DeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-645" y="-3041"/>
+        </scene>
+        <!--支付宝支付-->
+        <scene sceneID="U1S-zt-ZAZ">
+            <objects>
+                <tableViewController id="Sal-I1-j3H" userLabel="支付宝支付" customClass="AlipayTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ygu-qR-ILP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L8N-iE-Y2T">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8N-iE-Y2T" id="rkx-oD-eox">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Sal-I1-j3H" id="oP4-E3-LCg"/>
+                            <outlet property="delegate" destination="Sal-I1-j3H" id="OMG-N6-NIh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pWb-yB-C3Y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwn-VL-4mZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="-3041"/>
+        </scene>
+        <!--积分支付-->
+        <scene sceneID="n1h-Yc-kw0">
+            <objects>
+                <tableViewController id="btg-g7-M6P" userLabel="积分支付" customClass="IntegrationTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="G1t-5Z-hL1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c2e-Ea-sAS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c2e-Ea-sAS" id="DS8-Wf-jy6">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="btg-g7-M6P" id="Ui2-IG-y32"/>
+                            <outlet property="delegate" destination="btg-g7-M6P" id="N5Q-fc-AQj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1h0-e9-yBD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wq7-hf-270" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="-3688"/>
+        </scene>
         <!--考试模式-->
         <scene sceneID="RdD-0i-D47">
             <objects>
@@ -1025,7 +1159,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIU-yS-Vg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797" y="1578"/>
+            <point key="canvasLocation" x="-645" y="-2380"/>
         </scene>
         <!--考场设置-->
         <scene sceneID="14h-Sc-yt2">
@@ -1120,7 +1254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMu-B2-aga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797" y="875"/>
+            <point key="canvasLocation" x="-1097" y="-2380"/>
         </scene>
         <!--智能出题-->
         <scene sceneID="SeR-5l-Adu">

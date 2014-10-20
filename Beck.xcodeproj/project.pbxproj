@@ -18,6 +18,10 @@
 		3D2521C319F52A6F00FC72A7 /* ExamModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModeVC.m */; };
 		3D2521C419F52A6F00FC72A7 /* ExamRoomSimulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C219F52A6F00FC72A7 /* ExamRoomSimulate.m */; };
 		3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C619F52B3B00FC72A7 /* ExamHomeTVC.m */; };
+		3D2521CA19F52FCD00FC72A7 /* SimulationExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C919F52FCD00FC72A7 /* SimulationExamTVC.m */; };
+		3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521CC19F533D900FC72A7 /* PayTVC.m */; };
+		3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */; };
+		3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D219F5340800FC72A7 /* AlipayTVC.m */; };
 		3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34BDA319EA177F002A0D3F /* ItemTVC.m */; };
 		3D389D8C19EC004700BDDAAD /* FavorateItemsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D8B19EC004700BDDAAD /* FavorateItemsCategoryTVC.m */; };
 		3D389D8F19EC012C00BDDAAD /* NotesCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D8E19EC012C00BDDAAD /* NotesCategoryTVC.m */; };
@@ -103,6 +107,14 @@
 		3D2521C219F52A6F00FC72A7 /* ExamRoomSimulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamRoomSimulate.m; sourceTree = "<group>"; };
 		3D2521C519F52B3B00FC72A7 /* ExamHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamHomeTVC.h; sourceTree = "<group>"; };
 		3D2521C619F52B3B00FC72A7 /* ExamHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamHomeTVC.m; sourceTree = "<group>"; };
+		3D2521C819F52FCD00FC72A7 /* SimulationExamTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulationExamTVC.h; sourceTree = "<group>"; };
+		3D2521C919F52FCD00FC72A7 /* SimulationExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulationExamTVC.m; sourceTree = "<group>"; };
+		3D2521CB19F533D900FC72A7 /* PayTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayTVC.h; sourceTree = "<group>"; };
+		3D2521CC19F533D900FC72A7 /* PayTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayTVC.m; sourceTree = "<group>"; };
+		3D2521CE19F533FA00FC72A7 /* IntegrationTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTVC.h; sourceTree = "<group>"; };
+		3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTVC.m; sourceTree = "<group>"; };
+		3D2521D119F5340800FC72A7 /* AlipayTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayTVC.h; sourceTree = "<group>"; };
+		3D2521D219F5340800FC72A7 /* AlipayTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayTVC.m; sourceTree = "<group>"; };
 		3D34BDA219EA177F002A0D3F /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
 		3D34BDA319EA177F002A0D3F /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
 		3D389D8A19EC004700BDDAAD /* FavorateItemsCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorateItemsCategoryTVC.h; sourceTree = "<group>"; };
@@ -358,6 +370,14 @@
 				3D2521C219F52A6F00FC72A7 /* ExamRoomSimulate.m */,
 				3D2521C519F52B3B00FC72A7 /* ExamHomeTVC.h */,
 				3D2521C619F52B3B00FC72A7 /* ExamHomeTVC.m */,
+				3D2521C819F52FCD00FC72A7 /* SimulationExamTVC.h */,
+				3D2521C919F52FCD00FC72A7 /* SimulationExamTVC.m */,
+				3D2521CB19F533D900FC72A7 /* PayTVC.h */,
+				3D2521CC19F533D900FC72A7 /* PayTVC.m */,
+				3D2521CE19F533FA00FC72A7 /* IntegrationTVC.h */,
+				3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */,
+				3D2521D119F5340800FC72A7 /* AlipayTVC.h */,
+				3D2521D219F5340800FC72A7 /* AlipayTVC.m */,
 			);
 			path = ExamMode;
 			sourceTree = "<group>";
@@ -736,12 +756,14 @@
 			files = (
 				3DF5B86619E8E6530050165F /* Item.m in Sources */,
 				3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */,
+				3D2521CA19F52FCD00FC72A7 /* SimulationExamTVC.m in Sources */,
 				3DD856E219E817F800A17F41 /* ExchangeTVC.m in Sources */,
 				3D0BED8919EA2AF300B794B5 /* AnswerCVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */,
 				3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */,
 				3DA247BD19EAA4A9009897C0 /* ChooseQuestionBankTVC.m in Sources */,
+				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulate.m in Sources */,
 				3DD856D919E8146200A17F41 /* FavorateItemsTVC.m in Sources */,
 				3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */,
@@ -751,9 +773,11 @@
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
 				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
+				3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */,
 				3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */,
 				3D2521C319F52A6F00FC72A7 /* ExamModeVC.m in Sources */,
 				3DB42E8519EBF5B50097A9C8 /* ErrorItemsCategoryTVC.m in Sources */,
+				3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */,
 				3DA247C019EAA4F2009897C0 /* ChooseSectionTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
 				3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */,
@@ -894,7 +918,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Beck/imlib",
 					"$(PROJECT_DIR)/Beck/imkit",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -916,7 +939,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Beck/imlib",
 					"$(PROJECT_DIR)/Beck/imkit",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
