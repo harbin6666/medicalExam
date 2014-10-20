@@ -461,7 +461,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtZ-qN-tlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="875"/>
+            <point key="canvasLocation" x="1653" y="-753"/>
         </scene>
         <!--高频考点分类-->
         <scene sceneID="Gle-0s-MYW">
@@ -534,7 +534,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOe-WM-aqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="1578"/>
+            <point key="canvasLocation" x="2263" y="-753"/>
         </scene>
         <!--高频考点详情-->
         <scene sceneID="Cq4-B0-YPf">
@@ -561,18 +561,94 @@
         <scene sceneID="tfN-wq-MVd">
             <objects>
                 <navigationController id="xgi-AG-Knu" userLabel="我的账户 NC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="dmu-Sp-1yM"/>
+                    <tabBarItem key="tabBarItem" title="个人中心" id="dmu-Sp-1yM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aWF-nN-JPt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="s7H-uM-TMe" kind="relationship" relationship="rootViewController" id="OpV-ru-zxd"/>
+                        <segue destination="Eyt-oG-CkL" kind="relationship" relationship="rootViewController" id="V3l-Kg-aV3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdJ-bl-bPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="-1433"/>
+            <point key="canvasLocation" x="347" y="-1697"/>
+        </scene>
+        <!--My Account HomeTVC-->
+        <scene sceneID="ehr-ae-EVh">
+            <objects>
+                <tableViewController id="Eyt-oG-CkL" customClass="MyAccountHomeTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="a3T-Ic-Xyv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="51s-So-Ldr" style="IBUITableViewCellStyleDefault" id="o0S-o1-OMV">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0S-o1-OMV" id="6Hf-0x-Ma2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="51s-So-Ldr">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eyt-oG-CkL" id="QTU-gi-xVC"/>
+                            <outlet property="delegate" destination="Eyt-oG-CkL" id="Wz7-Ih-uK7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dvt-ul-Orn"/>
+                    <connections>
+                        <segue destination="vlc-pQ-e8S" kind="push" identifier="toNotes" id="npg-QB-mSl"/>
+                        <segue destination="zFO-54-tZ9" kind="push" identifier="toFavorate" id="9hS-0e-7b9"/>
+                        <segue destination="7de-nV-Qcq" kind="push" identifier="toError" id="QIr-Kf-LZ6"/>
+                        <segue destination="reo-dS-N2g" kind="push" identifier="toStatistic" id="tVk-wH-XgY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yk5-Gh-fQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="966" y="-1702"/>
+        </scene>
+        <!--StatisticTVC-->
+        <scene sceneID="HeC-Ll-2rh">
+            <objects>
+                <tableViewController id="reo-dS-N2g" customClass="StatisticTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ukV-xr-FP6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="iTL-KS-zdl" style="IBUITableViewCellStyleDefault" id="8A3-zO-h1j">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8A3-zO-h1j" id="WQP-0v-ySi">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iTL-KS-zdl">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="reo-dS-N2g" id="T5s-I7-CWW"/>
+                            <outlet property="delegate" destination="reo-dS-N2g" id="EJR-5q-k8I"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Xve-2b-60s"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JT3-mF-yoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653" y="-2964"/>
         </scene>
         <!--考试模式-->
         <scene sceneID="ilg-UT-r5l">
@@ -690,7 +766,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnD-0N-n9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1533" y="-1433"/>
+            <point key="canvasLocation" x="-1151" y="15"/>
         </scene>
         <!--修改密码-->
         <scene sceneID="A6N-ex-kVE">
@@ -750,7 +826,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwC-5x-XEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="-1622"/>
+            <point key="canvasLocation" x="-536" y="-538"/>
         </scene>
         <!--找回密码-->
         <scene sceneID="Vea-HA-gj7">
@@ -782,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMK-8Y-Ab2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="-997"/>
+            <point key="canvasLocation" x="-569" y="403"/>
         </scene>
         <!--其他 NC-->
         <scene sceneID="qoi-xk-I2X">
@@ -852,7 +928,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnW-3S-Ube" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3563" y="875"/>
+            <point key="canvasLocation" x="2194" y="-2971"/>
         </scene>
         <!--选择题库-->
         <scene sceneID="afx-ge-o8b">
@@ -1286,10 +1362,10 @@
             </objects>
             <point key="canvasLocation" x="1179" y="875"/>
         </scene>
-        <!--统计分析-->
+        <!--考点资讯-->
         <scene sceneID="W4m-Ka-Dh7">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="V1a-DK-plr" userLabel="统计分析" customClass="NewsTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="V1a-DK-plr" userLabel="考点资讯" customClass="NewsTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4It-pp-oFW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1322,7 +1398,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xy-CY-8VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3961" y="875"/>
+            <point key="canvasLocation" x="3947" y="842"/>
         </scene>
         <!--考点交流-->
         <scene sceneID="Jx5-Oc-el7">
@@ -1390,7 +1466,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RMv-7c-JUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3961" y="1612"/>
+            <point key="canvasLocation" x="3769" y="1559"/>
         </scene>
         <!--题目收藏-->
         <scene sceneID="gLl-3m-H4I">
@@ -1445,7 +1521,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lN-eF-S7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397" y="875"/>
+            <point key="canvasLocation" x="1653" y="-1542"/>
         </scene>
         <!--笔记总结-->
         <scene sceneID="gsn-EB-PjQ">
@@ -1499,7 +1575,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXS-7i-2KV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2791" y="875"/>
+            <point key="canvasLocation" x="1653" y="-2229"/>
         </scene>
         <!--练习历史-->
         <scene sceneID="BYU-KR-N3W">
@@ -1571,7 +1647,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLp-IJ-rMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3166" y="875"/>
+            <point key="canvasLocation" x="3403" y="991"/>
         </scene>
         <!--题目收藏分类-->
         <scene sceneID="1zx-Cv-quq">
@@ -1598,7 +1674,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJ5-hW-Lxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397" y="1578"/>
+            <point key="canvasLocation" x="2253" y="-1542"/>
         </scene>
         <!--笔记总结分类-->
         <scene sceneID="vaA-GJ-x6S">
@@ -1625,7 +1701,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pqy-mC-iFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2791" y="1578"/>
+            <point key="canvasLocation" x="2194" y="-2229"/>
         </scene>
         <!--选择题库-->
         <scene sceneID="8Ch-oy-dUf">
