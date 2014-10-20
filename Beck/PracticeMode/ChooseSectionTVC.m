@@ -51,8 +51,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    self.navigationItem.backBarButtonItem.title = @"学习模式";
 }
 
 

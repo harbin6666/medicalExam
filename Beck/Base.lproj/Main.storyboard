@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment version="2048" defaultVersion="1536" identifier="iOS"/>
+        <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -288,11 +288,11 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
                         <barButtonItem title="上一题" id="kSh-lX-Mf0"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Ffe-tR-SYN"/>
-                        <barButtonItem title="收藏" id="dxZ-dW-KTh" userLabel="收藏"/>
+                        <barButtonItem title="查看答案" id="dxZ-dW-KTh" userLabel="收藏"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="vdf-8a-cB7"/>
-                        <barButtonItem title="1/100" id="aWq-dv-fgh" userLabel="1/100"/>
+                        <barButtonItem title="未做" id="aWq-dv-fgh" userLabel="1/100"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="lX2-I2-c3f"/>
-                        <barButtonItem title="查看答案" id="iSf-QH-kFX" userLabel="查看答案"/>
+                        <barButtonItem title="收藏" id="iSf-QH-kFX" userLabel="查看答案"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="9mI-BO-4Zo"/>
                         <barButtonItem title="下一题" id="OQl-i3-MTu"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="a5q-AA-fmp"/>
@@ -970,10 +970,10 @@
             </objects>
             <point key="canvasLocation" x="-569" y="403"/>
         </scene>
-        <!--其他 NC-->
+        <!--更多 NC-->
         <scene sceneID="qoi-xk-I2X">
             <objects>
-                <navigationController id="Sb7-d5-EKo" userLabel="其他 NC" sceneMemberID="viewController">
+                <navigationController id="Sb7-d5-EKo" userLabel="更多 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="更多" id="nlM-4R-wSN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaq-5T-KHI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
