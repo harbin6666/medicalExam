@@ -67,6 +67,7 @@
 		3DC36E7719EAB8A600B7B5FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7619EAB8A600B7B5FF /* SystemConfiguration.framework */; };
 		3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */; };
 		3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68AB419F54820003DB313 /* PersionalFileTVC.m */; };
+		3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */; };
 		3DD856CD19E80ADA00A17F41 /* AutoItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */; };
 		3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856CF19E80DCD00A17F41 /* NewsTVC.m */; };
 		3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */; };
@@ -194,6 +195,8 @@
 		3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3DC68AB319F54820003DB313 /* PersionalFileTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersionalFileTVC.h; sourceTree = "<group>"; };
 		3DC68AB419F54820003DB313 /* PersionalFileTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersionalFileTVC.m; sourceTree = "<group>"; };
+		3DC68ABA19F54A6A003DB313 /* BeckLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckLoginVC.h; sourceTree = "<group>"; };
+		3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckLoginVC.m; sourceTree = "<group>"; };
 		3DD856CB19E80ADA00A17F41 /* AutoItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoItemsVC.h; sourceTree = "<group>"; };
 		3DD856CC19E80ADA00A17F41 /* AutoItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoItemsVC.m; sourceTree = "<group>"; };
 		3DD856CE19E80DCD00A17F41 /* NewsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTVC.h; sourceTree = "<group>"; };
@@ -519,6 +522,7 @@
 				3DF5B86319E8E6420050165F /* VO */,
 				3D99449819E6BF31009A1A1F /* Base */,
 				3D99448119E6AB51009A1A1F /* Homepage */,
+				3DC68AB919F54A35003DB313 /* 登陆 */,
 				3D99448219E6AB51009A1A1F /* 个人中心 */,
 				3D2521BE19F52A4800FC72A7 /* 练习模式 */,
 				3D2521BD19F529D900FC72A7 /* 考试模式 */,
@@ -570,6 +574,16 @@
 			);
 			name = "个人档案";
 			path = Person;
+			sourceTree = "<group>";
+		};
+		3DC68AB919F54A35003DB313 /* 登陆 */ = {
+			isa = PBXGroup;
+			children = (
+				3DC68ABA19F54A6A003DB313 /* BeckLoginVC.h */,
+				3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */,
+			);
+			name = "登陆";
+			path = Login;
 			sourceTree = "<group>";
 		};
 		3DE71FBC19ED65060043F6FB /* imkit */ = {
@@ -829,6 +843,7 @@
 				3D25220419F5441C00FC72A7 /* ErrorItemsTVC.m in Sources */,
 				3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */,
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
+				3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
