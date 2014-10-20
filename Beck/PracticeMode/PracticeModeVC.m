@@ -1,18 +1,18 @@
 //
-//  StudyModeVC.m
+//  PracticeModeVC.m
 //  Beck
 //
 //  Created by Aimy on 10/9/14.
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import "StudyModeVC.h"
+#import "PracticeModeVC.h"
 
 #import "ItemTVC.h"
 
 #import "AnswerCVC.h"
 
-@interface StudyModeVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface PracticeModeVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *favorateBtn;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation StudyModeVC
+@implementation PracticeModeVC
 
 - (void)awakeFromNib
 {

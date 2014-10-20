@@ -1,5 +1,5 @@
 //
-//  StudyModeVC.h
+//  PracticeModeVC.h
 //  Beck
 //
 //  Created by Aimy on 10/9/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StudyModeVC : UIPageViewController
+@interface PracticeModeVC : UIPageViewController
 
 @end
