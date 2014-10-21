@@ -43,7 +43,7 @@
 - (void)configNavibar
 {
     self.navigationItem.hidesBackButton = YES;
-    //    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     
     UIButton *leftBtn = [UIButton viewWithFrame:CGRectMake(0, 0, 44, 44)];
     [leftBtn setTitle:@"返回" forState:UIControlStateNormal];

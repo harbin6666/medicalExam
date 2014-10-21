@@ -25,8 +25,6 @@
 
     self.names = @[@"学习模式",@"考试模式",@"智能出题",@"高频考点",@"错题重做",@"题目收藏",@"笔记总结",@"练习历史",@"统计分析",@"考点资讯",@"考点交流",@"设置"];
     self.tableView.tableFooterView = [UIView new];
-    
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)viewDidLoad {
