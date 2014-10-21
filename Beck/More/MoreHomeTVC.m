@@ -62,16 +62,20 @@
         [self performSegueWithIdentifier:@"toChooseExam" sender:nil];
     }
     else if (indexPath.row == 2){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RegisterVC"];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 3){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"FindPasswordVC"];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 4){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+
     }
     else if (indexPath.row == 5){
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+
     }
     else {
         [self performSegueWithIdentifier:@"toPersonalFile" sender:nil];

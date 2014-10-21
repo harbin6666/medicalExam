@@ -36,6 +36,10 @@
 		3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220219F5441C00FC72A7 /* NotesTVC.m */; };
 		3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */; };
 		3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D34BDA319EA177F002A0D3F /* ItemTVC.m */; };
+		3D3835D619F678B3006C9DB0 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835D519F678B3006C9DB0 /* FindPasswordVC.m */; };
+		3D3835D919F678BF006C9DB0 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835D819F678BF006C9DB0 /* RegisterVC.m */; };
+		3D3835DC19F678D7006C9DB0 /* EnterCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835DB19F678D7006C9DB0 /* EnterCodeVC.m */; };
+		3D3835DF19F678E8006C9DB0 /* EnterPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */; };
 		3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
@@ -149,6 +153,14 @@
 		3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseExamTVC.m; sourceTree = "<group>"; };
 		3D34BDA219EA177F002A0D3F /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
 		3D34BDA319EA177F002A0D3F /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
+		3D3835D419F678B3006C9DB0 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
+		3D3835D519F678B3006C9DB0 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
+		3D3835D719F678BF006C9DB0 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		3D3835D819F678BF006C9DB0 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		3D3835DA19F678D7006C9DB0 /* EnterCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterCodeVC.h; sourceTree = "<group>"; };
+		3D3835DB19F678D7006C9DB0 /* EnterCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterCodeVC.m; sourceTree = "<group>"; };
+		3D3835DD19F678E8006C9DB0 /* EnterPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPasswordVC.h; sourceTree = "<group>"; };
+		3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPasswordVC.m; sourceTree = "<group>"; };
 		3D389D9119EC06EE00BDDAAD /* ExamResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamResultCell.h; sourceTree = "<group>"; };
 		3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamResultCell.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -421,6 +433,30 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
+		3D3835D219F6786B006C9DB0 /* 找回密码 */ = {
+			isa = PBXGroup;
+			children = (
+				3D3835D419F678B3006C9DB0 /* FindPasswordVC.h */,
+				3D3835D519F678B3006C9DB0 /* FindPasswordVC.m */,
+			);
+			name = "找回密码";
+			path = FindPassword;
+			sourceTree = "<group>";
+		};
+		3D3835D319F6786B006C9DB0 /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				3D3835D719F678BF006C9DB0 /* RegisterVC.h */,
+				3D3835D819F678BF006C9DB0 /* RegisterVC.m */,
+				3D3835DA19F678D7006C9DB0 /* EnterCodeVC.h */,
+				3D3835DB19F678D7006C9DB0 /* EnterCodeVC.m */,
+				3D3835DD19F678E8006C9DB0 /* EnterPasswordVC.h */,
+				3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */,
+			);
+			name = "注册";
+			path = Register;
+			sourceTree = "<group>";
+		};
 		3D389D9019EC05A600BDDAAD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +563,8 @@
 				3D2521BE19F52A4800FC72A7 /* 练习模式 */,
 				3D2521BD19F529D900FC72A7 /* 考试模式 */,
 				3D2521E619F5411900FC72A7 /* 更多 */,
+				3D3835D219F6786B006C9DB0 /* 找回密码 */,
+				3D3835D319F6786B006C9DB0 /* 注册 */,
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
 				3D0BEDBF19EA443700B794B5 /* BeckTBC.h */,
@@ -812,6 +850,8 @@
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulate.m in Sources */,
 				3D34BDA419EA177F002A0D3F /* ItemTVC.m in Sources */,
 				3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */,
+				3D3835D619F678B3006C9DB0 /* FindPasswordVC.m in Sources */,
+				3D3835D919F678BF006C9DB0 /* RegisterVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
 				3D25220319F5441C00FC72A7 /* ErrorItemsCategoryTVC.m in Sources */,
 				3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */,
@@ -839,10 +879,12 @@
 				3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,
 				3D25220519F5441C00FC72A7 /* FavorateItemsCategoryTVC.m in Sources */,
+				3D3835DC19F678D7006C9DB0 /* EnterCodeVC.m in Sources */,
 				3D2521DD19F53B4F00FC72A7 /* ChooseQuestionBankTVC.m in Sources */,
 				3D25220419F5441C00FC72A7 /* ErrorItemsTVC.m in Sources */,
 				3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */,
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
+				3D3835DF19F678E8006C9DB0 /* EnterPasswordVC.m in Sources */,
 				3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -968,9 +1010,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Beck/imkit",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -990,7 +1032,7 @@
 					"$(PROJECT_DIR)/Beck/imkit",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
