@@ -1027,9 +1027,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Beck/imkit",
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 arm64";
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -1049,7 +1049,7 @@
 					"$(PROJECT_DIR)/Beck/imkit",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 arm64";
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
