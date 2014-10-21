@@ -43,7 +43,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    self.navigationItem.backBarButtonItem.title = cell.textLabel.text;
     [self performSegueWithIdentifier:@"toTestingCentreDetail" sender:self];
 }
 

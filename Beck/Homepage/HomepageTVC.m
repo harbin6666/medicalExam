@@ -59,12 +59,8 @@
 {
     NSIndexPath *path = [self.tableView indexPathForCell:aCell];
     NSInteger index = path.row * 3 + aIndex;
-    
-    HomepageView *view = aCell.views[aIndex];
-    self.navigationItem.backBarButtonItem.title = [view titleForState:UIControlStateNormal];
 
     if (index == 0) {
-        self.navigationItem.backBarButtonItem.title = @"考试题库";
         [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
     }
     else if (index == 1) {
