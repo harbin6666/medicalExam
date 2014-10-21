@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BeckTVC.h"
 
-@interface TestingCentreCategoryTVC : UITableViewController
+@interface TestingCentreCategoryTVC : BeckTVC
 
 @property (nonatomic, strong) NSString *myTitle;
 

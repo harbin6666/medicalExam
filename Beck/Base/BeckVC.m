@@ -16,9 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    
+    [self configNavibar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,5 +34,33 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+@end
+
+
+@implementation UIViewController (Beck)
+
+- (void)configNavibar
+{
+    self.navigationItem.hidesBackButton = YES;
+    //    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    
+    UIButton *leftBtn = [UIButton viewWithFrame:CGRectMake(0, 0, 44, 44)];
+    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(leftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftBtnItem;
+}
+
+- (void)leftBtnClick:(UIBarButtonItem *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)rightBtnClick:(UIBarButtonItem *)sender
+{
+    
+}
 
 @end

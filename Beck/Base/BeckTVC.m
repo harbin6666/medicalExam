@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    [self configNavibar];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,21 +1,21 @@
 //
-//  ExamRoomSimulate.m
+//  ExamRoomSimulateTVC.m
 //  Beck
 //
 //  Created by Aimy on 10/12/14.
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import "ExamRoomSimulate.h"
+#import "ExamRoomSimulateTVC.h"
 
-@interface ExamRoomSimulate ()
+@interface ExamRoomSimulateTVC ()
 
 @property (nonatomic, strong) NSArray *scopes;
 @property (nonatomic, strong) NSArray *itemCountNames;
 
 @end
 
-@implementation ExamRoomSimulate
+@implementation ExamRoomSimulateTVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

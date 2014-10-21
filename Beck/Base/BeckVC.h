@@ -11,3 +11,13 @@
 @interface BeckVC : UIViewController
 
 @end
+
+@interface UIViewController (Beck)
+
+- (void)configNavibar;
+
+- (void)leftBtnClick:(UIBarButtonItem *)sender;
+
+- (void)rightBtnClick:(UIBarButtonItem *)sender;
+
+@end
