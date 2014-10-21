@@ -41,6 +41,8 @@
 		3D3835DC19F678D7006C9DB0 /* EnterCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835DB19F678D7006C9DB0 /* EnterCodeVC.m */; };
 		3D3835DF19F678E8006C9DB0 /* EnterPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */; };
 		3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835E219F69AA1006C9DB0 /* BeckTools.m */; };
+		3D38363B19F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D38363919F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a */; };
+		3D38363C19F6A22B006C9DB0 /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D38363A19F6A22B006C9DB0 /* RongCloud.bundle */; };
 		3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
@@ -78,8 +80,6 @@
 		3DD856D319E80EAC00A17F41 /* NewsCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856D219E80EAC00A17F41 /* NewsCategoryTVC.m */; };
 		3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856DE19E8148C00A17F41 /* HistoryTVC.m */; };
 		3DD856E219E817F800A17F41 /* ExchangeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD856E119E817F800A17F41 /* ExchangeTVC.m */; };
-		3DE71FD819ED65060043F6FB /* Rong_IMKit_v1_0_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE71FD619ED65060043F6FB /* Rong_IMKit_v1_0_3.a */; };
-		3DE71FD919ED65060043F6FB /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DE71FD719ED65060043F6FB /* RongCloud.bundle */; };
 		3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */; };
 		3DF5B86619E8E6530050165F /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86519E8E6530050165F /* Item.m */; };
 		8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D5D4D704E4BA88EBD7F48 /* libPods.a */; };
@@ -164,6 +164,33 @@
 		3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPasswordVC.m; sourceTree = "<group>"; };
 		3D3835E119F69AA1006C9DB0 /* BeckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTools.h; sourceTree = "<group>"; };
 		3D3835E219F69AA1006C9DB0 /* BeckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTools.m; sourceTree = "<group>"; };
+		3D38362019F6A22B006C9DB0 /* RCBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBasicViewController.h; sourceTree = "<group>"; };
+		3D38362119F6A22B006C9DB0 /* RCChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatListViewController.h; sourceTree = "<group>"; };
+		3D38362219F6A22B006C9DB0 /* RCChatSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatSettingViewController.h; sourceTree = "<group>"; };
+		3D38362319F6A22B006C9DB0 /* RCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatViewController.h; sourceTree = "<group>"; };
+		3D38362419F6A22B006C9DB0 /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
+		3D38362519F6A22B006C9DB0 /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
+		3D38362619F6A22B006C9DB0 /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
+		3D38362719F6A22B006C9DB0 /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
+		3D38362819F6A22B006C9DB0 /* RCGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroupListViewController.h; sourceTree = "<group>"; };
+		3D38362919F6A22B006C9DB0 /* RCHandShakeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHandShakeMessage.h; sourceTree = "<group>"; };
+		3D38362A19F6A22B006C9DB0 /* RCIM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIM.h; sourceTree = "<group>"; };
+		3D38362B19F6A22B006C9DB0 /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
+		3D38362C19F6A22B006C9DB0 /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
+		3D38362D19F6A22B006C9DB0 /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
+		3D38362E19F6A22B006C9DB0 /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
+		3D38362F19F6A22B006C9DB0 /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
+		3D38363019F6A22B006C9DB0 /* RCPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPreviewViewController.h; sourceTree = "<group>"; };
+		3D38363119F6A22B006C9DB0 /* RCRenameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRenameViewController.h; sourceTree = "<group>"; };
+		3D38363219F6A22B006C9DB0 /* RCRichContentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRichContentMessage.h; sourceTree = "<group>"; };
+		3D38363319F6A22B006C9DB0 /* RCSelectPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSelectPersonViewController.h; sourceTree = "<group>"; };
+		3D38363419F6A22B006C9DB0 /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
+		3D38363519F6A22B006C9DB0 /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
+		3D38363619F6A22B006C9DB0 /* RCThemeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCThemeDefine.h; sourceTree = "<group>"; };
+		3D38363719F6A22B006C9DB0 /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
+		3D38363819F6A22B006C9DB0 /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
+		3D38363919F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = Rong_IMKit_v1_1_0.a; sourceTree = "<group>"; };
+		3D38363A19F6A22B006C9DB0 /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		3D389D9119EC06EE00BDDAAD /* ExamResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamResultCell.h; sourceTree = "<group>"; };
 		3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamResultCell.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -222,32 +249,6 @@
 		3DD856DE19E8148C00A17F41 /* HistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTVC.m; sourceTree = "<group>"; };
 		3DD856E019E817F800A17F41 /* ExchangeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeTVC.h; sourceTree = "<group>"; };
 		3DD856E119E817F800A17F41 /* ExchangeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeTVC.m; sourceTree = "<group>"; };
-		3DE71FBE19ED65060043F6FB /* RCBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBasicViewController.h; sourceTree = "<group>"; };
-		3DE71FBF19ED65060043F6FB /* RCChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatListViewController.h; sourceTree = "<group>"; };
-		3DE71FC019ED65060043F6FB /* RCChatSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatSettingViewController.h; sourceTree = "<group>"; };
-		3DE71FC119ED65060043F6FB /* RCChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCChatViewController.h; sourceTree = "<group>"; };
-		3DE71FC219ED65060043F6FB /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
-		3DE71FC319ED65060043F6FB /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
-		3DE71FC419ED65060043F6FB /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
-		3DE71FC519ED65060043F6FB /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
-		3DE71FC619ED65060043F6FB /* RCGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroupListViewController.h; sourceTree = "<group>"; };
-		3DE71FC719ED65060043F6FB /* RCHandShakeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHandShakeMessage.h; sourceTree = "<group>"; };
-		3DE71FC819ED65060043F6FB /* RCIM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIM.h; sourceTree = "<group>"; };
-		3DE71FC919ED65060043F6FB /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
-		3DE71FCA19ED65060043F6FB /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
-		3DE71FCB19ED65060043F6FB /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
-		3DE71FCC19ED65060043F6FB /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
-		3DE71FCD19ED65060043F6FB /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
-		3DE71FCE19ED65060043F6FB /* RCPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPreviewViewController.h; sourceTree = "<group>"; };
-		3DE71FCF19ED65060043F6FB /* RCRenameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRenameViewController.h; sourceTree = "<group>"; };
-		3DE71FD019ED65060043F6FB /* RCSelectPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSelectPersonViewController.h; sourceTree = "<group>"; };
-		3DE71FD119ED65060043F6FB /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
-		3DE71FD219ED65060043F6FB /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
-		3DE71FD319ED65060043F6FB /* RCThemeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCThemeDefine.h; sourceTree = "<group>"; };
-		3DE71FD419ED65060043F6FB /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
-		3DE71FD519ED65060043F6FB /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
-		3DE71FD619ED65060043F6FB /* Rong_IMKit_v1_0_3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = Rong_IMKit_v1_0_3.a; sourceTree = "<group>"; };
-		3DE71FD719ED65060043F6FB /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		3DF5B86119E8E5E10050165F /* Beck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beck.xcdatamodel; sourceTree = "<group>"; };
 		3DF5B86419E8E6530050165F /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		3DF5B86519E8E6530050165F /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
@@ -266,7 +267,6 @@
 				3DC36E7319EAB89700B7B5FF /* OpenGLES.framework in Frameworks */,
 				3DC36E7119EAB89000B7B5FF /* libz.1.dylib in Frameworks */,
 				3DC36E6F19EAB88500B7B5FF /* libstdc++.dylib in Frameworks */,
-				3DE71FD819ED65060043F6FB /* Rong_IMKit_v1_0_3.a in Frameworks */,
 				3DC36E6D19EAB87A00B7B5FF /* libsqlite3.dylib in Frameworks */,
 				3DC36E6B19EAB87100B7B5FF /* libc++.dylib in Frameworks */,
 				3DC36E6919EAB86800B7B5FF /* Foundation.framework in Frameworks */,
@@ -278,6 +278,7 @@
 				3DC36E5D19EAB83C00B7B5FF /* CFNetwork.framework in Frameworks */,
 				3DC36E5B19EAB83600B7B5FF /* AVFoundation.framework in Frameworks */,
 				3DC36E5919EAB82F00B7B5FF /* AudioToolbox.framework in Frameworks */,
+				3D38363B19F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a in Frameworks */,
 				8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +471,48 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		3D38361E19F6A22B006C9DB0 /* imkit */ = {
+			isa = PBXGroup;
+			children = (
+				3D38361F19F6A22B006C9DB0 /* Headers */,
+				3D38363919F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a */,
+				3D38363A19F6A22B006C9DB0 /* RongCloud.bundle */,
+			);
+			path = imkit;
+			sourceTree = "<group>";
+		};
+		3D38361F19F6A22B006C9DB0 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3D38362019F6A22B006C9DB0 /* RCBasicViewController.h */,
+				3D38362119F6A22B006C9DB0 /* RCChatListViewController.h */,
+				3D38362219F6A22B006C9DB0 /* RCChatSettingViewController.h */,
+				3D38362319F6A22B006C9DB0 /* RCChatViewController.h */,
+				3D38362419F6A22B006C9DB0 /* RCClientDelegate.h */,
+				3D38362519F6A22B006C9DB0 /* RCConversation.h */,
+				3D38362619F6A22B006C9DB0 /* RCDiscussion.h */,
+				3D38362719F6A22B006C9DB0 /* RCGroup.h */,
+				3D38362819F6A22B006C9DB0 /* RCGroupListViewController.h */,
+				3D38362919F6A22B006C9DB0 /* RCHandShakeMessage.h */,
+				3D38362A19F6A22B006C9DB0 /* RCIM.h */,
+				3D38362B19F6A22B006C9DB0 /* RCImageMessage.h */,
+				3D38362C19F6A22B006C9DB0 /* RCIMClient.h */,
+				3D38362D19F6A22B006C9DB0 /* RCIMClientHeader.h */,
+				3D38362E19F6A22B006C9DB0 /* RCMessage.h */,
+				3D38362F19F6A22B006C9DB0 /* RCMessageContent.h */,
+				3D38363019F6A22B006C9DB0 /* RCPreviewViewController.h */,
+				3D38363119F6A22B006C9DB0 /* RCRenameViewController.h */,
+				3D38363219F6A22B006C9DB0 /* RCRichContentMessage.h */,
+				3D38363319F6A22B006C9DB0 /* RCSelectPersonViewController.h */,
+				3D38363419F6A22B006C9DB0 /* RCStatusDefine.h */,
+				3D38363519F6A22B006C9DB0 /* RCTextMessage.h */,
+				3D38363619F6A22B006C9DB0 /* RCThemeDefine.h */,
+				3D38363719F6A22B006C9DB0 /* RCUserInfo.h */,
+				3D38363819F6A22B006C9DB0 /* RCVoiceMessage.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		3D389D9019EC05A600BDDAAD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,7 +610,7 @@
 		3DC1C57319E645FD004F23E1 /* Beck */ = {
 			isa = PBXGroup;
 			children = (
-				3DE71FBC19ED65060043F6FB /* imkit */,
+				3D38361E19F6A22B006C9DB0 /* imkit */,
 				3DF5B86319E8E6420050165F /* VO */,
 				3D99449819E6BF31009A1A1F /* Base */,
 				3D99448119E6AB51009A1A1F /* Homepage */,
@@ -636,47 +679,6 @@
 			);
 			name = "登陆";
 			path = Login;
-			sourceTree = "<group>";
-		};
-		3DE71FBC19ED65060043F6FB /* imkit */ = {
-			isa = PBXGroup;
-			children = (
-				3DE71FBD19ED65060043F6FB /* Headers */,
-				3DE71FD619ED65060043F6FB /* Rong_IMKit_v1_0_3.a */,
-				3DE71FD719ED65060043F6FB /* RongCloud.bundle */,
-			);
-			path = imkit;
-			sourceTree = "<group>";
-		};
-		3DE71FBD19ED65060043F6FB /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				3DE71FBE19ED65060043F6FB /* RCBasicViewController.h */,
-				3DE71FBF19ED65060043F6FB /* RCChatListViewController.h */,
-				3DE71FC019ED65060043F6FB /* RCChatSettingViewController.h */,
-				3DE71FC119ED65060043F6FB /* RCChatViewController.h */,
-				3DE71FC219ED65060043F6FB /* RCClientDelegate.h */,
-				3DE71FC319ED65060043F6FB /* RCConversation.h */,
-				3DE71FC419ED65060043F6FB /* RCDiscussion.h */,
-				3DE71FC519ED65060043F6FB /* RCGroup.h */,
-				3DE71FC619ED65060043F6FB /* RCGroupListViewController.h */,
-				3DE71FC719ED65060043F6FB /* RCHandShakeMessage.h */,
-				3DE71FC819ED65060043F6FB /* RCIM.h */,
-				3DE71FC919ED65060043F6FB /* RCImageMessage.h */,
-				3DE71FCA19ED65060043F6FB /* RCIMClient.h */,
-				3DE71FCB19ED65060043F6FB /* RCIMClientHeader.h */,
-				3DE71FCC19ED65060043F6FB /* RCMessage.h */,
-				3DE71FCD19ED65060043F6FB /* RCMessageContent.h */,
-				3DE71FCE19ED65060043F6FB /* RCPreviewViewController.h */,
-				3DE71FCF19ED65060043F6FB /* RCRenameViewController.h */,
-				3DE71FD019ED65060043F6FB /* RCSelectPersonViewController.h */,
-				3DE71FD119ED65060043F6FB /* RCStatusDefine.h */,
-				3DE71FD219ED65060043F6FB /* RCTextMessage.h */,
-				3DE71FD319ED65060043F6FB /* RCThemeDefine.h */,
-				3DE71FD419ED65060043F6FB /* RCUserInfo.h */,
-				3DE71FD519ED65060043F6FB /* RCVoiceMessage.h */,
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		3DF5B86319E8E6420050165F /* VO */ = {
@@ -797,7 +799,7 @@
 			files = (
 				3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */,
 				3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */,
-				3DE71FD919ED65060043F6FB /* RongCloud.bundle in Resources */,
+				3D38363C19F6A22B006C9DB0 /* RongCloud.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
