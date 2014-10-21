@@ -974,7 +974,7 @@
                             <outlet property="delegate" destination="WuV-xM-oRn" id="uCs-ct-Z2f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="PkX-yh-o8j"/>
+                    <navigationItem key="navigationItem" id="PkX-yh-o8j"/>
                     <connections>
                         <segue destination="7uc-ux-CnB" kind="push" identifier="toSimulationExam" id="CsP-Rs-zhs"/>
                         <segue destination="kIt-Te-l0Y" kind="push" identifier="toChooseQuestionBank" id="bxL-Av-VIe"/>
@@ -1394,7 +1394,7 @@
                             <outlet property="delegate" destination="7uc-ux-CnB" id="Boc-Rg-EJh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="fJh-nB-pCO"/>
+                    <navigationItem key="navigationItem" id="fJh-nB-pCO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jN0-ms-FBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

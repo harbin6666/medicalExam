@@ -40,6 +40,7 @@
 		3D3835D919F678BF006C9DB0 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835D819F678BF006C9DB0 /* RegisterVC.m */; };
 		3D3835DC19F678D7006C9DB0 /* EnterCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835DB19F678D7006C9DB0 /* EnterCodeVC.m */; };
 		3D3835DF19F678E8006C9DB0 /* EnterPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */; };
+		3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835E219F69AA1006C9DB0 /* BeckTools.m */; };
 		3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
@@ -161,6 +162,8 @@
 		3D3835DB19F678D7006C9DB0 /* EnterCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterCodeVC.m; sourceTree = "<group>"; };
 		3D3835DD19F678E8006C9DB0 /* EnterPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPasswordVC.h; sourceTree = "<group>"; };
 		3D3835DE19F678E8006C9DB0 /* EnterPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPasswordVC.m; sourceTree = "<group>"; };
+		3D3835E119F69AA1006C9DB0 /* BeckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTools.h; sourceTree = "<group>"; };
+		3D3835E219F69AA1006C9DB0 /* BeckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTools.m; sourceTree = "<group>"; };
 		3D389D9119EC06EE00BDDAAD /* ExamResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamResultCell.h; sourceTree = "<group>"; };
 		3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamResultCell.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -457,6 +460,16 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		3D3835E019F69A85006C9DB0 /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				3D3835E119F69AA1006C9DB0 /* BeckTools.h */,
+				3D3835E219F69AA1006C9DB0 /* BeckTools.m */,
+			);
+			name = "工具";
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		3D389D9019EC05A600BDDAAD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +578,7 @@
 				3D2521E619F5411900FC72A7 /* 更多 */,
 				3D3835D219F6786B006C9DB0 /* 找回密码 */,
 				3D3835D319F6786B006C9DB0 /* 注册 */,
+				3D3835E019F69A85006C9DB0 /* 工具 */,
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
 				3D0BEDBF19EA443700B794B5 /* BeckTBC.h */,
@@ -876,6 +890,7 @@
 				3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */,
 				3D2521DF19F53B4F00FC72A7 /* PracticeModeVC.m in Sources */,
 				3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */,
+				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
 				3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,
 				3D25220519F5441C00FC72A7 /* FavorateItemsCategoryTVC.m in Sources */,
