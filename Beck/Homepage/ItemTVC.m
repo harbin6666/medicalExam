@@ -8,7 +8,7 @@
 
 #import "ItemtVC.h"
 
-@interface ItemTVC ()
+@interface ItemTVC () <UIAlertViewDelegate>
 
 @end
 
@@ -112,12 +112,17 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (IBAction)wrongItem:(id)sender {
+- (IBAction)addNote:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"添加笔记" message:@"" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+    alert.delegate = self;
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert show];
     
 }
 
-- (IBAction)addNote:(id)sender {
-    
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
 }
 
 /*
