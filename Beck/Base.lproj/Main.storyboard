@@ -402,7 +402,7 @@
         <!--选择考试-->
         <scene sceneID="JrJ-vm-Fzr">
             <objects>
-                <tableViewController id="RgT-hn-ikT" userLabel="选择考试" customClass="ChooseExamTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="RgT-hn-ikT" userLabel="选择考试" customClass="ChooseExamTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uOK-c7-rCH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -437,7 +437,7 @@
         <!--个人档案-->
         <scene sceneID="bhc-cw-xxA">
             <objects>
-                <tableViewController id="bXo-ye-c7Z" userLabel="个人档案" customClass="PersionalFileTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="bXo-ye-c7Z" userLabel="个人档案" customClass="PersionalFileTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JP7-b7-5A3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -721,7 +721,7 @@
         <!--验证码-->
         <scene sceneID="Ecv-vd-41S">
             <objects>
-                <viewController id="PhN-lA-8p6" userLabel="验证码" sceneMemberID="viewController">
+                <viewController id="PhN-lA-8p6" userLabel="验证码" customClass="EnterCodeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rTd-en-Ewx"/>
                         <viewControllerLayoutGuide type="bottom" id="8Rz-wg-DIf"/>
@@ -785,7 +785,7 @@
         <!--设置密码-->
         <scene sceneID="pd2-mr-MzR">
             <objects>
-                <viewController id="HTU-R7-7jZ" userLabel="设置密码" sceneMemberID="viewController">
+                <viewController id="HTU-R7-7jZ" userLabel="设置密码" customClass="EnterPasswordVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rd8-rN-giq"/>
                         <viewControllerLayoutGuide type="bottom" id="ogh-aj-8Bk"/>
@@ -913,7 +913,7 @@
         <!--统计-->
         <scene sceneID="HeC-Ll-2rh">
             <objects>
-                <tableViewController id="reo-dS-N2g" userLabel="统计" customClass="StatisticTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="reo-dS-N2g" userLabel="统计" customClass="StatisticTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ukV-xr-FP6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1365,7 +1365,7 @@
         <!--模拟考试-->
         <scene sceneID="ESI-qR-SC8">
             <objects>
-                <tableViewController id="7uc-ux-CnB" userLabel="模拟考试" customClass="SimulationExamTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="7uc-ux-CnB" userLabel="模拟考试" customClass="SimulationExamTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vmI-C8-pwP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
