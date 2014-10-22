@@ -42,7 +42,6 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"toTestingCentreDetail" sender:self];
 }
 
