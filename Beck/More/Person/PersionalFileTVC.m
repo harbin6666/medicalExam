@@ -8,7 +8,11 @@
 
 #import "PersionalFileTVC.h"
 
+#import "PersionalFileTableViewHeader.h"
+
 @interface PersionalFileTVC ()
+
+@property (nonatomic, strong) PersionalFileTableViewHeader *header;
 
 @property (nonatomic, strong) NSArray *names;
 
@@ -19,6 +23,10 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    self.header = [PersionalFileTableViewHeader viewWithFrame:CGRectMake(0, 0, 320, 100)];
+    self.header.backgroundColor = [UIColor grayColor];
+    self.tableView.tableHeaderView = self.header;
     
     self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
 }
@@ -48,6 +56,12 @@
     
     cell.textLabel.text = self.names[indexPath.row];
     
+    if (indexPath.row == 1) {
+        UISwitch *sw = [UISwitch new];
+        sw.on = YES;
+        cell.accessoryView = sw;
+    }
+    
     return cell;
 }
 
@@ -55,27 +69,21 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    if (indexPath.row == 0) {
-//        [self performSegueWithIdentifier:@"toTestingCentre" sender:nil];
-//    }
-//    else if (indexPath.row == 1){
-//        [self performSegueWithIdentifier:@"toChooseExam" sender:nil];
-//    }
-//    else if (indexPath.row == 2){
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
-//    else if (indexPath.row == 3){
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
-//    else if (indexPath.row == 4){
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
-//    else if (indexPath.row == 5){
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
-//    else {
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
+    if (indexPath.row == 0) {
+
+    }
+    else if (indexPath.row == 1){
+        
+    }
+    else if (indexPath.row == 2){
+        [self performSegueWithIdentifier:@"toModifyPassword" sender:nil];
+    }
+    else if (indexPath.row == 3){
+
+    }
+    else if (indexPath.row == 4){
+
+    }
 }
 
 @end
