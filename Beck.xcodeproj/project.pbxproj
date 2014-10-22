@@ -21,7 +21,7 @@
 		3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */; };
 		3D2521DD19F53B4F00FC72A7 /* ChooseQuestionBankTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D819F53B4F00FC72A7 /* ChooseQuestionBankTVC.m */; };
 		3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521DA19F53B4F00FC72A7 /* ChooseSectionTVC.m */; };
-		3D2521DF19F53B4F00FC72A7 /* PracticeModeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521DC19F53B4F00FC72A7 /* PracticeModeVC.m */; };
+		3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */; };
 		3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */; };
 		3D2521E519F53F8300FC72A7 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521E419F53F8300FC72A7 /* StatisticTVC.m */; };
 		3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521E819F5418C00FC72A7 /* MoreHomeTVC.m */; };
@@ -44,6 +44,7 @@
 		3D38363B19F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D38363919F6A22B006C9DB0 /* Rong_IMKit_v1_1_0.a */; };
 		3D38363C19F6A22B006C9DB0 /* RongCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D38363A19F6A22B006C9DB0 /* RongCloud.bundle */; };
 		3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */; };
+		3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449119E6B54D009A1A1F /* HomepageTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449019E6B54D009A1A1F /* HomepageTVC.m */; };
 		3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449319E6B562009A1A1F /* HomepageTableViewCell.m */; };
@@ -124,8 +125,8 @@
 		3D2521D819F53B4F00FC72A7 /* ChooseQuestionBankTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseQuestionBankTVC.m; sourceTree = "<group>"; };
 		3D2521D919F53B4F00FC72A7 /* ChooseSectionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseSectionTVC.h; sourceTree = "<group>"; };
 		3D2521DA19F53B4F00FC72A7 /* ChooseSectionTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseSectionTVC.m; sourceTree = "<group>"; };
-		3D2521DB19F53B4F00FC72A7 /* PracticeModeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeModeVC.h; sourceTree = "<group>"; };
-		3D2521DC19F53B4F00FC72A7 /* PracticeModeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeModeVC.m; sourceTree = "<group>"; };
+		3D2521DB19F53B4F00FC72A7 /* PracticeModePVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeModePVC.h; sourceTree = "<group>"; };
+		3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeModePVC.m; sourceTree = "<group>"; };
 		3D2521E019F53C9100FC72A7 /* MyAccountHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountHomeTVC.h; sourceTree = "<group>"; };
 		3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountHomeTVC.m; sourceTree = "<group>"; };
 		3D2521E319F53F8300FC72A7 /* StatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTVC.h; sourceTree = "<group>"; };
@@ -193,6 +194,8 @@
 		3D38363A19F6A22B006C9DB0 /* RongCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RongCloud.bundle; sourceTree = "<group>"; };
 		3D389D9119EC06EE00BDDAAD /* ExamResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamResultCell.h; sourceTree = "<group>"; };
 		3D389D9219EC06EE00BDDAAD /* ExamResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamResultCell.m; sourceTree = "<group>"; };
+		3D4F677719F7DC9200ED8FA4 /* BeckPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckPVC.h; sourceTree = "<group>"; };
+		3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckPVC.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3D99448F19E6B54D009A1A1F /* HomepageTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageTVC.h; sourceTree = "<group>"; };
@@ -364,8 +367,8 @@
 				3D2521D819F53B4F00FC72A7 /* ChooseQuestionBankTVC.m */,
 				3D2521D919F53B4F00FC72A7 /* ChooseSectionTVC.h */,
 				3D2521DA19F53B4F00FC72A7 /* ChooseSectionTVC.m */,
-				3D2521DB19F53B4F00FC72A7 /* PracticeModeVC.h */,
-				3D2521DC19F53B4F00FC72A7 /* PracticeModeVC.m */,
+				3D2521DB19F53B4F00FC72A7 /* PracticeModePVC.h */,
+				3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */,
 				3D2521D419F53A4800FC72A7 /* PractiseHomeTVC.h */,
 				3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */,
 			);
@@ -573,6 +576,8 @@
 				3D2521B819F526AE00FC72A7 /* BeckTVC.m */,
 				3D2521BA19F526C500FC72A7 /* BeckVC.h */,
 				3D2521BB19F526C500FC72A7 /* BeckVC.m */,
+				3D4F677719F7DC9200ED8FA4 /* BeckPVC.h */,
+				3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -890,7 +895,7 @@
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
 				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
 				3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */,
-				3D2521DF19F53B4F00FC72A7 /* PracticeModeVC.m in Sources */,
+				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
 				3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */,
 				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
 				3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */,
@@ -902,6 +907,7 @@
 				3DD856D019E80DCD00A17F41 /* NewsTVC.m in Sources */,
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
 				3D3835DF19F678E8006C9DB0 /* EnterPasswordVC.m in Sources */,
+				3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */,
 				3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

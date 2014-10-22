@@ -283,7 +283,7 @@
         <!--练习模式-->
         <scene sceneID="NhE-3P-mkL">
             <objects>
-                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NFD-gf-GkT" userLabel="练习模式" customClass="PracticeModeVC" sceneMemberID="viewController">
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NFD-gf-GkT" userLabel="练习模式" customClass="PracticeModePVC" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
                         <barButtonItem title="上一题" id="kSh-lX-Mf0"/>

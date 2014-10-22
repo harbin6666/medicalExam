@@ -1,18 +1,18 @@
 //
-//  PracticeModeVC.m
+//  PracticeModePVC.m
 //  Beck
 //
 //  Created by Aimy on 10/9/14.
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import "PracticeModeVC.h"
+#import "PracticeModePVC.h"
 
 #import "ItemTVC.h"
 
 #import "AnswerCVC.h"
 
-@interface PracticeModeVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface PracticeModePVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *previousBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *favorateBtn;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation PracticeModeVC
+@implementation PracticeModePVC
 
 - (void)awakeFromNib
 {

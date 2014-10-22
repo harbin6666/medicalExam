@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BeckTVC.h"
 
-@interface ItemTVC : UITableViewController
+@interface ItemTVC : BeckTVC
 
 @end
