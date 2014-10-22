@@ -49,10 +49,20 @@
         return 30.f;
     }
     else if (indexPath.section == 4){
-        return 80.f;
+        if (self.showAnswer) {
+            return 80.f;
+        }
+        else {
+            return 0.f;
+        }
     }
     else if (indexPath.section == 5){
-        return 80.f;
+        if (self.showNote) {
+            return 80.f;
+        }
+        else {
+            return 0.f;
+        }
     }
     else {
         return 44.f;
@@ -79,10 +89,16 @@
     else if (indexPath.section == 4){
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell" forIndexPath:indexPath];
         cell.detailTextLabel.text = @"我是答案";
+        
+        cell.textLabel.hidden = !self.showAnswer;
+        cell.detailTextLabel.hidden = !self.showAnswer;
     }
     else if (indexPath.section == 5){
         cell = [tableView dequeueReusableCellWithIdentifier:@"NoteCell" forIndexPath:indexPath];
         cell.detailTextLabel.text = @"我是笔记";
+        
+        cell.textLabel.hidden = !self.showNote;
+        cell.detailTextLabel.hidden = !self.showNote;
     }
     else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell" forIndexPath:indexPath];

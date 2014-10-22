@@ -305,26 +305,24 @@
             <objects>
                 <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NFD-gf-GkT" userLabel="练习模式" customClass="PracticeModePVC" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Fax-K2-Bg6"/>
-                        <barButtonItem title="上一题" id="kSh-lX-Mf0"/>
+                        <barButtonItem title="Item1" id="kSh-lX-Mf0"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Ffe-tR-SYN"/>
-                        <barButtonItem title="查看答案" id="dxZ-dW-KTh" userLabel="收藏"/>
+                        <barButtonItem title="Item2" id="dxZ-dW-KTh"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="vdf-8a-cB7"/>
-                        <barButtonItem title="未做" id="aWq-dv-fgh" userLabel="1/100"/>
+                        <barButtonItem title="Item3" id="aWq-dv-fgh"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="lX2-I2-c3f"/>
-                        <barButtonItem title="收藏" id="iSf-QH-kFX" userLabel="查看答案"/>
+                        <barButtonItem title="Item4" id="iSf-QH-kFX"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="9mI-BO-4Zo"/>
-                        <barButtonItem title="下一题" id="OQl-i3-MTu"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="a5q-AA-fmp"/>
+                        <barButtonItem title="Item5" id="OQl-i3-MTu"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Bvn-Dx-Svc"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="answerBtn" destination="iSf-QH-kFX" id="hQ2-S0-Cr8"/>
-                        <outlet property="favorateBtn" destination="dxZ-dW-KTh" id="LqW-Rd-H5W"/>
-                        <outlet property="nextBtn" destination="OQl-i3-MTu" id="nF3-c5-5CJ"/>
-                        <outlet property="pageBtn" destination="aWq-dv-fgh" id="VsI-f0-8ev"/>
-                        <outlet property="previousBtn" destination="kSh-lX-Mf0" id="1Z6-Gh-N05"/>
+                        <outlet property="item1" destination="kSh-lX-Mf0" id="yox-bO-ewa"/>
+                        <outlet property="item2" destination="dxZ-dW-KTh" id="HPb-ix-oxE"/>
+                        <outlet property="item3" destination="aWq-dv-fgh" id="zRh-el-h12"/>
+                        <outlet property="item4" destination="iSf-QH-kFX" id="ZWh-QP-NAI"/>
+                        <outlet property="item5" destination="OQl-i3-MTu" id="Qud-ZK-Aya"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSZ-Cc-jjh" userLabel="First Responder" sceneMemberID="firstResponder"/>

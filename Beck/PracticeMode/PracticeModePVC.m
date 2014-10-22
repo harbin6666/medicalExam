@@ -14,11 +14,13 @@
 
 @interface PracticeModePVC () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousBtn;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *favorateBtn;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *pageBtn;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *answerBtn;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *item1;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *item2;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *item3;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *item4;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *item5;
+
+@property (nonatomic, strong) ItemTVC *currentTVC;
 
 @end
 
@@ -29,39 +31,52 @@
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn1.frame = CGRectMake(0, 0, 44, 44);
     [btn1 setTitle:@"上一题" forState:UIControlStateNormal];
-    [btn1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     btn1.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.previousBtn.customView = btn1;
+    self.item1.customView = btn1;
+    [btn1 addTarget:self action:@selector(onPressedBtn1:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.frame = CGRectMake(0, 0, 44, 44);
     [btn2 setTitle:@"查看答案" forState:UIControlStateNormal];
-    [btn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     btn2.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.favorateBtn.customView = btn2;
+    self.item2.customView = btn2;
     [btn2 addTarget:self action:@selector(onPressedBtn2:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn3.frame = CGRectMake(0, 0, 44, 44);
     [btn3 setTitle:@"未做" forState:UIControlStateNormal];
-    [btn3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [btn3 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [btn3 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     btn3.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.pageBtn.customView = btn3;
+    self.item3.customView = btn3;
     [btn3 addTarget:self action:@selector(onPressedBtn3:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn4.frame = CGRectMake(0, 0, 44, 44);
     [btn4 setTitle:@"收藏" forState:UIControlStateNormal];
-    [btn4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn4 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     btn4.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.answerBtn.customView = btn4;
+    self.item4.customView = btn4;
+    [btn4 addTarget:self action:@selector(onPressedBtn4:) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn5 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn5.frame = CGRectMake(0, 0, 44, 44);
     [btn5 setTitle:@"下一题" forState:UIControlStateNormal];
-    [btn5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn5 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [btn5 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [btn5 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     btn5.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.nextBtn.customView = btn5;
+    self.item5.customView = btn5;
+    [btn5 addTarget:self action:@selector(onPressedBtn5:) forControlEvents:UIControlEventTouchUpInside];
     
     self.delegate = self;
     self.dataSource = self;
@@ -84,15 +99,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
     
+    WEAK_SELF;
     [self setViewControllers:@[vc]
                    direction:UIPageViewControllerNavigationDirectionForward
                     animated:NO
-                  completion:NULL];
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configToolBar];
+                  }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,28 +120,58 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)onPressedBtn1:(UIBarButtonItem *)sender {
+- (void)onPressedBtn1:(UIButton *)sender {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
     
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionReverse
+                    animated:YES
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configToolBar];
+                  }];
 }
 
-- (void)onPressedBtn2:(UIBarButtonItem *)sender {
+- (void)onPressedBtn2:(UIButton *)sender {
+    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
+    sender.selected = self.currentTVC.showAnswer;
+    [self.currentTVC.tableView reloadData];
+}
+
+- (void)onPressedBtn3:(UIButton *)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)onPressedBtn3:(UIBarButtonItem *)sender {
+- (void)onPressedBtn4:(UIButton *)sender {
+    self.currentTVC.favorated = !self.currentTVC.favorated;
+    sender.selected = self.currentTVC.favorated;
+}
+
+- (void)onPressedBtn5:(UIButton *)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
-    [self.navigationController pushViewController:vc animated:YES];
+    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    
+    
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:YES
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configToolBar];
+                  }];
 }
 
-- (void)onPressedBtn4:(UIBarButtonItem *)sender {
-    
-}
-
-- (void)onPressedBtn5:(UIBarButtonItem *)sender {
-    
+- (void)configToolBar
+{
+    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
+    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
 }
 
 #pragma mark - <UIPageViewControllerDataSource>

@@ -10,4 +10,10 @@
 
 @interface ItemTVC : BeckTVC
 
+@property (nonatomic) BOOL showAnswer;
+@property (nonatomic) BOOL showNote;
+@property (nonatomic) BOOL favorated;
+@property (nonatomic) BOOL cangoback;
+@property (nonatomic) BOOL cangoforward;
+
 @end

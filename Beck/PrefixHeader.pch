@@ -13,4 +13,7 @@
 #import "UIImage+tool.h"
 #import "OTSBorder.h"
 
+#define WEAK_SELF __weak typeof(self)weakSelf = self
+#define STRONG_SELF typeof(weakSelf)self = weakSelf
+
 #endif
