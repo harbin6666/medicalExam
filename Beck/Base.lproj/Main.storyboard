@@ -963,10 +963,10 @@
             </objects>
             <point key="canvasLocation" x="1653" y="-2964"/>
         </scene>
-        <!--考试模式-->
+        <!--考试模式首页-->
         <scene sceneID="ilg-UT-r5l">
             <objects>
-                <tableViewController id="WuV-xM-oRn" userLabel="考试模式" customClass="ExamHomeTVC" sceneMemberID="viewController">
+                <tableViewController id="WuV-xM-oRn" userLabel="考试模式首页" customClass="ExamHomeTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fS2-Pd-Usf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1281,10 +1281,10 @@
             </objects>
             <point key="canvasLocation" x="415" y="767"/>
         </scene>
-        <!--练习模式-->
+        <!--练习模式首页-->
         <scene sceneID="OqP-Pm-qhJ">
             <objects>
-                <tableViewController id="5mo-h2-S3l" userLabel="练习模式" customClass="PractiseHomeTVC" sceneMemberID="viewController">
+                <tableViewController id="5mo-h2-S3l" userLabel="练习模式首页" customClass="PractiseHomeTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="udq-Xm-eMy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1520,28 +1520,26 @@
         <!--考试模式-->
         <scene sceneID="RdD-0i-D47">
             <objects>
-                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Tbj-Rw-dnW" userLabel="考试模式" customClass="ExamModeVC" sceneMemberID="viewController">
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Tbj-Rw-dnW" userLabel="考试模式" customClass="ExamModePVC" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="39m-vg-JC4"/>
-                        <barButtonItem title="上一题" id="EGF-se-cn7"/>
+                        <barButtonItem title="Item1" id="EGF-se-cn7"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="9Zy-5C-nsy"/>
-                        <barButtonItem title="收藏" id="qfy-H0-WiC" userLabel="收藏"/>
+                        <barButtonItem title="Item2" id="qfy-H0-WiC"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="02v-ec-7dC"/>
-                        <barButtonItem title="1/100" id="pve-yX-7yG" userLabel="1/100"/>
+                        <barButtonItem title="Item3" id="pve-yX-7yG"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="TPO-zV-th3"/>
-                        <barButtonItem title="交卷" id="M6b-0o-Fgz"/>
+                        <barButtonItem title="Item4" id="M6b-0o-Fgz"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="OqA-yb-Vgm"/>
-                        <barButtonItem title="下一题" id="4eQ-T7-CG3"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xWL-fa-7xT"/>
+                        <barButtonItem title="Item5" id="4eQ-T7-CG3"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="cqA-2c-1Ak"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="favorateBtn" destination="qfy-H0-WiC" id="L2c-FF-kgb"/>
-                        <outlet property="nextBtn" destination="4eQ-T7-CG3" id="hHz-ht-Ond"/>
-                        <outlet property="pageBtn" destination="pve-yX-7yG" id="n6x-aL-PU8"/>
-                        <outlet property="previousBtn" destination="EGF-se-cn7" id="6Lv-Aj-Y4y"/>
-                        <outlet property="submitBtn" destination="M6b-0o-Fgz" id="zkf-CL-jnu"/>
+                        <outlet property="item1" destination="EGF-se-cn7" id="G2r-s4-3IB"/>
+                        <outlet property="item2" destination="qfy-H0-WiC" id="YWs-6L-sZu"/>
+                        <outlet property="item3" destination="pve-yX-7yG" id="0Bc-cv-DHX"/>
+                        <outlet property="item4" destination="M6b-0o-Fgz" id="VYW-L5-xgv"/>
+                        <outlet property="item5" destination="4eQ-T7-CG3" id="WCr-Wc-dZ4"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIU-yS-Vg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1639,37 +1637,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMu-B2-aga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="347" y="-2380"/>
-        </scene>
-        <!--智能出题-->
-        <scene sceneID="SeR-5l-Adu">
-            <objects>
-                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="syt-lw-Ami" userLabel="智能出题" customClass="AutoItemsVC" sceneMemberID="viewController">
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EYC-wZ-Fr8"/>
-                        <barButtonItem title="上一题" id="YxJ-qL-JHT"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="txp-dM-rFY"/>
-                        <barButtonItem title="收藏" id="o8J-eZ-ERL" userLabel="收藏"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="W7O-CF-053"/>
-                        <barButtonItem title="1/100" id="Zd4-78-n8o" userLabel="1/100"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="q4h-ao-xri"/>
-                        <barButtonItem title="查看答案" id="3q8-IG-bvG" userLabel="查看答案"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2jr-Z7-O3h"/>
-                        <barButtonItem title="下一题" id="0K3-2N-NcX"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="EpY-1U-Osy"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="1wA-s1-abA"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="answerBtn" destination="3q8-IG-bvG" id="Mpv-uz-K1D"/>
-                        <outlet property="favorateBtn" destination="o8J-eZ-ERL" id="kTe-ls-0mK"/>
-                        <outlet property="nextBtn" destination="0K3-2N-NcX" id="p4E-4N-aHu"/>
-                        <outlet property="pageBtn" destination="Zd4-78-n8o" id="uXU-ud-Ejk"/>
-                        <outlet property="previousBtn" destination="YxJ-qL-JHT" id="RLb-h1-wGK"/>
-                    </connections>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SH2-CK-6hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1179" y="875"/>
         </scene>
         <!--考点资讯-->
         <scene sceneID="W4m-Ka-Dh7">
@@ -2034,6 +2001,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="JtX-Wk-bPn" kind="push" id="2Uc-z3-ed7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -2042,9 +2012,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xIa-3G-aS6"/>
-                    <connections>
-                        <segue destination="JtX-Wk-bPn" kind="push" identifier="toChooseSection" id="Gu0-Aa-23T"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETq-eg-gF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

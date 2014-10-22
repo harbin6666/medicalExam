@@ -1,18 +1,18 @@
 //
-//  PracticeModePVC.m
+//  ExamModePVC.m
 //  Beck
 //
-//  Created by Aimy on 10/9/14.
+//  Created by Aimy on 10/10/14.
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import "PracticeModePVC.h"
+#import "ExamModePVC.h"
 
 #import "ItemTVC.h"
 
 #import "AnswerCVC.h"
 
-@interface PracticeModePVC ()
+@interface ExamModePVC ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *item1;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *item2;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation PracticeModePVC
+@implementation ExamModePVC
 
 - (void)awakeFromNib
 {
@@ -40,7 +40,7 @@
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.frame = CGRectMake(0, 0, 44, 44);
-    [btn2 setTitle:@"查看答案" forState:UIControlStateNormal];
+    [btn2 setTitle:@"收藏" forState:UIControlStateNormal];
     [btn2 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
@@ -60,7 +60,7 @@
     
     UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn4.frame = CGRectMake(0, 0, 44, 44);
-    [btn4 setTitle:@"收藏" forState:UIControlStateNormal];
+    [btn4 setTitle:@"交卷" forState:UIControlStateNormal];
     [btn4 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
@@ -113,11 +113,6 @@
                   }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)onPressedBtn1:(UIButton *)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
@@ -134,9 +129,8 @@
 }
 
 - (void)onPressedBtn2:(UIButton *)sender {
-    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
-    sender.selected = self.currentTVC.showAnswer;
-    [self.currentTVC.tableView reloadData];
+    self.currentTVC.favorated = !self.currentTVC.favorated;
+    sender.selected = self.currentTVC.favorated;
 }
 
 - (void)onPressedBtn3:(UIButton *)sender {
@@ -146,8 +140,9 @@
 }
 
 - (void)onPressedBtn4:(UIButton *)sender {
-    self.currentTVC.favorated = !self.currentTVC.favorated;
-    sender.selected = self.currentTVC.favorated;
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"是否交卷?" message:@"" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+    alert.delegate = self;
+    [alert show];
 }
 
 - (void)onPressedBtn5:(UIButton *)sender {
@@ -187,16 +182,9 @@
     return vc;
 }
 
-#pragma mark - <UIPageViewControllerDelegate>
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
 }
-*/
 
 @end
