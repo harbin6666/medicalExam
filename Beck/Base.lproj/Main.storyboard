@@ -1037,6 +1037,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xep-Fu-YAx" kind="push" id="YUH-0G-nAk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1049,6 +1052,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JT3-mF-yoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1653" y="-2964"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="PNc-aZ-CwU">
+            <objects>
+                <tableViewController id="Xep-Fu-YAx" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wKC-kK-sx4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e7J-X9-TUH">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e7J-X9-TUH" id="cYa-H5-8yf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Xep-Fu-YAx" id="2DS-PR-3Pg"/>
+                            <outlet property="delegate" destination="Xep-Fu-YAx" id="VfX-F7-kU8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="64W-1y-2Ui"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKN-Ni-Rvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088" y="-2964"/>
         </scene>
         <!--考试模式首页-->
         <scene sceneID="ilg-UT-r5l">
@@ -1328,7 +1358,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnW-3S-Ube" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="-2971"/>
+            <point key="canvasLocation" x="2506" y="-2964"/>
         </scene>
         <!--选择题库-->
         <scene sceneID="afx-ge-o8b">
