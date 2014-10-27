@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="AP6-oX-m96" id="3ut-22-HOR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bi2-Cn-6Vi"/>
+                    <navigationItem key="navigationItem" title="考试模式" id="SyG-ju-yVo"/>
                     <connections>
                         <segue destination="T2J-yf-tBl" kind="push" identifier="toSimulationExam" id="jk4-3q-yxO"/>
                         <segue destination="8Xc-b4-9JT" kind="push" identifier="toChooseQuestionBank" id="qzT-QJ-fyK"/>
@@ -351,7 +351,7 @@
                             <outlet property="delegate" destination="8Xc-b4-9JT" id="Dd3-Pp-j1c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="lUP-L0-9Ux"/>
+                    <navigationItem key="navigationItem" title="考试科目" id="IJb-m7-JZp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pS-5K-3pk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

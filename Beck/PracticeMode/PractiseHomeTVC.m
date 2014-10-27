@@ -20,7 +20,7 @@
 {
     [super awakeFromNib];
     
-    self.names = @[@"章节练习", @"题型练习"];
+    self.names = @[@"药事管理与法规", @"药理学", @"药物分析", @"药剂学", @"药物化学", @"药学综合知识与技能"];
 }
 
 - (void)viewDidLoad {
@@ -49,18 +49,6 @@
     cell.textLabel.text = self.names[indexPath.row];
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-//    if (indexPath.row == 0) {
-//        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
-//    }
-//    else {
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
 }
 
 @end

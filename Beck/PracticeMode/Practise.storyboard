@@ -83,7 +83,7 @@
                             <outlet property="delegate" destination="0ss-bQ-uEr" id="Lsh-dq-msv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qf0-Cy-iXM"/>
+                    <navigationItem key="navigationItem" title="选择考试课程" id="pn4-ck-FnL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU8-Rc-ox1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +121,7 @@
                             <outlet property="delegate" destination="8lf-yM-XVR" id="RCU-n4-ya0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7Rf-D0-WhG"/>
+                    <navigationItem key="navigationItem" title="选择考试科目" id="sVO-kp-GHM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgf-wQ-Pyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SectionCell" textLabel="2tf-PI-7dQ" detailTextLabel="APE-z8-KXp" style="IBUITableViewCellStyleValue1" id="EqV-JE-5GA">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="2tf-PI-7dQ" detailTextLabel="APE-z8-KXp" style="IBUITableViewCellStyleValue1" id="EqV-JE-5GA">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EqV-JE-5GA" id="3b5-7P-uto">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -155,26 +155,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonCell" id="8ry-IC-cM2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8ry-IC-cM2" id="tkd-JL-8Kr">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKo-Tu-o80">
-                                            <rect key="frame" x="20" y="7" width="280" height="30"/>
-                                            <color key="backgroundColor" red="0.62745098040000002" green="0.53333333329999999" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" title="开始测试">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="OC7-ep-qxH" kind="push" id="b1A-nj-aKe"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="OC7-ep-qxH" kind="push" id="Ttk-IQ-wly"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -182,7 +165,7 @@
                             <outlet property="delegate" destination="zih-Sh-PMZ" id="JSI-r3-iab"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="FdY-ZY-fV8"/>
+                    <navigationItem key="navigationItem" title="选择考试章节" id="rU4-Wa-opf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-E3-uTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
