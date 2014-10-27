@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D094DE419FE753200472508 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Base.storyboard */; };
 		3D0BED8919EA2AF300B794B5 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BED8819EA2AF300B794B5 /* AnswerCVC.m */; };
 		3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BEDC019EA443700B794B5 /* BeckTBC.m */; };
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
@@ -56,6 +57,11 @@
 		3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449D19E6C03A009A1A1F /* UIImage+tool.m */; };
 		3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944A019E6C29E009A1A1F /* OTSBorder.m */; };
 		3D9944B019E6CF74009A1A1F /* SettingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944AC19E6CF74009A1A1F /* SettingTVC.m */; };
+		3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */; };
+		3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AA19FE79EF002CD73D /* Practise.storyboard */; };
+		3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AC19FE79FB002CD73D /* Exam.storyboard */; };
+		3DB238D119FE8026002CD73D /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238D019FE8026002CD73D /* More.storyboard */; };
+		3DB238D319FE803E002CD73D /* MyAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238D219FE803E002CD73D /* MyAccount.storyboard */; };
 		3DC1C57719E645FD004F23E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57619E645FD004F23E1 /* main.m */; };
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC1C58119E645FD004F23E1 /* Main.storyboard */; };
@@ -99,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D094DE319FE753200472508 /* Base.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Base.storyboard; sourceTree = "<group>"; };
 		3D0BED8719EA2AF300B794B5 /* AnswerCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVC.h; sourceTree = "<group>"; };
 		3D0BED8819EA2AF300B794B5 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
 		3D0BEDBF19EA443700B794B5 /* BeckTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTBC.h; sourceTree = "<group>"; };
@@ -220,6 +227,12 @@
 		3D9944A019E6C29E009A1A1F /* OTSBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSBorder.m; sourceTree = "<group>"; };
 		3D9944AB19E6CF74009A1A1F /* SettingTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTVC.h; sourceTree = "<group>"; };
 		3D9944AC19E6CF74009A1A1F /* SettingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTVC.m; sourceTree = "<group>"; };
+		3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckHomepageVC.h; sourceTree = "<group>"; };
+		3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckHomepageVC.m; sourceTree = "<group>"; };
+		3DB238AA19FE79EF002CD73D /* Practise.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practise.storyboard; sourceTree = "<group>"; };
+		3DB238AC19FE79FB002CD73D /* Exam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
+		3DB238D019FE8026002CD73D /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		3DB238D219FE803E002CD73D /* MyAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyAccount.storyboard; sourceTree = "<group>"; };
 		3DC1C57119E645FD004F23E1 /* Beck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC1C57519E645FD004F23E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC1C57619E645FD004F23E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -351,6 +364,7 @@
 				3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */,
 				3D2521D119F5340800FC72A7 /* AlipayTVC.h */,
 				3D2521D219F5340800FC72A7 /* AlipayTVC.m */,
+				3DB238AC19FE79FB002CD73D /* Exam.storyboard */,
 			);
 			name = "考试模式";
 			path = ExamMode;
@@ -367,6 +381,7 @@
 				3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */,
 				3D2521D419F53A4800FC72A7 /* PractiseHomeTVC.h */,
 				3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */,
+				3DB238AA19FE79EF002CD73D /* Practise.storyboard */,
 			);
 			name = "练习模式";
 			path = PracticeMode;
@@ -381,6 +396,7 @@
 				3D2521E819F5418C00FC72A7 /* MoreHomeTVC.m */,
 				3D25220919F5455100FC72A7 /* ChooseExamTVC.h */,
 				3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */,
+				3DB238D019FE8026002CD73D /* More.storyboard */,
 			);
 			name = "更多";
 			path = More;
@@ -553,6 +569,7 @@
 				3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */,
 				3D2521E319F53F8300FC72A7 /* StatisticTVC.h */,
 				3D2521E419F53F8300FC72A7 /* StatisticTVC.m */,
+				3DB238D219FE803E002CD73D /* MyAccount.storyboard */,
 			);
 			name = "个人中心";
 			path = MyAccount;
@@ -682,6 +699,9 @@
 			children = (
 				3DC68ABA19F54A6A003DB313 /* BeckLoginVC.h */,
 				3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */,
+				3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */,
+				3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */,
+				3D094DE319FE753200472508 /* Base.storyboard */,
 			);
 			name = "登陆";
 			path = Login;
@@ -803,7 +823,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB238D319FE803E002CD73D /* MyAccount.storyboard in Resources */,
+				3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */,
+				3D094DE419FE753200472508 /* Base.storyboard in Resources */,
+				3DB238D119FE8026002CD73D /* More.storyboard in Resources */,
 				3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */,
+				3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */,
 				3DC1C58319E645FD004F23E1 /* Main.storyboard in Resources */,
 				3D38363C19F6A22B006C9DB0 /* RongCloud.bundle in Resources */,
 			);
@@ -899,6 +924,7 @@
 				3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */,
 				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
 				3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */,
+				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
 				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
 				3D389D9319EC06EE00BDDAAD /* ExamResultCell.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,

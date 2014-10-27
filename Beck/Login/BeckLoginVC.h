@@ -8,6 +8,6 @@
 
 #import "BeckTVC.h"
 
-@interface BeckLoginVC : BeckTVC
+@interface BeckLoginVC : BeckVC
 
 @end

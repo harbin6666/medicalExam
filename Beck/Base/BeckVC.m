@@ -48,16 +48,16 @@
 
 - (void)configNavibar
 {
-    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_0) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-    }
-
-    UIButton *leftBtn = [UIButton viewWithFrame:CGRectMake(0, 0, 44, 44)];
-    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [leftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [leftBtn addTarget:self action:@selector(leftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
-    self.navigationItem.leftBarButtonItem = leftBtnItem;
+//    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_0) {
+//        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+//    }
+//
+//    UIButton *leftBtn = [UIButton viewWithFrame:CGRectMake(0, 0, 44, 44)];
+//    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
+//    [leftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [leftBtn addTarget:self action:@selector(leftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+//    self.navigationItem.leftBarButtonItem = leftBtnItem;
 }
 
 - (void)leftBtnClick:(UIBarButtonItem *)sender

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AP6-oX-m96">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--考试模式首页-->
+        <scene sceneID="XCG-6v-cPy">
+            <objects>
+                <tableViewController id="AP6-oX-m96" userLabel="考试模式首页" customClass="ExamHomeTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bxb-eu-6xN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="3yW-Dz-eyU" style="IBUITableViewCellStyleDefault" id="xcp-Qy-Vo6">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xcp-Qy-Vo6" id="uvI-u5-wMJ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3yW-Dz-eyU">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AP6-oX-m96" id="TpT-Gg-WBt"/>
+                            <outlet property="delegate" destination="AP6-oX-m96" id="3ut-22-HOR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bi2-Cn-6Vi"/>
+                    <connections>
+                        <segue destination="T2J-yf-tBl" kind="push" identifier="toSimulationExam" id="jk4-3q-yxO"/>
+                        <segue destination="8Xc-b4-9JT" kind="push" identifier="toChooseQuestionBank" id="qzT-QJ-fyK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tce-0v-TfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1442" y="-2185"/>
+        </scene>
+        <!--考试模式 NC-->
+        <scene sceneID="cOz-fl-4G6">
+            <objects>
+                <navigationController id="mPR-Wy-esM" userLabel="考试模式 NC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="考试模式" id="PaK-OE-lC3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eo4-3m-Lcr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AP6-oX-m96" kind="relationship" relationship="rootViewController" id="UtA-Hg-G01"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6LI-MT-zRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1936" y="-2185"/>
+        </scene>
+        <!--模拟考试-->
+        <scene sceneID="fh5-Ne-xVg">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="T2J-yf-tBl" userLabel="模拟考试" customClass="SimulationExamTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="exB-0i-3qK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="3PW-iJ-hUr" style="IBUITableViewCellStyleDefault" id="A4L-ky-Gzm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A4L-ky-Gzm" id="b7d-nl-zWM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3PW-iJ-hUr">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pqM-eH-Cdl" kind="push" id="ew9-xQ-MYg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="T2J-yf-tBl" id="UbF-Rs-Uds"/>
+                            <outlet property="delegate" destination="T2J-yf-tBl" id="SVF-gL-vbM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OaX-JZ-7ZI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1GM-6u-CJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="-2846"/>
+        </scene>
+        <!--支付-->
+        <scene sceneID="6ph-3w-d3M">
+            <objects>
+                <tableViewController id="pqM-eH-Cdl" userLabel="支付" customClass="PayTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="K43-Jl-Fo9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="nrs-ws-irB" detailTextLabel="VjF-65-HRG" style="IBUITableViewCellStyleValue1" id="mnb-k2-nfD">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mnb-k2-nfD" id="gh6-Ng-IBE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nrs-ws-irB">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VjF-65-HRG">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pqM-eH-Cdl" id="f0C-C2-uSI"/>
+                            <outlet property="delegate" destination="pqM-eH-Cdl" id="dGu-kb-fbL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nRy-sZ-VVg"/>
+                    <connections>
+                        <segue destination="M0i-fC-Eq8" kind="push" identifier="toPayByAlipay" id="1kE-xs-Nux"/>
+                        <segue destination="hq5-9a-Q2O" kind="push" identifier="toPayByIntegration" id="95A-al-4w2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXZ-af-xe9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="-2846"/>
+        </scene>
+        <!--支付宝支付-->
+        <scene sceneID="k8C-Sb-xPr">
+            <objects>
+                <tableViewController id="M0i-fC-Eq8" userLabel="支付宝支付" customClass="AlipayTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pIb-Yn-LyK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lS8-dB-MMm">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lS8-dB-MMm" id="m3x-bD-RWt">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="M0i-fC-Eq8" id="15m-pE-EmI"/>
+                            <outlet property="delegate" destination="M0i-fC-Eq8" id="hES-iK-uEb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="j2i-uX-mEQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2m-34-VUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-2846"/>
+        </scene>
+        <!--积分支付-->
+        <scene sceneID="pvP-hf-Vfe">
+            <objects>
+                <tableViewController id="hq5-9a-Q2O" userLabel="积分支付" customClass="IntegrationTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="unS-yf-bKl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JHW-eS-qK3">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHW-eS-qK3" id="Ke0-Bj-Xda">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hq5-9a-Q2O" id="T8e-1D-yRR"/>
+                            <outlet property="delegate" destination="hq5-9a-Q2O" id="d1a-XG-Nnh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9fo-gL-azO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oO-Ig-YV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-3493"/>
+        </scene>
+        <!--考试模式-->
+        <scene sceneID="4dS-gL-oRT">
+            <objects>
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="f68-Aq-7ve" userLabel="考试模式" customClass="ExamModePVC" sceneMemberID="viewController">
+                    <toolbarItems>
+                        <barButtonItem title="Item1" id="uAG-IB-2jL"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="z6H-eP-wgt"/>
+                        <barButtonItem title="Item2" id="1rt-yY-pJa"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jnM-uc-lM0"/>
+                        <barButtonItem title="Item3" id="8tU-ob-oR9"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pxh-R5-h0E"/>
+                        <barButtonItem title="Item4" id="xpL-ha-ch5"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="aSd-XB-EmM"/>
+                        <barButtonItem title="Item5" id="j0j-Pi-cxD"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="2oX-c7-Mjc"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="item1" destination="uAG-IB-2jL" id="ZAs-ef-TXM"/>
+                        <outlet property="item2" destination="1rt-yY-pJa" id="jA8-DC-8si"/>
+                        <outlet property="item3" destination="8tU-ob-oR9" id="CWp-Vk-eyl"/>
+                        <outlet property="item4" destination="xpL-ha-ch5" id="HMP-ZR-2iP"/>
+                        <outlet property="item5" destination="j0j-Pi-cxD" id="LjN-ZI-B0v"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kK-lc-Sj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-2185"/>
+        </scene>
+        <!--考场设置-->
+        <scene sceneID="oap-FO-pc7">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="rdm-4O-99e" userLabel="考场设置" customClass="ExamRoomSimulate" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cwb-M6-ejh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstCell" textLabel="UUJ-5c-cGr" imageView="Eab-nP-sBi" style="IBUITableViewCellStyleDefault" id="T1n-hL-6d3">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1n-hL-6d3" id="QA9-MM-Xho">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UUJ-5c-cGr">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="second" id="Eab-nP-sBi">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondCell" textLabel="ULJ-vm-Cg0" style="IBUITableViewCellStyleDefault" id="iwS-Lc-tJp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iwS-Lc-tJp" id="esc-xS-u1Q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ULJ-vm-Cg0">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Title">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" textLabel="zGB-qu-pCa" style="IBUITableViewCellStyleDefault" id="Ne2-DY-qAj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ne2-DY-qAj" id="Dt9-Lv-aEw">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="温馨提示：题量设置默认为基础题量，您可以根据自身的学习情况进行自定义设置" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zGB-qu-pCa">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.62745098040000002" green="0.53333333329999999" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonCell" id="CJ9-MG-W8o">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CJ9-MG-W8o" id="fRe-0n-mK2">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0V-te-quz">
+                                            <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                            <color key="backgroundColor" red="0.62745098040000002" green="0.53333333329999999" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="开始考试">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rdm-4O-99e" id="IYL-yG-xlG"/>
+                            <outlet property="delegate" destination="rdm-4O-99e" id="b1j-az-Et2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dW6-FR-dg0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ue0-bt-Tph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="-2185"/>
+        </scene>
+        <!--选择题库-->
+        <scene sceneID="37z-xh-Y3Q">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="8Xc-b4-9JT" userLabel="选择题库" customClass="ChooseQuestionBankTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LY6-J5-Y9q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubjectCell" textLabel="Cfm-6r-5ef" style="IBUITableViewCellStyleDefault" id="orB-r9-Bhx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="orB-r9-Bhx" id="gef-Hj-9Eh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cfm-6r-5ef">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="P8q-FR-2vQ" kind="push" id="R3l-CH-6zp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8Xc-b4-9JT" id="W3W-f3-VL9"/>
+                            <outlet property="delegate" destination="8Xc-b4-9JT" id="Dd3-Pp-j1c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lUP-L0-9Ux"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pS-5K-3pk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="-2185"/>
+        </scene>
+        <!--选择章节-->
+        <scene sceneID="HCk-e7-PRm">
+            <objects>
+                <tableViewController id="P8q-FR-2vQ" userLabel="选择章节" customClass="ChooseSectionTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vdy-O5-gNH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SectionCell" textLabel="TNQ-6T-tjb" detailTextLabel="zpk-6Q-Xd6" style="IBUITableViewCellStyleValue1" id="q5O-5m-hMl">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q5O-5m-hMl" id="oeN-7u-VqK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TNQ-6T-tjb">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zpk-6Q-Xd6">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ButtonCell" id="uDp-7M-5Px">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uDp-7M-5Px" id="T23-h5-n6Q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfz-uu-M46">
+                                            <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                            <color key="backgroundColor" red="0.62745098040000002" green="0.53333333329999999" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="开始测试">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="f68-Aq-7ve" kind="push" id="4Fy-yT-ppc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P8q-FR-2vQ" id="ypb-uV-t7n"/>
+                            <outlet property="delegate" destination="P8q-FR-2vQ" id="d9N-xk-qHq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qHx-hJ-fE3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8q-Do-scx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="-2185"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="second" width="30" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
