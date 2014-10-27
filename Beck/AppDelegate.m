@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "RCIM.h"
+//#import "RCIM.h"
 
 #import "Item.h"
 
@@ -43,7 +43,8 @@
     }
     
     
-    [RCIM initWithAppKey:@"pwe86ga5er666" deviceToken:nil];
+//注册
+//    [RCIM initWithAppKey:@"pwe86ga5er666" deviceToken:nil];
     
 //获取token
 //    NSDictionary *dict = @{@"userId": @123456, @"name": @"aimy", @"portraitUri": @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png"};
