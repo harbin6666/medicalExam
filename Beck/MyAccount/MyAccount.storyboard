@@ -46,6 +46,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="EZS-17-63R" kind="push" id="EPR-t3-jZV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,7 +59,6 @@
                     <navigationItem key="navigationItem" id="EHO-kP-cJd"/>
                     <connections>
                         <outlet property="segmentedControl" destination="7W3-uf-k7t" id="Sqy-LR-qYa"/>
-                        <segue destination="EZS-17-63R" kind="push" identifier="toErrorItemsCategory" id="KUs-sH-Lqk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z67-RH-GOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,7 +112,7 @@
         <!--个人中心-->
         <scene sceneID="Scg-qH-cY6">
             <objects>
-                <tableViewController id="guB-5w-9aC" userLabel="个人中心" customClass="MyAccountHomeTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="guB-5w-9aC" userLabel="个人中心" customClass="MyAccountHomeTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4mg-gT-IEs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,6 +306,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="7Os-XP-GQf" kind="push" id="8qJ-Vb-aEH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -314,7 +319,6 @@
                     <navigationItem key="navigationItem" id="C7k-If-3nS"/>
                     <connections>
                         <outlet property="segmentedControl" destination="tY9-no-pDT" id="Gjz-9H-fdS"/>
-                        <segue destination="7Os-XP-GQf" kind="push" identifier="toFaoratetemsCategory" id="3sq-Q6-doo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcq-JA-4LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,6 +362,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Jtg-m7-Nsz" kind="push" id="y3H-57-vTR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -368,7 +375,6 @@
                     <navigationItem key="navigationItem" id="H3D-lh-bKm"/>
                     <connections>
                         <outlet property="segmentedControl" destination="6fE-9O-50E" id="rAt-ai-xc6"/>
-                        <segue destination="Jtg-m7-Nsz" kind="push" identifier="toNoteCategory" id="4Gg-PN-iYc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="not-gA-cbF" userLabel="First Responder" sceneMemberID="firstResponder"/>

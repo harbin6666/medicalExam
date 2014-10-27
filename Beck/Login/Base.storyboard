@@ -24,7 +24,7 @@
         <!--登录-->
         <scene sceneID="yBg-5Y-5rv">
             <objects>
-                <viewController id="MRK-IG-3lV" customClass="BeckLoginVC" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="MRK-IG-3lV" customClass="BeckLoginVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LeU-xc-Dg4"/>
                         <viewControllerLayoutGuide type="bottom" id="RXY-9V-uo9"/>
@@ -365,6 +365,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SN3-es-V9Y"/>
+        <segue reference="FM5-jz-sJE"/>
     </inferredMetricsTieBreakers>
 </document>
