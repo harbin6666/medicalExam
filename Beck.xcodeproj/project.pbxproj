@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3D094DE419FE753200472508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Main.storyboard */; };
-		3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BEDC019EA443700B794B5 /* BeckTBC.m */; };
 		3D0EFB9319FFBF820017A539 /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9219FFBF820017A539 /* FeedBackVC.m */; };
 		3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9519FFBF980017A539 /* HelpVC.m */; };
 		3D0EFB9919FFC4EA0017A539 /* ViewItemPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9819FFC4EA0017A539 /* ViewItemPVC.m */; };
@@ -81,8 +80,6 @@
 
 /* Begin PBXFileReference section */
 		3D094DE319FE753200472508 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3D0BEDBF19EA443700B794B5 /* BeckTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTBC.h; sourceTree = "<group>"; };
-		3D0BEDC019EA443700B794B5 /* BeckTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTBC.m; sourceTree = "<group>"; };
 		3D0EFB9119FFBF820017A539 /* FeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
 		3D0EFB9219FFBF820017A539 /* FeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
 		3D0EFB9419FFBF980017A539 /* HelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
@@ -440,8 +437,6 @@
 				3D3835E019F69A85006C9DB0 /* 工具 */,
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
-				3D0BEDBF19EA443700B794B5 /* BeckTBC.h */,
-				3D0BEDC019EA443700B794B5 /* BeckTBC.m */,
 				3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */,
 				3D99448C19E6AD27009A1A1F /* Media.xcassets */,
 				3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */,
@@ -721,7 +716,6 @@
 				3D2521F119F543CB00FC72A7 /* TestingCentreCategoryTVC.m in Sources */,
 				3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
-				3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */,
 				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
 				3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */,
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
