@@ -19,6 +19,7 @@
 		3D0EFBAD19FFCA530017A539 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAC19FFCA530017A539 /* FindPasswordVC.m */; };
 		3D0EFBB219FFCB8B0017A539 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */; };
 		3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */; };
+		3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
 		3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521BB19F526C500FC72A7 /* BeckVC.m */; };
 		3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */; };
@@ -214,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */,
 				3DB238D419FE8AC3002CD73D /* Foundation.framework in Frameworks */,
 				3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */,
 				8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */,
