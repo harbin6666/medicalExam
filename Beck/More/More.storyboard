@@ -271,10 +271,10 @@
             </objects>
             <point key="canvasLocation" x="-1914" y="-181"/>
         </scene>
-        <!--Modify PasswordVC-->
+        <!--修改密码-->
         <scene sceneID="3IK-jz-yjh">
             <objects>
-                <viewController id="0ex-j1-wz7" customClass="ModifyPasswordVC" sceneMemberID="viewController">
+                <viewController id="0ex-j1-wz7" userLabel="修改密码" customClass="ModifyPasswordVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cei-2t-jm0"/>
                         <viewControllerLayoutGuide type="bottom" id="adv-eh-5KN"/>
