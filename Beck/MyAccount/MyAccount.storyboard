@@ -47,7 +47,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="EZS-17-63R" kind="push" id="EPR-t3-jZV"/>
+                                    <segue destination="tE6-vy-aDm" kind="push" id="OjE-Bk-vh3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -56,7 +56,7 @@
                             <outlet property="delegate" destination="SYG-6p-dsv" id="G2e-nu-rG2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EHO-kP-cJd"/>
+                    <navigationItem key="navigationItem" title="错题重做" id="ZdE-dL-R4k"/>
                     <connections>
                         <outlet property="segmentedControl" destination="7W3-uf-k7t" id="Sqy-LR-qYa"/>
                     </connections>
@@ -64,33 +64,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z67-RH-GOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1203" y="-1151"/>
-        </scene>
-        <!--错题重做分类-->
-        <scene sceneID="Bbz-kk-qjx">
-            <objects>
-                <tableViewController id="EZS-17-63R" userLabel="错题重做分类" customClass="ErrorItemsCategoryTVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DfS-LD-z5E">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorItemsCategoryCell" id="Gef-bx-w68">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gef-bx-w68" id="ikP-xD-0qS">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="EZS-17-63R" id="jBr-ez-jOd"/>
-                            <outlet property="delegate" destination="EZS-17-63R" id="HVL-gL-TXd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="dik-Cj-HwI"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AhM-2P-CXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1813" y="-1151"/>
         </scene>
         <!--我的账户 NC-->
         <scene sceneID="rjJ-pU-iAy">
@@ -138,7 +111,7 @@
                             <outlet property="delegate" destination="guB-5w-9aC" id="ezk-oy-Zni"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TSu-dg-fe5"/>
+                    <navigationItem key="navigationItem" title="个人中心" id="xhu-Ae-uA6"/>
                     <connections>
                         <segue destination="eYf-nT-bS6" kind="push" identifier="toNotes" id="CTu-PM-Zj8"/>
                         <segue destination="dTN-76-Te1" kind="push" identifier="toFavorate" id="09e-E9-YkR"/>
@@ -307,7 +280,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7Os-XP-GQf" kind="push" id="8qJ-Vb-aEH"/>
+                                    <segue destination="tE6-vy-aDm" kind="push" id="au8-qX-qFs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -316,7 +289,7 @@
                             <outlet property="delegate" destination="dTN-76-Te1" id="MVP-jm-hVU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="C7k-If-3nS"/>
+                    <navigationItem key="navigationItem" title="题目收藏" id="PFc-c4-pcP"/>
                     <connections>
                         <outlet property="segmentedControl" destination="tY9-no-pDT" id="Gjz-9H-fdS"/>
                     </connections>
@@ -363,7 +336,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jtg-m7-Nsz" kind="push" id="y3H-57-vTR"/>
+                                    <segue destination="tE6-vy-aDm" kind="push" id="oao-a5-5O1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -372,7 +345,7 @@
                             <outlet property="delegate" destination="eYf-nT-bS6" id="6Of-1s-FK1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="H3D-lh-bKm"/>
+                    <navigationItem key="navigationItem" title="查看笔记" id="1tr-MD-a0z"/>
                     <connections>
                         <outlet property="segmentedControl" destination="6fE-9O-50E" id="rAt-ai-xc6"/>
                     </connections>
@@ -381,59 +354,34 @@
             </objects>
             <point key="canvasLocation" x="1203" y="-2631"/>
         </scene>
-        <!--题目收藏分类-->
-        <scene sceneID="KDc-Np-OJb">
+        <!--查看题目-->
+        <scene sceneID="Q9s-nm-5zl">
             <objects>
-                <tableViewController id="7Os-XP-GQf" userLabel="题目收藏分类" customClass="FavorateItemsCategoryTVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="feT-da-Dz9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavorateItemsCategoryCell" id="pfe-aR-zkc">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pfe-aR-zkc" id="xkd-kp-7s5">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="7Os-XP-GQf" id="MnD-Od-lqN"/>
-                            <outlet property="delegate" destination="7Os-XP-GQf" id="EZ5-bx-awo"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="1iU-c7-df2"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bjo-hu-V3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tE6-vy-aDm" userLabel="查看题目" customClass="ViewItemPVC" sceneMemberID="viewController">
+                    <toolbarItems>
+                        <barButtonItem title="Item1" id="mKv-lL-hSm"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="X9A-pa-tIM"/>
+                        <barButtonItem title="Item2" id="6dn-iB-7wm"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="s24-AD-zBU"/>
+                        <barButtonItem title="Item3" id="ffX-kn-eA7"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tTl-0p-EZM"/>
+                        <barButtonItem title="Item4" id="7tu-BJ-8f5"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="99O-y9-UJS"/>
+                        <barButtonItem title="Item5" id="X8c-rC-vYj"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="Nvn-sE-Vk5"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="item1" destination="mKv-lL-hSm" id="gdE-B1-U9T"/>
+                        <outlet property="item2" destination="6dn-iB-7wm" id="0rB-ii-Quh"/>
+                        <outlet property="item3" destination="ffX-kn-eA7" id="Dgk-Ve-gQ1"/>
+                        <outlet property="item4" destination="7tu-BJ-8f5" id="sJH-M3-nul"/>
+                        <outlet property="item5" destination="X8c-rC-vYj" id="rKy-QQ-cA2"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHf-l9-xle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="-1922"/>
-        </scene>
-        <!--笔记总结分类-->
-        <scene sceneID="T5f-uU-FPK">
-            <objects>
-                <tableViewController id="Jtg-m7-Nsz" userLabel="笔记总结分类" customClass="NotesCategoryTVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5fM-6u-ptD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotesCategoryCell" id="jJZ-CR-epH">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJZ-CR-epH" id="2l3-3Y-k7N">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Jtg-m7-Nsz" id="aAL-Ed-MON"/>
-                            <outlet property="delegate" destination="Jtg-m7-Nsz" id="TH0-dA-B30"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="JhJ-2r-44w"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dsO-DD-z68" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1813" y="-2631"/>
+            <point key="canvasLocation" x="1782" y="-1922"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -441,4 +389,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="oao-a5-5O1"/>
+    </inferredMetricsTieBreakers>
 </document>
