@@ -33,5 +33,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onTag:(id)sender {
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+}
 
 @end

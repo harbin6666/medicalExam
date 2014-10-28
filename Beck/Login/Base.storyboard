@@ -103,6 +103,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xr1-GM-mye" appends="YES" id="BAP-zW-3wB"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="登录" id="Asa-p2-Lfv">
                         <barButtonItem key="rightBarButtonItem" title="注册" id="IYt-bQ-jnn">
@@ -114,6 +118,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFA-fy-ip4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xr1-GM-mye">
+                    <connections>
+                        <action selector="onTag:" destination="MRK-IG-3lV" id="jtO-XU-ihc"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-26" y="239"/>
         </scene>
