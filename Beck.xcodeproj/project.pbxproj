@@ -105,6 +105,7 @@
 		3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
 		3D0EFBB019FFCB8B0017A539 /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
 		3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
+		3D0EFBB419FFD22D0017A539 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3D2521B719F526AE00FC72A7 /* BeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTVC.h; sourceTree = "<group>"; };
 		3D2521B819F526AE00FC72A7 /* BeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTVC.m; sourceTree = "<group>"; };
 		3D2521BA19F526C500FC72A7 /* BeckVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckVC.h; sourceTree = "<group>"; };
@@ -524,6 +525,7 @@
 		F024A33A6D9C41E5B103CF43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D0EFBB419FFD22D0017A539 /* libsqlite3.0.dylib */,
 				3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */,
 				3DC36E7619EAB8A600B7B5FF /* SystemConfiguration.framework */,
 				3DC36E7419EAB89D00B7B5FF /* QuartzCore.framework */,

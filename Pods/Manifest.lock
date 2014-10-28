@@ -20,25 +20,28 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AFSQLManager (1.0.2)
   - JSONModel (1.0.1)
   - MBProgressHUD (0.9)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.1)
-  - Toast (2.3)
+  - Toast (2.4)
 
 DEPENDENCIES:
   - AFNetworking (= 2.4.1)
+  - AFSQLManager (= 1.0.2)
   - JSONModel (= 1.0.1)
   - MBProgressHUD (= 0.9)
   - SDWebImage (= 3.7.1)
-  - Toast (= 2.3)
+  - Toast (= 2.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  AFSQLManager: e6d168b64782ae20b61392d2d17e81605b93fa75
   JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
-  Toast: 1d773017c5d2e7b1d90565a5f9530340e6eeff72
+  Toast: 6a3c2b1d70e426b26d130971c369670eac7aa9ce
 
 COCOAPODS: 0.33.1
