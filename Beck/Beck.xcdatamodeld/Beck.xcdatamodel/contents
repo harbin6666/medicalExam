@@ -13,8 +13,12 @@
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="itemInSql" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInSql" inverseName="item" inverseEntity="ItemInSql" syncable="YES"/>
         <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="item" inverseEntity="Note" syncable="YES"/>
         <relationship name="wrongItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WrongItem" inverseName="item" inverseEntity="WrongItem" syncable="YES"/>
+    </entity>
+    <entity name="ItemInSql" syncable="YES">
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemInSql" inverseEntity="Item" syncable="YES"/>
     </entity>
     <entity name="Note" syncable="YES">
         <attribute name="create" optional="YES" attributeType="Date" syncable="YES"/>
@@ -30,9 +34,10 @@
         <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="wrongItem" inverseEntity="Item" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-18" positionY="27" width="128" height="118"/>
         <element name="Exam" positionX="387" positionY="261" width="128" height="148"/>
+        <element name="Item" positionX="-18" positionY="27" width="128" height="133"/>
         <element name="Note" positionX="565" positionY="54" width="128" height="148"/>
         <element name="WrongItem" positionX="205" positionY="315" width="128" height="73"/>
+        <element name="ItemInSql" positionX="180" positionY="171" width="128" height="58"/>
     </elements>
 </model>
