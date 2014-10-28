@@ -8,7 +8,6 @@
         <!--练习模式 NC-->
         <scene sceneID="VKO-0u-Cat">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S81-EM-zq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="btU-HZ-wDD" userLabel="练习模式 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="练习模式" id="yWA-BS-hTt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kct-v4-idu">
@@ -19,6 +18,7 @@
                         <segue destination="8lf-yM-XVR" kind="relationship" relationship="rootViewController" id="1SU-Aq-VIS"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S81-EM-zq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-535" y="-114"/>
         </scene>
