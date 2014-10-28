@@ -10,6 +10,8 @@
 		3D094DE419FE753200472508 /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Base.storyboard */; };
 		3D0BED8919EA2AF300B794B5 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BED8819EA2AF300B794B5 /* AnswerCVC.m */; };
 		3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BEDC019EA443700B794B5 /* BeckTBC.m */; };
+		3D0EFB9319FFBF820017A539 /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9219FFBF820017A539 /* FeedBackVC.m */; };
+		3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9519FFBF980017A539 /* HelpVC.m */; };
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
 		3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521BB19F526C500FC72A7 /* BeckVC.m */; };
 		3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */; };
@@ -93,6 +95,10 @@
 		3D0BED8819EA2AF300B794B5 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
 		3D0BEDBF19EA443700B794B5 /* BeckTBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTBC.h; sourceTree = "<group>"; };
 		3D0BEDC019EA443700B794B5 /* BeckTBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTBC.m; sourceTree = "<group>"; };
+		3D0EFB9119FFBF820017A539 /* FeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
+		3D0EFB9219FFBF820017A539 /* FeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
+		3D0EFB9419FFBF980017A539 /* HelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
+		3D0EFB9519FFBF980017A539 /* HelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
 		3D2521B719F526AE00FC72A7 /* BeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTVC.h; sourceTree = "<group>"; };
 		3D2521B819F526AE00FC72A7 /* BeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTVC.m; sourceTree = "<group>"; };
 		3D2521BA19F526C500FC72A7 /* BeckVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckVC.h; sourceTree = "<group>"; };
@@ -336,6 +342,10 @@
 				3D2521E819F5418C00FC72A7 /* MoreHomeTVC.m */,
 				3D25220919F5455100FC72A7 /* ChooseExamTVC.h */,
 				3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */,
+				3D0EFB9119FFBF820017A539 /* FeedBackVC.h */,
+				3D0EFB9219FFBF820017A539 /* FeedBackVC.m */,
+				3D0EFB9419FFBF980017A539 /* HelpVC.h */,
+				3D0EFB9519FFBF980017A539 /* HelpVC.m */,
 				3DB238D019FE8026002CD73D /* More.storyboard */,
 			);
 			name = "更多";
@@ -806,6 +816,7 @@
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,
 				3D2521F319F543CB00FC72A7 /* TestingCentreTVC.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
+				3D0EFB9319FFBF820017A539 /* FeedBackVC.m in Sources */,
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
 				3D99449719E6B68B009A1A1F /* HomepageView.m in Sources */,
 				3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */,
@@ -819,6 +830,7 @@
 				3D99449419E6B562009A1A1F /* HomepageTableViewCell.m in Sources */,
 				3D0BEDC119EA443700B794B5 /* BeckTBC.m in Sources */,
 				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
+				3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */,
 				3DD856DF19E8148C00A17F41 /* HistoryTVC.m in Sources */,
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
 				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,

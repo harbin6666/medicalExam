@@ -62,14 +62,10 @@
         [self performSegueWithIdentifier:@"toChooseExam" sender:nil];
     }
     else if (indexPath.row == 2){
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RegisterVC"];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self performSegueWithIdentifier:@"toFeedBack" sender:nil];
     }
     else if (indexPath.row == 3){
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"FindPasswordVC"];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self performSegueWithIdentifier:@"toHelp" sender:nil];
     }
     else if (indexPath.row == 4){
 

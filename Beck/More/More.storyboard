@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--高频考点-->
@@ -76,7 +77,61 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3e-PE-EQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1517" y="1207"/>
+            <point key="canvasLocation" x="-1494" y="1206"/>
+        </scene>
+        <!--使用帮助-->
+        <scene sceneID="5ZJ-fQ-32y">
+            <objects>
+                <viewController id="M6r-b4-ZBx" customClass="FeedBackVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UJe-js-gHv"/>
+                        <viewControllerLayoutGuide type="bottom" id="cHj-QM-gpo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l8i-87-gge">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="使用帮助" id="8Zx-28-DgT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yF-Zv-Ogr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="1207"/>
+        </scene>
+        <!--意见反馈-->
+        <scene sceneID="XLj-ib-Py1">
+            <objects>
+                <viewController id="egH-vV-o07" customClass="HelpVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="me2-Y1-BGD"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPb-7B-ih5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jVE-Is-4rX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="说说您的建议,我们会根据您的意见改进哦~" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9W-Rx-4va">
+                                <rect key="frame" x="0.0" y="64" width="320" height="142"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b9W-Rx-4va" firstAttribute="top" secondItem="me2-Y1-BGD" secondAttribute="bottom" id="963-yW-Wes"/>
+                            <constraint firstItem="b9W-Rx-4va" firstAttribute="leading" secondItem="jVE-Is-4rX" secondAttribute="leading" id="Jv6-MQ-l1h"/>
+                            <constraint firstAttribute="trailing" secondItem="b9W-Rx-4va" secondAttribute="trailing" id="Sf5-aw-Cqj"/>
+                            <constraint firstItem="b9W-Rx-4va" firstAttribute="height" secondItem="jVE-Is-4rX" secondAttribute="height" multiplier="1/4" id="lJD-r9-tAf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="意见反馈" id="NOO-N6-hk4">
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="cpm-jG-z33"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCW-v6-niK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078" y="1207"/>
         </scene>
         <!--个人档案-->
         <scene sceneID="F6d-Q6-nDM">
@@ -114,7 +169,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E69-rM-6ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-569" y="1207"/>
+            <point key="canvasLocation" x="-350" y="1206"/>
         </scene>
         <!--更多-->
         <scene sceneID="9IR-lF-Hck">
@@ -150,6 +205,8 @@
                         <segue destination="pOz-6c-ITA" kind="push" identifier="toTestingCentre" id="EK8-Kv-1xX"/>
                         <segue destination="v37-nG-6fS" kind="push" identifier="toChooseExam" id="WeF-Yd-3iO"/>
                         <segue destination="wx7-3Q-fD4" kind="push" identifier="toPersonalFile" id="sVg-q8-dm1"/>
+                        <segue destination="M6r-b4-ZBx" kind="push" identifier="toHelp" id="DfX-CB-AwS"/>
+                        <segue destination="egH-vV-o07" kind="push" identifier="toFeedBack" id="nas-sW-fF1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMy-en-7uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yly-Dv-rV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-150" y="1207"/>
+            <point key="canvasLocation" x="-350" y="1927"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="srS-rW-acA">
