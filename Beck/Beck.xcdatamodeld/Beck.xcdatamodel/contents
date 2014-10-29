@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Exam" syncable="YES">
+    <entity name="ExamEntity" representedClassName="ExamEntity" syncable="YES">
         <attribute name="accuracy" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="right" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="section" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,35 +9,35 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="wrong" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Item" representedClassName="Item" syncable="YES">
+    <entity name="ItemEntity" representedClassName="ItemEntity" syncable="YES">
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="itemInSql" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInSql" inverseName="item" inverseEntity="ItemInSql" syncable="YES"/>
-        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="item" inverseEntity="Note" syncable="YES"/>
-        <relationship name="wrongItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WrongItem" inverseName="item" inverseEntity="WrongItem" syncable="YES"/>
+        <relationship name="itemInSql" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemInSqlEntity" inverseName="item" inverseEntity="ItemInSqlEntity" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NoteEntity" inverseName="item" inverseEntity="NoteEntity" syncable="YES"/>
+        <relationship name="wrongItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WrongItemEntity" inverseName="item" inverseEntity="WrongItemEntity" syncable="YES"/>
     </entity>
-    <entity name="ItemInSql" syncable="YES">
-        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="itemInSql" inverseEntity="Item" syncable="YES"/>
+    <entity name="ItemInSqlEntity" representedClassName="ItemInSqlEntity" syncable="YES">
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="itemInSql" inverseEntity="ItemEntity" syncable="YES"/>
     </entity>
-    <entity name="Note" syncable="YES">
+    <entity name="NoteEntity" representedClassName="NoteEntity" syncable="YES">
         <attribute name="create" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="notetext" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="section" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="note" inverseEntity="Item" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="note" inverseEntity="ItemEntity" syncable="YES"/>
     </entity>
-    <entity name="WrongItem" syncable="YES">
+    <entity name="WrongItemEntity" representedClassName="WrongItemEntity" syncable="YES">
         <attribute name="times" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="wrongItem" inverseEntity="Item" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="wrongItem" inverseEntity="ItemEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exam" positionX="387" positionY="261" width="128" height="148"/>
-        <element name="Item" positionX="-18" positionY="27" width="128" height="133"/>
-        <element name="Note" positionX="565" positionY="54" width="128" height="148"/>
-        <element name="WrongItem" positionX="205" positionY="315" width="128" height="73"/>
-        <element name="ItemInSql" positionX="180" positionY="171" width="128" height="58"/>
+        <element name="ExamEntity" positionX="817" positionY="1848" width="128" height="150"/>
+        <element name="ItemEntity" positionX="772" positionY="1485" width="128" height="133"/>
+        <element name="ItemInSqlEntity" positionX="376" positionY="1623" width="128" height="60"/>
+        <element name="NoteEntity" positionX="1033" positionY="1638" width="128" height="150"/>
+        <element name="WrongItemEntity" positionX="594" positionY="1923" width="128" height="73"/>
     </elements>
 </model>
