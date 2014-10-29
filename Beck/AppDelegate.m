@@ -10,8 +10,6 @@
 
 //#import "RCIM.h"
 
-#import "Item.h"
-
 #import <AFNetworking/AFNetworking.h>
 
 @interface AppDelegate ()
