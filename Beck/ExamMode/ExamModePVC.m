@@ -173,12 +173,14 @@
 {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    self.currentTVC = vc;
     return vc;
 }
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    self.currentTVC = vc;
     return vc;
 }
 
