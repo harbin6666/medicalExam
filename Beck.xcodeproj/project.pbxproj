@@ -64,6 +64,14 @@
 		3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */; };
 		3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68AB419F54820003DB313 /* PersionalFileTVC.m */; };
 		3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */; };
+		3DCB50E11A010EA70079CC01 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50D91A010EA70079CC01 /* TencentOpenAPI.framework */; };
+		3DCB50E21A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DCB50DA1A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		3DCB50E31A010EA70079CC01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DC1A010EA70079CC01 /* RennSDK.framework */; };
+		3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DE1A010EA70079CC01 /* libWeiboSDK.a */; };
+		3DCB50E51A010EA70079CC01 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DCB50DF1A010EA70079CC01 /* WeiboSDK.bundle */; };
+		3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */; };
+		3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */; };
+		3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E91A010F3C0079CC01 /* libz.dylib */; };
 		3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */; };
 		3DF5B86619E8E6530050165F /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86519E8E6530050165F /* Item.m */; };
 		8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D5D4D704E4BA88EBD7F48 /* libPods.a */; };
@@ -203,6 +211,14 @@
 		3DC68AB419F54820003DB313 /* PersionalFileTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersionalFileTVC.m; sourceTree = "<group>"; };
 		3DC68ABA19F54A6A003DB313 /* BeckLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckLoginVC.h; sourceTree = "<group>"; };
 		3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckLoginVC.m; sourceTree = "<group>"; };
+		3DCB50D91A010EA70079CC01 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		3DCB50DA1A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		3DCB50DC1A010EA70079CC01 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
+		3DCB50DE1A010EA70079CC01 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		3DCB50DF1A010EA70079CC01 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		3DCB50E01A010EA70079CC01 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3DCB50E91A010F3C0079CC01 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3DF5B86119E8E5E10050165F /* Beck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beck.xcdatamodel; sourceTree = "<group>"; };
 		3DF5B86419E8E6530050165F /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		3DF5B86519E8E6530050165F /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
@@ -215,7 +231,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */,
+				3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */,
+				3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */,
+				3DCB50E31A010EA70079CC01 /* RennSDK.framework in Frameworks */,
+				3DCB50E11A010EA70079CC01 /* TencentOpenAPI.framework in Frameworks */,
 				3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */,
+				3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */,
 				3DB238D419FE8AC3002CD73D /* Foundation.framework in Frameworks */,
 				3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */,
 				8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */,
@@ -429,6 +451,7 @@
 		3DC1C57319E645FD004F23E1 /* Beck */ = {
 			isa = PBXGroup;
 			children = (
+				3DCB50D71A010EA70079CC01 /* ThirdParty */,
 				3DF5B86319E8E6420050165F /* VO */,
 				3D99449819E6BF31009A1A1F /* Base */,
 				3DC68AB919F54A35003DB313 /* 首页 */,
@@ -510,6 +533,43 @@
 			path = Homepage;
 			sourceTree = "<group>";
 		};
+		3DCB50D71A010EA70079CC01 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				3DCB50D81A010EA70079CC01 /* OpenQQ */,
+				3DCB50DB1A010EA70079CC01 /* RenRen */,
+				3DCB50DD1A010EA70079CC01 /* Sina */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		3DCB50D81A010EA70079CC01 /* OpenQQ */ = {
+			isa = PBXGroup;
+			children = (
+				3DCB50D91A010EA70079CC01 /* TencentOpenAPI.framework */,
+				3DCB50DA1A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = OpenQQ;
+			sourceTree = "<group>";
+		};
+		3DCB50DB1A010EA70079CC01 /* RenRen */ = {
+			isa = PBXGroup;
+			children = (
+				3DCB50DC1A010EA70079CC01 /* RennSDK.framework */,
+			);
+			path = RenRen;
+			sourceTree = "<group>";
+		};
+		3DCB50DD1A010EA70079CC01 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+				3DCB50DE1A010EA70079CC01 /* libWeiboSDK.a */,
+				3DCB50DF1A010EA70079CC01 /* WeiboSDK.bundle */,
+				3DCB50E01A010EA70079CC01 /* WeiboSDK.h */,
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
 		3DF5B86319E8E6420050165F /* VO */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,6 +582,8 @@
 		F024A33A6D9C41E5B103CF43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DCB50E91A010F3C0079CC01 /* libz.dylib */,
+				3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */,
 				3D0EFBB419FFD22D0017A539 /* libsqlite3.0.dylib */,
 				3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */,
 				3DC36E7619EAB8A600B7B5FF /* SystemConfiguration.framework */,
@@ -631,8 +693,10 @@
 				3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */,
 				3D094DE419FE753200472508 /* Main.storyboard in Resources */,
 				3DB238D119FE8026002CD73D /* More.storyboard in Resources */,
+				3DCB50E21A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */,
 				3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */,
+				3DCB50E51A010EA70079CC01 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,12 +900,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beck/ThirdParty/OpenQQ",
+					"$(PROJECT_DIR)/Beck/ThirdParty/RenRen",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Beck/PrefixHeader.pch;
 				INFOPLIST_FILE = Beck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beck/ThirdParty/Sina",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 arm64 armv7s";
@@ -854,12 +926,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beck/ThirdParty/OpenQQ",
+					"$(PROJECT_DIR)/Beck/ThirdParty/RenRen",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Beck/PrefixHeader.pch;
 				INFOPLIST_FILE = Beck/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beck/ThirdParty/Sina",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
