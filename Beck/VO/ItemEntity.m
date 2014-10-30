@@ -2,11 +2,12 @@
 //  ItemEntity.m
 //  Beck
 //
-//  Created by Aimy on 14/10/29.
+//  Created by Aimy on 14/10/30.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
 #import "ItemEntity.h"
+#import "FavorateEntity.h"
 #import "ItemInSqlEntity.h"
 #import "NoteEntity.h"
 #import "WrongItemEntity.h"
@@ -19,6 +20,7 @@
 @dynamic type;
 @dynamic itemInSql;
 @dynamic note;
-@dynamic wrongItem;
+@dynamic wrong;
+@dynamic favorate;
 
 @end

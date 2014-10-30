@@ -1,5 +1,5 @@
 //
-//  WrongItemEntity.h
+//  FavorateEntity.h
 //  Beck
 //
 //  Created by Aimy on 14/10/30.
@@ -11,9 +11,9 @@
 
 @class ItemEntity;
 
-@interface WrongItemEntity : NSManagedObject
+@interface FavorateEntity : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * times;
+@property (nonatomic, retain) NSDate * time;
 @property (nonatomic, retain) ItemEntity *item;
 
 @end

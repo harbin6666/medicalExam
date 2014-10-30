@@ -2,7 +2,7 @@
 //  NoteEntity.m
 //  Beck
 //
-//  Created by Aimy on 14/10/29.
+//  Created by Aimy on 14/10/30.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
@@ -14,10 +14,6 @@
 
 @dynamic create;
 @dynamic notetext;
-@dynamic section;
-@dynamic subject;
-@dynamic title;
-@dynamic type;
 @dynamic item;
 
 @end

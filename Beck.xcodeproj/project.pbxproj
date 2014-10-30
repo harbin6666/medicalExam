@@ -20,6 +20,12 @@
 		3D0EFBB219FFCB8B0017A539 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */; };
 		3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */; };
 		3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
+		3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17825F1A02626F00F6904C /* FavorateEntity.m */; };
+		3D1782631A02630100F6904C /* WrongItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782621A02630100F6904C /* WrongItemEntity.m */; };
+		3D1782661A02630100F6904C /* ItemInSqlEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782651A02630100F6904C /* ItemInSqlEntity.m */; };
+		3D1782691A02630100F6904C /* ExamEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782681A02630100F6904C /* ExamEntity.m */; };
+		3D17826C1A02630200F6904C /* ItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17826B1A02630200F6904C /* ItemEntity.m */; };
+		3D17826F1A02630200F6904C /* NoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17826E1A02630200F6904C /* NoteEntity.m */; };
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
 		3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521BB19F526C500FC72A7 /* BeckVC.m */; };
 		3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */; };
@@ -72,11 +78,6 @@
 		3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */; };
 		3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */; };
 		3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E91A010F3C0079CC01 /* libz.dylib */; };
-		3DCB510C1A01127D0079CC01 /* ItemInSqlEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB510B1A01127D0079CC01 /* ItemInSqlEntity.m */; };
-		3DCB510F1A01127E0079CC01 /* NoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB510E1A01127E0079CC01 /* NoteEntity.m */; };
-		3DCB51121A01127E0079CC01 /* WrongItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB51111A01127E0079CC01 /* WrongItemEntity.m */; };
-		3DCB51151A01127E0079CC01 /* ExamEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB51141A01127E0079CC01 /* ExamEntity.m */; };
-		3DCB51181A01127E0079CC01 /* ItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB51171A01127E0079CC01 /* ItemEntity.m */; };
 		3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */; };
 		8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D5D4D704E4BA88EBD7F48 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,18 @@
 		3D0EFBB019FFCB8B0017A539 /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
 		3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
 		3D0EFBB419FFD22D0017A539 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		3D17825E1A02626F00F6904C /* FavorateEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorateEntity.h; sourceTree = "<group>"; };
+		3D17825F1A02626F00F6904C /* FavorateEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorateEntity.m; sourceTree = "<group>"; };
+		3D1782611A02630000F6904C /* WrongItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongItemEntity.h; sourceTree = "<group>"; };
+		3D1782621A02630100F6904C /* WrongItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongItemEntity.m; sourceTree = "<group>"; };
+		3D1782641A02630100F6904C /* ItemInSqlEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInSqlEntity.h; sourceTree = "<group>"; };
+		3D1782651A02630100F6904C /* ItemInSqlEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInSqlEntity.m; sourceTree = "<group>"; };
+		3D1782671A02630100F6904C /* ExamEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamEntity.h; sourceTree = "<group>"; };
+		3D1782681A02630100F6904C /* ExamEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamEntity.m; sourceTree = "<group>"; };
+		3D17826A1A02630200F6904C /* ItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemEntity.h; sourceTree = "<group>"; };
+		3D17826B1A02630200F6904C /* ItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemEntity.m; sourceTree = "<group>"; };
+		3D17826D1A02630200F6904C /* NoteEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEntity.h; sourceTree = "<group>"; };
+		3D17826E1A02630200F6904C /* NoteEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEntity.m; sourceTree = "<group>"; };
 		3D2521B719F526AE00FC72A7 /* BeckTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTVC.h; sourceTree = "<group>"; };
 		3D2521B819F526AE00FC72A7 /* BeckTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTVC.m; sourceTree = "<group>"; };
 		3D2521BA19F526C500FC72A7 /* BeckVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckVC.h; sourceTree = "<group>"; };
@@ -223,16 +236,6 @@
 		3DCB50E01A010EA70079CC01 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3DCB50E91A010F3C0079CC01 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		3DCB510A1A01127D0079CC01 /* ItemInSqlEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInSqlEntity.h; sourceTree = "<group>"; };
-		3DCB510B1A01127D0079CC01 /* ItemInSqlEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInSqlEntity.m; sourceTree = "<group>"; };
-		3DCB510D1A01127E0079CC01 /* NoteEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEntity.h; sourceTree = "<group>"; };
-		3DCB510E1A01127E0079CC01 /* NoteEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEntity.m; sourceTree = "<group>"; };
-		3DCB51101A01127E0079CC01 /* WrongItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongItemEntity.h; sourceTree = "<group>"; };
-		3DCB51111A01127E0079CC01 /* WrongItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongItemEntity.m; sourceTree = "<group>"; };
-		3DCB51131A01127E0079CC01 /* ExamEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamEntity.h; sourceTree = "<group>"; };
-		3DCB51141A01127E0079CC01 /* ExamEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamEntity.m; sourceTree = "<group>"; };
-		3DCB51161A01127E0079CC01 /* ItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemEntity.h; sourceTree = "<group>"; };
-		3DCB51171A01127E0079CC01 /* ItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemEntity.m; sourceTree = "<group>"; };
 		3DF5B86119E8E5E10050165F /* Beck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beck.xcdatamodel; sourceTree = "<group>"; };
 		457D5D4D704E4BA88EBD7F48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		646B6BD972844B829AA84FB4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -585,16 +588,18 @@
 		3DCB50FA1A0111560079CC01 /* VO */ = {
 			isa = PBXGroup;
 			children = (
-				3DCB51161A01127E0079CC01 /* ItemEntity.h */,
-				3DCB51171A01127E0079CC01 /* ItemEntity.m */,
-				3DCB51131A01127E0079CC01 /* ExamEntity.h */,
-				3DCB51141A01127E0079CC01 /* ExamEntity.m */,
-				3DCB51101A01127E0079CC01 /* WrongItemEntity.h */,
-				3DCB51111A01127E0079CC01 /* WrongItemEntity.m */,
-				3DCB510D1A01127E0079CC01 /* NoteEntity.h */,
-				3DCB510E1A01127E0079CC01 /* NoteEntity.m */,
-				3DCB510A1A01127D0079CC01 /* ItemInSqlEntity.h */,
-				3DCB510B1A01127D0079CC01 /* ItemInSqlEntity.m */,
+				3D17826D1A02630200F6904C /* NoteEntity.h */,
+				3D17826E1A02630200F6904C /* NoteEntity.m */,
+				3D17826A1A02630200F6904C /* ItemEntity.h */,
+				3D17826B1A02630200F6904C /* ItemEntity.m */,
+				3D1782671A02630100F6904C /* ExamEntity.h */,
+				3D1782681A02630100F6904C /* ExamEntity.m */,
+				3D1782641A02630100F6904C /* ItemInSqlEntity.h */,
+				3D1782651A02630100F6904C /* ItemInSqlEntity.m */,
+				3D1782611A02630000F6904C /* WrongItemEntity.h */,
+				3D1782621A02630100F6904C /* WrongItemEntity.m */,
+				3D17825E1A02626F00F6904C /* FavorateEntity.h */,
+				3D17825F1A02626F00F6904C /* FavorateEntity.m */,
 			);
 			path = VO;
 			sourceTree = "<group>";
@@ -773,8 +778,10 @@
 				3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */,
 				3D2521E519F53F8300FC72A7 /* StatisticTVC.m in Sources */,
 				3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */,
+				3D17826F1A02630200F6904C /* NoteEntity.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */,
+				3D1782661A02630100F6904C /* ItemInSqlEntity.m in Sources */,
 				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */,
@@ -782,24 +789,24 @@
 				3D4F677F19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.m in Sources */,
 				3D0EFBA819FFC9FF0017A539 /* EnterPasswordVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
+				3D1782631A02630100F6904C /* WrongItemEntity.m in Sources */,
 				3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */,
 				3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
 				3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
-				3DCB510C1A01127D0079CC01 /* ItemInSqlEntity.m in Sources */,
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,
+				3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */,
 				3D0EFB9919FFC4EA0017A539 /* ViewItemPVC.m in Sources */,
 				3D2521F319F543CB00FC72A7 /* TestingCentreTVC.m in Sources */,
 				3DC1C57719E645FD004F23E1 /* main.m in Sources */,
 				3D0EFB9319FFBF820017A539 /* FeedBackVC.m in Sources */,
 				3D0EFBA719FFC9FF0017A539 /* EnterCodeVC.m in Sources */,
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
-				3DCB510F1A01127E0079CC01 /* NoteEntity.m in Sources */,
 				3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */,
+				3D17826C1A02630200F6904C /* ItemEntity.m in Sources */,
+				3D1782691A02630100F6904C /* ExamEntity.m in Sources */,
 				3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */,
-				3DCB51181A01127E0079CC01 /* ItemEntity.m in Sources */,
-				3DCB51151A01127E0079CC01 /* ExamEntity.m in Sources */,
 				3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
 				3D2521F119F543CB00FC72A7 /* TestingCentreCategoryTVC.m in Sources */,
@@ -818,7 +825,6 @@
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
 				3D0EFB9F19FFC9400017A539 /* BeckMCTVC.m in Sources */,
 				3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */,
-				3DCB51121A01127E0079CC01 /* WrongItemEntity.m in Sources */,
 				3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

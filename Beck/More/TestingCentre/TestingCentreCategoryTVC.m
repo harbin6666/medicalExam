@@ -42,7 +42,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self performSegueWithIdentifier:@"toTestingCentreDetail" sender:self];
+//    [self performSegueWithIdentifier:@"toTestingCentreDetail" sender:self];
 }
 
 /*
