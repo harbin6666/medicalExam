@@ -101,6 +101,7 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.showNote = YES;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -116,6 +117,7 @@
 - (void)onPressedBtn1:(UIButton *)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.showNote = YES;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -148,7 +150,7 @@
 - (void)onPressedBtn5:(UIButton *)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    
+    vc.showNote = YES;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -173,6 +175,7 @@
 {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.showNote = YES;
     self.currentTVC = vc;
     return vc;
 }
@@ -180,6 +183,7 @@
 {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.showNote = YES;
     self.currentTVC = vc;
     return vc;
 }
