@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^BeckCompletionBlock)(id aResponseObject, NSError* anError);
+
 @interface BeckVC : UIViewController
 
 @end
@@ -19,5 +21,11 @@
 - (void)leftBtnClick:(UIBarButtonItem *)sender;
 
 - (void)rightBtnClick:(UIBarButtonItem *)sender;
+
+@end
+
+@interface UIViewController (Net)
+
+- (void)getValueWithUrl:(NSString *)url params:(NSDictionary *)params CompleteBlock:(BeckCompletionBlock)block;
 
 @end
