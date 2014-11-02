@@ -12,6 +12,10 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+#import "WeiboSDK.h"
+#import <TencentOpenAPI/QQApi.h>
+#import <RennSDK/RennSDK.h>
+
 @interface AppDelegate ()
 
 @end
