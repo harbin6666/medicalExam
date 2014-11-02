@@ -1,26 +1,26 @@
 //
-//  StatisticTVC.m
+//  ExamStatisticTVC.m
 //  Beck
 //
-//  Created by Aimy on 14/10/20.
+//  Created by Aimy on 14/11/2.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "StatisticTVC.h"
+#import "ExamStatisticTVC.h"
 
-@interface StatisticTVC ()
+@interface ExamStatisticTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
 @end
 
-@implementation StatisticTVC
+@implementation ExamStatisticTVC
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     
-    self.names = @[@"练习统计", @"考试统计"];
+    self.names = @[@"职业中药师考试模拟测试联系题库", @"职业中药师考试模拟测试联系题库", @"职业中药师考试模拟测试联系题库", @"职业中药师考试模拟测试联系题库"];
 }
 
 - (void)viewDidLoad {
@@ -49,18 +49,6 @@
     cell.textLabel.text = self.names[indexPath.row];
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    //    if (indexPath.row == 0) {
-    //        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
-    //    }
-    //    else {
-    //        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-    //    }
 }
 
 @end

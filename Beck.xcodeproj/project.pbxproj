@@ -40,7 +40,6 @@
 		3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521DA19F53B4F00FC72A7 /* ChooseSectionTVC.m */; };
 		3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */; };
 		3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */; };
-		3D2521E519F53F8300FC72A7 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521E419F53F8300FC72A7 /* StatisticTVC.m */; };
 		3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521E819F5418C00FC72A7 /* MoreHomeTVC.m */; };
 		3D2521F119F543CB00FC72A7 /* TestingCentreCategoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521EC19F543CB00FC72A7 /* TestingCentreCategoryTVC.m */; };
 		3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521EE19F543CB00FC72A7 /* TestingCentreDetailVC.m */; };
@@ -58,6 +57,9 @@
 		3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449A19E6BF31009A1A1F /* UIView+create.m */; };
 		3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449D19E6C03A009A1A1F /* UIImage+tool.m */; };
 		3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944A019E6C29E009A1A1F /* OTSBorder.m */; };
+		3DA4FA271A05FE2200C7D362 /* ExamStatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */; };
+		3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */; };
+		3DA4FA2B1A05FE3D00C7D362 /* PractiseStatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2A1A05FE3D00C7D362 /* PractiseStatisticTVC.m */; };
 		3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */; };
 		3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AA19FE79EF002CD73D /* Practise.storyboard */; };
 		3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AC19FE79FB002CD73D /* Exam.storyboard */; };
@@ -157,8 +159,6 @@
 		3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeModePVC.m; sourceTree = "<group>"; };
 		3D2521E019F53C9100FC72A7 /* MyAccountHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountHomeTVC.h; sourceTree = "<group>"; };
 		3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountHomeTVC.m; sourceTree = "<group>"; };
-		3D2521E319F53F8300FC72A7 /* StatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTVC.h; sourceTree = "<group>"; };
-		3D2521E419F53F8300FC72A7 /* StatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTVC.m; sourceTree = "<group>"; };
 		3D2521E719F5418C00FC72A7 /* MoreHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreHomeTVC.h; sourceTree = "<group>"; };
 		3D2521E819F5418C00FC72A7 /* MoreHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreHomeTVC.m; sourceTree = "<group>"; };
 		3D2521EB19F543CB00FC72A7 /* TestingCentreCategoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestingCentreCategoryTVC.h; sourceTree = "<group>"; };
@@ -193,6 +193,12 @@
 		3D99449D19E6C03A009A1A1F /* UIImage+tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+tool.m"; sourceTree = "<group>"; };
 		3D99449F19E6C29E009A1A1F /* OTSBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSBorder.h; sourceTree = "<group>"; };
 		3D9944A019E6C29E009A1A1F /* OTSBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSBorder.m; sourceTree = "<group>"; };
+		3DA4FA231A05FE2200C7D362 /* ExamStatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamStatisticTVC.h; sourceTree = "<group>"; };
+		3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamStatisticTVC.m; sourceTree = "<group>"; };
+		3DA4FA251A05FE2200C7D362 /* StatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTVC.h; sourceTree = "<group>"; };
+		3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTVC.m; sourceTree = "<group>"; };
+		3DA4FA291A05FE3D00C7D362 /* PractiseStatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticTVC.h; sourceTree = "<group>"; };
+		3DA4FA2A1A05FE3D00C7D362 /* PractiseStatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticTVC.m; sourceTree = "<group>"; };
 		3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckHomepageVC.h; sourceTree = "<group>"; };
 		3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckHomepageVC.m; sourceTree = "<group>"; };
 		3DB238AA19FE79EF002CD73D /* Practise.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practise.storyboard; sourceTree = "<group>"; };
@@ -407,13 +413,12 @@
 		3D99448219E6AB51009A1A1F /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
+				3DA4FA221A05FE2200C7D362 /* 统计 */,
 				3D2521F419F5441C00FC72A7 /* 错题重做 */,
 				3D2521F919F5441C00FC72A7 /* 题目收藏 */,
 				3D2521FE19F5441C00FC72A7 /* 查看笔记 */,
 				3D2521E019F53C9100FC72A7 /* MyAccountHomeTVC.h */,
 				3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */,
-				3D2521E319F53F8300FC72A7 /* StatisticTVC.h */,
-				3D2521E419F53F8300FC72A7 /* StatisticTVC.m */,
 				3D0EFB9719FFC4EA0017A539 /* ViewItemPVC.h */,
 				3D0EFB9819FFC4EA0017A539 /* ViewItemPVC.m */,
 				3DB238D219FE803E002CD73D /* MyAccount.storyboard */,
@@ -441,6 +446,20 @@
 				3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		3DA4FA221A05FE2200C7D362 /* 统计 */ = {
+			isa = PBXGroup;
+			children = (
+				3DA4FA231A05FE2200C7D362 /* ExamStatisticTVC.h */,
+				3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */,
+				3DA4FA251A05FE2200C7D362 /* StatisticTVC.h */,
+				3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */,
+				3DA4FA291A05FE3D00C7D362 /* PractiseStatisticTVC.h */,
+				3DA4FA2A1A05FE3D00C7D362 /* PractiseStatisticTVC.m */,
+			);
+			name = "统计";
+			path = Statistic;
 			sourceTree = "<group>";
 		};
 		3DC1C56819E645FD004F23E1 = {
@@ -773,13 +792,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */,
+				3DA4FA2B1A05FE3D00C7D362 /* PractiseStatisticTVC.m in Sources */,
 				3D0EFB9C19FFC6E30017A539 /* BeckAchievementTVC.m in Sources */,
 				3D2521CA19F52FCD00FC72A7 /* SimulationExamTVC.m in Sources */,
 				3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */,
-				3D2521E519F53F8300FC72A7 /* StatisticTVC.m in Sources */,
 				3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */,
 				3D17826F1A02630200F6904C /* NoteEntity.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
+				3DA4FA271A05FE2200C7D362 /* ExamStatisticTVC.m in Sources */,
 				3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */,
 				3D1782661A02630100F6904C /* ItemInSqlEntity.m in Sources */,
 				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
@@ -821,6 +841,7 @@
 				3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */,
 				3D2521DD19F53B4F00FC72A7 /* ChooseQuestionBankTVC.m in Sources */,
 				3D25220419F5441C00FC72A7 /* ErrorItemsTVC.m in Sources */,
+				3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */,
 				3D0EFBB219FFCB8B0017A539 /* AnswerCVC.m in Sources */,
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
 				3D0EFB9F19FFC9400017A539 /* BeckMCTVC.m in Sources */,

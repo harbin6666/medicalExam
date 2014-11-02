@@ -146,7 +146,24 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="bVr-Vw-3bY" kind="push" id="WZ6-l7-1GT"/>
+                                    <segue destination="bVr-Vw-3bY" kind="push" id="Pfu-J4-NrK"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell1" textLabel="uYX-he-vHs" style="IBUITableViewCellStyleDefault" id="6IO-b0-BEq">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IO-b0-BEq" id="Gsp-d0-6yN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uYX-he-vHs">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4Dq-pk-871" kind="push" id="Gor-Lf-hDi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -161,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="1203" y="-3460"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Practise StatisticTVC-->
         <scene sceneID="beA-IW-ABG">
             <objects>
-                <tableViewController id="bVr-Vw-3bY" sceneMemberID="viewController">
+                <tableViewController id="bVr-Vw-3bY" customClass="PractiseStatisticTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Moo-VE-YF6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,18 +203,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nH-rv-E6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="-3460"/>
+            <point key="canvasLocation" x="1764" y="-3774"/>
         </scene>
         <!--统计分析-->
         <scene sceneID="iqR-RF-TiS">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="4Dq-pk-871" userLabel="统计分析" customClass="StatisticTVC" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="4Dq-pk-871" userLabel="统计分析" customClass="ExamStatisticTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="22" sectionFooterHeight="22" id="o7p-RH-vbd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExamResultCell" rowHeight="133" id="UJd-lb-dF3" customClass="ExamResultCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="133" id="UJd-lb-dF3">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJd-lb-dF3" id="Twk-54-oLk">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -239,7 +256,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCq-o6-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056" y="-3460"/>
+            <point key="canvasLocation" x="1764" y="-3115"/>
         </scene>
         <!--题目收藏-->
         <scene sceneID="bVn-En-luE">
