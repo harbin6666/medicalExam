@@ -34,4 +34,12 @@
 }
 */
 
+- (IBAction)onTag:(id)sender {
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+}
+
+- (IBAction)onPressedConfirmBtn:(id)sender {
+    [self performSegueWithIdentifier:@"toLogin" sender:self];
+}
+
 @end

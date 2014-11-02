@@ -119,6 +119,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFA-fy-ip4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tFM-7Z-g2A" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="xr1-GM-mye">
                     <connections>
                         <action selector="onTag:" destination="MRK-IG-3lV" id="jtO-XU-ihc"/>
@@ -365,14 +366,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6TT-dB-sa1" firstAttribute="top" secondItem="VBt-44-vqq" secondAttribute="bottom" constant="8" id="6n2-on-lDt"/>
                             <constraint firstItem="VBt-44-vqq" firstAttribute="top" secondItem="LZ8-zb-9C3" secondAttribute="bottom" constant="16" id="tKo-dJ-Ipo"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="i2B-Mp-8Kq" appends="YES" id="29g-Wq-3s9"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="WqO-rE-KaX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrS-U1-KAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="i2B-Mp-8Kq">
+                    <connections>
+                        <action selector="onTag:" destination="J5I-Ba-WNK" id="7d4-4f-Xz9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="457" y="-80"/>
         </scene>
@@ -406,14 +416,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="LA1-hX-jvX" firstAttribute="top" secondItem="hxE-Dk-cZs" secondAttribute="bottom" constant="8" id="UDj-uG-wKG"/>
                             <constraint firstItem="hxE-Dk-cZs" firstAttribute="top" secondItem="l8W-hh-bjS" secondAttribute="bottom" constant="16" id="vFS-RX-Y26"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="w7H-6u-VZF" appends="YES" id="GQr-np-lch"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="找回密码" id="85b-er-IKr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PT3-0B-EOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w7H-6u-VZF">
+                    <connections>
+                        <action selector="onTag:" destination="Oam-ix-RyN" id="DTX-4L-RUq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="457" y="557"/>
         </scene>
@@ -467,6 +486,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Efn-NO-iMP" firstAttribute="top" secondItem="JaG-qB-w2w" secondAttribute="bottom" constant="8" id="4RA-c9-OiW"/>
                             <constraint firstItem="akt-nU-gn7" firstAttribute="top" secondItem="hFA-9Z-47F" secondAttribute="bottom" constant="16" id="DI2-QO-7oU"/>
@@ -474,10 +494,18 @@
                             <constraint firstItem="JaG-qB-w2w" firstAttribute="top" secondItem="akt-nU-gn7" secondAttribute="bottom" constant="8" id="g8P-1b-jxt"/>
                             <constraint firstItem="Hfl-tG-tzz" firstAttribute="top" secondItem="Wgn-KF-wls" secondAttribute="bottom" constant="8" id="vIV-Cl-eMb"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CTz-YQ-sJk" appends="YES" id="Uny-E9-nof"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="填写验证码" id="dfZ-Ur-O6y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2v-Lg-atg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CTz-YQ-sJk">
+                    <connections>
+                        <action selector="onTag:" destination="F0l-RN-i1q" id="bPq-dZ-TtO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="999" y="268"/>
         </scene>
@@ -510,25 +538,40 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBm-D4-8kL">
-                                <rect key="frame" x="16" y="177" width="288" height="30"/>
+                                <rect key="frame" x="16" y="176" width="288" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="确认">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPressedConfirmBtn:" destination="cpO-41-5Fs" eventType="touchUpInside" id="wUU-R5-3Qe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="F1e-24-6Ej" firstAttribute="top" secondItem="RFv-HM-MG1" secondAttribute="bottom" constant="8" id="DNy-4Q-9po"/>
                             <constraint firstItem="RFv-HM-MG1" firstAttribute="top" secondItem="uF1-g5-dQk" secondAttribute="bottom" constant="8" id="THA-Sj-Joz"/>
                             <constraint firstItem="uF1-g5-dQk" firstAttribute="top" secondItem="pOL-rH-5Cz" secondAttribute="bottom" constant="16" id="Uk4-n7-p10"/>
                             <constraint firstItem="DBm-D4-8kL" firstAttribute="top" secondItem="F1e-24-6Ej" secondAttribute="bottom" constant="8" id="niE-SL-RLg"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Egp-8u-RRq" appends="YES" id="0hs-yX-ymp"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="设置密码" id="lQ2-F0-6gn"/>
+                    <connections>
+                        <segue destination="tFM-7Z-g2A" kind="unwind" identifier="toLogin" unwindAction="unwindToThisVC:" id="qNg-v0-KyK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfS-5N-cEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Egp-8u-RRq">
+                    <connections>
+                        <action selector="onTag:" destination="cpO-41-5Fs" id="SGl-sv-EMb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1448" y="268"/>
         </scene>
@@ -728,6 +771,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="FM5-jz-sJE"/>
+        <segue reference="SN3-es-V9Y"/>
     </inferredMetricsTieBreakers>
 </document>

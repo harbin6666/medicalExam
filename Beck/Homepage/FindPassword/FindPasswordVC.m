@@ -34,4 +34,8 @@
 }
 */
 
+- (IBAction)onTag:(id)sender {
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+}
+
 @end
