@@ -59,7 +59,7 @@
 		3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9944A019E6C29E009A1A1F /* OTSBorder.m */; };
 		3DA4FA271A05FE2200C7D362 /* ExamStatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */; };
 		3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */; };
-		3DA4FA2B1A05FE3D00C7D362 /* PractiseStatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2A1A05FE3D00C7D362 /* PractiseStatisticTVC.m */; };
+		3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */; };
 		3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */; };
 		3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AA19FE79EF002CD73D /* Practise.storyboard */; };
 		3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AC19FE79FB002CD73D /* Exam.storyboard */; };
@@ -197,8 +197,8 @@
 		3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamStatisticTVC.m; sourceTree = "<group>"; };
 		3DA4FA251A05FE2200C7D362 /* StatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticTVC.h; sourceTree = "<group>"; };
 		3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTVC.m; sourceTree = "<group>"; };
-		3DA4FA291A05FE3D00C7D362 /* PractiseStatisticTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticTVC.h; sourceTree = "<group>"; };
-		3DA4FA2A1A05FE3D00C7D362 /* PractiseStatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticTVC.m; sourceTree = "<group>"; };
+		3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticCVC.h; sourceTree = "<group>"; };
+		3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticCVC.m; sourceTree = "<group>"; };
 		3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckHomepageVC.h; sourceTree = "<group>"; };
 		3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckHomepageVC.m; sourceTree = "<group>"; };
 		3DB238AA19FE79EF002CD73D /* Practise.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practise.storyboard; sourceTree = "<group>"; };
@@ -455,8 +455,8 @@
 				3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */,
 				3DA4FA251A05FE2200C7D362 /* StatisticTVC.h */,
 				3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */,
-				3DA4FA291A05FE3D00C7D362 /* PractiseStatisticTVC.h */,
-				3DA4FA2A1A05FE3D00C7D362 /* PractiseStatisticTVC.m */,
+				3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */,
+				3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */,
 			);
 			name = "统计";
 			path = Statistic;
@@ -792,7 +792,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */,
-				3DA4FA2B1A05FE3D00C7D362 /* PractiseStatisticTVC.m in Sources */,
 				3D0EFB9C19FFC6E30017A539 /* BeckAchievementTVC.m in Sources */,
 				3D2521CA19F52FCD00FC72A7 /* SimulationExamTVC.m in Sources */,
 				3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */,
@@ -829,6 +828,7 @@
 				3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */,
 				3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
+				3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */,
 				3D2521F119F543CB00FC72A7 /* TestingCentreCategoryTVC.m in Sources */,
 				3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
