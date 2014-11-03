@@ -37,7 +37,21 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5ie-hP-9bY"/>
                         <barButtonItem title="Item5" id="81I-uW-rBq"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="JS6-8u-4Qn"/>
+                    <navigationItem key="navigationItem" id="JS6-8u-4Qn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="igO-ks-Dis">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tgz-B1-zhy">
+                                <rect key="frame" x="16" y="11" width="99" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="练习模式" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="zih-Sh-PMZ" eventType="touchUpInside" id="AVF-og-TSX"/>
+                                    <action selector="leftBtnClick:" destination="OC7-ep-qxH" eventType="touchUpInside" id="td7-ce-ckS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="item1" destination="IIh-1F-753" id="ygo-Bo-1RT"/>
@@ -83,7 +97,21 @@
                             <outlet property="delegate" destination="0ss-bQ-uEr" id="Lsh-dq-msv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="选择考试课程" id="pn4-ck-FnL"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pn4-ck-FnL">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="kLm-dq-lPt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DCt-DL-zk0">
+                                <rect key="frame" x="16" y="11" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择考试课程" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="0ss-bQ-uEr" eventType="touchUpInside" id="2WA-Cv-55K"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU8-Rc-ox1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -121,7 +149,22 @@
                             <outlet property="delegate" destination="8lf-yM-XVR" id="RCU-n4-ya0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="选择考试科目" id="sVO-kp-GHM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sVO-kp-GHM">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="NIV-Za-dZh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mxh-oI-VBW">
+                                <rect key="frame" x="16" y="11" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择考试科目" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="8lf-yM-XVR" eventType="touchUpInside" id="W3v-9f-JsY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgf-wQ-Pyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,13 +208,30 @@
                             <outlet property="delegate" destination="zih-Sh-PMZ" id="JSI-r3-iab"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="选择考试章节" id="rU4-Wa-opf"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rU4-Wa-opf">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="gFE-n3-xCp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VQm-OS-EC3">
+                                <rect key="frame" x="16" y="11" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择考试章节" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="zih-Sh-PMZ" eventType="touchUpInside" id="4oX-5g-Lc0"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-E3-uTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="819" y="-114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backImage" width="22" height="22"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
