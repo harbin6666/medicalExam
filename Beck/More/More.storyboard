@@ -483,7 +483,7 @@
         <!--高频考点详情-->
         <scene sceneID="rDg-Zh-je7">
             <objects>
-                <viewController id="SXR-6q-dsw" userLabel="高频考点详情" sceneMemberID="viewController">
+                <viewController id="SXR-6q-dsw" userLabel="高频考点详情" customClass="TestingCentreDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ews-pr-YpS"/>
                         <viewControllerLayoutGuide type="bottom" id="LMG-kk-NHU"/>
