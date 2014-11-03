@@ -56,7 +56,22 @@
                             <outlet property="delegate" destination="SYG-6p-dsv" id="G2e-nu-rG2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="错题重做" id="ZdE-dL-R4k"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZdE-dL-R4k">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="8lh-W4-vZG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ogM-Pg-bNh">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="错题重做" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="SYG-6p-dsv" eventType="touchUpInside" id="Gcn-Aw-yZ4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="7W3-uf-k7t" id="Sqy-LR-qYa"/>
                     </connections>
@@ -111,7 +126,20 @@
                             <outlet property="delegate" destination="guB-5w-9aC" id="ezk-oy-Zni"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="个人中心" id="xhu-Ae-uA6"/>
+                    <navigationItem key="navigationItem" id="xhu-Ae-uA6">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="aVM-Ae-tXa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="har-hN-ZoK">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="个人中心" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="guB-5w-9aC" eventType="touchUpInside" id="S0V-XD-avK"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="eYf-nT-bS6" kind="push" identifier="toNotes" id="CTu-PM-Zj8"/>
                         <segue destination="dTN-76-Te1" kind="push" identifier="toFavorate" id="09e-E9-YkR"/>
@@ -172,7 +200,22 @@
                             <outlet property="delegate" destination="tGN-yu-t7Q" id="1r0-Hq-MOD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dM2-Ye-OSa"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dM2-Ye-OSa">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="CyJ-My-bHR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QN8-Nm-2CH">
+                                <rect key="frame" x="16" y="11" width="66" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="统计" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="tGN-yu-t7Q" eventType="touchUpInside" id="389-Uh-fzc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgP-Ki-78W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +304,21 @@
                             <constraint firstItem="nuf-7j-YjM" firstAttribute="top" secondItem="aYs-pA-3P9" secondAttribute="bottom" constant="50" id="iMB-Lq-GcT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lTa-lQ-rFl"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lTa-lQ-rFl">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="IL2-17-aHZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S0H-XU-m18">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="练习统计" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="1Y8-wD-gab" eventType="touchUpInside" id="JU9-nX-yz1"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="nlH-Mt-kfp" id="mI7-6u-hkX"/>
                         <segue destination="XLN-tn-qaY" kind="push" identifier="toPractiseDetail" id="2nk-vi-hYy"/>
@@ -333,7 +390,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ol2-lE-YOr"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ol2-lE-YOr">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="vVB-89-oC8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S3O-f7-cXI">
+                                <rect key="frame" x="16" y="11" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查看考试详情" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="XLN-tn-qaY" eventType="touchUpInside" id="aor-8d-ZRc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgR-g9-5V0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -386,7 +457,21 @@
                             <outlet property="delegate" destination="4Dq-pk-871" id="4TN-wa-nvh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BvQ-cx-kG3"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BvQ-cx-kG3">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="dpw-FN-bW1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9OM-Ud-FBz">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="考试统计" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="4Dq-pk-871" eventType="touchUpInside" id="8CG-JZ-R1E"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCq-o6-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -440,7 +525,22 @@
                             <outlet property="delegate" destination="dTN-76-Te1" id="MVP-jm-hVU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="题目收藏" id="PFc-c4-pcP"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PFc-c4-pcP">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="6Of-pK-bog">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nnd-8b-Xq0">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="题目收藏" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="dTN-76-Te1" eventType="touchUpInside" id="lzw-bX-f2g"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="tY9-no-pDT" id="Gjz-9H-fdS"/>
                     </connections>
@@ -496,7 +596,22 @@
                             <outlet property="delegate" destination="eYf-nT-bS6" id="6Of-1s-FK1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="查看笔记" id="1tr-MD-a0z"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1tr-MD-a0z">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="8Lf-4r-Z0V">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5ed-mE-JIn">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查看笔记" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="eYf-nT-bS6" eventType="touchUpInside" id="9ge-Fj-9L2"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="6fE-9O-50E" id="rAt-ai-xc6"/>
                     </connections>
@@ -535,12 +650,15 @@
             <point key="canvasLocation" x="1782" y="-1922"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backImage" width="22" height="22"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tig-V5-rrF"/>
+        <segue reference="OjE-Bk-vh3"/>
     </inferredMetricsTieBreakers>
 </document>
