@@ -51,8 +51,9 @@
 		3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835E219F69AA1006C9DB0 /* BeckTools.m */; };
 		3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */; };
 		3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */; };
-		3D4F677F19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677E19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.m */; };
 		3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */; };
+		3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */; };
+		3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449A19E6BF31009A1A1F /* UIView+create.m */; };
 		3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449D19E6C03A009A1A1F /* UIImage+tool.m */; };
@@ -181,10 +182,12 @@
 		3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckPVC.m; sourceTree = "<group>"; };
 		3D4F677A19F7E97900ED8FA4 /* BeckCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckCVC.h; sourceTree = "<group>"; };
 		3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckCVC.m; sourceTree = "<group>"; };
-		3D4F677D19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersionalFileTableViewHeader.h; sourceTree = "<group>"; };
-		3D4F677E19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersionalFileTableViewHeader.m; sourceTree = "<group>"; };
 		3D4F678019F7F9E500ED8FA4 /* ModifyPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordVC.h; sourceTree = "<group>"; };
 		3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordVC.m; sourceTree = "<group>"; };
+		3D6AE17D1A07BA7100C0BB71 /* MyPayInfoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPayInfoTVC.h; sourceTree = "<group>"; };
+		3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPayInfoTVC.m; sourceTree = "<group>"; };
+		3D6AE1801A07BA8600C0BB71 /* MyPointTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPointTVC.h; sourceTree = "<group>"; };
+		3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPointTVC.m; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3D99449919E6BF31009A1A1F /* UIView+create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+create.h"; sourceTree = "<group>"; };
@@ -535,10 +538,12 @@
 			children = (
 				3DC68AB319F54820003DB313 /* PersionalFileTVC.h */,
 				3DC68AB419F54820003DB313 /* PersionalFileTVC.m */,
-				3D4F677D19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.h */,
-				3D4F677E19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.m */,
 				3D4F678019F7F9E500ED8FA4 /* ModifyPasswordVC.h */,
 				3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */,
+				3D6AE17D1A07BA7100C0BB71 /* MyPayInfoTVC.h */,
+				3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */,
+				3D6AE1801A07BA8600C0BB71 /* MyPointTVC.h */,
+				3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */,
 			);
 			name = "个人档案";
 			path = Person;
@@ -805,12 +810,12 @@
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */,
 				3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */,
-				3D4F677F19F7F8E700ED8FA4 /* PersionalFileTableViewHeader.m in Sources */,
 				3D0EFBA819FFC9FF0017A539 /* EnterPasswordVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
 				3D1782631A02630100F6904C /* WrongItemEntity.m in Sources */,
 				3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */,
 				3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */,
+				3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
 				3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
@@ -846,6 +851,7 @@
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
 				3D0EFB9F19FFC9400017A539 /* BeckMCTVC.m in Sources */,
 				3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */,
+				3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */,
 				3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,11 +8,7 @@
 
 #import "PersionalFileTVC.h"
 
-#import "PersionalFileTableViewHeader.h"
-
-@interface PersionalFileTVC ()
-
-@property (nonatomic, strong) PersionalFileTableViewHeader *header;
+@interface PersionalFileTVC () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *names;
 
@@ -23,10 +19,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    self.header = [PersionalFileTableViewHeader viewWithFrame:CGRectMake(0, 0, 320, 100)];
-    self.header.backgroundColor = [UIColor grayColor];
-    self.tableView.tableHeaderView = self.header;
     
     self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
 }
@@ -48,10 +40,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.names.count;;
+    return self.names.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 4){
+        return [tableView dequeueReusableCellWithIdentifier:@"BottomCell" forIndexPath:indexPath];
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.names[indexPath.row];
@@ -70,19 +67,25 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-
-    }
-    else if (indexPath.row == 1){
-        
+        [self performSegueWithIdentifier:@"toMyPoint" sender:nil];
     }
     else if (indexPath.row == 2){
         [self performSegueWithIdentifier:@"toModifyPassword" sender:nil];
     }
     else if (indexPath.row == 3){
-
+        [self performSegueWithIdentifier:@"toPayInfo" sender:nil];
     }
-    else if (indexPath.row == 4){
+}
 
+- (IBAction)onPressedExit:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否退出当前账号？" delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"退出", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
