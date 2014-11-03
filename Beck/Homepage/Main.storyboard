@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-449" y="239"/>
         </scene>
-        <!--登录-->
+        <!--Beck LoginVC-->
         <scene sceneID="yBg-5Y-5rv">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="MRK-IG-3lV" customClass="BeckLoginVC" sceneMemberID="viewController">
@@ -109,7 +109,8 @@
                             <outletCollection property="gestureRecognizers" destination="xr1-GM-mye" appends="YES" id="BAP-zW-3wB"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="登录" id="Asa-p2-Lfv">
+                    <navigationItem key="navigationItem" id="Asa-p2-Lfv">
+                        <barButtonItem key="leftBarButtonItem" title="登陆" id="fT6-Aq-8bP"/>
                         <barButtonItem key="rightBarButtonItem" title="注册" id="IYt-bQ-jnn">
                             <connections>
                                 <segue destination="J5I-Ba-WNK" kind="push" id="ifu-HI-HDh"/>
@@ -128,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="-26" y="239"/>
         </scene>
-        <!--消息中心-->
+        <!--BeckMCTVC-->
         <scene sceneID="ScS-Au-g0T">
             <objects>
                 <tableViewController id="aUp-oF-YwY" customClass="BeckMCTVC" sceneMemberID="viewController">
@@ -172,13 +173,26 @@
                             <outlet property="delegate" destination="aUp-oF-YwY" id="axo-Y4-2ZJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="消息中心" id="ooL-pV-vOb"/>
+                    <navigationItem key="navigationItem" id="ooL-pV-vOb">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="C74-PT-19N">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xem-od-vgF">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="消息中心" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="aUp-oF-YwY" eventType="touchUpInside" id="Olm-QX-oE7"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wen-Eh-rHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-559" y="988"/>
         </scene>
-        <!--首页-->
+        <!--执业中药师-->
         <scene sceneID="2JC-6g-mBF">
             <objects>
                 <viewController id="7mP-0h-6Dd" customClass="BeckHomepageVC" sceneMemberID="viewController">
@@ -240,7 +254,16 @@
                             <constraint firstItem="Unj-AC-40T" firstAttribute="top" secondItem="cBs-R0-JuQ" secondAttribute="bottom" id="bbh-o6-sca"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="首页" id="W5T-uW-Rew">
+                    <navigationItem key="navigationItem" title="执业中药师" id="W5T-uW-Rew">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="GUm-qH-2RC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="32S-AM-A1M">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="消息" id="DTR-wb-7Io">
                             <connections>
                                 <segue destination="aUp-oF-YwY" kind="push" id="zup-KZ-ys0"/>
@@ -255,7 +278,7 @@
             </objects>
             <point key="canvasLocation" x="-26" y="984"/>
         </scene>
-        <!--个人成就-->
+        <!--Beck AchievementTVC-->
         <scene sceneID="DKf-TX-uRg">
             <objects>
                 <tableViewController id="59W-Jq-9Rc" customClass="BeckAchievementTVC" sceneMemberID="viewController">
@@ -313,7 +336,20 @@
                             <outlet property="delegate" destination="59W-Jq-9Rc" id="eoG-sZ-BAA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="个人成就" id="zmS-da-1aA"/>
+                    <navigationItem key="navigationItem" id="zmS-da-1aA">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="xoe-ln-s4X">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IeK-eu-pJc">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="个人成就" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="59W-Jq-9Rc" eventType="touchUpInside" id="d1Y-E5-X6W"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="footerView" destination="5ur-9W-cOS" id="kMi-Kz-D5p"/>
                     </connections>
@@ -375,7 +411,20 @@
                             <outletCollection property="gestureRecognizers" destination="i2B-Mp-8Kq" appends="YES" id="29g-Wq-3s9"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="注册" id="WqO-rE-KaX"/>
+                    <navigationItem key="navigationItem" id="WqO-rE-KaX">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="H8b-17-yEj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wRQ-X1-Nm0">
+                                <rect key="frame" x="16" y="7" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="登陆" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="J5I-Ba-WNK" eventType="touchUpInside" id="r4t-Np-3JQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrS-U1-KAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="i2B-Mp-8Kq">
@@ -425,7 +474,22 @@
                             <outletCollection property="gestureRecognizers" destination="w7H-6u-VZF" appends="YES" id="GQr-np-lch"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="找回密码" id="85b-er-IKr"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="85b-er-IKr">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="2MS-kf-m4H">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EH5-An-dIC">
+                                <rect key="frame" x="16" y="7" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="找回密码" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="Oam-ix-RyN" eventType="touchUpInside" id="ghE-pd-kGy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PT3-0B-EOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="w7H-6u-VZF">
@@ -468,7 +532,7 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaG-qB-w2w">
                                 <rect key="frame" x="152" y="101" width="152" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="重新发送">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -498,7 +562,21 @@
                             <outletCollection property="gestureRecognizers" destination="CTz-YQ-sJk" appends="YES" id="Uny-E9-nof"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="填写验证码" id="dfZ-Ur-O6y"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dfZ-Ur-O6y">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="LuB-CF-Kfv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R1k-FX-LfP">
+                                <rect key="frame" x="16" y="7" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="填写验证码" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="F0l-RN-i1q" eventType="touchUpInside" id="3aL-R8-bHa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2v-Lg-atg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="CTz-YQ-sJk">
@@ -561,7 +639,21 @@
                             <outletCollection property="gestureRecognizers" destination="Egp-8u-RRq" appends="YES" id="0hs-yX-ymp"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="设置密码" id="lQ2-F0-6gn"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lQ2-F0-6gn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="adK-up-F3b">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eme-vO-vXl">
+                                <rect key="frame" x="16" y="7" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="设置密码" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="cpO-41-5Fs" eventType="touchUpInside" id="RP6-0e-9Iz"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="tFM-7Z-g2A" kind="unwind" identifier="toLogin" unwindAction="unwindToThisVC:" id="qNg-v0-KyK"/>
                     </connections>
@@ -762,6 +854,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backImage" width="22" height="22"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

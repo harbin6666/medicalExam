@@ -18,9 +18,11 @@ typedef void(^BeckCompletionBlock)(id aResponseObject, NSError* anError);
 
 - (void)configNavibar;
 
-- (void)leftBtnClick:(UIBarButtonItem *)sender;
+- (IBAction)leftBtnClick:(UIButton *)sender;
 
-- (void)rightBtnClick:(UIBarButtonItem *)sender;
+- (IBAction)rightBtnClick:(UIButton *)sender;
+
+- (void)setNavigationBarButtonName:(NSString *)aName width:(CGFloat)aWidth isLeft:(BOOL)left;
 
 @end
 

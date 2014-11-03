@@ -14,58 +14,45 @@
 
 @implementation BeckVC
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
+- (void)viewDidLoad {
+    [super viewDidLoad];
     [self configNavibar];
 }
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
-
 
 @implementation UIViewController (Beck)
 
 - (void)configNavibar
 {
-//    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_0) {
-//        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-//    }
-//
-//    UIButton *leftBtn = [UIButton viewWithFrame:CGRectMake(0, 0, 44, 44)];
-//    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
-//    [leftBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [leftBtn addTarget:self action:@selector(leftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
-//    self.navigationItem.leftBarButtonItem = leftBtnItem;
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_0) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
 }
 
-- (void)leftBtnClick:(UIBarButtonItem *)sender
+- (void)setNavigationBarButtonName:(NSString *)aName width:(CGFloat)aWidth isLeft:(BOOL)left
+{
+    UIButton *btn = [UIButton viewWithFrame:CGRectMake(0, 0, aWidth, 44)];
+    [btn setTitle:aName forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    
+    if (left) {
+        [btn addTarget:self action:@selector(leftBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        self.navigationItem.leftBarButtonItem = btnItem;
+    }
+    else {
+        [btn addTarget:self action:@selector(rightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        self.navigationItem.rightBarButtonItem = btnItem;
+    }
+}
+
+- (void)leftBtnClick:(UIButton *)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)rightBtnClick:(UIBarButtonItem *)sender
+- (void)rightBtnClick:(UIButton *)sender
 {
     
 }
