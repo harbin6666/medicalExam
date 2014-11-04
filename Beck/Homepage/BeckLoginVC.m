@@ -8,7 +8,13 @@
 
 #import "BeckLoginVC.h"
 
-@interface BeckLoginVC ()
+#import "WeiboSDK.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <RennSDK/RennSDK.h>
+
+@interface BeckLoginVC () <TencentSessionDelegate>
+
+@property (nonatomic, strong) TencentOAuth *tencentOAuth;
 
 @end
 
@@ -17,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tencentOAuth = [[TencentOAuth alloc] initWithAppId:kOpenQQAppKey andDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,21 +31,66 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)onTag:(id)sender {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
 }
 
 - (IBAction)unwindToThisVC:(UIStoryboardSegue *)segue {
     
+}
+
+
+- (IBAction)onPressedQQ:(id)sender {
+    NSArray *permissions = @[kOPEN_PERMISSION_GET_USER_INFO,
+                             kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,
+                             kOPEN_PERMISSION_GET_INFO];
+    [self.tencentOAuth authorize:permissions inSafari:NO];
+}
+
+- (IBAction)onPressedSina:(id)sender {
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = kSinaRedirectURI;
+    request.scope = @"all";
+    request.userInfo = @{@"SSO_From": @"BeckLoginVC",
+                         @"Other_Info_1": [NSNumber numberWithInt:123],
+                         @"Other_Info_2": @[@"obj1", @"obj2"],
+                         @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+    [WeiboSDK sendRequest:request];
+}
+
+- (IBAction)onPressedRenRen:(id)sender {
+//    if ([RennClient isLogin]) {
+//        [RennClient logoutWithDelegate:self];
+//    }
+//    else {
+//        [RennClient loginWithDelegate:self];
+//    }
+}
+
+#pragma mark - <TencentLoginDelegate>
+
+- (void)tencentDidLogin
+{
+    NSLog(@"open id = %@, accessToken = %@", self.tencentOAuth.openId, self.tencentOAuth.accessToken);
+}
+
+- (void)tencentDidNotLogin:(BOOL)cancelled {
+    
+}
+
+- (void)tencentDidNotNetWork {
+    
+}
+
+#pragma mark - <RennLoginDelegate>
+- (void)rennLoginSuccess
+{
+    NSLog(@"登录成功");
+}
+
+- (void)rennLogoutSuccess
+{
+    NSLog(@"注销成功");
 }
 
 

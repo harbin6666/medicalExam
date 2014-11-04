@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-449" y="239"/>
         </scene>
-        <!--Beck LoginVC-->
+        <!--登陆-->
         <scene sceneID="yBg-5Y-5rv">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="MRK-IG-3lV" customClass="BeckLoginVC" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="MRK-IG-3lV" userLabel="登陆" customClass="BeckLoginVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LeU-xc-Dg4"/>
                         <viewControllerLayoutGuide type="bottom" id="RXY-9V-uo9"/>
@@ -48,18 +48,27 @@
                                         <state key="normal" title="Sina">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onPressedSina:" destination="MRK-IG-3lV" eventType="touchUpInside" id="IPt-Nj-9Qa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maR-cx-ebV">
                                         <rect key="frame" x="232" y="37" width="80" height="80"/>
                                         <state key="normal" title="RenRen">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onPressedRenRen:" destination="MRK-IG-3lV" eventType="touchUpInside" id="kSK-Xv-u4m"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbh-84-n05">
                                         <rect key="frame" x="8" y="37" width="80" height="80"/>
                                         <state key="normal" title="QQ">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onPressedQQ:" destination="MRK-IG-3lV" eventType="touchUpInside" id="JFI-Qt-qq3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="-26" y="239"/>
         </scene>
-        <!--BeckMCTVC-->
+        <!--消息中心-->
         <scene sceneID="ScS-Au-g0T">
             <objects>
-                <tableViewController id="aUp-oF-YwY" customClass="BeckMCTVC" sceneMemberID="viewController">
+                <tableViewController id="aUp-oF-YwY" userLabel="消息中心" customClass="BeckMCTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Gbp-vz-XJL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="-26" y="984"/>
         </scene>
-        <!--Beck AchievementTVC-->
+        <!--个人成就-->
         <scene sceneID="DKf-TX-uRg">
             <objects>
-                <tableViewController id="59W-Jq-9Rc" customClass="BeckAchievementTVC" sceneMemberID="viewController">
+                <tableViewController id="59W-Jq-9Rc" userLabel="个人成就" customClass="BeckAchievementTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="kBA-9E-cJx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
