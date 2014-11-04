@@ -13,8 +13,4 @@
 #import "RennStatusService.h"
 #import "RennUbbService.h"
 #import "RennUserService.h"
-#import "RennLocationService.h"
-#import "RennPlaceService.h"
-#import "RennHeadService.h"
-#import "RennNewsService.h"
 #import "RennFriendService.h"

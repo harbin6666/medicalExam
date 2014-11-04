@@ -61,6 +61,7 @@
 		3DA4FA271A05FE2200C7D362 /* ExamStatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */; };
 		3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */; };
 		3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */; };
+		3DA6453C1A091FED00AC34FB /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6453B1A091FED00AC34FB /* RennSDK.bundle */; };
 		3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */; };
 		3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AA19FE79EF002CD73D /* Practise.storyboard */; };
 		3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AC19FE79FB002CD73D /* Exam.storyboard */; };
@@ -202,6 +203,7 @@
 		3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticTVC.m; sourceTree = "<group>"; };
 		3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticCVC.h; sourceTree = "<group>"; };
 		3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticCVC.m; sourceTree = "<group>"; };
+		3DA6453B1A091FED00AC34FB /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
 		3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckHomepageVC.h; sourceTree = "<group>"; };
 		3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckHomepageVC.m; sourceTree = "<group>"; };
 		3DB238AA19FE79EF002CD73D /* Practise.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practise.storyboard; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 		3DCB50DB1A010EA70079CC01 /* RenRen */ = {
 			isa = PBXGroup;
 			children = (
+				3DA6453B1A091FED00AC34FB /* RennSDK.bundle */,
 				3DCB50DC1A010EA70079CC01 /* RennSDK.framework */,
 			);
 			path = RenRen;
@@ -739,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DB238D319FE803E002CD73D /* MyAccount.storyboard in Resources */,
+				3DA6453C1A091FED00AC34FB /* RennSDK.bundle in Resources */,
 				3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */,
 				3D094DE419FE753200472508 /* Main.storyboard in Resources */,
 				3DB238D119FE8026002CD73D /* More.storyboard in Resources */,

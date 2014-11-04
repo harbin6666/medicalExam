@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.sina.weibo.SNWeiboSDKDemo</string>
+	<string>com.renren.Demo</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -40,6 +40,14 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wb2045436852</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rm168802com.renren.Demo</string>
 			</array>
 		</dict>
 	</array>

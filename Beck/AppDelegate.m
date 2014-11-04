@@ -143,10 +143,13 @@
     if ([TencentOAuth CanHandleOpenURL:url]) {
         return [TencentOAuth HandleOpenURL:url];
     }
-    else {
-        [WeiboSDK handleOpenURL:url delegate:self.loginVC];
+    else if ([sourceApplication isEqualToString:@"com.sina.weibo"]){
+        return [WeiboSDK handleOpenURL:url delegate:self.loginVC];
     }
-//    return [RennClient  handleOpenURL:url];
+    else if ([sourceApplication isEqualToString:@"com.xiaonei.xiaonei"]) {
+        return [RennClient handleOpenURL:url];
+    }
+    
     return YES;
 }
 

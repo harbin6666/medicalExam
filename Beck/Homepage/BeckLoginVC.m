@@ -13,7 +13,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <RennSDK/RennSDK.h>
 
-@interface BeckLoginVC () <TencentSessionDelegate>
+@interface BeckLoginVC () <TencentSessionDelegate, RennLoginDelegate>
 
 @property (nonatomic, strong) TencentOAuth *tencentOAuth;
 
@@ -27,14 +27,16 @@
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
     delegate.loginVC = self;
     
-    // Do any additional setup after loading the view.
     self.tencentOAuth = [[TencentOAuth alloc] initWithAppId:kOpenQQAppKey andDelegate:self];
+    
     [WeiboSDK registerApp:kSinaAppKey];
     
-//    [RennClient initWithAppId:@"168802"
-//                       apiKey:@"e884884ac90c4182a426444db12915bf"
-//                    secretKey:@"094de55dc157411e8a5435c6a7c134c5"];
-    
+    [RennClient initWithAppId:kRenRenAppId
+                       apiKey:kRenRenAppKey
+                    secretKey:kRenRenAppSecretKey];
+
+    //不设置则获取默认权限
+    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,23 +72,24 @@
 }
 
 - (IBAction)onPressedRenRen:(id)sender {
-//    if ([RennClient isLogin]) {
-//        [RennClient logoutWithDelegate:self];
-//    }
-//    else {
-//        [RennClient loginWithDelegate:self];
-//    }
+    if ([RennClient isLogin]) {
+        [RennClient logoutWithDelegate:self];
+    }
+    else {
+        [RennClient loginWithDelegate:self];
+    }
 }
 
 #pragma mark - <TencentLoginDelegate>
 
 - (void)tencentDidLogin
 {
-    NSLog(@"open id = %@, accessToken = %@", self.tencentOAuth.openId, self.tencentOAuth.accessToken);
+    NSLog(@"QQ 登录成功");
+    NSLog(@"openid = %@, accessToken = %@", self.tencentOAuth.openId, self.tencentOAuth.accessToken);
 }
 
 - (void)tencentDidNotLogin:(BOOL)cancelled {
-    
+    NSLog(@"QQ 取消登录");
 }
 
 - (void)tencentDidNotNetWork {
@@ -104,27 +107,31 @@
 {
     if ([response isKindOfClass:WBAuthorizeResponse.class])
     {
-        NSString *title = @"认证结果";
-        NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",(int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                        message:message
-                                                       delegate:nil
-                                              cancelButtonTitle:@"确定"
-                                              otherButtonTitles:nil];
-        [alert show];
+        //(int)response.statusCode = 0 is ok
+        NSLog(@"Sina 登录成功");
+        NSLog(@"userID = %@, accessToken = %@", [(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken]);
+        
+//        NSString *title = @"认证结果";
+//        NSString *message = [NSString stringWithFormat:@"响应状态: %d\nresponse.userId: %@\nresponse.accessToken: %@\n响应UserInfo数据: %@\n原请求UserInfo数据: %@",(int)response.statusCode,[(WBAuthorizeResponse *)response userID], [(WBAuthorizeResponse *)response accessToken], response.userInfo, response.requestUserInfo];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+//                                                        message:message
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"确定"
+//                                              otherButtonTitles:nil];
+//        [alert show];
     }
 }
 
 #pragma mark - <RennLoginDelegate>
 - (void)rennLoginSuccess
 {
-    NSLog(@"登录成功");
+    NSLog(@"Renren 登录成功");
+    NSLog(@"renren uid = %@, accessToken = %@", [RennClient uid], [RennClient accessToken]);
 }
 
 - (void)rennLogoutSuccess
 {
-    NSLog(@"注销成功");
+    NSLog(@"Renren 注销成功");
 }
-
 
 @end

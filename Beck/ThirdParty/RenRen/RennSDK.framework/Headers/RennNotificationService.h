@@ -10,10 +10,6 @@
 
 extern NSString *kRennServiceTypePutNotificationAsUser;
 extern NSString *kRennServiceTypePutNotificationAsApp;
-extern NSString *kRennServiceTypePutInvitation;
-
-extern NSString *kTypeInvitationGIFT;
-extern NSString *kTypeInvitationINVITATION;
 
 /*
  API链接: http://wiki.dev.renren.com/wiki/V2/notification/user/put
@@ -34,28 +30,5 @@ extern NSString *kTypeInvitationINVITATION;
 @property (nonatomic, retain) NSString *content;
 //必选
 @property (nonatomic, retain) NSArray *userIds;
-
-@end
-
-
-/*
- API链接: http://wiki.dev.renren.com/wiki/V2/invitation/put
- */
-@interface PutInvitationParam : RennParam
-
-//可选
-@property (nonatomic, retain) NSString *invitationType;
-
-//必选
-@property (nonatomic, retain) NSString *userId;
-
-//可选
-@property (nonatomic, retain) NSString *img;
-
-//可选
-@property (nonatomic, retain) NSString *giftName;
-
-//必选
-@property (nonatomic, retain) NSString *url;
 
 @end

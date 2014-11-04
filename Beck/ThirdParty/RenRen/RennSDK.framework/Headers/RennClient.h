@@ -69,7 +69,5 @@
 // Cancel the request for delegate
 + (void)cancelForDelegate:(id)delegate;
 
-+ (void)quickRegister:(id<RennLoginDelegate>)delegate;
-
 @end
 

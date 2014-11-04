@@ -13,7 +13,6 @@ extern NSString *kRennServiceTypeBatchUser;
 extern NSString *kRennServiceTypeListUserFriendMutual;
 extern NSString *kRennServiceTypeListUserFriend;
 extern NSString *kRennServiceTypeListUserFriendApp;
-extern NSString *kRennServiceTypeListUserFriendUninstallApp;
 extern NSString *kRennServiceTypeGetLogin;
 
 /*
@@ -60,13 +59,6 @@ extern NSString *kRennServiceTypeGetLogin;
  API链接: http://wiki.dev.renren.com/wiki/V2/user/friend/app/list
  */
 @interface ListUserFriendAppParam : RennParam
-
-@end
-
-/*
- API链接: http://wiki.dev.renren.com/wiki/V2/user/friend/uninstall/list
- */
-@interface ListUserFriendUninstallAppParam : RennParam
 
 @end
 
