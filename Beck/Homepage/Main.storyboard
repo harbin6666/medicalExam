@@ -310,7 +310,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PointCell" textLabel="5Fj-XU-8HZ" detailTextLabel="I1Q-AP-e0W" style="IBUITableViewCellStyleValue1" id="HaO-tf-9Tx">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PointCell" textLabel="5Fj-XU-8HZ" detailTextLabel="I1Q-AP-e0W" style="IBUITableViewCellStyleValue1" id="HaO-tf-9Tx">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HaO-tf-9Tx" id="ixb-IQ-dQW">
                                     <autoresizingMask key="autoresizingMask"/>
