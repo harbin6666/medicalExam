@@ -8,6 +8,8 @@
 
 #import "BeckTVC.h"
 
-@interface BeckLoginVC : BeckVC
+#import "WeiboSDK.h"
+
+@interface BeckLoginVC : BeckVC <WeiboSDKDelegate>
 
 @end

@@ -46,12 +46,6 @@
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
     
-    [WeiboSDK registerApp:kSinaAppKey];
-    
-//    [RennClient initWithAppId:@"168802"
-//                       apiKey:@"e884884ac90c4182a426444db12915bf"
-//                    secretKey:@"094de55dc157411e8a5435c6a7c134c5"];
-    
 //注册
 //    [RCIM initWithAppKey:@"pwe86ga5er666" deviceToken:nil];
     
@@ -148,6 +142,9 @@
 {
     if ([TencentOAuth CanHandleOpenURL:url]) {
         return [TencentOAuth HandleOpenURL:url];
+    }
+    else {
+        [WeiboSDK handleOpenURL:url delegate:self.loginVC];
     }
 //    return [RennClient  handleOpenURL:url];
     return YES;

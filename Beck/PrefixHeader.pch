@@ -19,7 +19,7 @@
 
 #define kOpenQQAppKey       @"100344815"
 
-#define kSinaAppKey         @"1427831427"
+#define kSinaAppKey         @"2045436852"
 #define kSinaRedirectURI    @"http://www.sina.com"
 
 #endif
