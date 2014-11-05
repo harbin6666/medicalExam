@@ -667,7 +667,20 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="99O-y9-UJS"/>
                         <barButtonItem title="Item5" id="X8c-rC-vYj"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="Nvn-sE-Vk5"/>
+                    <navigationItem key="navigationItem" id="Nvn-sE-Vk5">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="tod-Ov-vuY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eHV-MN-Ubl">
+                                <rect key="frame" x="16" y="11" width="58" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="tE6-vy-aDm" eventType="touchUpInside" id="cIs-8z-KY0"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="item1" destination="mKv-lL-hSm" id="gdE-B1-U9T"/>
