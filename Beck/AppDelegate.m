@@ -14,7 +14,7 @@
 
 #import "WeiboSDK.h"
 #import <TencentOpenAPI/TencentOAuth.h>
-#import <RennSDK/RennSDK.h>
+//#import <RennSDK/RennSDK.h>
 
 @interface AppDelegate ()
 
@@ -147,7 +147,7 @@
         return [WeiboSDK handleOpenURL:url delegate:self.loginVC];
     }
     else if ([sourceApplication isEqualToString:@"com.xiaonei.xiaonei"]) {
-        return [RennClient handleOpenURL:url];
+//        return [RennClient handleOpenURL:url];
     }
     
     return YES;

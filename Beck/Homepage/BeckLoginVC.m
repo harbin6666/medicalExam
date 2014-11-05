@@ -11,9 +11,9 @@
 #import "AppDelegate.h"
 
 #import <TencentOpenAPI/TencentOAuth.h>
-#import <RennSDK/RennSDK.h>
+//#import <RennSDK/RennSDK.h>
 
-@interface BeckLoginVC () <TencentSessionDelegate, RennLoginDelegate>
+@interface BeckLoginVC () <TencentSessionDelegate>
 
 @property (nonatomic, strong) TencentOAuth *tencentOAuth;
 
@@ -31,12 +31,12 @@
     
     [WeiboSDK registerApp:kSinaAppKey];
     
-    [RennClient initWithAppId:kRenRenAppId
-                       apiKey:kRenRenAppKey
-                    secretKey:kRenRenAppSecretKey];
+//    [RennClient initWithAppId:kRenRenAppId
+//                       apiKey:kRenRenAppKey
+//                    secretKey:kRenRenAppSecretKey];
 
     //不设置则获取默认权限
-    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
+//    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,12 +72,12 @@
 }
 
 - (IBAction)onPressedRenRen:(id)sender {
-    if ([RennClient isLogin]) {
-        [RennClient logoutWithDelegate:self];
-    }
-    else {
-        [RennClient loginWithDelegate:self];
-    }
+//    if ([RennClient isLogin]) {
+//        [RennClient logoutWithDelegate:self];
+//    }
+//    else {
+//        [RennClient loginWithDelegate:self];
+//    }
 }
 
 #pragma mark - <TencentLoginDelegate>
@@ -126,7 +126,7 @@
 - (void)rennLoginSuccess
 {
     NSLog(@"Renren 登录成功");
-    NSLog(@"renren uid = %@, accessToken = %@", [RennClient uid], [RennClient accessToken]);
+//    NSLog(@"renren uid = %@, accessToken = %@", [RennClient uid], [RennClient accessToken]);
 }
 
 - (void)rennLogoutSuccess

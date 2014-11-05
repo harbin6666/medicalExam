@@ -76,7 +76,6 @@
 		3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */; };
 		3DCB50E11A010EA70079CC01 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50D91A010EA70079CC01 /* TencentOpenAPI.framework */; };
 		3DCB50E21A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DCB50DA1A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		3DCB50E31A010EA70079CC01 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DC1A010EA70079CC01 /* RennSDK.framework */; };
 		3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DE1A010EA70079CC01 /* libWeiboSDK.a */; };
 		3DCB50E51A010EA70079CC01 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DCB50DF1A010EA70079CC01 /* WeiboSDK.bundle */; };
 		3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */; };
@@ -260,7 +259,6 @@
 				3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */,
 				3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */,
 				3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */,
-				3DCB50E31A010EA70079CC01 /* RennSDK.framework in Frameworks */,
 				3DCB50E11A010EA70079CC01 /* TencentOpenAPI.framework in Frameworks */,
 				3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */,
 				3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */,
