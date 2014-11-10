@@ -19,20 +19,13 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.tabbar.selectedItem = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    self.tabbar.selectedItem = nil;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -44,6 +37,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        UITabBarItem *item1 = self.tabbar.items[0];
+        [item1 setSelectedImage:[[UIImage imageNamed:@"tab1_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item2 = self.tabbar.items[1];
+        [item2 setSelectedImage:[[UIImage imageNamed:@"tab2_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item3 = self.tabbar.items[2];
+        [item3 setSelectedImage:[[UIImage imageNamed:@"tab3_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item4 = self.tabbar.items[3];
+        [item4 setSelectedImage:[[UIImage imageNamed:@"tab4_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    }
+    else {
+        UITabBarItem *item1 = self.tabbar.items[0];
+        [item1 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+        
+        UITabBarItem *item2 = self.tabbar.items[1];
+        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+        
+        UITabBarItem *item3 = self.tabbar.items[2];
+        [item3 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+        
+        UITabBarItem *item4 = self.tabbar.items[3];
+        [item4 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,11 +98,6 @@
             break;
         default:
             break;
-    }
-    
-    if (!sb) {
-        self.tabbar.selectedItem = nil;
-        return ;
     }
     
     UIViewController *vc = [sb instantiateInitialViewController];

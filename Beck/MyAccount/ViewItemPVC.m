@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) ItemTVC *currentTVC;
 
+@property (strong, nonatomic) IBOutlet UITabBar *cusTabbar;
+
 @end
 
 @implementation ViewItemPVC
