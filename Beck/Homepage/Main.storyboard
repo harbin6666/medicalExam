@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -335,7 +336,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homejiang" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-Vl-ZjG">
-                                <rect key="frame" x="24" y="183" width="272" height="202"/>
+                                <rect key="frame" x="24" y="197" width="272" height="202"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -353,7 +354,7 @@
                             <constraint firstAttribute="centerX" secondItem="L8O-c0-epf" secondAttribute="centerX" id="YPk-L6-lgh"/>
                             <constraint firstItem="Unj-AC-40T" firstAttribute="top" secondItem="cBs-R0-JuQ" secondAttribute="bottom" id="bbh-o6-sca"/>
                             <constraint firstAttribute="centerX" secondItem="3ZG-ib-fxf" secondAttribute="centerX" id="izD-tw-dQA"/>
-                            <constraint firstAttribute="centerY" secondItem="0oZ-Vl-ZjG" secondAttribute="centerY" id="jRJ-Fv-PZI"/>
+                            <constraint firstItem="0oZ-Vl-ZjG" firstAttribute="centerY" secondItem="OQq-oj-9uI" secondAttribute="centerY" constant="14" id="jRJ-Fv-PZI"/>
                             <constraint firstItem="3ZG-ib-fxf" firstAttribute="top" secondItem="jt1-mX-yQ7" secondAttribute="bottom" constant="24" id="ytD-6a-dwv"/>
                         </constraints>
                     </view>
@@ -371,6 +372,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YN7-n0-SLM">
                                 <rect key="frame" x="246" y="7" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="消息">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -472,16 +474,74 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fio-y7-6EO">
                             <rect key="frame" x="8" y="0.0" width="145" height="30"/>
-                            <state key="normal" title="积分奖励规则说明">
+                            <state key="normal" backgroundImage="info">
                                 <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="-26" y="1680"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mwz-rG-OPO">
+            <objects>
+                <viewController id="ZBY-Yg-0eB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Smo-or-rxj"/>
+                        <viewControllerLayoutGuide type="bottom" id="2AE-JL-5jc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0H6-Ys-9ce">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTe-cA-jD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="-375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0ot-JC-5v0">
+            <objects>
+                <viewController id="Cs5-0u-p2T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N6z-g9-LXL"/>
+                        <viewControllerLayoutGuide type="bottom" id="9JJ-jH-6Q9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bgh-ke-EhX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoru2" translatesAutoresizingMaskIntoConstraints="NO" id="T5q-AZ-Mon">
+                                <rect key="frame" x="64" y="284" width="192" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="7Hq-TZ-giK"/>
+                                    <constraint firstAttribute="height" constant="72" id="Ile-9l-Vpv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoru1" translatesAutoresizingMaskIntoConstraints="NO" id="IQf-34-HId">
+                                <rect key="frame" x="117" y="218" width="86" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="mIf-W4-kVE"/>
+                                    <constraint firstAttribute="width" constant="86" id="qvy-6m-uxS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="IQf-34-HId" secondAttribute="bottom" id="Auc-jw-bdk"/>
+                            <constraint firstAttribute="centerX" secondItem="IQf-34-HId" secondAttribute="centerX" id="HRl-Pz-jwI"/>
+                            <constraint firstAttribute="centerY" secondItem="T5q-AZ-Mon" secondAttribute="top" id="RLY-7k-liT"/>
+                            <constraint firstAttribute="centerX" secondItem="T5q-AZ-Mon" secondAttribute="centerX" id="gUz-T2-qMK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djN-7u-754" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="-387"/>
         </scene>
         <!--注册-->
         <scene sceneID="uxn-Kn-S1E">
@@ -1031,9 +1091,12 @@
     </scenes>
     <resources>
         <image name="backImage" width="9" height="14"/>
+        <image name="daoru1" width="86" height="66"/>
+        <image name="daoru2" width="192" height="72"/>
         <image name="first" width="30" height="30"/>
         <image name="homebg" width="360" height="534"/>
         <image name="homejiang" width="272" height="202"/>
+        <image name="info" width="114" height="25"/>
         <image name="second" width="30" height="30"/>
         <image name="tab1" width="37" height="33"/>
         <image name="tab2" width="37" height="33"/>

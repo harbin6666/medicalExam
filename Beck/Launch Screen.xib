@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoru2" translatesAutoresizingMaskIntoConstraints="NO" id="6Sm-C7-KXC">
+                    <rect key="frame" x="144" y="240" width="192" height="72"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoru1" translatesAutoresizingMaskIntoConstraints="NO" id="K7L-KV-F09">
+                    <rect key="frame" x="197" y="174" width="86" height="66"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="6Sm-C7-KXC" secondAttribute="top" id="0Qv-e0-3Tm"/>
+                <constraint firstAttribute="centerX" secondItem="6Sm-C7-KXC" secondAttribute="centerX" id="fKr-he-UIj"/>
+                <constraint firstAttribute="centerX" secondItem="K7L-KV-F09" secondAttribute="centerX" id="hl3-VC-D5D"/>
+                <constraint firstAttribute="centerY" secondItem="K7L-KV-F09" secondAttribute="bottom" id="sMO-dA-NPX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="404" y="445"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="daoru1" width="86" height="66"/>
+        <image name="daoru2" width="192" height="72"/>
+    </resources>
+</document>

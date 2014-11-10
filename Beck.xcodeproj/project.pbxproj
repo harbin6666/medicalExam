@@ -54,6 +54,7 @@
 		3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */; };
 		3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */; };
 		3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */; };
+		3D8765EF1A10F13600ED25CE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8765EE1A10F13600ED25CE /* Launch Screen.xib */; };
 		3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D99448C19E6AD27009A1A1F /* Media.xcassets */; };
 		3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449A19E6BF31009A1A1F /* UIView+create.m */; };
 		3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99449D19E6C03A009A1A1F /* UIImage+tool.m */; };
@@ -188,6 +189,7 @@
 		3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPayInfoTVC.m; sourceTree = "<group>"; };
 		3D6AE1801A07BA8600C0BB71 /* MyPointTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPointTVC.h; sourceTree = "<group>"; };
 		3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPointTVC.m; sourceTree = "<group>"; };
+		3D8765EE1A10F13600ED25CE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		3D99448C19E6AD27009A1A1F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3D99449919E6BF31009A1A1F /* UIView+create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+create.h"; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 				3D3835E019F69A85006C9DB0 /* 工具 */,
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
+				3D8765EE1A10F13600ED25CE /* Launch Screen.xib */,
 				3D99448E19E6B08C009A1A1F /* PrefixHeader.pch */,
 				3D99448C19E6AD27009A1A1F /* Media.xcassets */,
 				3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */,
@@ -748,6 +751,7 @@
 				3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */,
 				3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */,
 				3DCB50E51A010EA70079CC01 /* WeiboSDK.bundle in Resources */,
+				3D8765EF1A10F13600ED25CE /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
