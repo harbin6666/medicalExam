@@ -286,7 +286,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-z5-PPQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="homebg" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-z5-PPQ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                             </imageView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBs-R0-JuQ">
@@ -334,10 +334,14 @@
                                     <segue destination="59W-Jq-9Rc" kind="push" id="IMn-RL-tpd"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homejiang" translatesAutoresizingMaskIntoConstraints="NO" id="0oZ-Vl-ZjG">
+                                <rect key="frame" x="24" y="183" width="272" height="202"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L8O-c0-epf" firstAttribute="top" secondItem="FWd-UP-kDj" secondAttribute="bottom" constant="8" id="3ew-lU-vg4"/>
+                            <constraint firstAttribute="centerX" secondItem="0oZ-Vl-ZjG" secondAttribute="centerX" id="3tm-P9-3Gk"/>
                             <constraint firstAttribute="trailing" secondItem="cBs-R0-JuQ" secondAttribute="trailing" id="8DL-Mv-mPH"/>
                             <constraint firstItem="cBs-R0-JuQ" firstAttribute="leading" secondItem="OQq-oj-9uI" secondAttribute="leading" id="Its-Cl-T3Q"/>
                             <constraint firstAttribute="centerX" secondItem="FWd-UP-kDj" secondAttribute="centerX" id="Ome-Sk-HKO"/>
@@ -349,6 +353,7 @@
                             <constraint firstAttribute="centerX" secondItem="L8O-c0-epf" secondAttribute="centerX" id="YPk-L6-lgh"/>
                             <constraint firstItem="Unj-AC-40T" firstAttribute="top" secondItem="cBs-R0-JuQ" secondAttribute="bottom" id="bbh-o6-sca"/>
                             <constraint firstAttribute="centerX" secondItem="3ZG-ib-fxf" secondAttribute="centerX" id="izD-tw-dQA"/>
+                            <constraint firstAttribute="centerY" secondItem="0oZ-Vl-ZjG" secondAttribute="centerY" id="jRJ-Fv-PZI"/>
                             <constraint firstItem="3ZG-ib-fxf" firstAttribute="top" secondItem="jt1-mX-yQ7" secondAttribute="bottom" constant="24" id="ytD-6a-dwv"/>
                         </constraints>
                     </view>
@@ -1027,6 +1032,8 @@
     <resources>
         <image name="backImage" width="9" height="14"/>
         <image name="first" width="30" height="30"/>
+        <image name="homebg" width="360" height="534"/>
+        <image name="homejiang" width="272" height="202"/>
         <image name="second" width="30" height="30"/>
         <image name="tab1" width="37" height="33"/>
         <image name="tab2" width="37" height="33"/>
