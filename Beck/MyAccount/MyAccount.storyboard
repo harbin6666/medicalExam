@@ -328,10 +328,10 @@
             </objects>
             <point key="canvasLocation" x="1764" y="-3753"/>
         </scene>
-        <!--View Controller-->
+        <!--考试详情-->
         <scene sceneID="Otp-74-duF">
             <objects>
-                <viewController id="XLN-tn-qaY" sceneMemberID="viewController">
+                <viewController id="XLN-tn-qaY" userLabel="考试详情" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fb-tk-lKg"/>
                         <viewControllerLayoutGuide type="bottom" id="M2d-6U-M6t"/>
