@@ -47,7 +47,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.names[indexPath.row];
-    
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"MA%li",(long)indexPath.row]];
     return cell;
 }
 

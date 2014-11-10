@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TSO-DH-PCG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TSO-DH-PCG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -293,10 +293,10 @@
                                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="个人中心" id="hH1-y6-QcL"/>
-                                    <tabBarItem tag="1" title="练习模式" id="0MU-hF-hWT"/>
-                                    <tabBarItem tag="2" title="考试模式" id="07L-TY-9Ri"/>
-                                    <tabBarItem tag="3" title="更多" id="lOB-yy-UxM"/>
+                                    <tabBarItem title="个人中心" image="tab1" id="hH1-y6-QcL"/>
+                                    <tabBarItem tag="1" title="练习模式" image="tab2" id="0MU-hF-hWT"/>
+                                    <tabBarItem tag="2" title="考试模式" image="tab3" id="07L-TY-9Ri"/>
+                                    <tabBarItem tag="3" title="更多" image="tab4" id="lOB-yy-UxM"/>
                                 </items>
                                 <connections>
                                     <outlet property="delegate" destination="7mP-0h-6Dd" id="Gwb-j0-Pqa"/>
@@ -1025,9 +1025,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backImage" width="22" height="22"/>
+        <image name="backImage" width="9" height="14"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="tab1" width="37" height="33"/>
+        <image name="tab2" width="37" height="33"/>
+        <image name="tab3" width="37" height="33"/>
+        <image name="tab4" width="37" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

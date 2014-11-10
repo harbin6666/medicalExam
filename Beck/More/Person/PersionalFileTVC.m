@@ -59,6 +59,8 @@
         cell.accessoryView = sw;
     }
     
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"more%li",(long)indexPath.row]];
+    
     return cell;
 }
 
