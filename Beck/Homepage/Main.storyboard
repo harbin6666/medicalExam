@@ -485,10 +485,10 @@
             </objects>
             <point key="canvasLocation" x="-26" y="1680"/>
         </scene>
-        <!--View Controller-->
+        <!--没网络-->
         <scene sceneID="Mwz-rG-OPO">
             <objects>
-                <viewController storyboardIdentifier="nonet" id="ZBY-Yg-0eB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nonet" id="ZBY-Yg-0eB" userLabel="没网络" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Smo-or-rxj"/>
                         <viewControllerLayoutGuide type="bottom" id="2AE-JL-5jc"/>
@@ -528,10 +528,10 @@
             </objects>
             <point key="canvasLocation" x="-449" y="-387"/>
         </scene>
-        <!--View Controller-->
+        <!--导入页-->
         <scene sceneID="0ot-JC-5v0">
             <objects>
-                <viewController id="Cs5-0u-p2T" sceneMemberID="viewController">
+                <viewController id="Cs5-0u-p2T" userLabel="导入页" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6z-g9-LXL"/>
                         <viewControllerLayoutGuide type="bottom" id="9JJ-jH-6Q9"/>
@@ -979,7 +979,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="first" id="I6Z-0a-4xe">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="radio" highlightedImage="radio_sel" id="I6Z-0a-4xe">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -991,10 +991,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J3s-hE-yxQ" id="9HM-DX-0Ge">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-Jy-ust">
-                                            <rect key="frame" x="233" y="7" width="69" height="30"/>
-                                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" title=" 添加笔记 ">
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-Jy-ust">
+                                            <rect key="frame" x="240" y="9" width="62" height="25"/>
+                                            <state key="normal" image="biji">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -1116,13 +1115,15 @@
     </scenes>
     <resources>
         <image name="backImage" width="9" height="14"/>
+        <image name="biji" width="62" height="25"/>
         <image name="daoru1" width="86" height="66"/>
         <image name="daoru2" width="192" height="72"/>
-        <image name="first" width="30" height="30"/>
         <image name="homebg" width="360" height="534"/>
         <image name="homejiang" width="272" height="202"/>
         <image name="info" width="114" height="25"/>
         <image name="nonet" width="71" height="71"/>
+        <image name="radio" width="19" height="20"/>
+        <image name="radio_sel" width="19" height="20"/>
         <image name="second" width="30" height="30"/>
         <image name="tab1" width="37" height="33"/>
         <image name="tab2" width="37" height="33"/>
