@@ -488,7 +488,7 @@
         <!--View Controller-->
         <scene sceneID="Mwz-rG-OPO">
             <objects>
-                <viewController id="ZBY-Yg-0eB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nonet" id="ZBY-Yg-0eB" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Smo-or-rxj"/>
                         <viewControllerLayoutGuide type="bottom" id="2AE-JL-5jc"/>
@@ -496,12 +496,37 @@
                     <view key="view" contentMode="scaleToFill" id="0H6-Ys-9ce">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nonet" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-AA-vcA">
+                                <rect key="frame" x="125" y="163" width="71" height="71"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络加载失败，" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Za-IV-reU">
+                                <rect key="frame" x="101" y="254" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="请重新设置网络哦～" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI4-9a-BbI">
+                                <rect key="frame" x="84" y="275" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5Za-IV-reU" secondAttribute="centerX" id="3Vh-zo-K94"/>
+                            <constraint firstAttribute="centerX" secondItem="fUE-AA-vcA" secondAttribute="centerX" id="4bW-Ti-dfc"/>
+                            <constraint firstItem="5Za-IV-reU" firstAttribute="top" secondItem="fUE-AA-vcA" secondAttribute="bottom" constant="20" id="6a4-6k-ddR"/>
+                            <constraint firstAttribute="centerY" secondItem="iI4-9a-BbI" secondAttribute="centerY" id="TFD-Cz-gCb"/>
+                            <constraint firstItem="iI4-9a-BbI" firstAttribute="top" secondItem="5Za-IV-reU" secondAttribute="bottom" id="ZMf-Fv-g0P"/>
+                            <constraint firstAttribute="centerX" secondItem="iI4-9a-BbI" secondAttribute="centerX" id="drL-Gh-UZt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTe-cA-jD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448" y="-375"/>
+            <point key="canvasLocation" x="-449" y="-387"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0ot-JC-5v0">
@@ -1097,6 +1122,7 @@
         <image name="homebg" width="360" height="534"/>
         <image name="homejiang" width="272" height="202"/>
         <image name="info" width="114" height="25"/>
+        <image name="nonet" width="71" height="71"/>
         <image name="second" width="30" height="30"/>
         <image name="tab1" width="37" height="33"/>
         <image name="tab2" width="37" height="33"/>
