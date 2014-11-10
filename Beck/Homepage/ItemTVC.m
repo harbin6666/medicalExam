@@ -77,7 +77,11 @@
     }
     else if (indexPath.section == 1){
         cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"医疗机构药剂人员调配处方时的错误行为是";
+        UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
+        label.text = @"医疗机构药剂人员调配处方时的错误行为是?";
+        
+        UIImageView *cellBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"jilu"]];
+        cell.backgroundView = cellBackgroundView;
     }
     else if (indexPath.section == 2){
         cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell" forIndexPath:indexPath];
