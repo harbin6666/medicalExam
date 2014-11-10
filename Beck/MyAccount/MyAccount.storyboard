@@ -671,66 +671,35 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="cusTabbar" destination="qdf-9v-UHM" id="aNY-fN-lrq"/>
+                        <outlet property="cusTabbar" destination="4fj-pq-73m" id="oSh-Uv-knk"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHf-l9-xle" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBar contentMode="scaleToFill" id="qdf-9v-UHM">
+                <tabBar contentMode="scaleToFill" id="4fj-pq-73m">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <items>
-                        <tabBarItem systemItem="favorites" id="ZVZ-4B-5VR"/>
-                        <tabBarItem systemItem="more" id="vHJ-rE-4am"/>
+                        <tabBarItem title="上一题" image="back" id="sGy-QW-7q9"/>
+                        <tabBarItem tag="1" title="查看答案" image="answer" id="r76-qe-zz4"/>
+                        <tabBarItem tag="2" title="1/100" image="setting" id="9eO-9O-IoO"/>
+                        <tabBarItem tag="3" title="收藏" image="favorate" id="mQq-4k-Vbz"/>
+                        <tabBarItem tag="4" title="下一题" image="next" id="Exu-8M-Fqu"/>
                     </items>
+                    <connections>
+                        <outlet property="delegate" destination="tE6-vy-aDm" id="gBZ-bo-2Ff"/>
+                    </connections>
                 </tabBar>
             </objects>
             <point key="canvasLocation" x="1782" y="-1922"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6PQ-Fn-MVU">
-            <objects>
-                <viewController id="OUO-Xd-LHg" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="U1u-1Y-OGa"/>
-                        <viewControllerLayoutGuide type="bottom" id="idQ-RO-few"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Dwu-Vx-n1P">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-pq-73m">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="上一题" image="back" selectedImage="back_sel" id="sGy-QW-7q9"/>
-                                    <tabBarItem title="查看答案" image="answer" selectedImage="answer_sel" id="r76-qe-zz4"/>
-                                    <tabBarItem title="1/100" image="setting" id="9eO-9O-IoO"/>
-                                    <tabBarItem title="收藏" image="favorate" selectedImage="favorate_sel" id="mQq-4k-Vbz"/>
-                                    <tabBarItem title="下一题" image="next" selectedImage="next_sel" id="Exu-8M-Fqu"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="acj-Ls-OY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2161" y="-1922"/>
-        </scene>
     </scenes>
     <resources>
         <image name="answer" width="26" height="23"/>
-        <image name="answer_sel" width="26" height="23"/>
         <image name="back" width="26" height="23"/>
         <image name="backImage" width="9" height="14"/>
-        <image name="back_sel" width="26" height="23"/>
         <image name="favorate" width="26" height="23"/>
-        <image name="favorate_sel" width="26" height="23"/>
         <image name="next" width="26" height="23"/>
-        <image name="next_sel" width="26" height="23"/>
         <image name="setting" width="26" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
