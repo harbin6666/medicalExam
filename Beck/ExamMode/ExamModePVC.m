@@ -14,13 +14,9 @@
 
 @interface ExamModePVC ()
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *item1;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *item2;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *item3;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *item4;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *item5;
-
 @property (nonatomic, strong) ItemTVC *currentTVC;
+
+@property (strong, nonatomic) IBOutlet UITabBar *cusTabbar;
 
 @end
 
@@ -28,76 +24,54 @@
 
 - (void)awakeFromNib
 {
-    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn1.frame = CGRectMake(0, 0, 44, 44);
-    [btn1 setTitle:@"上一题" forState:UIControlStateNormal];
-    [btn1 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    btn1.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.item1.customView = btn1;
-    [btn1 addTarget:self action:@selector(onPressedBtn1:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn2.frame = CGRectMake(0, 0, 44, 44);
-    [btn2 setTitle:@"收藏" forState:UIControlStateNormal];
-    [btn2 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    [btn2 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    btn2.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.item2.customView = btn2;
-    [btn2 addTarget:self action:@selector(onPressedBtn2:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn3.frame = CGRectMake(0, 0, 44, 44);
-    [btn3 setTitle:@"未做" forState:UIControlStateNormal];
-    [btn3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [btn3 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    [btn3 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    btn3.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.item3.customView = btn3;
-    [btn3 addTarget:self action:@selector(onPressedBtn3:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn4.frame = CGRectMake(0, 0, 44, 44);
-    [btn4 setTitle:@"交卷" forState:UIControlStateNormal];
-    [btn4 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    [btn4 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    btn4.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.item4.customView = btn4;
-    [btn4 addTarget:self action:@selector(onPressedBtn4:) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *btn5 = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn5.frame = CGRectMake(0, 0, 44, 44);
-    [btn5 setTitle:@"下一题" forState:UIControlStateNormal];
-    [btn5 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [btn5 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-    [btn5 setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    btn5.titleLabel.font = [UIFont systemFontOfSize:10.f];
-    self.item5.customView = btn5;
-    [btn5 addTarget:self action:@selector(onPressedBtn5:) forControlEvents:UIControlEventTouchUpInside];
-    
     self.delegate = self;
     self.dataSource = self;
     
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.navigationController.toolbarHidden = YES;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setToolbarHidden:NO animated:YES];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view addSubview:self.cusTabbar];
+    self.cusTabbar.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cusTabbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_cusTabbar)]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_cusTabbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_cusTabbar)]];
+    
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        UITabBarItem *item1 = self.cusTabbar.items[0];
+        [item1 setSelectedImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item2 = self.cusTabbar.items[1];
+        [item2 setSelectedImage:[[UIImage imageNamed:@"answer_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item3 = self.cusTabbar.items[2];
+        [item3 setSelectedImage:[[UIImage imageNamed:@"setting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item3 setImage:[[UIImage imageNamed:@"setting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item3 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+        
+        UITabBarItem *item4 = self.cusTabbar.items[3];
+        [item4 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item5 = self.cusTabbar.items[4];
+        [item5 setSelectedImage:[[UIImage imageNamed:@"next_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    }
+    else {
+        UITabBarItem *item1 = self.cusTabbar.items[0];
+        [item1 setFinishedSelectedImage:[UIImage imageNamed:@"back_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"back"]];
+        
+        UITabBarItem *item2 = self.cusTabbar.items[1];
+        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer"]];
+        
+        UITabBarItem *item3 = self.cusTabbar.items[2];
+        [item3 setFinishedSelectedImage:[UIImage imageNamed:@"setting"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting"]];
+        
+        UITabBarItem *item4 = self.cusTabbar.items[3];
+        [item4 setFinishedSelectedImage:[UIImage imageNamed:@"favorate_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+        
+        UITabBarItem *item5 = self.cusTabbar.items[4];
+        [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
+    }
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
@@ -163,8 +137,8 @@
 
 - (void)configToolBar
 {
-    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
-    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
+//    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
+//    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
 }
 
 #pragma mark - <UIPageViewControllerDataSource>

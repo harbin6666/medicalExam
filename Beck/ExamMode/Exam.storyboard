@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AP6-oX-m96">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AP6-oX-m96">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -279,17 +279,7 @@
         <scene sceneID="4dS-gL-oRT">
             <objects>
                 <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="f68-Aq-7ve" userLabel="考试模式" customClass="ExamModePVC" sceneMemberID="viewController">
-                    <toolbarItems>
-                        <barButtonItem title="Item1" id="uAG-IB-2jL"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="z6H-eP-wgt"/>
-                        <barButtonItem title="Item2" id="1rt-yY-pJa"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="jnM-uc-lM0"/>
-                        <barButtonItem title="Item3" id="8tU-ob-oR9"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pxh-R5-h0E"/>
-                        <barButtonItem title="Item4" id="xpL-ha-ch5"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="aSd-XB-EmM"/>
-                        <barButtonItem title="Item5" id="j0j-Pi-cxD"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="2oX-c7-Mjc">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="0iu-IT-8og">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X0x-j9-tjq">
@@ -306,13 +296,20 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="item1" destination="uAG-IB-2jL" id="ZAs-ef-TXM"/>
-                        <outlet property="item2" destination="1rt-yY-pJa" id="jA8-DC-8si"/>
-                        <outlet property="item3" destination="8tU-ob-oR9" id="CWp-Vk-eyl"/>
-                        <outlet property="item4" destination="xpL-ha-ch5" id="HMP-ZR-2iP"/>
-                        <outlet property="item5" destination="j0j-Pi-cxD" id="LjN-ZI-B0v"/>
+                        <outlet property="cusTabbar" destination="TR5-gR-Udh" id="K1T-Mz-hxY"/>
                     </connections>
                 </pageViewController>
+                <tabBar contentMode="scaleToFill" id="TR5-gR-Udh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <tabBarItem title="上一题" image="back" id="ffE-zp-Zue"/>
+                        <tabBarItem tag="1" title="查看答案" image="answer" id="xIB-7B-hJc"/>
+                        <tabBarItem tag="2" title="设置" image="weizuo" id="98L-MA-y8P" userLabel="未做"/>
+                        <tabBarItem tag="3" title="收藏" image="favorate" id="4Kz-fa-TTg"/>
+                        <tabBarItem tag="4" title="下一题" image="next" id="Os4-Aa-vmr"/>
+                    </items>
+                </tabBar>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kK-lc-Sj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-357" y="-2185"/>
@@ -463,8 +460,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backImage" width="22" height="22"/>
+        <image name="answer" width="26" height="23"/>
+        <image name="back" width="26" height="23"/>
+        <image name="backImage" width="9" height="14"/>
+        <image name="favorate" width="26" height="23"/>
+        <image name="next" width="26" height="23"/>
         <image name="second" width="30" height="30"/>
+        <image name="weizuo" width="26" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
