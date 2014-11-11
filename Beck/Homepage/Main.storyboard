@@ -116,7 +116,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="checkbox"/>
-                                <state key="highlighted" image="checkbox"/>
                                 <connections>
                                     <action selector="onPressedCheckBox:" destination="MRK-IG-3lV" eventType="touchUpInside" id="odI-a2-dII"/>
                                 </connections>
