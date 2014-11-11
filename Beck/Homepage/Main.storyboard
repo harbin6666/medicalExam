@@ -111,10 +111,15 @@
                                     <constraint firstAttribute="height" constant="30" id="MTX-98-u0P"/>
                                     <constraint firstAttribute="width" constant="84" id="iTJ-dj-2Yg"/>
                                 </constraints>
-                                <state key="normal" title="记住我" image="second">
+                                <state key="normal" title="记住我" image="uncheckbox">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="checkbox"/>
+                                <state key="highlighted" image="checkbox"/>
+                                <connections>
+                                    <action selector="onPressedCheckBox:" destination="MRK-IG-3lV" eventType="touchUpInside" id="odI-a2-dII"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bli-5K-Sbi">
                                 <rect key="frame" x="16" y="208" width="288" height="30"/>
@@ -1128,6 +1133,7 @@
     <resources>
         <image name="backImage" width="9" height="14"/>
         <image name="biji" width="62" height="25"/>
+        <image name="checkbox" width="24" height="24"/>
         <image name="daoru1" width="86" height="66"/>
         <image name="daoru2" width="192" height="72"/>
         <image name="homebg" width="360" height="534"/>
@@ -1137,11 +1143,11 @@
         <image name="nonet" width="71" height="71"/>
         <image name="radio" width="19" height="20"/>
         <image name="radio_sel" width="19" height="20"/>
-        <image name="second" width="30" height="30"/>
         <image name="tab1" width="37" height="33"/>
         <image name="tab2" width="37" height="33"/>
         <image name="tab3" width="37" height="33"/>
         <image name="tab4" width="37" height="33"/>
+        <image name="uncheckbox" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
