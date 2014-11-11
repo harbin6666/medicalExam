@@ -58,7 +58,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ZdE-dL-R4k">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="8lh-W4-vZG">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="8lh-W4-vZG">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ogM-Pg-bNh">
                                 <rect key="frame" x="16" y="7" width="94" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,7 +127,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xhu-Ae-uA6">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="aVM-Ae-tXa">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="aVM-Ae-tXa">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="har-hN-ZoK">
                                 <rect key="frame" x="16" y="11" width="81" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -202,7 +202,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dM2-Ye-OSa">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="CyJ-My-bHR">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="CyJ-My-bHR">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QN8-Nm-2CH">
                                 <rect key="frame" x="16" y="11" width="66" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -332,7 +332,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lTa-lQ-rFl">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="IL2-17-aHZ">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="IL2-17-aHZ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S0H-XU-m18">
                                 <rect key="frame" x="16" y="7" width="94" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -451,7 +451,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ol2-lE-YOr">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="vVB-89-oC8">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="vVB-89-oC8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S3O-f7-cXI">
                                 <rect key="frame" x="16" y="11" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -518,7 +518,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BvQ-cx-kG3">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="dpw-FN-bW1">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="dpw-FN-bW1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9OM-Ud-FBz">
                                 <rect key="frame" x="16" y="7" width="94" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -586,7 +586,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PFc-c4-pcP">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="6Of-pK-bog">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="6Of-pK-bog">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nnd-8b-Xq0">
                                 <rect key="frame" x="16" y="7" width="94" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -657,7 +657,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="1tr-MD-a0z">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="8Lf-4r-Z0V">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="8Lf-4r-Z0V">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5ed-mE-JIn">
                                 <rect key="frame" x="16" y="7" width="94" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -685,7 +685,7 @@
                 <pageViewController hidesBottomBarWhenPushed="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tE6-vy-aDm" userLabel="查看题目" customClass="ViewItemPVC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Nvn-sE-Vk5">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="tod-Ov-vuY">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="tod-Ov-vuY">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eHV-MN-Ubl">
                                 <rect key="frame" x="16" y="11" width="58" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
