@@ -33,6 +33,9 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    UILabel *lbl = (UILabel *)[cell.contentView viewWithTag:999];
+    lbl.text = @(indexPath.row + 1).stringValue;
     return cell;
 }
 
