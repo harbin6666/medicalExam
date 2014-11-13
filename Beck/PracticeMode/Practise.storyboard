@@ -57,6 +57,9 @@
                         <tabBarItem tag="3" title="收藏" image="favorate" id="KjM-Ym-8dc"/>
                         <tabBarItem tag="4" title="下一题" image="next" id="Bqo-mt-joI"/>
                     </items>
+                    <connections>
+                        <outlet property="delegate" destination="OC7-ep-qxH" id="bZH-Ss-VNT"/>
+                    </connections>
                 </tabBar>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oA-V8-z3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="163" y="-489"/>
         </scene>
-        <!--Choose Item TypeTVC-->
+        <!--选择题型-->
         <scene sceneID="MK1-4W-OKO">
             <objects>
-                <tableViewController id="3xG-0Q-FZd" customClass="ChooseItemTypeTVC" sceneMemberID="viewController">
+                <tableViewController id="3xG-0Q-FZd" userLabel="选择题型" customClass="ChooseItemTypeTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Das-mA-SXb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

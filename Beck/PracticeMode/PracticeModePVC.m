@@ -12,7 +12,7 @@
 
 #import "AnswerCVC.h"
 
-@interface PracticeModePVC ()
+@interface PracticeModePVC () <UITabBarDelegate>
 
 @property (nonatomic, strong) ItemTVC *currentTVC;
 
@@ -87,9 +87,27 @@
                   }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    switch (item.tag) {
+        case 0:
+            [self onPressedBtn1:nil];
+            break;
+        case 1:
+            [self onPressedBtn2:nil];
+            break;
+        case 2:
+            [self onPressedBtn3:nil];
+            break;
+        case 3:
+            [self onPressedBtn4:nil];
+            break;
+        case 4:
+            [self onPressedBtn5:nil];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)onPressedBtn1:(UIButton *)sender {
