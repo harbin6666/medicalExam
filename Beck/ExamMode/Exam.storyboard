@@ -304,7 +304,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <items>
                         <tabBarItem title="上一题" image="back" id="ffE-zp-Zue"/>
-                        <tabBarItem tag="1" title="查看答案" image="favorate" id="xIB-7B-hJc" userLabel="收藏"/>
+                        <tabBarItem tag="1" title="收藏" image="favorate" id="xIB-7B-hJc" userLabel="收藏"/>
                         <tabBarItem tag="2" title="设置" image="weizuo" id="98L-MA-y8P" userLabel="未做"/>
                         <tabBarItem tag="3" title="收藏" image="submit" id="4Kz-fa-TTg" userLabel="提交"/>
                         <tabBarItem tag="4" title="下一题" image="next" id="Os4-Aa-vmr"/>
