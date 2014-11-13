@@ -304,11 +304,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <items>
                         <tabBarItem title="上一题" image="back" id="ffE-zp-Zue"/>
-                        <tabBarItem tag="1" title="查看答案" image="answer" id="xIB-7B-hJc"/>
+                        <tabBarItem tag="1" title="查看答案" image="favorate" id="xIB-7B-hJc" userLabel="收藏"/>
                         <tabBarItem tag="2" title="设置" image="weizuo" id="98L-MA-y8P" userLabel="未做"/>
-                        <tabBarItem tag="3" title="收藏" image="favorate" id="4Kz-fa-TTg"/>
+                        <tabBarItem tag="3" title="收藏" image="submit" id="4Kz-fa-TTg" userLabel="提交"/>
                         <tabBarItem tag="4" title="下一题" image="next" id="Os4-Aa-vmr"/>
                     </items>
+                    <connections>
+                        <outlet property="delegate" destination="f68-Aq-7ve" id="TSj-pp-831"/>
+                    </connections>
                 </tabBar>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kK-lc-Sj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -460,12 +463,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="answer" width="26" height="23"/>
         <image name="back" width="26" height="23"/>
         <image name="backImage" width="9" height="14"/>
         <image name="favorate" width="26" height="23"/>
         <image name="next" width="26" height="23"/>
         <image name="second" width="30" height="30"/>
+        <image name="submit" width="26" height="23"/>
         <image name="weizuo" width="26" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
