@@ -541,6 +541,7 @@
                                     <outlet property="infoLbl" destination="Rs4-VX-snQ" id="o4M-gx-nYs"/>
                                     <outlet property="itemCountLbl" destination="ztj-hg-LKe" id="49l-Td-7Za"/>
                                     <outlet property="titleLbl" destination="Ua0-Xw-ePK" id="K92-Zb-2ll"/>
+                                    <segue destination="tE6-vy-aDm" kind="push" id="o4e-cF-nHM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -770,6 +771,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tig-V5-rrF"/>
+        <segue reference="o4e-cF-nHM"/>
     </inferredMetricsTieBreakers>
 </document>
