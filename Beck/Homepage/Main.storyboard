@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TSO-DH-PCG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TSO-DH-PCG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -666,6 +666,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7mP-0h-6Dd" kind="push" id="gkv-qO-mm0"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-P1-9xU">
                                 <rect key="frame" x="16" y="105" width="288" height="413"/>
@@ -715,10 +718,20 @@
                             <constraint firstItem="Hza-7p-w8F" firstAttribute="trailing" secondItem="4gC-eH-FYn" secondAttribute="trailingMargin" id="tku-sA-xGd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="个性化设置" id="d2q-jU-lYO"/>
-                    <connections>
-                        <segue destination="7mP-0h-6Dd" kind="push" id="8YK-d8-0bY"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="个性化设置" id="d2q-jU-lYO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="NUW-LW-to9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pzp-YB-zeE">
+                                <rect key="frame" x="16" y="7" width="45" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="Itq-M7-wKH" eventType="touchUpInside" id="MPB-Hq-eIl"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLO-p2-1gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1390,7 +1403,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="gkv-qO-mm0"/>
         <segue reference="SN3-es-V9Y"/>
-        <segue reference="8YK-d8-0bY"/>
     </inferredMetricsTieBreakers>
 </document>
