@@ -298,6 +298,9 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBs-R0-JuQ">
                                 <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="8MD-Bd-c6x"/>
+                                </constraints>
                                 <items>
                                     <tabBarItem title="个人中心" image="tab1" id="hH1-y6-QcL"/>
                                     <tabBarItem tag="1" title="练习模式" image="tab2" id="0MU-hF-hWT"/>
@@ -351,10 +354,10 @@
                             <constraint firstAttribute="trailing" secondItem="cBs-R0-JuQ" secondAttribute="trailing" id="8DL-Mv-mPH"/>
                             <constraint firstItem="cBs-R0-JuQ" firstAttribute="leading" secondItem="OQq-oj-9uI" secondAttribute="leading" id="Its-Cl-T3Q"/>
                             <constraint firstAttribute="centerX" secondItem="FWd-UP-kDj" secondAttribute="centerX" id="Ome-Sk-HKO"/>
-                            <constraint firstItem="cBs-R0-JuQ" firstAttribute="top" secondItem="RQI-z5-PPQ" secondAttribute="bottom" id="RTz-14-e1e"/>
+                            <constraint firstItem="RQI-z5-PPQ" firstAttribute="bottom" secondItem="cBs-R0-JuQ" secondAttribute="top" id="RTz-14-e1e"/>
                             <constraint firstItem="RQI-z5-PPQ" firstAttribute="leading" secondItem="OQq-oj-9uI" secondAttribute="leading" id="TB7-2W-MdJ"/>
                             <constraint firstAttribute="trailing" secondItem="RQI-z5-PPQ" secondAttribute="trailing" id="TUZ-MQ-XIW"/>
-                            <constraint firstItem="cBs-R0-JuQ" firstAttribute="top" secondItem="L8O-c0-epf" secondAttribute="bottom" constant="40" id="Ufj-5f-zbc"/>
+                            <constraint firstItem="L8O-c0-epf" firstAttribute="bottom" secondItem="cBs-R0-JuQ" secondAttribute="top" constant="-40" id="Ufj-5f-zbc"/>
                             <constraint firstItem="RQI-z5-PPQ" firstAttribute="top" secondItem="jt1-mX-yQ7" secondAttribute="bottom" id="X6q-nk-FdW"/>
                             <constraint firstAttribute="centerX" secondItem="L8O-c0-epf" secondAttribute="centerX" id="YPk-L6-lgh"/>
                             <constraint firstItem="Unj-AC-40T" firstAttribute="top" secondItem="cBs-R0-JuQ" secondAttribute="bottom" id="bbh-o6-sca"/>
