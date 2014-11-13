@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */; };
+		3D092D451A14DD8500C19F69 /* ExamStatisticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D441A14DD8500C19F69 /* ExamStatisticCell.m */; };
 		3D094DE419FE753200472508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Main.storyboard */; };
 		3D0EFB9319FFBF820017A539 /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9219FFBF820017A539 /* FeedBackVC.m */; };
 		3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9519FFBF980017A539 /* HelpVC.m */; };
@@ -103,6 +104,8 @@
 /* Begin PBXFileReference section */
 		3D092D401A14D3F200C19F69 /* ChooseItemTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseItemTypeTVC.h; sourceTree = "<group>"; };
 		3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseItemTypeTVC.m; sourceTree = "<group>"; };
+		3D092D431A14DD8500C19F69 /* ExamStatisticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamStatisticCell.h; sourceTree = "<group>"; };
+		3D092D441A14DD8500C19F69 /* ExamStatisticCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamStatisticCell.m; sourceTree = "<group>"; };
 		3D094DE319FE753200472508 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3D0EFB9119FFBF820017A539 /* FeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
 		3D0EFB9219FFBF820017A539 /* FeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
@@ -472,6 +475,8 @@
 			children = (
 				3DA4FA231A05FE2200C7D362 /* ExamStatisticTVC.h */,
 				3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */,
+				3D092D431A14DD8500C19F69 /* ExamStatisticCell.h */,
+				3D092D441A14DD8500C19F69 /* ExamStatisticCell.m */,
 				3DA4FA251A05FE2200C7D362 /* StatisticTVC.h */,
 				3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */,
 				3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */,
@@ -850,6 +855,7 @@
 				3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,
+				3D092D451A14DD8500C19F69 /* ExamStatisticCell.m in Sources */,
 				3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */,
 				3D0EFB9919FFC4EA0017A539 /* ViewItemPVC.m in Sources */,
 				3D2521F319F543CB00FC72A7 /* TestingCentreTVC.m in Sources */,

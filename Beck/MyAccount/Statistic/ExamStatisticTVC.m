@@ -8,6 +8,8 @@
 
 #import "ExamStatisticTVC.h"
 
+#import "ExamStatisticCell.h"
+
 @interface ExamStatisticTVC ()
 
 @property (nonatomic, strong) NSArray *names;
@@ -44,9 +46,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    ExamStatisticCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.names[indexPath.row];
+    cell.titleLbl.text = @"职业中药师考试模拟测试联系题库";
+    cell.dateLbl.text = [NSDate date].description;
+    cell.itemCountLbl.text = @"100道";
+    cell.infoLbl.text = @"对：80 错：20 正确率：80%";
     
     return cell;
 }
