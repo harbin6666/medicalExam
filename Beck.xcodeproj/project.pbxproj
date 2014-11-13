@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */; };
 		3D094DE419FE753200472508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Main.storyboard */; };
 		3D0EFB9319FFBF820017A539 /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9219FFBF820017A539 /* FeedBackVC.m */; };
 		3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9519FFBF980017A539 /* HelpVC.m */; };
@@ -100,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D092D401A14D3F200C19F69 /* ChooseItemTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseItemTypeTVC.h; sourceTree = "<group>"; };
+		3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseItemTypeTVC.m; sourceTree = "<group>"; };
 		3D094DE319FE753200472508 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3D0EFB9119FFBF820017A539 /* FeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
 		3D0EFB9219FFBF820017A539 /* FeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				3D2521DC19F53B4F00FC72A7 /* PracticeModePVC.m */,
 				3D2521D419F53A4800FC72A7 /* PractiseHomeTVC.h */,
 				3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */,
+				3D092D401A14D3F200C19F69 /* ChooseItemTypeTVC.h */,
+				3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */,
 				3DB238AA19FE79EF002CD73D /* Practise.storyboard */,
 			);
 			name = "练习模式";
@@ -842,6 +847,7 @@
 				3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
 				3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */,
+				3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,
 				3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */,

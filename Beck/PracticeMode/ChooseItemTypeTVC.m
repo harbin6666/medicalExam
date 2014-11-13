@@ -1,26 +1,26 @@
 //
-//  PractiseHomeTVC.m
+//  ChooseItemTypeTVC.m
 //  Beck
 //
-//  Created by Aimy on 14/10/20.
+//  Created by Aimy on 14/11/13.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "PractiseHomeTVC.h"
+#import "ChooseItemTypeTVC.h"
 
-@interface PractiseHomeTVC ()
+@interface ChooseItemTypeTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
 @end
 
-@implementation PractiseHomeTVC
+@implementation ChooseItemTypeTVC
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     
-    self.names = @[@"章节练习",@"题库练习"];
+    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题"];
 }
 
 - (void)viewDidLoad {
@@ -47,18 +47,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.names[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"practise%li",(long)indexPath.row]];
-    return cell;
-}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"toQuestionBank" sender:self];
-    }
-    else {
-        [self performSegueWithIdentifier:@"toItemType" sender:self];
-    }
+    return cell;
 }
 
 @end
