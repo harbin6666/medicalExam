@@ -26,19 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[AFSQLManager sharedManager] performQuery:@"select count(choice_id) from choice_questions" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        NSLog(@"%@,%@,%d",row,error,finished);
-    }];
-    
-    [[AFSQLManager sharedManager] performQuery:@"select count(id) from compatibility_info" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        NSLog(@"%@,%@,%d",row,error,finished);
-    }];
-    
-    [[AFSQLManager sharedManager] performQuery:@"select count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        NSLog(@"%@,%@,%d",row,error,finished);
-    }];
-    
-    [[AFSQLManager sharedManager] performQuery:@"select count(decision_id) from decision_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    [[AFSQLManager sharedManager] performQuery:@"select count(choice_id) from choice_questions union all select count(id) from compatibility_info union all select count(space_id) from space_question union all select count(decision_id) from decision_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
     }];
 }
