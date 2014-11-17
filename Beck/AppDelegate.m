@@ -16,6 +16,8 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 //#import <RennSDK/RennSDK.h>
 
+#import <AFSQLManager/AFSQLManager.h>
+
 @interface AppDelegate ()
 
 @end
@@ -24,6 +26,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[AFSQLManager sharedManager] openLocalDatabaseWithName:@"beck.db" andStatusBlock:^(BOOL success, NSError *error) {
+        if (success) {
+            NSLog(@"beck db open success");
+        }
+        else {
+            NSLog(@"beck db open failed");
+        }
+    }];
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
     

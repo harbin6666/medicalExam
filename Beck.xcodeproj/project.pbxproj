@@ -50,6 +50,7 @@
 		3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521FD19F5441C00FC72A7 /* FavorateItemsTVC.m */; };
 		3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220219F5441C00FC72A7 /* NotesTVC.m */; };
 		3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */; };
+		3D32E6921A1A214300978C5A /* beck.db in Resources */ = {isa = PBXBuildFile; fileRef = 3D32E6911A1A214300978C5A /* beck.db */; };
 		3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835E219F69AA1006C9DB0 /* BeckTools.m */; };
 		3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */; };
 		3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */; };
@@ -186,6 +187,7 @@
 		3D25220219F5441C00FC72A7 /* NotesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTVC.m; sourceTree = "<group>"; };
 		3D25220919F5455100FC72A7 /* ChooseExamTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseExamTVC.h; sourceTree = "<group>"; };
 		3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseExamTVC.m; sourceTree = "<group>"; };
+		3D32E6911A1A214300978C5A /* beck.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = beck.db; sourceTree = "<group>"; };
 		3D3835E119F69AA1006C9DB0 /* BeckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTools.h; sourceTree = "<group>"; };
 		3D3835E219F69AA1006C9DB0 /* BeckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTools.m; sourceTree = "<group>"; };
 		3D4F677719F7DC9200ED8FA4 /* BeckPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckPVC.h; sourceTree = "<group>"; };
@@ -422,6 +424,14 @@
 			path = Notes;
 			sourceTree = "<group>";
 		};
+		3D32E6901A1A214300978C5A /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				3D32E6911A1A214300978C5A /* beck.db */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		3D3835E019F69A85006C9DB0 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +519,7 @@
 		3DC1C57319E645FD004F23E1 /* Beck */ = {
 			isa = PBXGroup;
 			children = (
+				3D32E6901A1A214300978C5A /* DB */,
 				3DCB50FA1A0111560079CC01 /* VO */,
 				3DCB50D71A010EA70079CC01 /* ThirdParty */,
 				3D99449819E6BF31009A1A1F /* Base */,
@@ -773,6 +784,7 @@
 				3D094DE419FE753200472508 /* Main.storyboard in Resources */,
 				3DB238D119FE8026002CD73D /* More.storyboard in Resources */,
 				3DCB50E21A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				3D32E6921A1A214300978C5A /* beck.db in Resources */,
 				3D99448D19E6AD27009A1A1F /* Media.xcassets in Resources */,
 				3DB238AD19FE79FB002CD73D /* Exam.storyboard in Resources */,
 				3DCB50E51A010EA70079CC01 /* WeiboSDK.bundle in Resources */,

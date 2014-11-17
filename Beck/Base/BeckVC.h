@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AFSQLManager/AFSQLManager.h>
+
 typedef void(^BeckCompletionBlock)(id aResponseObject, NSError* anError);
 
 @interface BeckVC : UIViewController

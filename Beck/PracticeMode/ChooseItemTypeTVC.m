@@ -25,11 +25,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [[AFSQLManager sharedManager] performQuery:@"select count(choice_id) from choice_questions" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+    }];
+    
+    [[AFSQLManager sharedManager] performQuery:@"select count(id) from compatibility_info" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+    }];
+    
+    [[AFSQLManager sharedManager] performQuery:@"select count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+    }];
+    
+    [[AFSQLManager sharedManager] performQuery:@"select count(decision_id) from decision_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+    }];
 }
 
 #pragma mark - Table view data source

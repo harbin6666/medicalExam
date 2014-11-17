@@ -18,6 +18,8 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [UIView new];
+    
+    
 }
 
 #pragma mark - Table view data source

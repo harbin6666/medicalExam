@@ -24,6 +24,10 @@
     self.tableView.tableFooterView = [UIView new];
     
     self.questionBanks = @[@[@"药事管理与法规", @"药理学", @"药物分析", @"药剂学", @"药物化学", @"药学综合知识与技能"], @[@"药事管理与法规", @"药理学", @"药物分析", @"药剂学", @"药物化学", @"药学综合知识与技能"]];
+    
+    [[AFSQLManager sharedManager] performQuery:@"select lib_id, lib_name from question_library" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+    }];
 }
 
 #pragma mark - Table view data source
