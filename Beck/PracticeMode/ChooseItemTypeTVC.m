@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSArray *names;
 
+@property (nonatomic, strong) NSMutableArray *numbers;
+
 @end
 
 @implementation ChooseItemTypeTVC
@@ -26,8 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[AFSQLManager sharedManager] performQuery:@"select count(choice_id) from choice_questions union all select count(id) from compatibility_info union all select count(space_id) from space_question union all select count(decision_id) from decision_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    self.numbers = @[].mutableCopy;
+    
+    [[AFSQLManager sharedManager] performQuery:@"select custom_id, count(choice_id) from choice_questions union all select custom_id, count(id) from compatibility_info union all select custom_id, count(space_id) from space_question union all select custom_id, count(decision_id) from decision_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
+        if (finished) {
+            [self.tableView reloadData];
+        }
+        else {
+            [self.numbers addObject:row[1]];
+        }
     }];
 }
 
@@ -46,7 +56,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.names[indexPath.row];
-
+    NSString *num = self.numbers[indexPath.row];
+    if (num) {
+        cell.detailTextLabel.text = num;
+    }
+    else {
+        cell.detailTextLabel.text = nil;
+    }
     return cell;
 }
 
