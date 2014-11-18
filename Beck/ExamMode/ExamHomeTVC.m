@@ -8,6 +8,8 @@
 
 #import "ExamHomeTVC.h"
 
+#import "ChooseExamBankTVC.h"
+
 @interface ExamHomeTVC ()
 
 @property (nonatomic, strong) NSArray *names;
@@ -52,12 +54,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
-    if (indexPath.row == 0) {
-        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
-    }
-    else {
-        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+{
+    [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:indexPath];
+//    if (indexPath.row == 0) {
+//        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
+//    }
+//    else {
+//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
+//    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = sender;
+    if (path.row == 1) {
+        ChooseExamBankTVC *vc = segue.destinationViewController;
+        vc.fromExam = YES;
     }
 }
 

@@ -10,4 +10,6 @@
 
 @interface ChooseExamBankTVC : BeckTVC
 
+@property (nonatomic) BOOL fromExam;
+
 @end

@@ -105,7 +105,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="pqM-eH-Cdl" kind="push" id="ew9-xQ-MYg"/>
+                                    <segue destination="pqM-eH-Cdl" kind="push" id="vuE-Y8-MLl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -132,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GM-6u-CJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-809" y="-2846"/>
+            <point key="canvasLocation" x="-988" y="-3179"/>
         </scene>
         <!--支付-->
         <scene sceneID="6ph-3w-d3M">
@@ -191,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXZ-af-xe9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="-2846"/>
+            <point key="canvasLocation" x="-372" y="-3179"/>
         </scene>
         <!--支付宝支付-->
         <scene sceneID="k8C-Sb-xPr">
@@ -315,7 +315,7 @@
                 </tabBar>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kK-lc-Sj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="-2185"/>
+            <point key="canvasLocation" x="-372" y="-2185"/>
         </scene>
         <!--考场设置-->
         <scene sceneID="oap-FO-pc7">
@@ -465,7 +465,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pS-5K-3pk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-809" y="-2185"/>
+            <point key="canvasLocation" x="-934" y="-2185"/>
         </scene>
     </scenes>
     <resources>

@@ -27,7 +27,11 @@
     
     self.numbers = @[].mutableCopy;
     
-    [[AFSQLManager sharedManager] performQuery:@"select distinct a.exam_subject, (select count(b.exam_subject) from question_library as b where b.exam_subject == a.exam_subject and type == 2) from question_library as a where type == 2" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    NSNumber *type = self.fromExam ? @1: @2;
+    
+    NSString *sql = [NSString stringWithFormat:@"select distinct a.exam_subject, (select count(b.exam_subject) from question_library as b where b.exam_subject == a.exam_subject and type == %@) from question_library as a where type == %@",type,type];
+    
+    [[AFSQLManager sharedManager] performQuery:sql withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
         if (finished) {
             [self.tableView reloadData];
