@@ -84,7 +84,7 @@
         cell.backgroundView = cellBackgroundView;
     }
     else if (indexPath.section == 2){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell" forIndexPath:indexPath];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ChoiceCell" forIndexPath:indexPath];
         cell.textLabel.text = @"我是选项";
     }
     else if (indexPath.section == 3){
