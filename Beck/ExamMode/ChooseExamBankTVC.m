@@ -1,16 +1,14 @@
 //
-//  ChooseQuestionBankTVC.m
+//  ChooseExamBankTVC.m
 //  Beck
 //
-//  Created by Aimy on 10/12/14.
-//  Copyright (c) 2014 Aimy. All rights reserved.
+//  Created by Aimy on 14/11/18.
+//  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "ChooseQuestionBankTVC.h"
+#import "ChooseExamBankTVC.h"
 
-#import "UIView+create.h"
-
-@interface ChooseQuestionBankTVC ()
+@interface ChooseExamBankTVC ()
 
 @property (nonatomic, strong) NSArray *questionBanks;
 
@@ -18,7 +16,7 @@
 
 @end
 
-@implementation ChooseQuestionBankTVC
+@implementation ChooseExamBankTVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +27,7 @@
     
     self.numbers = @[].mutableCopy;
     
-    [[AFSQLManager sharedManager] performQuery:@"select distinct a.exam_subject, (select count(b.exam_subject) from question_library as b where b.exam_subject == a.exam_subject and type == 1) from question_library as a where type == 1" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    [[AFSQLManager sharedManager] performQuery:@"select distinct a.exam_subject, (select count(b.exam_subject) from question_library as b where b.exam_subject == a.exam_subject and type == 2) from question_library as a where type == 2" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
         if (finished) {
             [self.tableView reloadData];
@@ -59,7 +57,7 @@
 {
     UILabel *lbl = [UILabel viewWithFrame:CGRectMake(10, 0, 300, 30)];
     lbl.backgroundColor = [UIColor lightGrayColor];
-    lbl.text = @"   章节复习题";
+    lbl.text = @"   考试科目";
     return lbl;
 }
 
