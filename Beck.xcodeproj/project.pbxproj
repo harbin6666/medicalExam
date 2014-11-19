@@ -52,6 +52,7 @@
 		3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */; };
 		3D32E6921A1A214300978C5A /* beck.db in Resources */ = {isa = PBXBuildFile; fileRef = 3D32E6911A1A214300978C5A /* beck.db */; };
 		3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835E219F69AA1006C9DB0 /* BeckTools.m */; };
+		3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */; };
 		3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */; };
 		3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */; };
 		3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */; };
@@ -191,6 +192,8 @@
 		3D32E6911A1A214300978C5A /* beck.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = beck.db; sourceTree = "<group>"; };
 		3D3835E119F69AA1006C9DB0 /* BeckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTools.h; sourceTree = "<group>"; };
 		3D3835E219F69AA1006C9DB0 /* BeckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTools.m; sourceTree = "<group>"; };
+		3D4CEEA31A1CB39B0078AA38 /* OTSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSAlertView.h; sourceTree = "<group>"; };
+		3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSAlertView.m; sourceTree = "<group>"; };
 		3D4F677719F7DC9200ED8FA4 /* BeckPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckPVC.h; sourceTree = "<group>"; };
 		3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckPVC.m; sourceTree = "<group>"; };
 		3D4F677A19F7E97900ED8FA4 /* BeckCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckCVC.h; sourceTree = "<group>"; };
@@ -467,6 +470,8 @@
 		3D99449819E6BF31009A1A1F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3D4CEEA31A1CB39B0078AA38 /* OTSAlertView.h */,
+				3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */,
 				3D99449F19E6C29E009A1A1F /* OTSBorder.h */,
 				3D9944A019E6C29E009A1A1F /* OTSBorder.m */,
 				3D99449C19E6C03A009A1A1F /* UIImage+tool.h */,
@@ -894,6 +899,7 @@
 				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
 				3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */,
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
+				3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */,
 				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
 				3D0EFBAD19FFCA530017A539 /* FindPasswordVC.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,

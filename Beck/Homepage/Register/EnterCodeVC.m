@@ -8,7 +8,12 @@
 
 #import "EnterCodeVC.h"
 
+#import "EnterPasswordVC.h"
+
 @interface EnterCodeVC ()
+
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumLbl;
+@property (weak, nonatomic) IBOutlet UITextField *smsTF;
 
 @end
 
@@ -17,22 +22,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.phoneNumLbl.text = self.phoneNum;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onPressedRefreshBtn:(id)sender {
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/sendsmsAct.htm" params:@{@"loginName":self.phoneNum} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:@"发送失败" andCompleteBlock:nil] show];
+            }
+            else {
+                self.smsCode = aResponseObject[@"value"];
+            }
+        }
+    }];
 }
 
-/*
+- (IBAction)onPressedBtn:(id)sender {
+    if (!self.smsTF.text || !self.smsTF.text.length) {
+        [[OTSAlertView alertWithMessage:@"请输入验证码" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    if ([self.smsCode.stringValue isEqualToString:self.smsTF.text]) {
+        [self performSegueWithIdentifier:@"toNext" sender:self];
+    }
+    else {
+        [[OTSAlertView alertWithMessage:@"验证码错误" andCompleteBlock:nil] show];
+        return;
+    }
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    EnterPasswordVC *vc = segue.destinationViewController;
+    vc.phoneNum = self.phoneNum;
 }
-*/
+
 
 - (IBAction)onTag:(id)sender {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];

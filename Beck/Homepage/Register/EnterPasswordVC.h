@@ -10,4 +10,6 @@
 
 @interface EnterPasswordVC : BeckVC
 
+@property (nonatomic, strong) NSString *phoneNum;
+
 @end

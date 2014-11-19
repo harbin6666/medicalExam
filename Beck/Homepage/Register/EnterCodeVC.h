@@ -10,4 +10,7 @@
 
 @interface EnterCodeVC : BeckVC
 
+@property (nonatomic, strong) NSString *phoneNum;
+@property (nonatomic, strong) NSNumber *smsCode;
+
 @end

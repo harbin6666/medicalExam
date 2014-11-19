@@ -841,7 +841,7 @@
                                     <constraint firstAttribute="height" constant="30" id="LwE-nv-7Ng"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TT-dB-sa1">
                                 <rect key="frame" x="16" y="134" width="288" height="30"/>
@@ -854,7 +854,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="F0l-RN-i1q" kind="push" id="FM5-jz-sJE"/>
+                                    <action selector="onPressedBtn:" destination="J5I-Ba-WNK" eventType="touchUpInside" id="pbb-Kf-KSY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -877,7 +877,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wRQ-X1-Nm0">
                                 <rect key="frame" x="16" y="7" width="58" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="登陆" image="backImage">
+                                <state key="normal" title="注册" image="backImage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -886,6 +886,10 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberTF" destination="VBt-44-vqq" id="Ewn-mE-ITp"/>
+                        <segue destination="F0l-RN-i1q" kind="push" identifier="toNext" id="8K1-Vn-LQK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrS-U1-KAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="i2B-Mp-8Kq">
@@ -1021,7 +1025,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="cpO-41-5Fs" kind="push" id="6k1-vU-Ypo"/>
+                                    <action selector="onPressedBtn:" destination="F0l-RN-i1q" eventType="touchUpInside" id="ibv-kn-D3y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaG-qB-w2w">
@@ -1035,6 +1039,9 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPressedRefreshBtn:" destination="F0l-RN-i1q" eventType="touchUpInside" id="i8k-qm-6mE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1073,6 +1080,11 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="phoneNumLbl" destination="akt-nU-gn7" id="JVm-Fi-K82"/>
+                        <outlet property="smsTF" destination="Hfl-tG-tzz" id="hHR-lH-ZF8"/>
+                        <segue destination="cpO-41-5Fs" kind="push" identifier="toNext" id="gya-wZ-eLs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2v-Lg-atg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="CTz-YQ-sJk">
@@ -1171,6 +1183,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pwTF1" destination="RFv-HM-MG1" id="ITJ-XQ-Dps"/>
+                        <outlet property="pwTF2" destination="F1e-24-6Ej" id="FPv-DM-C8k"/>
                         <segue destination="tFM-7Z-g2A" kind="unwind" identifier="toLogin" unwindAction="unwindToThisVC:" id="qNg-v0-KyK"/>
                     </connections>
                 </viewController>
@@ -1447,6 +1461,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="gkv-qO-mm0"/>
-        <segue reference="SN3-es-V9Y"/>
+        <segue reference="8K1-Vn-LQK"/>
     </inferredMetricsTieBreakers>
 </document>

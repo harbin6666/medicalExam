@@ -8,6 +8,8 @@
 
 #import "BeckVC.h"
 
+#import <MBProgressHUD/MBProgressHUD.h>
+
 @interface BeckVC ()
 
 @end
@@ -63,6 +65,48 @@
 
 @implementation UIViewController (Net)
 
+- (void)showLoading
+{
+    [self showLoadingWithMessage:nil];
+}
+
+- (void)showLoadingWithMessage:(NSString *)message
+{
+    [self showLoadingWithMessage:message hideAfter:0];
+}
+
+- (void)showLoadingWithMessage:(NSString *)message hideAfter:(NSTimeInterval)second
+{
+    [self showLoadingWithMessage:message onView:self.view hideAfter:second];
+}
+
+- (void)showLoadingWithMessage:(NSString *)message onView:(UIView *)aView hideAfter:(NSTimeInterval)second
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:aView animated:YES];
+    
+    if (message) {
+        hud.labelText = message;
+        hud.mode = MBProgressHUDModeText;
+    }
+    else {
+        hud.mode = MBProgressHUDModeIndeterminate;
+    }
+    
+    if (second > 0) {
+        [hud hide:YES afterDelay:second];
+    }
+}
+
+- (void)hideLoading
+{
+    [self hideLoadingOnView:self.view];
+}
+
+- (void)hideLoadingOnView:(UIView *)aView
+{
+    [MBProgressHUD hideAllHUDsForView:aView animated:YES];
+}
+
 - (void)getValueWithUrl:(NSString *)url params:(NSDictionary *)params CompleteBlock:(BeckCompletionBlock)block
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -71,16 +115,24 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json", @"application/json", @"text/javascript", @"text/html",@"text/plain", nil];
 
     AFHTTPRequestOperation *operation = [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"responseObject = %@",responseObject);
         if (block) {
             block(responseObject, nil);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"error = %@",error);
         if (block) {
             block(operation, error);
         }
     }];
 
     [operation start];
+}
+
+- (void)getValueWithBeckUrl:(NSString *)url params:(NSDictionary *)params CompleteBlock:(BeckCompletionBlock)block
+{
+    NSString *beckUrl = [@"http://115.28.161.246:7080/beck" stringByAppendingString:url];
+    [self getValueWithUrl:beckUrl params:params CompleteBlock:block];
 }
 
 @end
