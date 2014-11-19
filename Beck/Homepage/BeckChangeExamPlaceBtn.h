@@ -10,4 +10,8 @@
 
 @interface BeckChangeExamPlaceBtn : UIButton
 
+@property (nonatomic, strong) NSArray *provinces;
+
+@property (nonatomic, strong) NSDictionary *province;
+
 @end

@@ -8,11 +8,19 @@
 
 #import "BeckCustomVC1.h"
 
+#import "BeckChangeExamPlaceBtn.h"
+
+#import "BeckCustomVC2.h"
+
 @interface BeckCustomVC1 () <UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) NSArray *names;
+@property (nonatomic, strong) NSArray *positions;
 
 @property (nonatomic, strong) NSIndexPath *path;
+
+@property (weak, nonatomic) IBOutlet BeckChangeExamPlaceBtn *provinceBtn;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -22,11 +30,44 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.names = @[@"主管药师",@"药师",@"药士",@"主管中药师",@"中药师",@"中药士"];
-    
-    self.path = [NSIndexPath indexPathForRow:0 inSection:0];
-    
     self.navigationItem.hidesBackButton = YES;
+    
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/provinceAct.htm" params:nil CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.provinceBtn.provinces = aResponseObject[@"list"];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取省份失败" andCompleteBlock:nil] show];
+        }
+    }];
+    
+    [self getValueWithBeckUrl:@"/front/positionTitleInfoAct.htm" params:@{@"token":@"sysTypeList"} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.positions = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取职位失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -41,15 +82,29 @@
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
-/*
+- (IBAction)onPressedBtn:(id)sender {
+    if (!self.provinceBtn.province) {
+        [[OTSAlertView alertWithMessage:@"请选择省份" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    if (!self.path) {
+        [[OTSAlertView alertWithMessage:@"请选择职位" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    [self performSegueWithIdentifier:@"toNext" sender:self];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    BeckCustomVC2 *vc = segue.destinationViewController;
+    vc.province = self.provinceBtn.province;
+    vc.position = self.positions[self.path.row];
 }
-*/
+
 - (IBAction)onPressedChangePlaceBtn:(id)sender {
     [sender becomeFirstResponder];
 }
@@ -61,7 +116,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.names.count;
+    return self.positions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,11 +124,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     UILabel *lbl = (UILabel *)[cell.contentView viewWithTag:999];
-    lbl.text = self.names[indexPath.row];
+    NSDictionary *name = self.positions[indexPath.row];
+    lbl.text = name[@"titleName"];
     
     UIImageView *check = (UIImageView *)[cell.contentView viewWithTag:888];
     
-    if ([self.path compare:indexPath] == NSOrderedSame) {
+    if (self.path && [self.path compare:indexPath] == NSOrderedSame) {
         check.highlighted = YES;
     }
     else {

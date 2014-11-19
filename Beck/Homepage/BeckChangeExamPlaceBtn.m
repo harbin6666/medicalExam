@@ -41,6 +41,26 @@
 - (IBAction)onPressedDone:(id)sender
 {
     [self resignFirstResponder];
+    self.province = self.provinces[[self.pv selectedRowInComponent:0]];
+    [self setTitle:self.province[@"province"] forState:UIControlStateNormal];
+}
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return self.provinces.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSDictionary *province = self.provinces[row];
+    return province[@"province"];
 }
 
 @end

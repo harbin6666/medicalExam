@@ -10,9 +10,11 @@
 
 @interface BeckCustomVC2 ()
 
-@property (nonatomic, strong) NSArray *names;
+@property (nonatomic, strong) NSArray *subjectPositions;
 
 @property (nonatomic, strong) NSMutableSet *set;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -23,9 +25,27 @@
     // Do any additional setup after loading the view.
     self.navigationItem.hidesBackButton = YES;
     
-    self.names = @[@"药事管理与法规",@"药学综合知识",@"药剂学",@"药理学"];
-    
     self.set = [NSMutableSet set];
+    
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/subjectPositionRelationAct.htm" params:@{@"token":@"subjectPositionRelation",@"titleId":self.position[@"id"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.subjectPositions = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取考试科目失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,14 +60,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.names.count;
+    return self.subjectPositions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.names[indexPath.row];
+    NSDictionary *subjectPosition = self.subjectPositions[indexPath.row];
+    cell.textLabel.text = subjectPosition[@"subjectName"];
     
     if ([self.set containsObject:indexPath]) {
         cell.imageView.highlighted = YES;
@@ -69,6 +90,41 @@
     }
     
     [tableView reloadData];
+}
+
+- (IBAction)onPressedBtn:(id)sender {
+    if (!self.set.count) {
+        [[OTSAlertView alertWithMessage:@"请选择考试科目" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    __block NSString *ids = @"";
+    
+    WEAK_SELF;
+    [self.set enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        STRONG_SELF;
+        NSIndexPath *path = obj;
+        NSDictionary *subjectPosition = self.subjectPositions[path.row];
+        ids = [ids stringByAppendingFormat:@"%@,",subjectPosition[@"id"]];
+    }];
+    
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/userExamSubjectAct.htm" params:@{@"token":@"add",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"],@"titleId":[self.position[@"id"] stringValue],@"subjectIdList":ids} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                [self performSegueWithIdentifier:@"toHome" sender:self];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"设置考试科目失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 /*

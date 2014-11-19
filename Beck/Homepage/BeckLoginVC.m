@@ -67,10 +67,16 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
             }
             else {
+                [[NSUserDefaults standardUserDefaults] setObject:self.usernameTF.text forKey:@"loginName"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
                 self.usernameTF.text = @"";
                 self.passwordTF.text = @"";
+//                [self performSegueWithIdentifier:@"toCus" sender:self];
                 [self performSegueWithIdentifier:@"toHome" sender:self];
             }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
         }
     }];
 }

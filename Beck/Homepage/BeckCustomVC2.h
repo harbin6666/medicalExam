@@ -10,4 +10,7 @@
 
 @interface BeckCustomVC2 : BeckVC
 
+@property (nonatomic, strong) NSDictionary *province;
+@property (nonatomic, strong) NSDictionary *position;
+
 @end
