@@ -10,4 +10,6 @@
 
 @interface ChooseSectionTVC : BeckTVC
 
+@property (nonatomic, strong) NSString *examOutlineId;
+
 @end

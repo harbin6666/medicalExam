@@ -63,7 +63,7 @@
                 </tabBar>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oA-V8-z3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="-148"/>
+            <point key="canvasLocation" x="621" y="212"/>
         </scene>
         <!--选择题库-->
         <scene sceneID="43J-yP-Vs2">
@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="92J-4r-fNv" detailTextLabel="ECd-Sf-tgq" style="IBUITableViewCellStyleValue1" id="UmB-RA-Y6b">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="92J-4r-fNv" style="IBUITableViewCellStyleDefault" id="UmB-RA-Y6b">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UmB-RA-Y6b" id="H1M-n5-TOK">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -85,17 +85,8 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ECd-Sf-tgq">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="OC7-ep-qxH" kind="push" id="Sa7-hr-1tk"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -109,7 +100,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DCt-DL-zk0">
                                 <rect key="frame" x="16" y="11" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="选择考试课程" image="backImage">
+                                <state key="normal" title="选择考试科目" image="backImage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -118,6 +109,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="zih-Sh-PMZ" kind="push" identifier="toNext" id="Uwh-OC-UVe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU8-Rc-ox1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,7 +284,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-E3-uTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1099" y="-561"/>
+            <point key="canvasLocation" x="621" y="-489"/>
         </scene>
     </scenes>
     <resources>
@@ -307,6 +301,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Sa7-hr-1tk"/>
+        <segue reference="Ttk-IQ-wly"/>
     </inferredMetricsTieBreakers>
 </document>

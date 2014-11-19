@@ -10,6 +10,8 @@
 
 @interface ChooseSectionTVC ()
 
+@property (nonatomic, strong) NSArray *sections;
+
 @end
 
 @implementation ChooseSectionTVC
@@ -19,7 +21,26 @@
     
     self.tableView.tableFooterView = [UIView new];
     
+    [self showLoading];
     
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"testQuestions",@"subjectId":[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"],@"examOutlineId":self.examOutlineId} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.sections = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取章节练习失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 #pragma mark - Table view data source
@@ -29,14 +50,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 17;
+    return self.sections.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    NSDictionary *section = self.sections[indexPath.row];
     
-    cell.textLabel.text = @"1.章节";
-    cell.detailTextLabel.text = @"38题";
+    cell.textLabel.text = section[@"suctom"];
+    NSArray *items = section[@"titleList"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d题",(int)items.count];
     return cell;
 }
 

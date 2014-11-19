@@ -17,8 +17,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
-    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)viewWillAppear:(BOOL)animated
