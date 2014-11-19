@@ -115,12 +115,12 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json", @"application/json", @"text/javascript", @"text/html",@"text/plain", nil];
 
     AFHTTPRequestOperation *operation = [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"responseObject = %@",responseObject);
+        NSLog(@"url = %@ responseObject = %@",url,responseObject);
         if (block) {
             block(responseObject, nil);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"error = %@",error);
+        NSLog(@"url = %@ error = %@",url,error);
         if (block) {
             block(operation, error);
         }

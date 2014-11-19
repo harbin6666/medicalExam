@@ -66,10 +66,34 @@
         [self performSegueWithIdentifier:@"toHelp" sender:nil];
     }
     else if (indexPath.row == 4){
-
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
     else if (indexPath.row == 5){
-
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+        [self showLoading];
+        WEAK_SELF;
+        [self getValueWithBeckUrl:@"/front/versionUpdateAct.htm" params:@{@"token":@"ios",@"paramValue":currentVersion} CompleteBlock:^(id aResponseObject, NSError *anError) {
+            STRONG_SELF;
+            [self hideLoading];
+            if (!anError) {
+                NSNumber *errorcode = aResponseObject[@"errorcode"];
+                if (errorcode.boolValue) {
+                    [[OTSAlertView alertWithMessage:@"不需要更新" andCompleteBlock:nil] show];
+                }
+                else {
+                    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:aResponseObject[@"url"]]]) {
+                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:aResponseObject[@"url"]]];
+                    }
+                    else {
+                        [[OTSAlertView alertWithMessage:@"无法更新" andCompleteBlock:nil] show];
+                    }
+                }
+            }
+            else {
+                [[OTSAlertView alertWithMessage:@"获取更新失败" andCompleteBlock:nil] show];
+            }
+        }];
     }
     else {
         [self performSegueWithIdentifier:@"toPersonalFile" sender:nil];

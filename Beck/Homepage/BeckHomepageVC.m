@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UITabBar *tabbar;
 
+@property (weak, nonatomic) IBOutlet UILabel *countDownLbl;
+
 @end
 
 @implementation BeckHomepageVC
@@ -63,11 +65,25 @@
         UITabBarItem *item4 = self.tabbar.items[3];
         [item4 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
     }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/examSubjectAct.htm" params:@{@"token":@"countdown",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                
+            }
+            else {
+                NSNumber *days = aResponseObject[@"numberDay"];
+                self.countDownLbl.text = [NSString stringWithFormat:@"距离考试还有%@天",days];
+            }
+        }
+        else {
+            
+        }
+    }];
 }
 
 /*

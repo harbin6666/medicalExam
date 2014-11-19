@@ -10,6 +10,8 @@
 
 @interface FeedBackVC ()
 
+@property (weak, nonatomic) IBOutlet UITextField *feedbackTF;
+
 @end
 
 @implementation FeedBackVC
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +36,30 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onPressedBtn:(id)sender {
+    if (!self.feedbackTF.text.length) {
+        [[OTSAlertView alertWithMessage:@"请输反馈" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/feedBackAddAct.htm" params:@{@"token":@"add",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"],@"content":self.feedbackTF.text} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"提交失败" andCompleteBlock:nil] show];
+        }
+    }];
+}
 
 @end

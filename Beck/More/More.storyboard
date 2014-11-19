@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bi-MC-TkO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4bi-MC-TkO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="-710" y="1207"/>
         </scene>
-        <!--HelpVC-->
+        <!--Feed BackVC-->
         <scene sceneID="XLj-ib-Py1">
             <objects>
-                <viewController id="egH-vV-o07" customClass="HelpVC" sceneMemberID="viewController">
+                <viewController id="egH-vV-o07" customClass="FeedBackVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="me2-Y1-BGD"/>
                         <viewControllerLayoutGuide type="bottom" id="kPb-7B-ih5"/>
@@ -183,8 +183,15 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="发送" id="cpm-jG-z33"/>
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="cpm-jG-z33">
+                            <connections>
+                                <action selector="onPressedBtn:" destination="egH-vV-o07" id="05x-EC-y1D"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="feedbackTF" destination="b9W-Rx-4va" id="Cgv-jp-xdJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCW-v6-niK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
