@@ -13,6 +13,8 @@
 #import "UIImage+tool.h"
 #import "OTSBorder.h"
 #import "OTSAlertView.h"
+#import "NSMutableArray+safe.h"
+#import "NSMutableDictionary+safe.h"
 
 #define WEAK_SELF __weak typeof(self)weakSelf = self
 #define STRONG_SELF typeof(weakSelf)self = weakSelf

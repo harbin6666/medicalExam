@@ -118,6 +118,9 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
             }
             else {
+                [[NSUserDefaults standardUserDefaults] setObject:self.position[@"id"] forKey:@"subjectId"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
                 [self performSegueWithIdentifier:@"toHome" sender:self];
             }
         }

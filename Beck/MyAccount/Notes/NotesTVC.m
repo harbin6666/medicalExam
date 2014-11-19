@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
+@property (nonatomic, strong) NSArray *notes;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation NotesTVC
@@ -36,6 +39,63 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [UIView new];
+    
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:@{@"token":@"subject",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.notes = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+        }
+    }];
+}
+
+- (IBAction)changeValue:(UISegmentedControl *)sender {
+    [self showLoading];
+    
+    NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
+    
+    if (sender.selectedSegmentIndex == 0) {
+        params[@"token"] = @"subject";
+    }
+    else if (sender.selectedSegmentIndex == 1) {
+        params[@"token"] = @"type";
+        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+    else {
+        params[@"token"] = @"outline";
+        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+    
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.notes = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 #pragma mark - Table view data source
@@ -45,13 +105,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.notes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NotesCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @(indexPath.row).stringValue;
+    NSDictionary *note = self.notes[indexPath.row];
+    
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        cell.textLabel.text = note[@"subjectName"];
+    }
+    else if (self.segmentedControl.selectedSegmentIndex == 1) {
+        cell.textLabel.text = note[@"customName"];
+    }
+    else {
+        cell.textLabel.text = note[@"outlineName"];
+    }
+    
+    cell.detailTextLabel.text = note[@"count"];
     
     return cell;
 }
