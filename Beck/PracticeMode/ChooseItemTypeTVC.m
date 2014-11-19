@@ -22,7 +22,7 @@
 {
     [super awakeFromNib];
     
-    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题"];
+    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题",@"填空题"];
 }
 
 - (void)viewDidLoad {
@@ -30,7 +30,7 @@
     
     self.numbers = @[].mutableCopy;
     
-    [[AFSQLManager sharedManager] performQuery:@"select custom_id, count(choice_id) from choice_questions union all select custom_id, count(id) from compatibility_info union all select custom_id, count(space_id) from space_question union all select custom_id, count(decision_id) from decision_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    [[AFSQLManager sharedManager] performQuery:@"select custom_id, count(choice_id) from choice_questions union all select custom_id, count(decision_id) from decision_question union all select custom_id, count(id) from compatibility_info union all select custom_id, count(id) from compatibility_info union all select custom_id, count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
         if (finished) {
             [self.tableView reloadData];
