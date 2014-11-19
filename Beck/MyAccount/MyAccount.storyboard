@@ -391,7 +391,7 @@
         <!--考试详情-->
         <scene sceneID="Otp-74-duF">
             <objects>
-                <viewController id="XLN-tn-qaY" userLabel="考试详情" sceneMemberID="viewController">
+                <viewController id="XLN-tn-qaY" userLabel="考试详情" customClass="PractiseStatisticDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fb-tk-lKg"/>
                         <viewControllerLayoutGuide type="bottom" id="M2d-6U-M6t"/>
@@ -498,6 +498,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btn" destination="wLW-in-ld1" id="NO7-MX-aKb"/>
+                        <outlet property="lbl1" destination="abu-5W-XRS" id="Xwd-Z6-fYp"/>
+                        <outlet property="lbl2" destination="d38-Kv-kiO" id="f5N-5e-Qp0"/>
+                        <outlet property="lbl3" destination="w5G-fm-keb" id="LsG-7f-2UK"/>
+                        <outlet property="lbl4" destination="Ptr-cn-0aD" id="BGa-CG-dxO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgR-g9-5V0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,6 +819,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OjE-Bk-vh3"/>
+        <segue reference="Tig-V5-rrF"/>
     </inferredMetricsTieBreakers>
 </document>

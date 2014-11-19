@@ -56,6 +56,7 @@
 		3D4CEEAD1A1CDA360078AA38 /* NSMutableArray+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEAA1A1CDA360078AA38 /* NSMutableArray+safe.m */; };
 		3D4CEEAE1A1CDA360078AA38 /* NSMutableDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEAC1A1CDA360078AA38 /* NSMutableDictionary+safe.m */; };
 		3D4CEEB11A1CDB400078AA38 /* NSObject+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEB01A1CDB400078AA38 /* NSObject+swizzle.m */; };
+		3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEB31A1CE5A90078AA38 /* PractiseStatisticDetailVC.m */; };
 		3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */; };
 		3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */; };
 		3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */; };
@@ -203,6 +204,8 @@
 		3D4CEEAC1A1CDA360078AA38 /* NSMutableDictionary+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+safe.m"; sourceTree = "<group>"; };
 		3D4CEEAF1A1CDB400078AA38 /* NSObject+swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+swizzle.h"; sourceTree = "<group>"; };
 		3D4CEEB01A1CDB400078AA38 /* NSObject+swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+swizzle.m"; sourceTree = "<group>"; };
+		3D4CEEB21A1CE5A90078AA38 /* PractiseStatisticDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticDetailVC.h; sourceTree = "<group>"; };
+		3D4CEEB31A1CE5A90078AA38 /* PractiseStatisticDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticDetailVC.m; sourceTree = "<group>"; };
 		3D4F677719F7DC9200ED8FA4 /* BeckPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckPVC.h; sourceTree = "<group>"; };
 		3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckPVC.m; sourceTree = "<group>"; };
 		3D4F677A19F7E97900ED8FA4 /* BeckCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckCVC.h; sourceTree = "<group>"; };
@@ -516,6 +519,8 @@
 				3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */,
 				3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */,
 				3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */,
+				3D4CEEB21A1CE5A90078AA38 /* PractiseStatisticDetailVC.h */,
+				3D4CEEB31A1CE5A90078AA38 /* PractiseStatisticDetailVC.m */,
 			);
 			name = "统计";
 			path = Statistic;
@@ -877,6 +882,7 @@
 				3D1782661A02630100F6904C /* ItemInSqlEntity.m in Sources */,
 				3D9789491A1257F200835549 /* BeckCustomVC1.m in Sources */,
 				3D9789461A12575100835549 /* BeckChangeExamPlaceBtn.m in Sources */,
+				3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */,
 				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */,
