@@ -13,7 +13,7 @@
 @interface RegisterVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *numberTF;
-@property (nonatomic, strong) NSString *smsCode;
+@property (nonatomic, strong) NSNumber *smsCode;
 
 @end
 

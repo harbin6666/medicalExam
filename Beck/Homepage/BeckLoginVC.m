@@ -15,6 +15,9 @@
 
 @interface BeckLoginVC () <TencentSessionDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *usernameTF;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTF;
+
 @property (nonatomic, strong) TencentOAuth *tencentOAuth;
 
 @end
@@ -37,19 +40,41 @@
 
     //不设置则获取默认权限
 //    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
-    
-//    [self getValueWithUrl:@"http://115.28.161.246:7080/beck/front/provinceAct.htm" params:nil CompleteBlock:^(id aResponseObject, NSError *anError) {
-//        NSLog(@"%@,%@",aResponseObject,anError);
-//    }];
 }
 - (IBAction)onPressedCheckBox:(UIButton *)sender {
     sender.selected = !sender.selected;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onPressedLogin:(id)sender {
+    if (!self.usernameTF.text.length) {
+        [[OTSAlertView alertWithMessage:@"请输入密码" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    if (!self.passwordTF.text.length) {
+        [[OTSAlertView alertWithMessage:@"请输入账号" andCompleteBlock:nil] show];
+        return;
+    }
+    
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/userAct.htm" params:@{@"token":@"login",@"loginName":self.usernameTF.text,@"passWord":self.passwordTF.text} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.usernameTF.text = @"";
+                self.passwordTF.text = @"";
+                [self performSegueWithIdentifier:@"toHome" sender:self];
+            }
+        }
+    }];
 }
+
 
 - (IBAction)onTag:(id)sender {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
