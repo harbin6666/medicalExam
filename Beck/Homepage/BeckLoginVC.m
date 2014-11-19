@@ -68,6 +68,7 @@
             }
             else {
                 [[NSUserDefaults standardUserDefaults] setObject:self.usernameTF.text forKey:@"loginName"];
+                [[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"subjectId"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 self.usernameTF.text = @"";
                 self.passwordTF.text = @"";
