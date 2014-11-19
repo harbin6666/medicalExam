@@ -75,6 +75,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="7W3-uf-k7t" id="Sqy-LR-qYa"/>
+                        <outlet property="tableView" destination="h5F-eM-0Iy" id="ru9-sa-MJ1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z67-RH-GOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -587,6 +588,9 @@
                                 <segment title="按题型"/>
                                 <segment title="按时间"/>
                             </segments>
+                            <connections>
+                                <action selector="changeValue:" destination="dTN-76-Te1" eventType="valueChanged" id="qyS-51-sad"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FavorateItemsCell" textLabel="JhF-Mf-uml" detailTextLabel="hXA-ap-o4I" style="IBUITableViewCellStyleValue1" id="jJR-D2-Hhy">
@@ -636,6 +640,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="tY9-no-pDT" id="Gjz-9H-fdS"/>
+                        <outlet property="tableView" destination="lcZ-vi-Au0" id="8sr-hn-luT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcq-JA-4LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -775,6 +780,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oao-a5-5O1"/>
+        <segue reference="OjE-Bk-vh3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
+@property (nonatomic, strong) NSArray *items;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation FavorateItemsTVC
@@ -36,6 +39,49 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [UIView new];
+    
+    [self changeValue:self.segmentedControl];
+}
+
+- (IBAction)changeValue:(UISegmentedControl *)sender {
+    [self showLoading];
+    
+    NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
+    
+    if (sender.selectedSegmentIndex == 0) {
+        params[@"token"] = @"subject";
+    }
+    else if (sender.selectedSegmentIndex == 1) {
+        params[@"token"] = @"outline";
+        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+    else if (sender.selectedSegmentIndex == 2)  {
+        params[@"token"] = @"type";
+        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+    else {
+        params[@"token"] = @"time";
+        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+    
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.items = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 #pragma mark - Table view data source
@@ -45,13 +91,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavorateItemsCell" forIndexPath:indexPath];
+    NSDictionary *item = self.items[indexPath.row];
     
-    cell.textLabel.text = @(indexPath.row).stringValue;
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        cell.textLabel.text = item[@"subjectName"];
+    }
+    else if (self.segmentedControl.selectedSegmentIndex == 1) {
+        cell.textLabel.text = item[@"outlineName"];
+    }
+    else if (self.segmentedControl.selectedSegmentIndex == 2)  {
+        cell.textLabel.text = item[@"customName"];
+    }
+    else {
+        cell.textLabel.text = nil;
+    }
+    
+    cell.detailTextLabel.text = item[@"count"];
     
     return cell;
 }

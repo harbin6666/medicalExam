@@ -40,25 +40,7 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    [self showLoading];
-    WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:@{@"token":@"subject",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
-        [self hideLoading];
-        if (!anError) {
-            NSNumber *errorcode = aResponseObject[@"errorcode"];
-            if (errorcode.boolValue) {
-                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
-            }
-            else {
-                self.notes = aResponseObject[@"list"];
-                [self.tableView reloadData];
-            }
-        }
-        else {
-            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
-        }
-    }];
+    [self changeValue:self.segmentedControl];
 }
 
 - (IBAction)changeValue:(UISegmentedControl *)sender {
