@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 #import <TencentOpenAPI/TencentOAuth.h>
-//#import <RennSDK/RennSDK.h>
+#import <RennSDK/RennSDK.h>
 
 @interface BeckLoginVC () <TencentSessionDelegate>
 
@@ -41,8 +41,10 @@
     //不设置则获取默认权限
 //    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
 }
+
 - (IBAction)onPressedCheckBox:(UIButton *)sender {
     sender.selected = !sender.selected;
+    [[NSUserDefaults standardUserDefaults] setBool:sender.selected forKey:@"autologin"];
 }
 
 - (IBAction)onPressedLogin:(id)sender {
@@ -68,12 +70,17 @@
             }
             else {
                 [[NSUserDefaults standardUserDefaults] setObject:self.usernameTF.text forKey:@"loginName"];
-                [[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"subjectId"];
+                [[NSUserDefaults standardUserDefaults] setObject:self.passwordTF.text forKey:@"passWord"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 self.usernameTF.text = @"";
                 self.passwordTF.text = @"";
-//                [self performSegueWithIdentifier:@"toCus" sender:self];
-                [self performSegueWithIdentifier:@"toHome" sender:self];
+                
+                if ([[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"]) {
+                    [self performSegueWithIdentifier:@"toHome" sender:self];
+                }
+                else {
+                    [self performSegueWithIdentifier:@"toCus" sender:self];
+                }
             }
         }
         else {
