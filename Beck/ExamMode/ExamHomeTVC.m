@@ -29,9 +29,13 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    if (path.row == 1) {
+        ChooseExamBankTVC *vc = segue.destinationViewController;
+        vc.fromExam = YES;
+    }
 }
 
 #pragma mark - Table view data source
@@ -51,26 +55,6 @@
     cell.textLabel.text = self.names[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"exam%li",(long)indexPath.row]];
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:indexPath];
-//    if (indexPath.row == 0) {
-//        [self performSegueWithIdentifier:@"toSimulationExam" sender:nil];
-//    }
-//    else {
-//        [self performSegueWithIdentifier:@"toChooseQuestionBank" sender:nil];
-//    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSIndexPath *path = sender;
-    if (path.row == 1) {
-        ChooseExamBankTVC *vc = segue.destinationViewController;
-        vc.fromExam = YES;
-    }
 }
 
 @end

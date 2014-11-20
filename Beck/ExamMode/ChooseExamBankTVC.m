@@ -21,21 +21,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.questionBanks = @[@"药事管理与法规", @"药理学", @"药物分析", @"药剂学", @"药物化学", @"药学综合知识与技能"];
+    [self showLoading];
     
-    self.numbers = @[].mutableCopy;
-    
-    NSNumber *type = self.fromExam ? @1: @2;
-    
-    NSString *sql = [NSString stringWithFormat:@"select distinct a.exam_subject, (select count(b.exam_subject) from question_library as b where b.exam_subject == a.exam_subject and type == %@) from question_library as a where type == %@",type,type];
-    
-    [[AFSQLManager sharedManager] performQuery:sql withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        NSLog(@"%@,%@,%d",row,error,finished);
-        if (finished) {
-            [self.tableView reloadData];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/examPaperAct.htm" params:@{@"token":@"list",@"subjectId":[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"],@"type":(self.fromExam ? @"2" : @"1")} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.questionBanks = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
         }
         else {
-            [self.numbers addObject:row[1]];
+            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
         }
     }];
 }
@@ -47,34 +50,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 44.f;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UILabel *lbl = [UILabel viewWithFrame:CGRectMake(10, 0, 300, 30)];
-    lbl.backgroundColor = [UIColor lightGrayColor];
-    lbl.text = @"   考试科目";
-    return lbl;
+    return self.questionBanks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.questionBanks[indexPath.row];
+    NSDictionary *questionBank = self.questionBanks[indexPath.row];
     
-    NSString *num = self.numbers[indexPath.row];
-    if (num) {
-        cell.detailTextLabel.text = num;
-    }
-    else {
-        cell.detailTextLabel.text = nil;
-    }
+    cell.textLabel.text = questionBank[@"paperName"];
+    
     return cell;
 }
 

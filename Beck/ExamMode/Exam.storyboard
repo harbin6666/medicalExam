@@ -27,6 +27,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8Xc-b4-9JT" kind="push" id="dIc-L2-xcz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -132,7 +135,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GM-6u-CJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-988" y="-3179"/>
+            <point key="canvasLocation" x="-949" y="-3179"/>
         </scene>
         <!--支付-->
         <scene sceneID="6ph-3w-d3M">
@@ -482,4 +485,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="dIc-L2-xcz"/>
+    </inferredMetricsTieBreakers>
 </document>
