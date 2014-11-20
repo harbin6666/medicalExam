@@ -90,6 +90,20 @@
             }];
         }
             break;
+        case 1:
+        {
+            NSMutableArray *ids = [NSMutableArray array];
+            [[AFSQLManager sharedManager] performQuery:@"select choice_id from choice_questions where custom_id == 2" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+                NSLog(@"%@,%@,%d",row,error,finished);
+                if (finished) {
+                    [self performSegueWithIdentifier:@"toNext" sender:ids];
+                }
+                else {
+                    [ids addObject:row[0]];
+                }
+            }];
+        }
+            break;
         case 2:
         {
             NSMutableArray *ids = [NSMutableArray array];
