@@ -29,8 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.tableFooterView = [UIView new];
-    
     self.sectionNames = @[@"    我的宣章", @"    我的统计", @"    我的积分"];
 }
 
