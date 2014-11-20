@@ -30,7 +30,12 @@
     
     self.numbers = @[].mutableCopy;
     
-    [[AFSQLManager sharedManager] performQuery:@"select custom_id, count(choice_id) from choice_questions union all select custom_id, count(decision_id) from decision_question union all select custom_id, count(id) from compatibility_info union all select custom_id, count(id) from compatibility_info union all select custom_id, count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    [[AFSQLManager sharedManager] performQuery:
+     @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
+     select custom_id, count(decision_id) from decision_question union all\
+     select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
+     select custom_id, count(id) from compatibility_info union all\
+     select custom_id, count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
         if (finished) {
             [self.tableView reloadData];
@@ -64,6 +69,19 @@
         cell.detailTextLabel.text = nil;
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[AFSQLManager sharedManager] performQuery:@"select custom_id, count(choice_id) from choice_questions union all select custom_id, count(decision_id) from decision_question union all select custom_id, count(id) from compatibility_info union all select custom_id, count(id) from compatibility_info union all select custom_id, count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+        if (finished) {
+            [self.tableView reloadData];
+        }
+        else {
+            [self.numbers addObject:row[1]];
+        }
+    }];
 }
 
 @end
