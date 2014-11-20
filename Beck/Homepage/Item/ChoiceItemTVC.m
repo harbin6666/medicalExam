@@ -46,6 +46,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 1){
+        NSString *info = self.itemInfo[9];
+        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+        CGSize size = [info boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        
+        if (size.height < 60.f) {
+            return 60.f;
+        }
+        
+        return size.height;
+    }
+    
     if (indexPath.section == 2){
         NSArray *itemAnswer = self.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[3];
@@ -72,8 +84,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    if (indexPath.section == 1) {
+        UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
+        label.text = self.itemInfo[9];
+        return cell;
+    }
+    
     if (indexPath.section == 2) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
         if (self.itemAnswers.count) {
             NSArray *itemAnswer = self.itemAnswers[indexPath.row];
             cell.textLabel.text = itemAnswer[3];
@@ -81,7 +100,7 @@
         return cell;
     }
     
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    return cell;
 }
 
 /*
