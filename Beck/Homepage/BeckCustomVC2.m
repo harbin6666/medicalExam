@@ -35,7 +35,7 @@
         if (!anError) {
             NSNumber *errorcode = aResponseObject[@"errorcode"];
             if (errorcode.boolValue) {
-                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
                 self.subjectPositions = aResponseObject[@"list"];
@@ -115,7 +115,7 @@
         if (!anError) {
             NSNumber *errorcode = aResponseObject[@"errorcode"];
             if (errorcode.boolValue) {
-                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
                 [[NSUserDefaults standardUserDefaults] setObject:self.position[@"id"] forKey:@"subjectId"];

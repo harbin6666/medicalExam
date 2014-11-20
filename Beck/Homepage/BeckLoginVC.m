@@ -41,7 +41,7 @@
     //不设置则获取默认权限
 //    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
     
-    [self performSegueWithIdentifier:@"toHome" sender:self];
+    [self performSegueWithIdentifier:@"toCus" sender:self];
 }
 
 - (IBAction)onPressedCheckBox:(UIButton *)sender {
@@ -68,7 +68,7 @@
         if (!anError) {
             NSNumber *errorcode = aResponseObject[@"errorcode"];
             if (errorcode.boolValue) {
-                [[OTSAlertView alertWithMessage:aResponseObject[@"token"] andCompleteBlock:nil] show];
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
                 [[NSUserDefaults standardUserDefaults] setObject:self.usernameTF.text forKey:@"loginName"];
