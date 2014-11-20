@@ -122,4 +122,9 @@
     NSLog(@"%@", [alertView textFieldAtIndex:0].text);
 }
 
+- (void)dealloc
+{
+    NSLog(@"ItemTVC dealloc");
+}
+
 @end

@@ -85,7 +85,7 @@
                     [self performSegueWithIdentifier:@"toNext" sender:ids];
                 }
                 else {
-                    [ids addObject:row[1]];
+                    [ids addObject:row[0]];
                 }
             }];
         }

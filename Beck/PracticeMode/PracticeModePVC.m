@@ -104,9 +104,14 @@
 }
 
 - (void)onPressedBtn1:(UIButton *)sender {
+    ItemTVC *tempVC = self.currentTVC;
+    if (self.items.firstObject == tempVC.itemId) {
+        return;
+    }
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] - 1];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -137,9 +142,14 @@
 }
 
 - (void)onPressedBtn5:(UIButton *)sender {
+    ItemTVC *tempVC = self.currentTVC;
+    if (self.items.lastObject == tempVC.itemId) {
+        return;
+    }
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    
+    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] + 1];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -169,6 +179,7 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] - 1];
     self.currentTVC = vc;
     return vc;
 }
@@ -181,6 +192,7 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] + 1];
     self.currentTVC = vc;
     return vc;
 }
