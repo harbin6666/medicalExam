@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "ItemtVC.h"
+#import "ChoiceItemTVC.h"
 
-@interface MultiChoiceItemTVC : ItemTVC
+@interface MultiChoiceItemTVC : ChoiceItemTVC
 
 @end
