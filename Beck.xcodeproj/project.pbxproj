@@ -14,6 +14,7 @@
 		3D0256CC1A1E27C600C46B0E /* SpaceItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256CB1A1E27C600C46B0E /* SpaceItemTVC.m */; };
 		3D0256CF1A1E27D200C46B0E /* DecisionItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256CE1A1E27D200C46B0E /* DecisionItemTVC.m */; };
 		3D0256D11A1E285400C46B0E /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0256D01A1E285400C46B0E /* Item.storyboard */; };
+		3D0256D41A1E39CE00C46B0E /* ItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256D31A1E39CE00C46B0E /* ItemVO.m */; };
 		3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */; };
 		3D092D451A14DD8500C19F69 /* ExamStatisticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D441A14DD8500C19F69 /* ExamStatisticCell.m */; };
 		3D094DE419FE753200472508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Main.storyboard */; };
@@ -128,6 +129,8 @@
 		3D0256CD1A1E27D200C46B0E /* DecisionItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionItemTVC.h; sourceTree = "<group>"; };
 		3D0256CE1A1E27D200C46B0E /* DecisionItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionItemTVC.m; sourceTree = "<group>"; };
 		3D0256D01A1E285400C46B0E /* Item.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
+		3D0256D21A1E39CE00C46B0E /* ItemVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVO.h; sourceTree = "<group>"; };
+		3D0256D31A1E39CE00C46B0E /* ItemVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVO.m; sourceTree = "<group>"; };
 		3D092D401A14D3F200C19F69 /* ChooseItemTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseItemTypeTVC.h; sourceTree = "<group>"; };
 		3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseItemTypeTVC.m; sourceTree = "<group>"; };
 		3D092D431A14DD8500C19F69 /* ExamStatisticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamStatisticCell.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				3D0256CD1A1E27D200C46B0E /* DecisionItemTVC.h */,
 				3D0256CE1A1E27D200C46B0E /* DecisionItemTVC.m */,
 				3D0256D01A1E285400C46B0E /* Item.storyboard */,
+				3D0256D21A1E39CE00C46B0E /* ItemVO.h */,
+				3D0256D31A1E39CE00C46B0E /* ItemVO.m */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -923,6 +928,7 @@
 				3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */,
 				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
 				3D0256C01A1E276D00C46B0E /* ItemTVC.m in Sources */,
+				3D0256D41A1E39CE00C46B0E /* ItemVO.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */,
 				3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */,

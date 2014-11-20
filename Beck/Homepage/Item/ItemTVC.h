@@ -8,14 +8,7 @@
 
 #import "BeckTVC.h"
 
-typedef enum ItemType
-{
-    ItemTypeChoice = 1,
-    ItemTypeCompatibility,
-    ItemTypeMultiChoice,
-    ItemTypeSpace,
-    ItemTypeDecision
-} ItemType;
+#import "ItemVO.h"
 
 @interface ItemTVC : BeckTVC
 
@@ -27,8 +20,8 @@ typedef enum ItemType
 
 @property (nonatomic) ItemType type;
 
-@property (nonatomic, strong) NSString *itemId;
+@property (nonatomic, strong) ItemVO *itemVO;
 
-+ (instancetype)initWitleItemId:(NSString *)itemId andType:(ItemType)type;
++ (instancetype)createWitleItemVO:(ItemVO *)aVO;
 
 @end

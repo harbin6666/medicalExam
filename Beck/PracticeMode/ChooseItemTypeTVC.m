@@ -85,7 +85,10 @@
                     [self performSegueWithIdentifier:@"toNext" sender:ids];
                 }
                 else {
-                    [ids addObject:row[0]];
+                    ItemVO *vo = [ItemVO new];
+                    vo.itemId = row[0];
+                    vo.type = ItemTypeChoice;
+                    [ids addObject:vo];
                 }
             }];
         }
@@ -93,13 +96,16 @@
         case 1:
         {
             NSMutableArray *ids = [NSMutableArray array];
-            [[AFSQLManager sharedManager] performQuery:@"select choice_id from choice_questions where custom_id == 2" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+            [[AFSQLManager sharedManager] performQuery:@"select decision_id from decision_question where custom_id == 2" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
                 NSLog(@"%@,%@,%d",row,error,finished);
                 if (finished) {
                     [self performSegueWithIdentifier:@"toNext" sender:ids];
                 }
                 else {
-                    [ids addObject:row[0]];
+                    ItemVO *vo = [ItemVO new];
+                    vo.itemId = row[0];
+                    vo.type = ItemTypeCompatibility;
+                    [ids addObject:vo];
                 }
             }];
         }
@@ -113,7 +119,46 @@
                     [self performSegueWithIdentifier:@"toNext" sender:ids];
                 }
                 else {
-                    [ids addObject:row[0]];
+                    ItemVO *vo = [ItemVO new];
+                    vo.itemId = row[0];
+                    vo.type = ItemTypeMultiChoice;
+                    [ids addObject:vo];
+                }
+            }];
+        }
+            break;
+            
+        case 3:
+        {
+            NSMutableArray *ids = [NSMutableArray array];
+            [[AFSQLManager sharedManager] performQuery:@"select id from compatibility_info where custom_id == 4" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+                NSLog(@"%@,%@,%d",row,error,finished);
+                if (finished) {
+                    [self performSegueWithIdentifier:@"toNext" sender:ids];
+                }
+                else {
+                    ItemVO *vo = [ItemVO new];
+                    vo.itemId = row[0];
+                    vo.type = ItemTypeSpace;
+                    [ids addObject:vo];
+                }
+            }];
+        }
+            break;
+            
+        case 4:
+        {
+            NSMutableArray *ids = [NSMutableArray array];
+            [[AFSQLManager sharedManager] performQuery:@"select space_id from space_question where custom_id == 5" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+                NSLog(@"%@,%@,%d",row,error,finished);
+                if (finished) {
+                    [self performSegueWithIdentifier:@"toNext" sender:ids];
+                }
+                else {
+                    ItemVO *vo = [ItemVO new];
+                    vo.itemId = row[0];
+                    vo.type = ItemTypeDecision;
+                    [ids addObject:vo];
                 }
             }];
         }

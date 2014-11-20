@@ -8,8 +8,10 @@
 
 #import "BeckPVC.h"
 
+#import "ItemVO.h"
+
 @interface PracticeModePVC : BeckPVC
 
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSArray *items;//<ItemVO>
 
 @end

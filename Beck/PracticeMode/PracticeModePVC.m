@@ -65,7 +65,7 @@
         [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
     }
     
-    ItemTVC *vc = [ItemTVC initWitleItemId:self.items.firstObject andType:ItemTypeChoice];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items.firstObject];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -103,11 +103,11 @@
 
 - (void)onPressedBtn1:(UIButton *)sender {
     ItemTVC *tempVC = self.currentTVC;
-    if (self.items.firstObject == tempVC.itemId) {
+    if (self.items.firstObject == tempVC.itemVO) {
         return;
     }
     
-    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] - 1] andType:ItemTypeChoice];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] - 1]];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -139,11 +139,11 @@
 
 - (void)onPressedBtn5:(UIButton *)sender {
     ItemTVC *tempVC = self.currentTVC;
-    if (self.items.lastObject == tempVC.itemId) {
+    if (self.items.lastObject == tempVC.itemVO) {
         return;
     }
     
-    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] + 1] andType:ItemTypeChoice];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] + 1]];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -167,22 +167,22 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     ItemTVC *tempVC = (ItemTVC *)viewController;
-    if (self.items.firstObject == tempVC.itemId) {
+    if (self.items.firstObject == tempVC.itemVO) {
         return nil;
     }
     
-    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] - 1] andType:ItemTypeChoice];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] - 1]];
     self.currentTVC = vc;
     return vc;
 }
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     ItemTVC *tempVC = (ItemTVC *)viewController;
-    if (self.items.lastObject == tempVC.itemId) {
+    if (self.items.lastObject == tempVC.itemVO) {
         return nil;
     }
     
-    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] + 1] andType:ItemTypeChoice];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] + 1]];
     self.currentTVC = vc;
     return vc;
 }

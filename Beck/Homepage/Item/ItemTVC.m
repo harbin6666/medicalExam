@@ -14,11 +14,11 @@
 
 @implementation ItemTVC
 
-+ (instancetype)initWitleItemId:(NSString *)itemId andType:(ItemType)type
++ (instancetype)createWitleItemVO:(ItemVO *)aVO
 {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = nil;
-    switch (type) {
+    switch (aVO.type) {
         case ItemTypeChoice:
             vc = [sb instantiateViewControllerWithIdentifier:@"ChoiceItemTVC"];
             break;
@@ -39,8 +39,7 @@
             break;
     }
     
-    vc.itemId = itemId;
-    vc.type = type;
+    vc.itemVO = aVO;
     
     return vc;
 }

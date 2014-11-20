@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *sql1 = [@"select * from choice_questions where choice_id == " stringByAppendingFormat:@"%@",self.itemId];
+    NSString *sql1 = [@"select * from choice_questions where choice_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
     
     [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         if (finished) {
@@ -32,7 +32,7 @@
     }];
     
     self.itemAnswers = @[].mutableCopy;
-    NSString *sql2 = [@"select * from choice_items where choice_id == " stringByAppendingFormat:@"%@",self.itemId];
+    NSString *sql2 = [@"select * from choice_items where choice_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
     
     [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         if (finished) {
