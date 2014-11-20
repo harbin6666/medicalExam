@@ -104,7 +104,7 @@
                 else {
                     ItemVO *vo = [ItemVO new];
                     vo.itemId = row[0];
-                    vo.type = ItemTypeCompatibility;
+                    vo.type = ItemTypeDecision;
                     [ids addObject:vo];
                 }
             }];
@@ -139,7 +139,7 @@
                 else {
                     ItemVO *vo = [ItemVO new];
                     vo.itemId = row[0];
-                    vo.type = ItemTypeSpace;
+                    vo.type = ItemTypeCompatibility;
                     [ids addObject:vo];
                 }
             }];
@@ -157,7 +157,7 @@
                 else {
                     ItemVO *vo = [ItemVO new];
                     vo.itemId = row[0];
-                    vo.type = ItemTypeDecision;
+                    vo.type = ItemTypeSpace;
                     [ids addObject:vo];
                 }
             }];

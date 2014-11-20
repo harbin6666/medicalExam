@@ -22,19 +22,18 @@
         case ItemTypeChoice:
             vc = [sb instantiateViewControllerWithIdentifier:@"ChoiceItemTVC"];
             break;
-        case ItemTypeCompatibility:
-            vc = [sb instantiateViewControllerWithIdentifier:@"CompatibilityItemTVC"];
+        case ItemTypeDecision:
+            vc = [sb instantiateViewControllerWithIdentifier:@"DecisionItemTVC"];
             break;
         case ItemTypeMultiChoice:
             vc = [sb instantiateViewControllerWithIdentifier:@"MultiChoiceItemTVC"];
             break;
+        case ItemTypeCompatibility:
+            vc = [sb instantiateViewControllerWithIdentifier:@"CompatibilityItemTVC"];
+            break;
         case ItemTypeSpace:
             vc = [sb instantiateViewControllerWithIdentifier:@"SpaceItemTVC"];
             break;
-        case ItemTypeDecision:
-            vc = [sb instantiateViewControllerWithIdentifier:@"DecisionItemTVC"];
-            break;
-            
         default:
             break;
     }

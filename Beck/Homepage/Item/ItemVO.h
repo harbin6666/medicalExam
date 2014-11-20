@@ -11,10 +11,10 @@
 typedef enum ItemType
 {
     ItemTypeChoice = 1,
-    ItemTypeCompatibility,
+    ItemTypeDecision,
     ItemTypeMultiChoice,
-    ItemTypeSpace,
-    ItemTypeDecision
+    ItemTypeCompatibility,
+    ItemTypeSpace
 } ItemType;
 
 @interface ItemVO : NSObject

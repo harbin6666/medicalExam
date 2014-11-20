@@ -10,6 +10,8 @@
 
 @interface DecisionItemTVC ()
 
+@property (nonatomic ,strong) NSArray *itemInfo;
+
 @end
 
 @implementation DecisionItemTVC
@@ -17,21 +19,69 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *sql1 = [@"select * from decision_question where decision_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
+    
+    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+            [self.tableView reloadData];
+        }
+        else {
+            self.itemInfo = row;
+        }
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1){
+        NSString *info = self.itemInfo[8];
+        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+        CGSize size = [info boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        
+        if (size.height < 60.f) {
+            return 60.f;
+        }
+        
+        return size.height;
+    }
+    
+    if (indexPath.section == 2){
+        return 30.f;
+    }
+    
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 2) {
+        return 2;
+    }
+    
+    return [super tableView:tableView numberOfRowsInSection:section];
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    if (indexPath.section == 1) {
+        UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
+        label.text = self.itemInfo[8];
+        return cell;
+    }
+    
+    if (indexPath.section == 2) {
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"对";
+        }
+        else {
+            cell.textLabel.text = @"错";
+        }
+        
+        return cell;
+    }
+    
+    return cell;
+}
 
 @end
