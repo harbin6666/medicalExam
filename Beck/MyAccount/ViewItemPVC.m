@@ -28,14 +28,6 @@
 
 @implementation ViewItemPVC
 
-- (void)awakeFromNib
-{
-    self.delegate = self;
-    self.dataSource = self;
-    
-    self.edgesForExtendedLayout = UIRectEdgeBottom;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     

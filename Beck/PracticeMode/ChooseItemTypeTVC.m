@@ -8,6 +8,8 @@
 
 #import "ChooseItemTypeTVC.h"
 
+#import "PracticeModePVC.h"
+
 @interface ChooseItemTypeTVC ()
 
 @property (nonatomic, strong) NSArray *names;
@@ -73,15 +75,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[AFSQLManager sharedManager] performQuery:@"select custom_id, count(choice_id) from choice_questions union all select custom_id, count(decision_id) from decision_question union all select custom_id, count(id) from compatibility_info union all select custom_id, count(id) from compatibility_info union all select custom_id, count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        NSLog(@"%@,%@,%d",row,error,finished);
-        if (finished) {
-            [self.tableView reloadData];
+    switch (indexPath.row) {
+        case 0:
+        {
+            NSMutableArray *ids = [NSMutableArray array];
+            [[AFSQLManager sharedManager] performQuery:@"select choice_id from choice_questions where custom_id == 1" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+                NSLog(@"%@,%@,%d",row,error,finished);
+                if (finished) {
+                    [self performSegueWithIdentifier:@"toNext" sender:ids];
+                }
+                else {
+                    [ids addObject:row[1]];
+                }
+            }];
         }
-        else {
-            [self.numbers addObject:row[1]];
-        }
-    }];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PracticeModePVC *vc = segue.destinationViewController;
+    vc.items = sender;
 }
 
 @end

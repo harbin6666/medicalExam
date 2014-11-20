@@ -10,4 +10,6 @@
 
 @interface PracticeModePVC : BeckPVC
 
+@property (nonatomic, strong) NSArray *items;
+
 @end

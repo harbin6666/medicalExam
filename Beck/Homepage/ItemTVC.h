@@ -8,6 +8,15 @@
 
 #import "BeckTVC.h"
 
+typedef enum ItemType
+{
+    ItemTypeChoice = 1,
+    ItemTypeCompatibility,
+    ItemTypeMultiChoice,
+    ItemTypeSpace,
+    ItemTypeDecision
+} ItemType;
+
 @interface ItemTVC : BeckTVC
 
 @property (nonatomic) BOOL showAnswer;
@@ -15,5 +24,9 @@
 @property (nonatomic) BOOL favorated;
 @property (nonatomic) BOOL cangoback;
 @property (nonatomic) BOOL cangoforward;
+
+@property (nonatomic) ItemType type;
+
+@property (nonatomic) NSString *itemId;
 
 @end

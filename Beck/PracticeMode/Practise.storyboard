@@ -145,9 +145,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="OC7-ep-qxH" kind="push" id="qYN-6m-14m"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -169,6 +166,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="OC7-ep-qxH" kind="push" identifier="toNext" id="cw0-3N-r9e"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgL-vI-0Q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,6 +301,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ttk-IQ-wly"/>
+        <segue reference="cw0-3N-r9e"/>
     </inferredMetricsTieBreakers>
 </document>

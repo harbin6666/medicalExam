@@ -22,14 +22,6 @@
 
 @implementation PracticeModePVC
 
-- (void)awakeFromNib
-{
-    self.delegate = self;
-    self.dataSource = self;
-    
-    self.edgesForExtendedLayout = UIRectEdgeBottom;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -75,6 +67,7 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
+    vc.itemId = self.items.firstObject;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -111,6 +104,7 @@
 }
 
 - (void)onPressedBtn1:(UIButton *)sender {
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
     
@@ -168,6 +162,11 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
+    ItemTVC *tempVC = (ItemTVC *)viewController;
+    if (self.items.firstObject == tempVC.itemId) {
+        return nil;
+    }
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
     self.currentTVC = vc;
@@ -175,6 +174,11 @@
 }
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
+    ItemTVC *tempVC = (ItemTVC *)viewController;
+    if (self.items.lastObject == tempVC.itemId) {
+        return nil;
+    }
+    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
     self.currentTVC = vc;
