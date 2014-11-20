@@ -53,10 +53,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="T2J-yf-tBl" kind="push" identifier="toSimulationExam" id="jk4-3q-yxO"/>
-                        <segue destination="8Xc-b4-9JT" kind="push" identifier="toChooseQuestionBank" id="qzT-QJ-fyK"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tce-0v-TfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +131,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1GM-6u-CJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-949" y="-3179"/>
+            <point key="canvasLocation" x="-943" y="-2996"/>
         </scene>
         <!--支付-->
         <scene sceneID="6ph-3w-d3M">
@@ -194,7 +190,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXZ-af-xe9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="-3179"/>
+            <point key="canvasLocation" x="-366" y="-2996"/>
         </scene>
         <!--支付宝支付-->
         <scene sceneID="k8C-Sb-xPr">
@@ -235,7 +231,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2m-34-VUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-2846"/>
+            <point key="canvasLocation" x="137" y="-2663"/>
         </scene>
         <!--积分支付-->
         <scene sceneID="pvP-hf-Vfe">
@@ -276,7 +272,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oO-Ig-YV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-3493"/>
+            <point key="canvasLocation" x="137" y="-3310"/>
         </scene>
         <!--考试模式-->
         <scene sceneID="4dS-gL-oRT">
@@ -421,7 +417,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="Cfm-6r-5ef" detailTextLabel="Gh1-PW-jRh" style="IBUITableViewCellStyleValue1" id="orB-r9-Bhx">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="Cfm-6r-5ef" style="IBUITableViewCellStyleDefault" id="orB-r9-Bhx">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="orB-r9-Bhx" id="gef-Hj-9Eh">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -430,12 +426,6 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gh1-PW-jRh">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -485,7 +475,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="dIc-L2-xcz"/>
-    </inferredMetricsTieBreakers>
 </document>
