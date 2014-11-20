@@ -47,17 +47,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    switch (self.itemId.integerValue) {
-        case 1:
-        {
-            
-        }
-            break;
-            
-        default:
-            break;
-    }
 }
 
 #pragma mark - Table view data source
@@ -68,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 2) {
-        return 4;
+        return 0;
     }
     
     return 1;
@@ -105,7 +94,7 @@
         }
     }
     else {
-        return 44.f;
+        return 60.f;
     }
 }
 
