@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0256C01A1E276D00C46B0E /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256BF1A1E276D00C46B0E /* ItemTVC.m */; };
+		3D0256C31A1E278900C46B0E /* ChoiceItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256C21A1E278900C46B0E /* ChoiceItemTVC.m */; };
+		3D0256C61A1E279F00C46B0E /* CompatibilityItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256C51A1E279F00C46B0E /* CompatibilityItemTVC.m */; };
+		3D0256C91A1E27BA00C46B0E /* MultiChoiceItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256C81A1E27BA00C46B0E /* MultiChoiceItemTVC.m */; };
+		3D0256CC1A1E27C600C46B0E /* SpaceItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256CB1A1E27C600C46B0E /* SpaceItemTVC.m */; };
+		3D0256CF1A1E27D200C46B0E /* DecisionItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0256CE1A1E27D200C46B0E /* DecisionItemTVC.m */; };
+		3D0256D11A1E285400C46B0E /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0256D01A1E285400C46B0E /* Item.storyboard */; };
 		3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */; };
 		3D092D451A14DD8500C19F69 /* ExamStatisticCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D092D441A14DD8500C19F69 /* ExamStatisticCell.m */; };
 		3D094DE419FE753200472508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D094DE319FE753200472508 /* Main.storyboard */; };
@@ -20,7 +27,6 @@
 		3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA619FFC9FF0017A539 /* RegisterVC.m */; };
 		3D0EFBAD19FFCA530017A539 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAC19FFCA530017A539 /* FindPasswordVC.m */; };
 		3D0EFBB219FFCB8B0017A539 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */; };
-		3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */; };
 		3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
 		3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17825F1A02626F00F6904C /* FavorateEntity.m */; };
 		3D1782631A02630100F6904C /* WrongItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782621A02630100F6904C /* WrongItemEntity.m */; };
@@ -109,6 +115,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0256BE1A1E276D00C46B0E /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
+		3D0256BF1A1E276D00C46B0E /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
+		3D0256C11A1E278900C46B0E /* ChoiceItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceItemTVC.h; sourceTree = "<group>"; };
+		3D0256C21A1E278900C46B0E /* ChoiceItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceItemTVC.m; sourceTree = "<group>"; };
+		3D0256C41A1E279F00C46B0E /* CompatibilityItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompatibilityItemTVC.h; sourceTree = "<group>"; };
+		3D0256C51A1E279F00C46B0E /* CompatibilityItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompatibilityItemTVC.m; sourceTree = "<group>"; };
+		3D0256C71A1E27BA00C46B0E /* MultiChoiceItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiChoiceItemTVC.h; sourceTree = "<group>"; };
+		3D0256C81A1E27BA00C46B0E /* MultiChoiceItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiChoiceItemTVC.m; sourceTree = "<group>"; };
+		3D0256CA1A1E27C500C46B0E /* SpaceItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceItemTVC.h; sourceTree = "<group>"; };
+		3D0256CB1A1E27C600C46B0E /* SpaceItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceItemTVC.m; sourceTree = "<group>"; };
+		3D0256CD1A1E27D200C46B0E /* DecisionItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionItemTVC.h; sourceTree = "<group>"; };
+		3D0256CE1A1E27D200C46B0E /* DecisionItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionItemTVC.m; sourceTree = "<group>"; };
+		3D0256D01A1E285400C46B0E /* Item.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
 		3D092D401A14D3F200C19F69 /* ChooseItemTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseItemTypeTVC.h; sourceTree = "<group>"; };
 		3D092D411A14D3F200C19F69 /* ChooseItemTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseItemTypeTVC.m; sourceTree = "<group>"; };
 		3D092D431A14DD8500C19F69 /* ExamStatisticCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamStatisticCell.h; sourceTree = "<group>"; };
@@ -134,8 +153,6 @@
 		3D0EFBAC19FFCA530017A539 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 		3D0EFBAE19FFCB8B0017A539 /* AnswerCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVC.h; sourceTree = "<group>"; };
 		3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
-		3D0EFBB019FFCB8B0017A539 /* ItemTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTVC.h; sourceTree = "<group>"; };
-		3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTVC.m; sourceTree = "<group>"; };
 		3D0EFBB419FFD22D0017A539 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3D17825E1A02626F00F6904C /* FavorateEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavorateEntity.h; sourceTree = "<group>"; };
 		3D17825F1A02626F00F6904C /* FavorateEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavorateEntity.m; sourceTree = "<group>"; };
@@ -315,6 +332,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D0256BD1A1E275E00C46B0E /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				3D0256BE1A1E276D00C46B0E /* ItemTVC.h */,
+				3D0256BF1A1E276D00C46B0E /* ItemTVC.m */,
+				3D0256C11A1E278900C46B0E /* ChoiceItemTVC.h */,
+				3D0256C21A1E278900C46B0E /* ChoiceItemTVC.m */,
+				3D0256C41A1E279F00C46B0E /* CompatibilityItemTVC.h */,
+				3D0256C51A1E279F00C46B0E /* CompatibilityItemTVC.m */,
+				3D0256C71A1E27BA00C46B0E /* MultiChoiceItemTVC.h */,
+				3D0256C81A1E27BA00C46B0E /* MultiChoiceItemTVC.m */,
+				3D0256CA1A1E27C500C46B0E /* SpaceItemTVC.h */,
+				3D0256CB1A1E27C600C46B0E /* SpaceItemTVC.m */,
+				3D0256CD1A1E27D200C46B0E /* DecisionItemTVC.h */,
+				3D0256CE1A1E27D200C46B0E /* DecisionItemTVC.m */,
+				3D0256D01A1E285400C46B0E /* Item.storyboard */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		3D0EFBA019FFC9FF0017A539 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -615,6 +652,7 @@
 		3DC68AB919F54A35003DB313 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				3D0256BD1A1E275E00C46B0E /* Item */,
 				3D0EFBA019FFC9FF0017A539 /* Register */,
 				3D0EFBAA19FFCA530017A539 /* FindPassword */,
 				3DC68ABA19F54A6A003DB313 /* BeckLoginVC.h */,
@@ -627,8 +665,6 @@
 				3D0EFB9E19FFC9400017A539 /* BeckMCTVC.m */,
 				3D0EFBAE19FFCB8B0017A539 /* AnswerCVC.h */,
 				3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */,
-				3D0EFBB019FFCB8B0017A539 /* ItemTVC.h */,
-				3D0EFBB119FFCB8B0017A539 /* ItemTVC.m */,
 				3D9789441A12575100835549 /* BeckChangeExamPlaceBtn.h */,
 				3D9789451A12575100835549 /* BeckChangeExamPlaceBtn.m */,
 				3D9789471A1257F200835549 /* BeckCustomVC1.h */,
@@ -809,6 +845,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DB238D319FE803E002CD73D /* MyAccount.storyboard in Resources */,
+				3D0256D11A1E285400C46B0E /* Item.storyboard in Resources */,
 				3DA6453C1A091FED00AC34FB /* RennSDK.bundle in Resources */,
 				3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */,
 				3D094DE419FE753200472508 /* Main.storyboard in Resources */,
@@ -875,6 +912,7 @@
 				3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */,
 				3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */,
 				3D17826F1A02630200F6904C /* NoteEntity.m in Sources */,
+				3D0256C91A1E27BA00C46B0E /* MultiChoiceItemTVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3DA4FA271A05FE2200C7D362 /* ExamStatisticTVC.m in Sources */,
 				3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */,
@@ -884,6 +922,7 @@
 				3D9789461A12575100835549 /* BeckChangeExamPlaceBtn.m in Sources */,
 				3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */,
 				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
+				3D0256C01A1E276D00C46B0E /* ItemTVC.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */,
 				3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */,
@@ -895,11 +934,12 @@
 				3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */,
 				3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
-				3D0EFBB319FFCB8B0017A539 /* ItemTVC.m in Sources */,
 				3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
+				3D0256C31A1E278900C46B0E /* ChoiceItemTVC.m in Sources */,
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,
 				3D092D451A14DD8500C19F69 /* ExamStatisticCell.m in Sources */,
+				3D0256CC1A1E27C600C46B0E /* SpaceItemTVC.m in Sources */,
 				3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */,
 				3D4CEEB11A1CDB400078AA38 /* NSObject+swizzle.m in Sources */,
 				3D0EFB9919FFC4EA0017A539 /* ViewItemPVC.m in Sources */,
@@ -912,6 +952,7 @@
 				3D17826C1A02630200F6904C /* ItemEntity.m in Sources */,
 				3D1782691A02630100F6904C /* ExamEntity.m in Sources */,
 				3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */,
+				3D0256CF1A1E27D200C46B0E /* DecisionItemTVC.m in Sources */,
 				3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */,
 				3D4CEEAE1A1CDA360078AA38 /* NSMutableDictionary+safe.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
@@ -923,6 +964,7 @@
 				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
 				3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */,
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
+				3D0256C61A1E279F00C46B0E /* CompatibilityItemTVC.m in Sources */,
 				3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */,
 				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
 				3D0EFBAD19FFCA530017A539 /* FindPasswordVC.m in Sources */,

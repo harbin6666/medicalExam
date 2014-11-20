@@ -14,8 +14,50 @@
 
 @implementation ItemTVC
 
++ (instancetype)initWitleItemId:(NSString *)itemId andType:(ItemType)type
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
+    ItemTVC *vc = nil;
+    switch (type) {
+        case ItemTypeChoice:
+            vc = [sb instantiateViewControllerWithIdentifier:@"ChoiceItemTVC"];
+            break;
+        case ItemTypeCompatibility:
+            vc = [sb instantiateViewControllerWithIdentifier:@"CompatibilityItemTVC"];
+            break;
+        case ItemTypeMultiChoice:
+            vc = [sb instantiateViewControllerWithIdentifier:@"MultiChoiceItemTVC"];
+            break;
+        case ItemTypeSpace:
+            vc = [sb instantiateViewControllerWithIdentifier:@"SpaceItemTVC"];
+            break;
+        case ItemTypeDecision:
+            vc = [sb instantiateViewControllerWithIdentifier:@"DecisionItemTVC"];
+            break;
+            
+        default:
+            break;
+    }
+    
+    vc.itemId = itemId;
+    vc.type = type;
+    
+    return vc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    switch (self.itemId.integerValue) {
+        case 1:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - Table view data source
@@ -82,7 +124,7 @@
         cell.backgroundView = cellBackgroundView;
     }
     else if (indexPath.section == 2){
-        cell = [tableView dequeueReusableCellWithIdentifier:@"ChoiceCell" forIndexPath:indexPath];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
         cell.textLabel.text = @"我是选项";
     }
     else if (indexPath.section == 3){

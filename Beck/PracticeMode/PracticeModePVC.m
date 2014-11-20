@@ -65,9 +65,7 @@
         [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
     }
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    vc.itemId = self.items.firstObject;
+    ItemTVC *vc = [ItemTVC initWitleItemId:self.items.firstObject andType:ItemTypeChoice];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -109,9 +107,7 @@
         return;
     }
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] - 1];
+    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] - 1] andType:ItemTypeChoice];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -147,9 +143,7 @@
         return;
     }
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] + 1];
+    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] + 1] andType:ItemTypeChoice];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -177,9 +171,7 @@
         return nil;
     }
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] - 1];
+    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] - 1] andType:ItemTypeChoice];
     self.currentTVC = vc;
     return vc;
 }
@@ -190,9 +182,7 @@
         return nil;
     }
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    vc.itemId = self.items[[self.items indexOfObject:tempVC.itemId] + 1];
+    ItemTVC *vc = [ItemTVC initWitleItemId:self.items[[self.items indexOfObject:tempVC.itemId] + 1] andType:ItemTypeChoice];
     self.currentTVC = vc;
     return vc;
 }
