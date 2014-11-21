@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Aimy. All rights reserved.
 //
 
-#import "BeckPVC.h"
+#import "ItemPVC.h"
 
 #import "ItemVO.h"
 
-@interface PracticeModePVC : BeckPVC
+@interface PracticeModePVC : ItemPVC
 
 @property (nonatomic, strong) NSArray *items;//<ItemVO>
 
