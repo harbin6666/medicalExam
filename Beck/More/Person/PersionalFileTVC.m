@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSArray *names;
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 @implementation PersionalFileTVC
@@ -25,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.titleLabel.text = [NSString stringWithFormat:@"%@,欢迎您",[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]];
 }
 
 - (void)didReceiveMemoryWarning {
