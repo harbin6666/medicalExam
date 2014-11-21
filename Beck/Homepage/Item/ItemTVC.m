@@ -73,10 +73,10 @@
         return 60.f;
     }
     else if (indexPath.section == 2){
-        return 30.f;
+        return 44.f;
     }
     else if (indexPath.section == 3){
-        return 30.f;
+        return 44.f;
     }
     else if (indexPath.section == 4){
         if (self.showAnswer) {

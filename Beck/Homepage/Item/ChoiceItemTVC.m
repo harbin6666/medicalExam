@@ -49,7 +49,7 @@
     if (indexPath.section == 1){
         NSString *info = self.itemInfo[9];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
-        CGSize size = [info boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [info.clearString boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 60.f) {
             return 60.f;
@@ -62,10 +62,10 @@
         NSArray *itemAnswer = self.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[3];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
-        CGSize size = [answer boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [answer.clearString boundingRectWithSize:CGSizeMake(200, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
-        if (size.height < 30.f) {
-            return 30.f;
+        if (size.height < 44.f) {
+            return 44.f;
         }
         
         return size.height;
@@ -88,14 +88,14 @@
     
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
-        label.text = self.itemInfo[9];
+        label.text = [self.itemInfo[9] clearString];
         return cell;
     }
     
     if (indexPath.section == 2) {
         if (self.itemAnswers.count) {
             NSArray *itemAnswer = self.itemAnswers[indexPath.row];
-            cell.textLabel.text = itemAnswer[3];
+            cell.textLabel.text = [itemAnswer[3] clearString];
         }
         return cell;
     }

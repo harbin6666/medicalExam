@@ -702,19 +702,19 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-7w-Yoq">
-                                            <rect key="frame" x="52" y="8" width="260" height="28"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="52" y="0.0" width="260" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="U4q-7w-Yoq" firstAttribute="leading" secondItem="M7F-Gp-9Ca" secondAttribute="trailing" id="3Ju-xA-f1V"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="U4q-7w-Yoq" secondAttribute="bottom" id="RYU-ht-4s7"/>
+                                        <constraint firstAttribute="bottom" secondItem="U4q-7w-Yoq" secondAttribute="bottom" id="RYU-ht-4s7"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="U4q-7w-Yoq" secondAttribute="trailing" id="dG2-rC-1uE"/>
                                         <constraint firstItem="M7F-Gp-9Ca" firstAttribute="leading" secondItem="M8V-Ih-uZl" secondAttribute="leadingMargin" id="fwm-5J-Yjf"/>
                                         <constraint firstAttribute="centerY" secondItem="M7F-Gp-9Ca" secondAttribute="centerY" id="tsa-sS-aVS"/>
-                                        <constraint firstItem="U4q-7w-Yoq" firstAttribute="top" secondItem="M8V-Ih-uZl" secondAttribute="topMargin" id="vwu-sh-T7B"/>
+                                        <constraint firstItem="U4q-7w-Yoq" firstAttribute="top" secondItem="M8V-Ih-uZl" secondAttribute="top" id="vwu-sh-T7B"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

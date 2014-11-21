@@ -15,6 +15,7 @@
 #import "OTSAlertView.h"
 #import "NSMutableArray+safe.h"
 #import "NSMutableDictionary+safe.h"
+#import "NSString+clear.h"
 
 #define WEAK_SELF __weak typeof(self)weakSelf = self
 #define STRONG_SELF typeof(weakSelf)self = weakSelf

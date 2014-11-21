@@ -82,6 +82,7 @@
 		3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */; };
 		3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */; };
 		3DA6453C1A091FED00AC34FB /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6453B1A091FED00AC34FB /* RennSDK.bundle */; };
+		3DAE70831A1F83F30001C3E2 /* NSString+clear.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE70821A1F83F30001C3E2 /* NSString+clear.m */; };
 		3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB04E2C1A1B7C1000B6964B /* ChooseExamBankTVC.m */; };
 		3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */; };
 		3DB238AB19FE79EF002CD73D /* Practise.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238AA19FE79EF002CD73D /* Practise.storyboard */; };
@@ -261,6 +262,8 @@
 		3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticCVC.h; sourceTree = "<group>"; };
 		3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticCVC.m; sourceTree = "<group>"; };
 		3DA6453B1A091FED00AC34FB /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		3DAE70811A1F83F30001C3E2 /* NSString+clear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+clear.h"; sourceTree = "<group>"; };
+		3DAE70821A1F83F30001C3E2 /* NSString+clear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+clear.m"; sourceTree = "<group>"; };
 		3DB04E2B1A1B7C1000B6964B /* ChooseExamBankTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseExamBankTVC.h; sourceTree = "<group>"; };
 		3DB04E2C1A1B7C1000B6964B /* ChooseExamBankTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseExamBankTVC.m; sourceTree = "<group>"; };
 		3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckHomepageVC.h; sourceTree = "<group>"; };
@@ -551,6 +554,8 @@
 				3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */,
 				3D4F677A19F7E97900ED8FA4 /* BeckCVC.h */,
 				3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */,
+				3DAE70811A1F83F30001C3E2 /* NSString+clear.h */,
+				3DAE70821A1F83F30001C3E2 /* NSString+clear.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -973,6 +978,7 @@
 				3D4CEEAD1A1CDA360078AA38 /* NSMutableArray+safe.m in Sources */,
 				3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
+				3DAE70831A1F83F30001C3E2 /* NSString+clear.m in Sources */,
 				3D2521DF19F53B4F00FC72A7 /* PracticeModePVC.m in Sources */,
 				3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */,
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,

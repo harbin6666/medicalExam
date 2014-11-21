@@ -54,7 +54,7 @@
         NSArray *itemInfo = self.itemInfos[indexPath.row];
         NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
-        CGSize size = [info boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [[info clearString] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 30.f) {
             return 30.f;
@@ -67,10 +67,10 @@
         NSArray *itemAnswer = self.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[1];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
-        CGSize size = [answer boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [[answer clearString] boundingRectWithSize:CGSizeMake(200, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
-        if (size.height < 30.f) {
-            return 30.f;
+        if (size.height < 44.f) {
+            return 44.f;
         }
         
         return size.height;
@@ -99,7 +99,7 @@
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemInfo = self.itemInfos[indexPath.row];
         NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
-        label.text = info;
+        label.text = [info clearString];
         return cell;
     }
     
@@ -107,7 +107,7 @@
         cell.textLabel.hidden = YES;
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemAnswer = self.itemAnswers[indexPath.row];
-        label.text = itemAnswer[1];
+        label.text = [itemAnswer[1] clearString];
         
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
         NSMutableArray *answers = @[].mutableCopy;

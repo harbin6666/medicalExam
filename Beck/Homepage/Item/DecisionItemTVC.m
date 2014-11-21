@@ -36,7 +36,7 @@
     if (indexPath.section == 1){
         NSString *info = self.itemInfo[8];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
-        CGSize size = [info boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [[info clearString] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 60.f) {
             return 60.f;
@@ -46,7 +46,7 @@
     }
     
     if (indexPath.section == 2){
-        return 30.f;
+        return 44.f;
     }
     
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
@@ -66,7 +66,7 @@
     
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
-        label.text = self.itemInfo[8];
+        label.text = [self.itemInfo[8] clearString];
         return cell;
     }
     
