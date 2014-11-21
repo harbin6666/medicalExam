@@ -8,6 +8,8 @@
 
 #import "CompatibilityItemTVC.h"
 
+#import "CompatibilityItemBtn.h"
+
 @interface CompatibilityItemTVC ()
 
 @property (nonatomic, strong) NSMutableArray *itemInfos;
@@ -50,7 +52,7 @@
 {
     if (indexPath.section == 1){
         NSArray *itemInfo = self.itemInfos[indexPath.row];
-        NSString *info = itemInfo[2];
+        NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
         CGSize size = [info boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
@@ -96,17 +98,31 @@
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemInfo = self.itemInfos[indexPath.row];
-        label.text = itemInfo[2];
+        NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
+        label.text = info;
         return cell;
     }
     
     if (indexPath.section == 2) {
+        cell.textLabel.hidden = YES;
+        UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemAnswer = self.itemAnswers[indexPath.row];
-        cell.textLabel.text = itemAnswer[1];
+        label.text = itemAnswer[1];
+        
+        CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
+        NSMutableArray *answers = @[].mutableCopy;
+        for (NSArray *itemInfo in self.itemInfos) {
+            [answers addObject:itemInfo[1]];
+        }
+        btn.answers = answers;
         return cell;
     }
     
     return cell;
+}
+
+- (IBAction)onPressedBtn:(id)sender {
+    [sender becomeFirstResponder];
 }
 
 /*

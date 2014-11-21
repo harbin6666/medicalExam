@@ -682,19 +682,40 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Thx-0L-vCt" style="IBUITableViewCellStyleDefault" id="d0e-zb-gb3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="d0e-zb-gb3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0e-zb-gb3" id="M8V-Ih-uZl">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Thx-0L-vCt">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <button opaque="NO" tag="888" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7F-Gp-9Ca" customClass="CompatibilityItemBtn">
+                                            <rect key="frame" x="8" y="7" width="44" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="fU1-wG-gy1"/>
+                                                <constraint firstAttribute="height" constant="30" id="fmg-R6-Umz"/>
+                                            </constraints>
+                                            <state key="normal" title="...">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onPressedBtn:" destination="bHi-Va-cIb" eventType="touchUpInside" id="2ys-rI-4nZ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-7w-Yoq">
+                                            <rect key="frame" x="52" y="8" width="260" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="U4q-7w-Yoq" firstAttribute="leading" secondItem="M7F-Gp-9Ca" secondAttribute="trailing" id="3Ju-xA-f1V"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="U4q-7w-Yoq" secondAttribute="bottom" id="RYU-ht-4s7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="U4q-7w-Yoq" secondAttribute="trailing" id="dG2-rC-1uE"/>
+                                        <constraint firstItem="M7F-Gp-9Ca" firstAttribute="leading" secondItem="M8V-Ih-uZl" secondAttribute="leadingMargin" id="fwm-5J-Yjf"/>
+                                        <constraint firstAttribute="centerY" secondItem="M7F-Gp-9Ca" secondAttribute="centerY" id="tsa-sS-aVS"/>
+                                        <constraint firstItem="U4q-7w-Yoq" firstAttribute="top" secondItem="M8V-Ih-uZl" secondAttribute="topMargin" id="vwu-sh-T7B"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ButtonCell" id="O9K-Le-j9V">

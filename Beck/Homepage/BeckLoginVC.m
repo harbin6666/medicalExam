@@ -45,6 +45,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"loginName"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self performSegueWithIdentifier:@"toHome" sender:self];
+//    [self performSegueWithIdentifier:@"toCus" sender:self];
 }
 
 - (IBAction)onPressedCheckBox:(UIButton *)sender {

@@ -70,6 +70,7 @@
 		3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */; };
 		3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */; };
 		3D8765EF1A10F13600ED25CE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8765EE1A10F13600ED25CE /* Launch Screen.xib */; };
+		3D965F9D1A1F71B6009AB423 /* CompatibilityItemBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D965F9C1A1F71B6009AB423 /* CompatibilityItemBtn.m */; };
 		3D9789461A12575100835549 /* BeckChangeExamPlaceBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9789451A12575100835549 /* BeckChangeExamPlaceBtn.m */; };
 		3D9789491A1257F200835549 /* BeckCustomVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9789481A1257F200835549 /* BeckCustomVC1.m */; };
 		3D97894C1A1257FF00835549 /* BeckCustomVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D97894B1A1257FF00835549 /* BeckCustomVC2.m */; };
@@ -237,6 +238,8 @@
 		3D6AE1801A07BA8600C0BB71 /* MyPointTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPointTVC.h; sourceTree = "<group>"; };
 		3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPointTVC.m; sourceTree = "<group>"; };
 		3D8765EE1A10F13600ED25CE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		3D965F9B1A1F71B6009AB423 /* CompatibilityItemBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompatibilityItemBtn.h; sourceTree = "<group>"; };
+		3D965F9C1A1F71B6009AB423 /* CompatibilityItemBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompatibilityItemBtn.m; sourceTree = "<group>"; };
 		3D9789441A12575100835549 /* BeckChangeExamPlaceBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckChangeExamPlaceBtn.h; sourceTree = "<group>"; };
 		3D9789451A12575100835549 /* BeckChangeExamPlaceBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckChangeExamPlaceBtn.m; sourceTree = "<group>"; };
 		3D9789471A1257F200835549 /* BeckCustomVC1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckCustomVC1.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				3D0256C81A1E27BA00C46B0E /* MultiChoiceItemTVC.m */,
 				3D0256C41A1E279F00C46B0E /* CompatibilityItemTVC.h */,
 				3D0256C51A1E279F00C46B0E /* CompatibilityItemTVC.m */,
+				3D965F9B1A1F71B6009AB423 /* CompatibilityItemBtn.h */,
+				3D965F9C1A1F71B6009AB423 /* CompatibilityItemBtn.m */,
 				3D0256CA1A1E27C500C46B0E /* SpaceItemTVC.h */,
 				3D0256CB1A1E27C600C46B0E /* SpaceItemTVC.m */,
 				3D0256D01A1E285400C46B0E /* Item.storyboard */,
@@ -956,6 +961,7 @@
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
 				3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */,
 				3D17826C1A02630200F6904C /* ItemEntity.m in Sources */,
+				3D965F9D1A1F71B6009AB423 /* CompatibilityItemBtn.m in Sources */,
 				3D1782691A02630100F6904C /* ExamEntity.m in Sources */,
 				3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */,
 				3D0256CF1A1E27D200C46B0E /* DecisionItemTVC.m in Sources */,
