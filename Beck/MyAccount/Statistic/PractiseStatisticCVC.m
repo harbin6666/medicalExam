@@ -13,13 +13,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl1;
-@property (weak, nonatomic) IBOutlet UILabel *lbl2;
-@property (weak, nonatomic) IBOutlet UILabel *lbl3;
-@property (weak, nonatomic) IBOutlet UILabel *lbl4;
 @property (weak, nonatomic) IBOutlet UILabel *lbl5;
 @property (weak, nonatomic) IBOutlet UILabel *lbl6;
 @property (weak, nonatomic) IBOutlet UILabel *lbl7;
-@property (weak, nonatomic) IBOutlet UILabel *lbl8;
 
 @property (nonatomic, strong) NSArray *exams;
 
@@ -49,15 +45,9 @@
                 self.exams = aResponseObject[@"list"];
                 [self.collectionView reloadData];
                 self.lbl1.text = [NSString stringWithFormat:@"您总共进行了%@次模拟练习",aResponseObject[@"count"]];
-                self.lbl2.text = [NSString stringWithFormat:@"总练习题量：%@题",aResponseObject[@"number"]];
-                self.lbl3.text = [NSString stringWithFormat:@"题库数量：%@题",aResponseObject[@"sum"]];
-                CGFloat finish = [aResponseObject[@"number"] floatValue] / [aResponseObject[@"sum"] floatValue];
-                self.lbl4.text = [NSString stringWithFormat:@"完成率：%.2f",finish];
                 self.lbl5.text = [NSString stringWithFormat:@"最高成绩：%@分",aResponseObject[@"highest"]];
                 self.lbl6.text = [NSString stringWithFormat:@"最低成绩：%@分",aResponseObject[@"lowGrade"]];
                 self.lbl7.text = [NSString stringWithFormat:@"平均成绩：%@分",aResponseObject[@"average"]];
-                
-                self.lbl8.text = [NSString stringWithFormat:@"正确率：%@",@""];
             }
         }
         else {
