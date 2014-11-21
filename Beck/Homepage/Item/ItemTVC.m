@@ -10,6 +10,9 @@
 
 @interface ItemTVC () <UIAlertViewDelegate>
 
+- (NSString *)answerParse;
+- (NSString *)noteParse;
+
 @end
 
 @implementation ItemTVC
@@ -119,14 +122,14 @@
     }
     else if (indexPath.section == 4){
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell" forIndexPath:indexPath];
-        cell.detailTextLabel.text = @"我是答案";
+        cell.detailTextLabel.text = [self answerParse];
         
         cell.textLabel.hidden = !self.showAnswer;
         cell.detailTextLabel.hidden = !self.showAnswer;
     }
     else if (indexPath.section == 5){
         cell = [tableView dequeueReusableCellWithIdentifier:@"NoteCell" forIndexPath:indexPath];
-        cell.detailTextLabel.text = @"我是笔记";
+        cell.detailTextLabel.text = [self noteParse];
         
         cell.textLabel.hidden = !self.showNote;
         cell.detailTextLabel.hidden = !self.showNote;
@@ -139,16 +142,48 @@
 }
 
 - (IBAction)addNote:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"添加笔记" message:@"" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
-    alert.delegate = self;
-    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    [alert show];
-    
+    WEAK_SELF;
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"添加笔记" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            STRONG_SELF;
+            [self showLoading];
+            NSString *note = [alertView textFieldAtIndex:0].text;
+            note = (note ?: @"");
+            [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:@{@"token":@"addUpdate",@"json":@"note"} CompleteBlock:^(id aResponseObject, NSError *anError) {
+                if (!anError) {
+                    NSNumber *errorcode = aResponseObject[@"errorcode"];
+                    if (errorcode.boolValue) {
+                        [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+                    }
+                    else {
+                        
+                    }
+                }
+                else {
+                    [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+                }
+                [self hideLoading];
+            }];
+        }
+    }];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alertView addButtonWithTitle:@"取消"];
+    [alertView show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@"%@", [alertView textFieldAtIndex:0].text);
+}
+
+- (NSString *)answerParse
+{
+    return @"我是答案";
+}
+
+- (NSString *)noteParse
+{
+    return @"我是笔记";
 }
 
 - (void)dealloc
