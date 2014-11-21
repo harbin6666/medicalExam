@@ -115,7 +115,8 @@
 
 - (void)configToolBar
 {
-
+//    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
+//    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
 }
 
 #pragma mark - <UIPageViewControllerDataSource>

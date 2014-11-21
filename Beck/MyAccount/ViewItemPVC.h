@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "BeckPVC.h"
+#import "ItemPVC.h"
 
-@interface ViewItemPVC : BeckPVC
+@interface ViewItemPVC : ItemPVC
 
 @end

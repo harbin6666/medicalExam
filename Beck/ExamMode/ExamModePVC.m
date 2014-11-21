@@ -8,15 +8,7 @@
 
 #import "ExamModePVC.h"
 
-#import "ItemTVC.h"
-
-#import "AnswerCVC.h"
-
-@interface ExamModePVC () <UITabBarDelegate>
-
-@property (nonatomic, strong) ItemTVC *currentTVC;
-
-@property (strong, nonatomic) IBOutlet UITabBar *cusTabbar;
+@interface ExamModePVC ()
 
 @end
 
@@ -24,11 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view addSubview:self.cusTabbar];
-    self.cusTabbar.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cusTabbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_cusTabbar)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_cusTabbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_cusTabbar)]];
     
     if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
         UITabBarItem *item1 = self.cusTabbar.items[0];
@@ -64,57 +51,6 @@
         UITabBarItem *item5 = self.cusTabbar.items[4];
         [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
     }
-    
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    
-    WEAK_SELF;
-    [self setViewControllers:@[vc]
-                   direction:UIPageViewControllerNavigationDirectionForward
-                    animated:NO
-                  completion:^(BOOL finished) {
-                      STRONG_SELF;
-                      self.currentTVC = vc;
-                      [self configToolBar];
-                  }];
-}
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    switch (item.tag) {
-        case 0:
-            [self onPressedBtn1:nil];
-            break;
-        case 1:
-            [self onPressedBtn2:nil];
-            break;
-        case 2:
-            [self onPressedBtn3:nil];
-            break;
-        case 3:
-            [self onPressedBtn4:nil];
-            break;
-        case 4:
-            [self onPressedBtn5:nil];
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)onPressedBtn1:(UIButton *)sender {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    
-    WEAK_SELF;
-    [self setViewControllers:@[vc]
-                   direction:UIPageViewControllerNavigationDirectionReverse
-                    animated:YES
-                  completion:^(BOOL finished) {
-                      STRONG_SELF;
-                      self.currentTVC = vc;
-                      [self configToolBar];
-                  }];
 }
 
 - (void)onPressedBtn2:(UIButton *)sender {
@@ -129,51 +65,16 @@
 }
 
 - (void)onPressedBtn4:(UIButton *)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"是否交卷?" message:@"" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
-    alert.delegate = self;
-    [alert show];
-}
-
-- (void)onPressedBtn5:(UIButton *)sender {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    
-    
-    WEAK_SELF;
-    [self setViewControllers:@[vc]
-                   direction:UIPageViewControllerNavigationDirectionForward
-                    animated:YES
-                  completion:^(BOOL finished) {
-                      STRONG_SELF;
-                      self.currentTVC = vc;
-                      [self configToolBar];
-                  }];
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否交卷?" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            
+        }
+    }];
+    [alertView addButtonWithTitle:@"取消"];
+    [alertView show];
 }
 
 - (void)configToolBar
-{
-//    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
-//    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
-}
-
-#pragma mark - <UIPageViewControllerDataSource>
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
-{
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    self.currentTVC = vc;
-    return vc;
-}
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-{
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    ItemTVC *vc = [sb instantiateViewControllerWithIdentifier:@"ItemTVC"];
-    self.currentTVC = vc;
-    return vc;
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     
 }
