@@ -29,7 +29,7 @@ typedef enum ItemType
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
 
-- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index;
+- (void)setAnswer:(id)answer andIndex:(NSInteger)index;
 
 - (BOOL)isRight;
 

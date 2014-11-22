@@ -10,7 +10,7 @@
 
 @implementation ChoiceItemVO
 
-- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index
+- (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     [self.userAnswers removeAllObjects];
     [self.userAnswers addObject:self.itemAnswers[index]];

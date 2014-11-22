@@ -47,7 +47,7 @@
     return itemVO;
 }
 
-- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index
+- (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     
 }

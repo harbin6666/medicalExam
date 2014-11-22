@@ -138,7 +138,7 @@
     if (indexPath.section == 2) {
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
-        [self.itemVO setAnswer:[btn titleForState:UIControlStateNormal] andIndex:indexPath.row];
+        [self.itemVO setAnswer:self.itemVO.itemInfo[btn.answerIndex] andIndex:indexPath.row];
     }
 }
 

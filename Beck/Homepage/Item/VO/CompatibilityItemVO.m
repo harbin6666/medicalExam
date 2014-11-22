@@ -10,13 +10,13 @@
 
 @implementation CompatibilityItemVO
 
-- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index
+- (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
-    if ([self.userAnswers containsObject:self.itemAnswers[index]]) {
-        [self.userAnswers removeObject:self.itemAnswers[index]];
+    if ([self.userAnswers containsObject:answer]) {
+        [self.userAnswers removeObject:answer];
     }
     else {
-        [self.userAnswers addObject:self.itemAnswers[index]];
+        [self.userAnswers addObject:answer];
     }
 }
 

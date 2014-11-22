@@ -56,8 +56,8 @@
 - (IBAction)onPressedDone:(id)sender
 {
     [self resignFirstResponder];
-    self.answer = self.answers[[self.pv selectedRowInComponent:0]];
-    [self setTitle:self.answer forState:UIControlStateNormal];
+    self.answerIndex = [self.pv selectedRowInComponent:0];
+    [self setTitle:self.answers[self.answerIndex] forState:UIControlStateNormal];
 }
 
 // returns the number of 'columns' to display.

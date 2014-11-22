@@ -10,7 +10,7 @@
 
 @implementation MultiChoiceItemVO
 
-- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index
+- (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     if ([self.userAnswers containsObject:self.itemAnswers[index]]) {
         [self.userAnswers removeObject:self.itemAnswers[index]];

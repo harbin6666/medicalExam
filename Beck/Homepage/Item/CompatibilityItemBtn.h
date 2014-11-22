@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSArray *answers;
 
-@property (nonatomic, strong) NSString *answer;
+@property (nonatomic) NSInteger answerIndex;
 
 @end
