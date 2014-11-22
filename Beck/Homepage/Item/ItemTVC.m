@@ -8,7 +8,7 @@
 
 #import "ItemtVC.h"
 
-@interface ItemTVC () <UIAlertViewDelegate>
+@interface ItemTVC ()
 
 - (NSString *)answerParse;
 - (NSString *)noteParse;

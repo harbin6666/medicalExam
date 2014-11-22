@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) TencentOAuth *tencentOAuth;
 
+@property (nonatomic) BOOL autoLogin;
+
 @end
 
 @implementation BeckLoginVC
@@ -41,16 +43,22 @@
     //不设置则获取默认权限
 //    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
     
-    [[NSUserDefaults standardUserDefaults] setObject:@"2" forKey:@"subjectId"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"loginName"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [self performSegueWithIdentifier:@"toHome" sender:self];
-//    [self performSegueWithIdentifier:@"toCus" sender:self];
+
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"] &&
+        [[NSUserDefaults standardUserDefaults] stringForKey:@"passWord"] &&
+        [[NSUserDefaults standardUserDefaults] boolForKey:@"autologin"]) {
+        if ([[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"]) {
+            [self performSegueWithIdentifier:@"toHome" sender:self];
+        }
+        else {
+            [self performSegueWithIdentifier:@"toCus" sender:self];
+        }
+    }
 }
 
 - (IBAction)onPressedCheckBox:(UIButton *)sender {
     sender.selected = !sender.selected;
-    [[NSUserDefaults standardUserDefaults] setBool:sender.selected forKey:@"autologin"];
+    self.autoLogin = sender.selected;
 }
 
 - (IBAction)onPressedLogin:(id)sender {
@@ -77,6 +85,7 @@
             else {
                 [[NSUserDefaults standardUserDefaults] setObject:self.usernameTF.text forKey:@"loginName"];
                 [[NSUserDefaults standardUserDefaults] setObject:self.passwordTF.text forKey:@"passWord"];
+                [[NSUserDefaults standardUserDefaults] setBool:self.autoLogin forKey:@"autologin"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 self.usernameTF.text = @"";
                 self.passwordTF.text = @"";

@@ -30,9 +30,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.hidesBackButton = YES;
-    self.navigationItem.backBarButtonItem.title = @"";
-    
     [self showLoading];
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/provinceAct.htm" params:nil CompleteBlock:^(id aResponseObject, NSError *anError) {

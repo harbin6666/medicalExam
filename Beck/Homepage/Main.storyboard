@@ -522,7 +522,9 @@
                             <constraint firstItem="cyB-u6-ABt" firstAttribute="leading" secondItem="iwF-0e-lYi" secondAttribute="trailing" constant="8" symbolic="YES" id="xOd-kL-hdO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="个性化设置" id="2OX-hk-d6P"/>
+                    <navigationItem key="navigationItem" title="个性化设置" id="2OX-hk-d6P">
+                        <barButtonItem key="leftBarButtonItem" title="      " id="V7w-7C-Lce"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="provinceBtn" destination="cyB-u6-ABt" id="68r-p0-RSG"/>
                         <outlet property="tableView" destination="Gbt-2O-gGV" id="jws-66-35i"/>
@@ -1239,7 +1241,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="SN3-es-V9Y"/>
         <segue reference="ieV-CZ-EPD"/>
-        <segue reference="8K1-Vn-LQK"/>
     </inferredMetricsTieBreakers>
 </document>

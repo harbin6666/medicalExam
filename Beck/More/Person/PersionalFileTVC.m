@@ -8,7 +8,7 @@
 
 #import "PersionalFileTVC.h"
 
-@interface PersionalFileTVC () <UIAlertViewDelegate>
+@interface PersionalFileTVC ()
 
 @property (nonatomic, strong) NSArray *names;
 
@@ -82,15 +82,18 @@
 }
 
 - (IBAction)onPressedExit:(id)sender {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否退出当前账号？" delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"退出", nil];
+    WEAK_SELF;
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"提示" message:@"是否退出当前账号？" leftBtn:@"否" rightBtn:@"退出" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 1) {
+            STRONG_SELF;
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"subjectId"];
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginName"];
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"autologin"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    }];
     [alertView show];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 1) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
 }
 
 @end
