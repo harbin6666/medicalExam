@@ -14,10 +14,10 @@
 {
     [self.userAnswers removeAllObjects];
     if (index == 0) {
-        [self.userAnswers addObject:@(YES)];
+        self.userAnswers[@0] = @(YES);
     }
     else {
-        [self.userAnswers addObject:@(NO)];
+        self.userAnswers[@0] = @(NO);
     }
 }
 

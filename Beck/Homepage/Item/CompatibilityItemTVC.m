@@ -113,11 +113,8 @@
         label.text = [itemAnswer[1] clearString];
         
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
-        NSMutableArray *answers = @[].mutableCopy;
-        for (NSArray *itemInfo in self.itemVO.itemInfo) {
-            [answers addObject:itemInfo[1]];
-        }
-        btn.answers = answers;
+        btn.answerIndex = indexPath.row;
+        btn.itemVO = self.itemVO;
         return cell;
     }
     
@@ -135,11 +132,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 2) {
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
-        [self.itemVO setAnswer:self.itemVO.itemInfo[btn.answerIndex] andIndex:indexPath.row];
-    }
+//    if (indexPath.section == 2) {
+//        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//        CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
+//        [self.itemVO setAnswer:self.itemVO.itemInfo[btn.answerIndex] andIndex:indexPath.row];
+//    }
 }
 
 @end

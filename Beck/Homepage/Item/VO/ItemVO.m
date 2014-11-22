@@ -42,7 +42,7 @@
     
     itemVO.type = type;
     itemVO.itemId = itemId;
-    itemVO.userAnswers = @[].mutableCopy;
+    itemVO.userAnswers = @{}.mutableCopy;
     
     return itemVO;
 }

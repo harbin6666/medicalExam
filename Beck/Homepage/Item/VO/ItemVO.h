@@ -25,7 +25,7 @@ typedef enum ItemType
 @property (nonatomic, strong) NSString *itemId;
 @property (nonatomic) ItemType type;
 
-@property (nonatomic, strong) NSMutableArray *userAnswers;
+@property (nonatomic, strong) NSMutableDictionary *userAnswers;
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
 

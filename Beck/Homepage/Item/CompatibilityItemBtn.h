@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ItemVO.h"
+
 @interface CompatibilityItemBtn : UIButton
 
-@property (nonatomic, strong) NSArray *answers;
+@property (nonatomic, strong) ItemVO *itemVO;
 
 @property (nonatomic) NSInteger answerIndex;
 

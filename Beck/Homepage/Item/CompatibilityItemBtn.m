@@ -56,8 +56,10 @@
 - (IBAction)onPressedDone:(id)sender
 {
     [self resignFirstResponder];
-    self.answerIndex = [self.pv selectedRowInComponent:0];
-    [self setTitle:self.answers[self.answerIndex] forState:UIControlStateNormal];
+    NSArray *answers = self.itemVO.itemInfo;
+    NSArray *answer = answers[[self.pv selectedRowInComponent:0]];
+    [self.itemVO setAnswer:answers andIndex:self.answerIndex];
+    [self setTitle:answer[1] forState:UIControlStateNormal];
 }
 
 // returns the number of 'columns' to display.
@@ -69,13 +71,15 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.answers.count;
+    NSArray *answers = self.itemVO.itemInfo;
+    return answers.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    NSString *answer = self.answers[row];
-    return answer;
+    NSArray *answers = self.itemVO.itemInfo;
+    NSArray *answer = answers[row];
+    return answer[1];
 }
 
 @end
