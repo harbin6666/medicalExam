@@ -133,14 +133,13 @@
     return @"配伍选择题：一组试题（2至4个）共用一组A，B，C，D，E五个备选答案。选项在前，题干在后，每题只有一个正确答案。每个选项可供选择一次，也可重复选用，也可不被选用。考生只需为每道试题选出一个最佳答案。";
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 2) {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
+        [self.itemVO setAnswer:[btn titleForState:UIControlStateNormal] andIndex:indexPath.row];
+    }
+}
 
 @end

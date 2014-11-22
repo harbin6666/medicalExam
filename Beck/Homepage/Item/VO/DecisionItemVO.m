@@ -10,4 +10,15 @@
 
 @implementation DecisionItemVO
 
+- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index
+{
+    [self.userAnswers removeAllObjects];
+    if (index == 0) {
+        [self.userAnswers addObject:@(YES)];
+    }
+    else {
+        [self.userAnswers addObject:@(NO)];
+    }
+}
+
 @end

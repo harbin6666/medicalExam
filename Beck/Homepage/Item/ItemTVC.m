@@ -198,4 +198,11 @@
     return @"我是题型描述";
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 2) {
+        [self.itemVO setAnswer:nil andIndex:indexPath.row];
+    }
+}
+
 @end
