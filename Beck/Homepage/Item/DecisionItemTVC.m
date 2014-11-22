@@ -84,4 +84,9 @@
     return cell;
 }
 
+- (NSString *)itemDespretion
+{
+    return @"我是判断题题目描述";
+}
+
 @end

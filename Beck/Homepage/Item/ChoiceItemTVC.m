@@ -45,7 +45,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{    
     if (indexPath.section == 1){
         NSString *info = self.itemInfo[9];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
@@ -86,6 +86,10 @@
 {
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [self itemDespretion];
+    }
+    
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         label.text = [self.itemInfo[9] clearString];
@@ -111,6 +115,11 @@
 - (NSString *)noteParse
 {
     return @"我是笔记啊";
+}
+
+- (NSString *)itemDespretion
+{
+    return @"最佳选择题：题干在前，选项在后。共有A，B，C，D，E五个备选答案，其中只有一个为最佳答案，其余选项为干扰答案。考生须在5个选项中选出一个最符合题意的答案。";
 }
 
 @end

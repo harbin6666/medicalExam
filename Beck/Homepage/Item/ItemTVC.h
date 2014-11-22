@@ -24,4 +24,6 @@
 
 + (instancetype)createWitleItemVO:(ItemVO *)aVO;
 
+- (NSString *)itemDespretion;
+
 @end

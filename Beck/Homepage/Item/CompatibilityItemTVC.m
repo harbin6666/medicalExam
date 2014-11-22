@@ -95,6 +95,10 @@
 {
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [self itemDespretion];
+    }
+    
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemInfo = self.itemInfos[indexPath.row];
@@ -123,6 +127,11 @@
 
 - (IBAction)onPressedBtn:(id)sender {
     [sender becomeFirstResponder];
+}
+
+- (NSString *)itemDespretion
+{
+    return @"配伍选择题：一组试题（2至4个）共用一组A，B，C，D，E五个备选答案。选项在前，题干在后，每题只有一个正确答案。每个选项可供选择一次，也可重复选用，也可不被选用。考生只需为每道试题选出一个最佳答案。";
 }
 
 /*

@@ -66,8 +66,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        return 100.f;
+    if (indexPath.section == 0){
+        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+        CGSize size = [[self itemDespretion] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        
+        if (size.height < 60.f) {
+            return 60.f;
+        }
+        
+        return size.height;
     }
     else if (indexPath.section == 1){
         return 60.f;
@@ -103,7 +110,7 @@
     UITableViewCell *cell;
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"SubjectCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"多项选择题：由一个题干和ABCDE五个备选答案组成，题干在前，选项在后，要求考生从五个备选答案种选出两个或者两个以上的正确答案，多选，少选，错选均不得分";
+        cell.textLabel.text = [self itemDespretion];
     }
     else if (indexPath.section == 1){
         cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
@@ -189,6 +196,11 @@
 - (void)dealloc
 {
     NSLog(@"ItemTVC dealloc");
+}
+
+- (NSString *)itemDespretion
+{
+    return @"我是题目描述";
 }
 
 @end

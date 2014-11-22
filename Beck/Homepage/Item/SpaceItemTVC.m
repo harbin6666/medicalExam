@@ -24,6 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSString *)itemDespretion
+{
+    return @"我是填空题题目描述";
+}
+
 /*
 #pragma mark - Navigation
 
