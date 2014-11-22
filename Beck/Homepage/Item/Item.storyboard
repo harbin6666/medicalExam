@@ -839,7 +839,22 @@
                             <outlet property="delegate" destination="qgT-2X-wFw" id="IKZ-E1-NGs"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="ph8-mO-Wb7">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="lYi-At-AiT">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HG7-Zk-6mm">
+                                <rect key="frame" x="16" y="7" width="81" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="题目跳转" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="qgT-2X-wFw" eventType="touchUpInside" id="mGD-j0-asa"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <keyCommands/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wj-0h-rtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -847,6 +862,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backImage" width="9" height="14"/>
         <image name="biji" width="62" height="25"/>
         <image name="checkbox" width="24" height="24"/>
         <image name="jilu" width="50" height="35"/>
