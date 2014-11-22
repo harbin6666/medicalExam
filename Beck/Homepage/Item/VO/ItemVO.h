@@ -22,4 +22,6 @@ typedef enum ItemType
 @property (nonatomic, strong) NSString *itemId;
 @property (nonatomic) ItemType type;
 
++ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
+
 @end
