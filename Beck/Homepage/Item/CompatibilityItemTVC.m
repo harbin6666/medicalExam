@@ -12,8 +12,6 @@
 
 @interface CompatibilityItemTVC ()
 
-@property (nonatomic, strong) NSMutableArray *itemInfos;
-
 @end
 
 @implementation CompatibilityItemTVC
@@ -22,15 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.itemInfos = @[].mutableCopy;
+    NSMutableArray *itemInfo = @[].mutableCopy;
     NSString *sql1 = [@"select * from compatibility_items where compatibility_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
     
     [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         if (finished) {
+            self.itemVO.itemInfo = itemInfo;
             [self.tableView reloadData];
         }
         else {
-            [self.itemInfos addObject:row];
+            [itemInfo addObject:row];
         }
     }];
     
@@ -51,7 +50,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 1){
-        NSArray *itemInfo = self.itemInfos[indexPath.row];
+        NSArray *itemInfo = self.itemVO.itemInfo[indexPath.row];
         NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
         CGSize size = [[info clearString] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
@@ -81,7 +80,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 1) {
-        return self.itemInfos.count;
+        return self.itemVO.itemInfo.count;
     }
     
     if (section == 2) {
@@ -101,7 +100,7 @@
     
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
-        NSArray *itemInfo = self.itemInfos[indexPath.row];
+        NSArray *itemInfo = self.itemVO.itemInfo[indexPath.row];
         NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
         label.text = [info clearString];
         return cell;
@@ -115,7 +114,7 @@
         
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
         NSMutableArray *answers = @[].mutableCopy;
-        for (NSArray *itemInfo in self.itemInfos) {
+        for (NSArray *itemInfo in self.itemVO.itemInfo) {
             [answers addObject:itemInfo[1]];
         }
         btn.answers = answers;
