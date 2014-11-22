@@ -26,7 +26,7 @@
 
 - (NSString *)itemDespretion
 {
-    return @"我是填空题题目描述";
+    return @"我是填空题题型描述";
 }
 
 /*

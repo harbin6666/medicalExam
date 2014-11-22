@@ -46,6 +46,16 @@
     return itemVO;
 }
 
+- (void)setAnswer:(NSString *)answer andIndex:(NSInteger)index
+{
+    
+}
+
+- (BOOL)isRight
+{
+    return YES;
+}
+
 - (BOOL)isEqual:(id)object
 {
     ItemVO *another = object;

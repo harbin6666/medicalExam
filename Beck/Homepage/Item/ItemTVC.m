@@ -178,11 +178,6 @@
     [alertView show];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
-}
-
 - (NSString *)answerParse
 {
     return @"我是答案";
@@ -195,12 +190,12 @@
 
 - (void)dealloc
 {
-    NSLog(@"ItemTVC dealloc");
+    NSLog(@"%@ dealloc",NSStringFromClass([self class]));
 }
 
 - (NSString *)itemDespretion
 {
-    return @"我是题目描述";
+    return @"我是题型描述";
 }
 
 @end

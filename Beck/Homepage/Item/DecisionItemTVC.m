@@ -84,7 +84,7 @@
 
 - (NSString *)itemDespretion
 {
-    return @"我是判断题题目描述";
+    return @"我是判断题题型描述";
 }
 
 @end
