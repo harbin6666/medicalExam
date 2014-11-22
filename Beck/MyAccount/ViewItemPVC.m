@@ -70,9 +70,9 @@
     sender.selected = self.currentTVC.favorated;
 }
 
-- (void)configToolBar
+- (void)configTabBar
 {
-
+    [super configTabBar];
 }
 
 @end

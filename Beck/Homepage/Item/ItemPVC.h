@@ -25,4 +25,6 @@
 - (void)onPressedBtn4:(UIButton *)sender;
 - (void)onPressedBtn5:(UIButton *)sender;
 
+- (void)configTabBar;
+
 @end

@@ -22,6 +22,23 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cusTabbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_cusTabbar)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_cusTabbar]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_cusTabbar)]];
     
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        UITabBarItem *item1 = self.cusTabbar.items[0];
+        [item1 setImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item1 setSelectedImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        
+        UITabBarItem *item5 = self.cusTabbar.items[4];
+        [item5 setImage:[[UIImage imageNamed:@"next_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item5 setSelectedImage:[[UIImage imageNamed:@"next_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    }
+    else {
+        UITabBarItem *item1 = self.cusTabbar.items[0];
+        [item1 setFinishedSelectedImage:[UIImage imageNamed:@"back_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"back_sel"]];
+        
+        UITabBarItem *item5 = self.cusTabbar.items[4];
+        [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next_sel"]];
+    }
+    
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items.firstObject];
     
     WEAK_SELF;
@@ -31,7 +48,7 @@
                   completion:^(BOOL finished) {
                       STRONG_SELF;
                       self.currentTVC = vc;
-                      [self configToolBar];
+                      [self configTabBar];
                   }];
 }
 
@@ -61,6 +78,7 @@
 - (void)onPressedBtn1:(UIButton *)sender {
     ItemTVC *tempVC = self.currentTVC;
     if (self.items.firstObject == tempVC.itemVO) {
+        [self configTabBar];
         return;
     }
     
@@ -73,7 +91,7 @@
                   completion:^(BOOL finished) {
                       STRONG_SELF;
                       self.currentTVC = vc;
-                      [self configToolBar];
+                      [self configTabBar];
                   }];
 }
 
@@ -97,6 +115,7 @@
 - (void)onPressedBtn5:(UIButton *)sender {
     ItemTVC *tempVC = self.currentTVC;
     if (self.items.lastObject == tempVC.itemVO) {
+        [self configTabBar];
         return;
     }
     
@@ -109,12 +128,59 @@
                   completion:^(BOOL finished) {
                       STRONG_SELF;
                       self.currentTVC = vc;
-                      [self configToolBar];
+                      [self configTabBar];
                   }];
 }
 
-- (void)configToolBar
+- (void)configTabBar
 {
+    ItemTVC *tempVC = self.currentTVC;
+    if (self.items.firstObject == tempVC.itemVO) {
+        if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+            UITabBarItem *item1 = self.cusTabbar.items[0];
+            [item1 setImage:[[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item1 setSelectedImage:[[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            UITabBarItem *item1 = self.cusTabbar.items[0];
+            [item1 setFinishedSelectedImage:[UIImage imageNamed:@"back"] withFinishedUnselectedImage:[UIImage imageNamed:@"back"]];
+        }
+    }
+    else {
+        if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+            UITabBarItem *item1 = self.cusTabbar.items[0];
+            [item1 setImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item1 setSelectedImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            UITabBarItem *item1 = self.cusTabbar.items[0];
+            [item1 setFinishedSelectedImage:[UIImage imageNamed:@"back_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"back_sel"]];
+        }
+    }
+    
+    if (self.items.lastObject == tempVC.itemVO) {
+        if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+            UITabBarItem *item5 = self.cusTabbar.items[4];
+            [item5 setImage:[[UIImage imageNamed:@"next"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item5 setSelectedImage:[[UIImage imageNamed:@"next"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            UITabBarItem *item5 = self.cusTabbar.items[4];
+            [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
+        }
+    }
+    else {
+        if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+            UITabBarItem *item5 = self.cusTabbar.items[4];
+            [item5 setImage:[[UIImage imageNamed:@"next_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item5 setSelectedImage:[[UIImage imageNamed:@"next_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            UITabBarItem *item5 = self.cusTabbar.items[4];
+            [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next_sel"]];
+        }
+    }
+    
 //    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
 //    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
 }

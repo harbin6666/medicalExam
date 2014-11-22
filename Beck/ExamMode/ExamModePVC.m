@@ -74,9 +74,9 @@
     [alertView show];
 }
 
-- (void)configToolBar
+- (void)configTabBar
 {
-    
+    [super configTabBar];
 }
 
 @end
