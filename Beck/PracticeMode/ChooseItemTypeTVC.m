@@ -112,7 +112,7 @@
     [self showLoading];
     WEAK_SELF;
     NSMutableArray *ids = [NSMutableArray array];
-    [[AFSQLManager sharedManager] performQuery:@"select choice_id, custom_id from choice_questions where custom_id == 1" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    [[AFSQLManager sharedManager] performQuery:sql withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
         if (finished) {
             STRONG_SELF;

@@ -10,8 +10,6 @@
 
 @interface DecisionItemTVC ()
 
-@property (nonatomic ,strong) NSArray *itemInfo;
-
 @end
 
 @implementation DecisionItemTVC
@@ -26,7 +24,7 @@
             [self.tableView reloadData];
         }
         else {
-            self.itemInfo = row;
+            self.itemVO.itemInfo = row;
         }
     }];
 }
@@ -34,7 +32,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 1){
-        NSString *info = self.itemInfo[8];
+        NSString *info = self.itemVO.itemInfo[8];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
         CGSize size = [[info clearString] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
@@ -66,7 +64,7 @@
     
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
-        label.text = [self.itemInfo[8] clearString];
+        label.text = [self.itemVO.itemInfo[8] clearString];
         return cell;
     }
     

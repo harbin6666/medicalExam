@@ -19,6 +19,9 @@ typedef enum ItemType
 
 @interface ItemVO : NSObject
 
+@property (nonatomic, strong) NSArray *itemInfo;
+@property (nonatomic, strong) NSArray *itemAnswers;
+
 @property (nonatomic, strong) NSString *itemId;
 @property (nonatomic) ItemType type;
 

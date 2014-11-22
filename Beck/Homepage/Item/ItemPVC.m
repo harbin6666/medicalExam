@@ -173,8 +173,6 @@
         [item5 setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
     }
     
-//    ((UIButton *)self.item2.customView).selected = self.currentTVC.showAnswer;
-//    ((UIButton *)self.item4.customView).selected = self.currentTVC.favorated;
 }
 
 #pragma mark - <UIPageViewControllerDataSource>

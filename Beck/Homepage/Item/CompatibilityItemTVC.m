@@ -13,7 +13,6 @@
 @interface CompatibilityItemTVC ()
 
 @property (nonatomic, strong) NSMutableArray *itemInfos;
-@property (nonatomic, strong) NSMutableArray *itemAnswers;
 
 @end
 
@@ -35,15 +34,16 @@
         }
     }];
     
-    self.itemAnswers = @[].mutableCopy;
+    NSMutableArray *itemAnswers = @[].mutableCopy;
     NSString *sql2 = [@"select * from compatibility_questions where compatibility_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
     
     [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         if (finished) {
+            self.itemVO.itemAnswers = itemAnswers;
             [self.tableView reloadData];
         }
         else {
-            [self.itemAnswers addObject:row];
+            [itemAnswers addObject:row];
         }
     }];
 }
@@ -64,7 +64,7 @@
     }
     
     if (indexPath.section == 2){
-        NSArray *itemAnswer = self.itemAnswers[indexPath.row];
+        NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[1];
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
         CGSize size = [[answer clearString] boundingRectWithSize:CGSizeMake(200, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
@@ -85,7 +85,7 @@
     }
     
     if (section == 2) {
-        return self.itemAnswers.count;
+        return self.itemVO.itemAnswers.count;
     }
     
     return [super tableView:tableView numberOfRowsInSection:section];
@@ -110,7 +110,7 @@
     if (indexPath.section == 2) {
         cell.textLabel.hidden = YES;
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
-        NSArray *itemAnswer = self.itemAnswers[indexPath.row];
+        NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
         label.text = [itemAnswer[1] clearString];
         
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
