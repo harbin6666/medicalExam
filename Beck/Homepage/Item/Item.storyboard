@@ -694,7 +694,7 @@
                                                 <constraint firstAttribute="width" constant="44" id="fU1-wG-gy1"/>
                                                 <constraint firstAttribute="height" constant="30" id="fmg-R6-Umz"/>
                                             </constraints>
-                                            <state key="normal" title="...">
+                                            <state key="normal" title="答案">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
