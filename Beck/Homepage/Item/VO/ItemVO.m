@@ -41,7 +41,13 @@
     }
     
     itemVO.type = type;
-    itemVO.itemId = itemId;
+    if ([itemId isKindOfClass:[NSString class]]) {
+        itemVO.itemId = itemId;
+    }
+    else {
+        itemVO.itemId = [(NSNumber *)itemId stringValue];
+    }
+    
     itemVO.userAnswers = @{}.mutableCopy;
     
     return itemVO;

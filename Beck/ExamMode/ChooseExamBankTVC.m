@@ -40,7 +40,7 @@
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"获取试卷列表失败" andCompleteBlock:nil] show];
         }
     }];
 }
@@ -67,22 +67,49 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [self showLoading];
-//    NSString *sql = nil;
-//    WEAK_SELF;
-//    NSMutableArray *ids = [NSMutableArray array];
-//    [[AFSQLManager sharedManager] performQuery:sql withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-//        NSLog(@"%@,%@,%d",row,error,finished);
-//        if (finished) {
-//            STRONG_SELF;
-//            [self hideLoading];
-//            [self performSegueWithIdentifier:@"toNext" sender:ids];
-//        }
-//        else {
-//            ItemVO *vo = [ItemVO createWithItemId:row[0] andType:[row[1] intValue]];
-//            [ids addObject:vo];
-//        }
-//    }];
+    NSDictionary *questionBank = self.questionBanks[indexPath.row];
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/examPaperAct.htm" params:@{@"token":@"content",@"examPaperId":questionBank[@"id"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                [self getItemsAndToNext:aResponseObject[@"list"]];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取试题失败" andCompleteBlock:nil] show];
+        }
+    }];
+}
+
+- (void)getItemsAndToNext:(NSArray *)infos
+{
+    [self showLoading];
+    NSArray *listComposition = infos.lastObject[@"listComposition"];
+    NSMutableArray *ids = [NSMutableArray array];
+    WEAK_SELF;
+    [listComposition enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        STRONG_SELF;
+        NSDictionary *part = obj;
+        NSString *customId = part[@"customId"];
+        NSArray *listContent = part[@"listContent"];
+        [listContent enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSDictionary *item = obj;
+            ItemVO *itemVO = [ItemVO createWithItemId:item[@"itemId"] andType:customId.intValue];
+            [ids addObject:itemVO];
+        }];
+        
+        if (listComposition.lastObject == obj) {
+            [self performSegueWithIdentifier:@"toNext" sender:ids];
+            [self hideLoading];
+        }
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
