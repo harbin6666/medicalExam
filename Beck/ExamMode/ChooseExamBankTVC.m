@@ -112,6 +112,7 @@
 {
     ExamModePVC *vc = segue.destinationViewController;
     vc.items = sender;
+    vc.fromExam = self.fromExam;
 }
 
 @end

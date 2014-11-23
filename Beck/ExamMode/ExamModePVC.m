@@ -51,6 +51,11 @@
         UITabBarItem *item5 = self.cusTabbar.items[4];
         [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
     }
+    
+    if (self.fromExam) {
+        UIButton *btn = (UIButton *)self.navigationItem.leftBarButtonItem.customView;
+        [btn setTitle:@"真题考试" forState:UIControlStateNormal];
+    }
 }
 
 - (void)onPressedBtn2:(UIButton *)sender {

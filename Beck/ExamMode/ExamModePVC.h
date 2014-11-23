@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSDictionary *examInfos;
 
+@property (nonatomic) BOOL fromExam;
+
 @end
