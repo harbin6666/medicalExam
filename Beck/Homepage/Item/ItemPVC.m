@@ -177,6 +177,7 @@
         [item5 setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
     }
     
+    self.title = [NSString stringWithFormat:@"%d/%d",(int)[self.items indexOfObject:self.currentTVC.itemVO] + 1,(int)self.items.count];
 }
 
 #pragma mark - <UIPageViewControllerDataSource>
