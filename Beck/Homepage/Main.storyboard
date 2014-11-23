@@ -145,7 +145,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Oam-ix-RyN" kind="push" id="4pN-Np-y0i"/>
+                                    <segue destination="J5I-Ba-WNK" kind="push" identifier="toFindPW" id="Qdh-Vz-X6p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,7 +193,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="J5I-Ba-WNK" kind="push" id="G1H-hm-Xd1"/>
+                                    <segue destination="J5I-Ba-WNK" kind="push" identifier="toRegister" id="G1H-hm-Xd1"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -896,9 +896,9 @@
                     <navigationItem key="navigationItem" id="WqO-rE-KaX">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="H8b-17-yEj">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wRQ-X1-Nm0">
-                                <rect key="frame" x="16" y="7" width="58" height="30"/>
+                                <rect key="frame" x="16" y="7" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="注册" image="backImage">
+                                <state key="normal" title="注册        " image="backImage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -919,82 +919,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="457" y="-80"/>
-        </scene>
-        <!--找回密码-->
-        <scene sceneID="FZ9-rN-W5U">
-            <objects>
-                <viewController storyboardIdentifier="FindPasswordVC" hidesBottomBarWhenPushed="YES" id="Oam-ix-RyN" userLabel="找回密码" customClass="FindPasswordVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="l8W-hh-bjS"/>
-                        <viewControllerLayoutGuide type="bottom" id="QEk-af-KTo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1qx-2g-CHm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  请输入手机号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxE-Dk-cZs">
-                                <rect key="frame" x="16" y="84" width="288" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fcU-4Y-r76"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LA1-hX-jvX">
-                                <rect key="frame" x="16" y="134" width="288" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gcL-xe-dA7"/>
-                                </constraints>
-                                <state key="normal" title="下一步">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="F0l-RN-i1q" kind="push" id="SN3-es-V9Y"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="LA1-hX-jvX" firstAttribute="leading" secondItem="1qx-2g-CHm" secondAttribute="leadingMargin" id="50M-wo-mmS"/>
-                            <constraint firstItem="hxE-Dk-cZs" firstAttribute="trailing" secondItem="1qx-2g-CHm" secondAttribute="trailingMargin" id="SbK-3s-1JH"/>
-                            <constraint firstItem="LA1-hX-jvX" firstAttribute="trailing" secondItem="1qx-2g-CHm" secondAttribute="trailingMargin" id="aaA-cb-LAl"/>
-                            <constraint firstItem="hxE-Dk-cZs" firstAttribute="leading" secondItem="1qx-2g-CHm" secondAttribute="leadingMargin" id="dMT-LZ-aLx"/>
-                            <constraint firstItem="LA1-hX-jvX" firstAttribute="top" secondItem="hxE-Dk-cZs" secondAttribute="bottom" constant="20" id="p9C-uo-TEk"/>
-                            <constraint firstItem="hxE-Dk-cZs" firstAttribute="top" secondItem="l8W-hh-bjS" secondAttribute="bottom" constant="20" id="qw1-ou-ryD"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="w7H-6u-VZF" appends="YES" id="GQr-np-lch"/>
-                        </connections>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="85b-er-IKr">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="2MS-kf-m4H">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EH5-An-dIC">
-                                <rect key="frame" x="16" y="7" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="找回密码" image="backImage">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="leftBtnClick:" destination="Oam-ix-RyN" eventType="touchUpInside" id="ghE-pd-kGy"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PT3-0B-EOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="w7H-6u-VZF">
-                    <connections>
-                        <action selector="onTag:" destination="Oam-ix-RyN" id="DTX-4L-RUq"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="457" y="557"/>
+            <point key="canvasLocation" x="473" y="239"/>
         </scene>
         <!--验证码-->
         <scene sceneID="0GU-50-Ayo">
@@ -1114,7 +1039,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="999" y="268"/>
+            <point key="canvasLocation" x="934" y="239"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="ABP-bw-y0W">
@@ -1216,7 +1141,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1448" y="268"/>
+            <point key="canvasLocation" x="1452" y="239"/>
         </scene>
     </scenes>
     <resources>
@@ -1241,7 +1166,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SN3-es-V9Y"/>
-        <segue reference="ieV-CZ-EPD"/>
+        <segue reference="Qdh-Vz-X6p"/>
+        <segue reference="d1f-2z-2BA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,8 @@
 
 #import "AppDelegate.h"
 
+#import "RegisterVC.h"
+
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <RennSDK/RennSDK.h>
 
@@ -113,6 +115,13 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toFindPW"]) {
+        RegisterVC *vc = segue.destinationViewController;
+        vc.findpw = YES;
+    }
+}
 
 - (IBAction)onPressedQQ:(id)sender {
     NSArray *permissions = @[kOPEN_PERMISSION_GET_USER_INFO,

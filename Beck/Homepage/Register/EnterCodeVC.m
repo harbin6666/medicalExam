@@ -63,6 +63,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EnterPasswordVC *vc = segue.destinationViewController;
     vc.phoneNum = self.phoneNum;
+    vc.findpw = self.findpw;
 }
 
 

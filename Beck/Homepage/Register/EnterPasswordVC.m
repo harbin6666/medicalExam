@@ -53,8 +53,13 @@
     }
     [self showLoading];
     
+    NSMutableDictionary *param = @{@"token":@"Makepassword",@"loginName":self.phoneNum,@"passWord":self.pwTF2.text}.mutableCopy;
+    if (self.findpw) {
+        param[@"token"] = @"RetrievePassWord";
+    }
+    
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userAct.htm" params:@{@"token":@"Makepassword",@"loginName":self.phoneNum,@"passWord":self.pwTF2.text} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userAct.htm" params:param CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {

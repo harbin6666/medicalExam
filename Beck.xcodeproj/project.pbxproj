@@ -25,7 +25,6 @@
 		3D0EFBA719FFC9FF0017A539 /* EnterCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA219FFC9FF0017A539 /* EnterCodeVC.m */; };
 		3D0EFBA819FFC9FF0017A539 /* EnterPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA419FFC9FF0017A539 /* EnterPasswordVC.m */; };
 		3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA619FFC9FF0017A539 /* RegisterVC.m */; };
-		3D0EFBAD19FFCA530017A539 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAC19FFCA530017A539 /* FindPasswordVC.m */; };
 		3D0EFBB219FFCB8B0017A539 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */; };
 		3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
 		3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17825F1A02626F00F6904C /* FavorateEntity.m */; };
@@ -158,8 +157,6 @@
 		3D0EFBA419FFC9FF0017A539 /* EnterPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPasswordVC.m; sourceTree = "<group>"; };
 		3D0EFBA519FFC9FF0017A539 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		3D0EFBA619FFC9FF0017A539 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
-		3D0EFBAB19FFCA530017A539 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
-		3D0EFBAC19FFCA530017A539 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 		3D0EFBAE19FFCB8B0017A539 /* AnswerCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVC.h; sourceTree = "<group>"; };
 		3D0EFBAF19FFCB8B0017A539 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
 		3D0EFBB419FFD22D0017A539 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -395,15 +392,6 @@
 				3D0EFBA619FFC9FF0017A539 /* RegisterVC.m */,
 			);
 			path = Register;
-			sourceTree = "<group>";
-		};
-		3D0EFBAA19FFCA530017A539 /* FindPassword */ = {
-			isa = PBXGroup;
-			children = (
-				3D0EFBAB19FFCA530017A539 /* FindPasswordVC.h */,
-				3D0EFBAC19FFCA530017A539 /* FindPasswordVC.m */,
-			);
-			path = FindPassword;
 			sourceTree = "<group>";
 		};
 		3D2521BD19F529D900FC72A7 /* 考试模式 */ = {
@@ -707,7 +695,6 @@
 			children = (
 				3D0256BD1A1E275E00C46B0E /* Item */,
 				3D0EFBA019FFC9FF0017A539 /* Register */,
-				3D0EFBAA19FFCA530017A539 /* FindPassword */,
 				3DC68ABA19F54A6A003DB313 /* BeckLoginVC.h */,
 				3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */,
 				3DB238A519FE79B0002CD73D /* BeckHomepageVC.h */,
@@ -1028,7 +1015,6 @@
 				3D0256C61A1E279F00C46B0E /* CompatibilityItemTVC.m in Sources */,
 				3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */,
 				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
-				3D0EFBAD19FFCA530017A539 /* FindPasswordVC.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,
 				3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */,
 				3D2521DD19F53B4F00FC72A7 /* ChooseQuestionBankTVC.m in Sources */,

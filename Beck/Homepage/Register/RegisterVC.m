@@ -22,6 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.findpw) {
+        UIButton *btn = (UIButton *)self.navigationItem.leftBarButtonItem.customView;
+        [btn setTitle:@"找回密码" forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

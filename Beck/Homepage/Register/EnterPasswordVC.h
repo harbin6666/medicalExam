@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString *phoneNum;
 
+@property (nonatomic) BOOL findpw;
+
 @end

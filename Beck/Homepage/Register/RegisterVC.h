@@ -10,4 +10,6 @@
 
 @interface RegisterVC : BeckVC
 
+@property (nonatomic) BOOL findpw;
+
 @end
