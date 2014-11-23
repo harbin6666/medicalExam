@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="zmA-tJ-Bxn" style="IBUITableViewCellStyleDefault" id="l6g-lj-KeK">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="zmA-tJ-Bxn" imageView="8yg-jX-KPY" style="IBUITableViewCellStyleDefault" id="l6g-lj-KeK">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l6g-lj-KeK" id="37L-iK-Wkf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -79,6 +79,9 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="uncheckbox" highlightedImage="checkbox" id="8yg-jX-KPY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -102,6 +105,11 @@
                                     <action selector="leftBtnClick:" destination="pOz-6c-ITA" eventType="touchUpInside" id="lN4-CS-ukB"/>
                                 </connections>
                             </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="N7T-Wa-3Zb">
+                            <connections>
+                                <action selector="onPressedBtn:" destination="v37-nG-6fS" id="CDc-p1-cb1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -723,7 +731,9 @@
     </scenes>
     <resources>
         <image name="backImage" width="9" height="14"/>
+        <image name="checkbox" width="24" height="24"/>
         <image name="personalbg" width="359" height="57"/>
+        <image name="uncheckbox" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
