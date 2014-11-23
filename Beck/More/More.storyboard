@@ -620,6 +620,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onPressedDone:" destination="0ex-j1-wz7" eventType="touchUpInside" id="y7g-Bs-VVj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认新密码:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhT-XV-awp">
                                 <rect key="frame" x="16" y="216" width="102" height="21"/>
@@ -676,6 +679,11 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pw1TF" destination="e2z-Rf-f0z" id="IM5-U6-aKC"/>
+                        <outlet property="pw2TF" destination="neO-Vi-cwq" id="aAY-o6-YBi"/>
+                        <outlet property="pwOldTF" destination="U2o-qk-EQQ" id="04N-hC-nN8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yly-Dv-rV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="M6O-gT-Ze5">

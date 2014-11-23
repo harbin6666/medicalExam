@@ -45,7 +45,7 @@
 
 - (IBAction)onPressedBtn:(id)sender {
     
-    if (!self.numberTF.text || !self.numberTF.text.length) {
+    if (!self.numberTF.text.length) {
         [[OTSAlertView alertWithMessage:@"请输入手机号" andCompleteBlock:nil] show];
         return;
     }
