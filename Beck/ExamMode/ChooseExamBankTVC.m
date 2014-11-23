@@ -93,9 +93,7 @@
     [self showLoading];
     NSArray *listComposition = infos.lastObject[@"listComposition"];
     NSMutableArray *ids = [NSMutableArray array];
-    WEAK_SELF;
     [listComposition enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        STRONG_SELF;
         NSDictionary *part = obj;
         NSString *customId = part[@"customId"];
         NSArray *listContent = part[@"listContent"];
@@ -104,12 +102,10 @@
             ItemVO *itemVO = [ItemVO createWithItemId:item[@"itemId"] andType:customId.intValue];
             [ids addObject:itemVO];
         }];
-        
-        if (listComposition.lastObject == obj) {
-            [self performSegueWithIdentifier:@"toNext" sender:ids];
-            [self hideLoading];
-        }
     }];
+    
+    [self performSegueWithIdentifier:@"toNext" sender:ids];
+    [self hideLoading];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
