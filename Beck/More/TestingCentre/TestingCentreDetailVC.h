@@ -10,4 +10,6 @@
 
 @interface TestingCentreDetailVC : BeckVC
 
+@property (nonatomic, strong) NSDictionary *infos;
+
 @end

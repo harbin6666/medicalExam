@@ -10,6 +10,9 @@
 
 @interface TestingCentreDetailVC ()
 
+@property (strong, nonatomic) IBOutlet UILabel *titleLbl;
+@property (strong, nonatomic) IBOutlet UILabel *contentLbl;
+
 @end
 
 @implementation TestingCentreDetailVC
@@ -17,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.titleLbl.text = self.infos[@"name"];
+    self.contentLbl.text = self.infos[@"content"];
 }
 
 - (void)didReceiveMemoryWarning {

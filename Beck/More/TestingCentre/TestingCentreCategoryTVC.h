@@ -10,6 +10,6 @@
 
 @interface TestingCentreCategoryTVC : BeckTVC
 
-@property (nonatomic, strong) NSString *myTitle;
+@property (nonatomic, strong) NSDictionary *infos;
 
 @end

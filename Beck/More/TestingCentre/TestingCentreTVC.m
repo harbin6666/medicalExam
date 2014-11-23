@@ -8,6 +8,8 @@
 
 #import "TestingCentreTVC.h"
 
+#import "TestingCentreCategoryTVC.h"
+
 @interface TestingCentreTVC ()
 
 @property (nonatomic, strong) NSArray *names;
@@ -19,7 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.names = @[@"药事管理与法规", @"药理学", @"药物分析", @"药剂学", @"药物化学", @"药学综合知识与技能"];
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"userList",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (anError) {
+            [[OTSAlertView alertWithMessage:@"获取高频考点章节失败" andCompleteBlock:nil] show];
+        }
+        else {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.names = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+    }];
 }
 
 #pragma mark - Table view data source
@@ -33,16 +53,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TestingCentreCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.names[indexPath.row];
+    NSDictionary *infos = self.names[indexPath.row];
+    cell.textLabel.text = infos[@"courseName"];
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self performSegueWithIdentifier:@"toTestingCentreCategory" sender:self];
+    TestingCentreCategoryTVC *vc = segue.destinationViewController;
+    vc.infos = self.names[self.tableView.indexPathForSelectedRow.row];
 }
 
 @end
