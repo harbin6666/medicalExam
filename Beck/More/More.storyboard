@@ -163,10 +163,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="说说您的建议,我们会根据您的意见改进哦~" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9W-Rx-4va">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="说说您的建议,我们会根据您的意见改进哦~" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9W-Rx-4va">
                                 <rect key="frame" x="0.0" y="64" width="320" height="142"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>

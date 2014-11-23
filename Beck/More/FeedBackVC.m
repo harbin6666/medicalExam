@@ -38,7 +38,7 @@
 */
 - (IBAction)onPressedBtn:(id)sender {
     if (!self.feedbackTF.text.length) {
-        [[OTSAlertView alertWithMessage:@"请输反馈" andCompleteBlock:nil] show];
+        [[OTSAlertView alertWithMessage:@"请输入反馈" andCompleteBlock:nil] show];
         return;
     }
     
