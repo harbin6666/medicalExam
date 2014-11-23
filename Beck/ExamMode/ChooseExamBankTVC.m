@@ -8,6 +8,8 @@
 
 #import "ChooseExamBankTVC.h"
 
+#import "ExamModePVC.h"
+
 @interface ChooseExamBankTVC ()
 
 @property (nonatomic, strong) NSArray *questionBanks;
@@ -61,6 +63,32 @@
     cell.textLabel.text = questionBank[@"paperName"];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    [self showLoading];
+//    NSString *sql = nil;
+//    WEAK_SELF;
+//    NSMutableArray *ids = [NSMutableArray array];
+//    [[AFSQLManager sharedManager] performQuery:sql withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+//        NSLog(@"%@,%@,%d",row,error,finished);
+//        if (finished) {
+//            STRONG_SELF;
+//            [self hideLoading];
+//            [self performSegueWithIdentifier:@"toNext" sender:ids];
+//        }
+//        else {
+//            ItemVO *vo = [ItemVO createWithItemId:row[0] andType:[row[1] intValue]];
+//            [ids addObject:vo];
+//        }
+//    }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ExamModePVC *vc = segue.destinationViewController;
+    vc.items = sender;
 }
 
 @end

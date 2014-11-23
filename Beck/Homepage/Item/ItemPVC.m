@@ -26,6 +26,10 @@
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items.firstObject];
     
+    if (!vc) {
+        return;
+    }
+    
     WEAK_SELF;
     [self setViewControllers:@[vc]
                    direction:UIPageViewControllerNavigationDirectionForward

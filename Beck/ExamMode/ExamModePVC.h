@@ -10,4 +10,6 @@
 
 @interface ExamModePVC : ItemPVC
 
+@property (nonatomic, strong) NSDictionary *examInfos;
+
 @end
