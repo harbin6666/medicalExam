@@ -184,23 +184,25 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     ItemTVC *tempVC = (ItemTVC *)viewController;
+    self.currentTVC = tempVC;
+    [self configTabBar];
     if (self.items.firstObject == tempVC.itemVO) {
         return nil;
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] - 1]];
-    self.currentTVC = vc;
     return vc;
 }
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     ItemTVC *tempVC = (ItemTVC *)viewController;
+    self.currentTVC = tempVC;
+    [self configTabBar];
     if (self.items.lastObject == tempVC.itemVO) {
         return nil;
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] + 1]];
-    self.currentTVC = vc;
     return vc;
 }
 
