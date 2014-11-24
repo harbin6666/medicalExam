@@ -70,10 +70,27 @@
     }
 }
 
+- (void)leftBtnClick:(UIButton *)sender
+{
+    WEAK_SELF;
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否退出考试?" message:@"" leftBtn:@"退出" rightBtn:@"取消" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            STRONG_SELF;
+            [super leftBtnClick:sender];
+            [self.countdownTimer invalidate];
+        }
+    }];
+    [alertView show];
+}
+
 - (void)setTime
 {
     [self.countdownTimer invalidate];
     NSNumber *answerTime = self.examInfos[@"answerTime"];
+    if (!answerTime.longLongValue) {
+        return;
+    }
+    
     self.beginTime = [NSDate date];
     self.deadTime = [NSDate dateWithTimeIntervalSinceNow:answerTime.longLongValue * 60];
     WEAK_SELF;
@@ -113,13 +130,12 @@
 
 - (void)onPressedBtn4:(UIButton *)sender {
     WEAK_SELF;
-    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否交卷?" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否交卷?" message:@"" leftBtn:@"交卷" rightBtn:@"取消" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
             STRONG_SELF;
             [self submitExam];
         }
     }];
-    [alertView addButtonWithTitle:@"取消"];
     [alertView show];
 }
 
