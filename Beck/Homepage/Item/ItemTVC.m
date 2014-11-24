@@ -198,6 +198,13 @@
     return @"我是题型描述";
 }
 
+- (IBAction)onSelectedChoice:(UITapGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:[self tableView]];
+    NSIndexPath *path = [self.tableView indexPathForRowAtPoint:point];
+    [self.itemVO setAnswer:nil andIndex:path.row];
+    [self.tableView reloadData];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 2) {

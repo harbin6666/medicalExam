@@ -13,12 +13,7 @@
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     [self.userAnswers removeAllObjects];
-    if (index == 0) {
-        self.userAnswers[@0] = @(YES);
-    }
-    else {
-        self.userAnswers[@0] = @(NO);
-    }
+    self.userAnswers[@(index)] = @1;
 }
 
 @end

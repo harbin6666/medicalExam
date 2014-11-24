@@ -12,7 +12,12 @@
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
-    self.userAnswers[@(index)] = self.itemAnswers[index];
+    if ([self.userAnswers.allKeys containsObject:@(index)]) {
+        [self.userAnswers removeObjectForKey:@(index)];
+    }
+    else {
+        self.userAnswers[@(index)] = self.itemAnswers[index];
+    }
 }
 
 @end

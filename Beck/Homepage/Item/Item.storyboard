@@ -57,7 +57,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="Cell" textLabel="rd2-5l-3e7" imageView="std-ZA-sat" style="IBUITableViewCellStyleDefault" id="Mo9-r3-5sb">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="rd2-5l-3e7" imageView="std-ZA-sat" style="IBUITableViewCellStyleDefault" id="Mo9-r3-5sb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mo9-r3-5sb" id="WrR-jP-Vq9">
@@ -71,6 +71,10 @@
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="radio" highlightedImage="radio_sel" id="std-ZA-sat">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="1gz-zZ-Fqp" appends="YES" id="fSk-DM-vBW"/>
+                                            </connections>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -162,6 +166,11 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VU-Ye-2jg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1gz-zZ-Fqp">
+                    <connections>
+                        <action selector="onSelectedChoice:" destination="NwH-rD-csK" id="bS3-ZX-gHy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-139" y="308"/>
         </scene>
@@ -216,7 +225,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="mam-xU-jzL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="mam-xU-jzL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mam-xU-jzL" id="cVn-Ef-tCb">
@@ -364,7 +373,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="f5j-Iz-Jel" imageView="h8B-fa-RYK" style="IBUITableViewCellStyleDefault" id="dMb-5W-FnE">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="f5j-Iz-Jel" imageView="h8B-fa-RYK" style="IBUITableViewCellStyleDefault" id="dMb-5W-FnE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dMb-5W-FnE" id="xLf-3W-HDd">
@@ -378,6 +387,10 @@
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="uncheckbox" highlightedImage="checkbox" id="h8B-fa-RYK">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="shn-sh-7Vk" appends="YES" id="gxh-So-KEf"/>
+                                            </connections>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -469,6 +482,11 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8p-tq-skK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="shn-sh-7Vk">
+                    <connections>
+                        <action selector="onSelectedChoice:" destination="qA9-Xp-3hY" id="fRw-HL-4Dm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="282" y="308"/>
         </scene>
@@ -523,7 +541,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="Cell" textLabel="tml-Nc-znA" imageView="3rF-HU-gtF" style="IBUITableViewCellStyleDefault" id="KHE-Fx-Xx7">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="tml-Nc-znA" imageView="3rF-HU-gtF" style="IBUITableViewCellStyleDefault" id="KHE-Fx-Xx7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHE-Fx-Xx7" id="ZLM-ty-aIZ">
@@ -537,6 +555,10 @@
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="radio" highlightedImage="radio_sel" id="3rF-HU-gtF">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="DLn-zC-3Fg" appends="YES" id="BiW-8r-JyI"/>
+                                            </connections>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -628,6 +650,11 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTi-HX-ixv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DLn-zC-3Fg">
+                    <connections>
+                        <action selector="onSelectedChoice:" destination="UV5-Nk-VFV" id="F7V-yf-QV9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="660" y="308"/>
         </scene>
@@ -682,7 +709,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="d0e-zb-gb3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="d0e-zb-gb3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0e-zb-gb3" id="M8V-Ih-uZl">

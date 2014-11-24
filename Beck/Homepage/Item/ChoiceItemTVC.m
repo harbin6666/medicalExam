@@ -98,6 +98,7 @@
         if (self.itemVO.itemAnswers.count) {
             NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
             cell.textLabel.text = [itemAnswer[3] clearString];
+            cell.imageView.highlighted = [self.itemVO isSelectedAtIndex:indexPath.row];
         }
         return cell;
     }

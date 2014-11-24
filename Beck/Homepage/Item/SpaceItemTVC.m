@@ -29,6 +29,10 @@
     return @"我是填空题题型描述";
 }
 
+- (IBAction)onSelectedChoice:(UITapGestureRecognizer *)sender {
+    
+}
+
 /*
 #pragma mark - Navigation
 

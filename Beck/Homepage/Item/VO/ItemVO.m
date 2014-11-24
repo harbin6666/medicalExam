@@ -60,7 +60,12 @@
 
 - (BOOL)isRight
 {
-    return YES;
+    return NO;
+}
+
+- (BOOL)isSelectedAtIndex:(NSInteger)index
+{
+    return [self.userAnswers.allKeys containsObject:@(index)];
 }
 
 - (BOOL)isEqual:(id)object
