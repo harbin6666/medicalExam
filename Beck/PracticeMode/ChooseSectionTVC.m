@@ -8,6 +8,9 @@
 
 #import "ChooseSectionTVC.h"
 
+#import "ItemVO.h"
+#import "PracticeModePVC.h"
+
 @interface ChooseSectionTVC ()
 
 @property (nonatomic, strong) NSArray *sections;
@@ -22,7 +25,7 @@
     [self showLoading];
     
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"testQuestions",@"subjectId":[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"],@"examOutlineId":self.examOutlineId} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"testQuestions",@"subjectId":[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"],@"examOutlineId":self.examOutlineId,@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -59,6 +62,67 @@
     NSArray *items = section[@"titleList"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d题",(int)items.count];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *sql = nil;
+    NSDictionary *section = self.sections[indexPath.row];
+    NSNumber *type = section[@"typeId"];
+    switch (type.integerValue) {
+        case ItemTypeChoice:
+        {
+            sql = @"select choice_id, custom_id from choice_questions where custom_id == 1";
+        }
+            break;
+        case ItemTypeDecision:
+        {
+            sql = @"select decision_id, custom_id from decision_question where custom_id == 2";
+        }
+            break;
+        case ItemTypeMultiChoice:
+        {
+            sql = @"select choice_id, custom_id from choice_questions where custom_id == 3";
+        }
+            break;
+            
+        case ItemTypeCompatibility:
+        {
+            sql = @"select id, custom_id from compatibility_info where custom_id == 4";
+        }
+            break;
+            
+        case ItemTypeSpace:
+        {
+            sql = @"select space_id, custom_id from space_question where custom_id == 5";
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self showLoading];
+    WEAK_SELF;
+    NSMutableArray *ids = [NSMutableArray array];
+    [[AFSQLManager sharedManager] performQuery:sql withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        NSLog(@"%@,%@,%d",row,error,finished);
+        if (finished) {
+            STRONG_SELF;
+            [self hideLoading];
+            [self performSegueWithIdentifier:@"toNext" sender:ids];
+        }
+        else {
+            ItemVO *vo = [ItemVO createWithItemId:row[0] andType:[row[1] intValue]];
+            [ids addObject:vo];
+        }
+    }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PracticeModePVC *vc = segue.destinationViewController;
+    vc.items = sender;
 }
 
 @end
