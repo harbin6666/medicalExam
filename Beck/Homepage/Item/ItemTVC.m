@@ -178,6 +178,16 @@
     [alertView show];
 }
 
+- (BOOL)showNote
+{
+    return self.itemVO.showNote;
+}
+
+- (BOOL)favorated
+{
+    return self.itemVO.favorated;
+}
+
 - (NSString *)answerParse
 {
     return @"我是答案";

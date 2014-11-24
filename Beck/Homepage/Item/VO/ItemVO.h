@@ -26,6 +26,9 @@ typedef enum ItemType
 @property (nonatomic, strong) NSNumber *score;
 @property (nonatomic) ItemType type;
 
+@property (nonatomic) BOOL showNote;
+@property (nonatomic) BOOL favorated;
+
 @property (nonatomic, strong) NSMutableDictionary *userAnswers;
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
