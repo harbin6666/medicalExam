@@ -8,7 +8,7 @@
 
 #import "ItemPVC.h"
 
-@interface ItemPVC ()
+@interface ItemPVC () <AnswerCVCDelegate>
 
 @end
 
@@ -91,9 +91,11 @@
 }
 
 - (void)onPressedBtn3:(UIButton *)sender {
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-//    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
-//    [self.navigationController pushViewController:vc animated:YES];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
+    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
+    vc.items = self.items;
+    vc.vcDelegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)onPressedBtn4:(UIButton *)sender {
@@ -205,6 +207,28 @@
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] + 1]];
     return vc;
+}
+
+#pragma mark <AnswerCVCDelegate>
+- (void)didSelectedItemIndexInAnswerCVC:(NSInteger)index
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[index]];
+    
+    if (!vc) {
+        return;
+    }
+    
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:NO
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configTabBar];
+                  }];
 }
 
 @end

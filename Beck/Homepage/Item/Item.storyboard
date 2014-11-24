@@ -835,10 +835,10 @@
             </objects>
             <point key="canvasLocation" x="-139" y="980"/>
         </scene>
-        <!--查看答案-->
+        <!--题目跳转-->
         <scene sceneID="VJl-9n-ajU">
             <objects>
-                <collectionViewController storyboardIdentifier="AnswerCVC" id="qgT-2X-wFw" userLabel="查看答案" customClass="AnswerCVC" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="AnswerCVC" id="qgT-2X-wFw" userLabel="题目跳转" customClass="AnswerCVC" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="ipJ-FW-8dR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -850,7 +850,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnswerCell" id="hFg-3Z-t20">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hFg-3Z-t20">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

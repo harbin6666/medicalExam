@@ -63,11 +63,11 @@
     sender.selected = self.currentTVC.favorated;
 }
 
-- (void)onPressedBtn3:(UIButton *)sender {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
-    [self.navigationController pushViewController:vc animated:YES];
-}
+//- (void)onPressedBtn3:(UIButton *)sender {
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
+//    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 - (void)onPressedBtn4:(UIButton *)sender {
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否交卷?" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {

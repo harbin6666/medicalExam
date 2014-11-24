@@ -59,11 +59,11 @@
     [self.currentTVC.tableView reloadData];
 }
 
-- (void)onPressedBtn3:(UIButton *)sender {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
-    [self.navigationController pushViewController:vc animated:YES];
-}
+//- (void)onPressedBtn3:(UIButton *)sender {
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
+//    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 - (void)onPressedBtn4:(UIButton *)sender {
     self.currentTVC.favorated = !self.currentTVC.favorated;
