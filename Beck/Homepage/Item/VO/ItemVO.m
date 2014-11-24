@@ -63,6 +63,16 @@
     return NO;
 }
 
+- (NSNumber *)getScore
+{
+    return @0;
+}
+
+- (NSString *)getAnswer
+{
+    return @"";
+}
+
 - (BOOL)isSelectedAtIndex:(NSInteger)index
 {
     return [self.userAnswers.allKeys containsObject:@(index)];

@@ -21,22 +21,51 @@
 
 - (NSNumber *)getScore
 {
-    return @0;
+    __block int score = 0;
+    [self.itemVOs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        if (vo.isRight) {
+            score += [vo getScore].intValue;
+        }
+    }];
+    
+    return @(score);
 }
 
 - (NSNumber *)getRightAmount
 {
-    return @0;
+    __block int count = 0;
+    [self.itemVOs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        if (vo.isRight) {
+            count++;
+        }
+    }];
+    
+    return @(count);
 }
 
 - (NSNumber *)getWrongAmount
 {
-    return @0;
+    __block int count = 0;
+    [self.itemVOs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        if (!vo.isRight) {
+            count++;
+        }
+    }];
+    
+    return @(count);
 }
 
 - (NSString *)getAnswer
 {
-    return @"";
+    NSMutableArray *answers = [NSMutableArray array];
+    [self.itemVOs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        [answers addObject:vo.getAnswer];
+    }];
+    return [answers componentsJoinedByString:@","];
 }
 
 @end

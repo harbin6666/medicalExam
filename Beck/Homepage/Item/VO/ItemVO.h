@@ -35,4 +35,8 @@ typedef enum ItemType
 
 - (BOOL)isSelectedAtIndex:(NSInteger)index;
 
+- (NSNumber *)getScore;
+
+- (NSString *)getAnswer;
+
 @end
