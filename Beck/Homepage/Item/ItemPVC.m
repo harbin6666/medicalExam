@@ -65,9 +65,18 @@
 }
 
 - (void)onPressedBtn1:(UIButton *)sender {
+    static BOOL done = YES;
+    
+    if (!done) {
+        return;
+    }
+    
+    done = NO;
+    
     ItemTVC *tempVC = self.currentTVC;
     if (self.items.firstObject == tempVC.itemVO) {
         [self configTabBar];
+        done = YES;
         return;
     }
     
@@ -81,6 +90,7 @@
                       STRONG_SELF;
                       self.currentTVC = vc;
                       [self configTabBar];
+                      done = YES;
                   }];
 }
 
@@ -104,9 +114,18 @@
 }
 
 - (void)onPressedBtn5:(UIButton *)sender {
+    static BOOL done = YES;
+    
+    if (!done) {
+        return;
+    }
+    
+    done = NO;
+    
     ItemTVC *tempVC = self.currentTVC;
     if (self.items.lastObject == tempVC.itemVO) {
         [self configTabBar];
+        done = YES;
         return;
     }
     
@@ -120,6 +139,7 @@
                       STRONG_SELF;
                       self.currentTVC = vc;
                       [self configTabBar];
+                      done = YES;
                   }];
 }
 
