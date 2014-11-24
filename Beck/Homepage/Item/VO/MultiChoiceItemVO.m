@@ -26,4 +26,26 @@
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,itemAnswer[2],self.type];
 }
 
+- (BOOL)isRight
+{
+    int count = 0;
+    BOOL right = NO;
+    
+    for (NSArray *itemAnswer in self.itemAnswers) {
+        NSNumber *isAnswer = itemAnswer[5];
+        if (isAnswer.boolValue) {
+            count++;
+            if (![self.userAnswers.allValues containsObject:itemAnswer]) {
+                break;
+            }
+        }
+    }
+    
+    if (count != self.userAnswers.allKeys.count) {
+        return NO;
+    }
+    
+    return right;
+}
+
 @end

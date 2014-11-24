@@ -12,13 +12,34 @@
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
-    self.userAnswers[@(index)] = answer;
+    NSArray *itemAnswer = self.itemAnswers[index];
+    self.userAnswers[answer] = itemAnswer[4];
 }
 
 - (NSString *)getAnswer
 {
-    NSArray *answer = self.userAnswers.allValues.lastObject;
+    NSArray *answer = self.userAnswers.allKeys.lastObject;
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer[1],self.type];
+}
+
+- (BOOL)isRight
+{
+    if (self.userAnswers.count > 0 && self.userAnswers.count != self.itemAnswers.count) {
+        return NO;
+    }
+    
+    __block BOOL right = YES;
+    
+    [self.userAnswers enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSArray *answer = key;
+        NSNumber *itemId = obj;
+        if (![answer[0] isEqual:itemId]) {
+            right = NO;
+            *stop = YES;
+        }
+    }];
+    
+    return right;
 }
 
 @end

@@ -22,4 +22,10 @@
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,itemAnswer[2],self.type];
 }
 
+- (BOOL)isRight
+{
+    NSNumber *isAnswer = self.userAnswers.allValues.lastObject[5];
+    return [isAnswer boolValue];
+}
+
 @end
