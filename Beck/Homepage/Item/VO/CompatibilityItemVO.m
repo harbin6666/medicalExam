@@ -24,7 +24,7 @@
 
 - (BOOL)isRight
 {
-    if (self.userAnswers.count > 0 && self.userAnswers.count != self.itemAnswers.count) {
+    if (self.userAnswers.count == 0 || (self.userAnswers.count != self.itemAnswers.count)) {
         return NO;
     }
     

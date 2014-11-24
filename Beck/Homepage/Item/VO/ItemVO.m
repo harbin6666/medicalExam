@@ -16,7 +16,7 @@
 
 @implementation ItemVO
 
-+ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type
++ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type score:(NSNumber *)score
 {
     ItemVO *itemVO = nil;
     switch (type) {
@@ -48,9 +48,15 @@
         itemVO.itemId = [(NSNumber *)itemId stringValue];
     }
     
+    itemVO.score = score;
     itemVO.userAnswers = @{}.mutableCopy;
     
     return itemVO;
+}
+
++ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type
+{
+    return [self createWithItemId:itemId andType:type score:@0];
 }
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
@@ -65,7 +71,7 @@
 
 - (NSNumber *)getScore
 {
-    return @0;
+    return self.score;
 }
 
 - (NSString *)getAnswer

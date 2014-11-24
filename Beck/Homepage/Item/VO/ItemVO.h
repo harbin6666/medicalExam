@@ -23,11 +23,14 @@ typedef enum ItemType
 @property (nonatomic, strong) NSArray *itemAnswers;
 
 @property (nonatomic, strong) NSString *itemId;
+@property (nonatomic, strong) NSNumber *score;
 @property (nonatomic) ItemType type;
 
 @property (nonatomic, strong) NSMutableDictionary *userAnswers;
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
+
++ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type score:(NSNumber *)score;
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index;
 
