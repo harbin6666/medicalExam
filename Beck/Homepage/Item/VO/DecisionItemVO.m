@@ -16,4 +16,9 @@
     self.userAnswers[@(index)] = @1;
 }
 
+- (NSString *)getAnswer
+{
+    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,self.userAnswers.allKeys.lastObject,self.type];
+}
+
 @end

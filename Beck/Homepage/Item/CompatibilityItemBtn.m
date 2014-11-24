@@ -58,7 +58,7 @@
     [self resignFirstResponder];
     NSArray *answers = self.itemVO.itemInfo;
     NSArray *answer = answers[[self.pv selectedRowInComponent:0]];
-    [self.itemVO setAnswer:answers andIndex:self.answerIndex];
+    [self.itemVO setAnswer:answer andIndex:self.answerIndex];
     [self setTitle:answer[1] forState:UIControlStateNormal];
 }
 

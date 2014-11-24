@@ -10,4 +10,15 @@
 
 @implementation SpaceItemVO
 
+- (void)setAnswer:(id)answer andIndex:(NSInteger)index
+{
+    self.userAnswers[@(index)] = answer;
+}
+
+- (NSString *)getAnswer
+{
+    NSString *answer = self.userAnswers.allValues.lastObject;
+    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer,self.type];
+}
+
 @end

@@ -15,4 +15,10 @@
     self.userAnswers[@(index)] = answer;
 }
 
+- (NSString *)getAnswer
+{
+    NSArray *answer = self.userAnswers.allValues.lastObject;
+    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer[1],self.type];
+}
+
 @end
