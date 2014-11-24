@@ -8,7 +8,11 @@
 
 #import "ExamModePVC.h"
 
+#import "ExamVO.h"
+
 @interface ExamModePVC ()
+
+@property (nonatomic, strong) NSDate *beginTime;
 
 @end
 
@@ -16,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.beginTime = [NSDate date];
     
     if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
         UITabBarItem *item1 = self.cusTabbar.items[0];
@@ -70,18 +76,50 @@
 //}
 
 - (void)onPressedBtn4:(UIButton *)sender {
+    WEAK_SELF;
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否交卷?" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
-            
+            STRONG_SELF;
+            [self submitExam];
         }
     }];
     [alertView addButtonWithTitle:@"取消"];
     [alertView show];
 }
 
-- (void)configTabBar
+- (void)submitExam
 {
-    [super configTabBar];
+    [self showLoading];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"paperId"] = self.examInfos[@"id"];
+    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    params[@"beginTime"] = self.beginTime.description;
+    params[@"endTime"] = [NSDate date].description;
+    
+    ExamVO *vo = [ExamVO createWithExamInfos:self.examInfos withItemVOs:self.items];
+    params[@"Score"] = vo.getScore.stringValue;
+    params[@"userAnswer"] = vo.getAnswer;
+    params[@"rightAmount"] = vo.getRightAmount.stringValue;
+    params[@"wrongAmount"] = vo.getWrongAmount.stringValue;
+    
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"提交失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 @end

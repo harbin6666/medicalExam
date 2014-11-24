@@ -35,12 +35,7 @@
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
 		3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521BB19F526C500FC72A7 /* BeckVC.m */; };
 		3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */; };
-		3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C219F52A6F00FC72A7 /* ExamRoomSimulateTVC.m */; };
 		3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C619F52B3B00FC72A7 /* ExamHomeTVC.m */; };
-		3D2521CA19F52FCD00FC72A7 /* SimulationExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C919F52FCD00FC72A7 /* SimulationExamTVC.m */; };
-		3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521CC19F533D900FC72A7 /* PayTVC.m */; };
-		3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */; };
-		3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D219F5340800FC72A7 /* AlipayTVC.m */; };
 		3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */; };
 		3D2521DD19F53B4F00FC72A7 /* ChooseQuestionBankTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521D819F53B4F00FC72A7 /* ChooseQuestionBankTVC.m */; };
 		3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521DA19F53B4F00FC72A7 /* ChooseSectionTVC.m */; };
@@ -55,7 +50,6 @@
 		3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220219F5441C00FC72A7 /* NotesTVC.m */; };
 		3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */; };
 		3D32E6921A1A214300978C5A /* beck.db in Resources */ = {isa = PBXBuildFile; fileRef = 3D32E6911A1A214300978C5A /* beck.db */; };
-		3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3835E219F69AA1006C9DB0 /* BeckTools.m */; };
 		3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */; };
 		3D4CEEAD1A1CDA360078AA38 /* NSMutableArray+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEAA1A1CDA360078AA38 /* NSMutableArray+safe.m */; };
 		3D4CEEAE1A1CDA360078AA38 /* NSMutableDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEAC1A1CDA360078AA38 /* NSMutableDictionary+safe.m */; };
@@ -71,6 +65,7 @@
 		3D65EE131A235983005DB486 /* ItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE0B1A235983005DB486 /* ItemVO.m */; };
 		3D65EE141A235983005DB486 /* MultiChoiceItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE0D1A235983005DB486 /* MultiChoiceItemVO.m */; };
 		3D65EE151A235983005DB486 /* SpaceItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE0F1A235983005DB486 /* SpaceItemVO.m */; };
+		3D65EE181A236825005DB486 /* ExamVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE171A236825005DB486 /* ExamVO.m */; };
 		3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */; };
 		3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */; };
 		3D8765EF1A10F13600ED25CE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8765EE1A10F13600ED25CE /* Launch Screen.xib */; };
@@ -176,18 +171,8 @@
 		3D2521BB19F526C500FC72A7 /* BeckVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckVC.m; sourceTree = "<group>"; };
 		3D2521BF19F52A6F00FC72A7 /* ExamModePVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamModePVC.h; sourceTree = "<group>"; };
 		3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamModePVC.m; sourceTree = "<group>"; };
-		3D2521C119F52A6F00FC72A7 /* ExamRoomSimulateTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamRoomSimulateTVC.h; sourceTree = "<group>"; };
-		3D2521C219F52A6F00FC72A7 /* ExamRoomSimulateTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamRoomSimulateTVC.m; sourceTree = "<group>"; };
 		3D2521C519F52B3B00FC72A7 /* ExamHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamHomeTVC.h; sourceTree = "<group>"; };
 		3D2521C619F52B3B00FC72A7 /* ExamHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamHomeTVC.m; sourceTree = "<group>"; };
-		3D2521C819F52FCD00FC72A7 /* SimulationExamTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulationExamTVC.h; sourceTree = "<group>"; };
-		3D2521C919F52FCD00FC72A7 /* SimulationExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulationExamTVC.m; sourceTree = "<group>"; };
-		3D2521CB19F533D900FC72A7 /* PayTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayTVC.h; sourceTree = "<group>"; };
-		3D2521CC19F533D900FC72A7 /* PayTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayTVC.m; sourceTree = "<group>"; };
-		3D2521CE19F533FA00FC72A7 /* IntegrationTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegrationTVC.h; sourceTree = "<group>"; };
-		3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegrationTVC.m; sourceTree = "<group>"; };
-		3D2521D119F5340800FC72A7 /* AlipayTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlipayTVC.h; sourceTree = "<group>"; };
-		3D2521D219F5340800FC72A7 /* AlipayTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlipayTVC.m; sourceTree = "<group>"; };
 		3D2521D419F53A4800FC72A7 /* PractiseHomeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseHomeTVC.h; sourceTree = "<group>"; };
 		3D2521D519F53A4800FC72A7 /* PractiseHomeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseHomeTVC.m; sourceTree = "<group>"; };
 		3D2521D719F53B4F00FC72A7 /* ChooseQuestionBankTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseQuestionBankTVC.h; sourceTree = "<group>"; };
@@ -215,8 +200,6 @@
 		3D25220919F5455100FC72A7 /* ChooseExamTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseExamTVC.h; sourceTree = "<group>"; };
 		3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseExamTVC.m; sourceTree = "<group>"; };
 		3D32E6911A1A214300978C5A /* beck.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = beck.db; sourceTree = "<group>"; };
-		3D3835E119F69AA1006C9DB0 /* BeckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckTools.h; sourceTree = "<group>"; };
-		3D3835E219F69AA1006C9DB0 /* BeckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckTools.m; sourceTree = "<group>"; };
 		3D4CEEA31A1CB39B0078AA38 /* OTSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSAlertView.h; sourceTree = "<group>"; };
 		3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSAlertView.m; sourceTree = "<group>"; };
 		3D4CEEA91A1CDA360078AA38 /* NSMutableArray+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+safe.h"; sourceTree = "<group>"; };
@@ -247,6 +230,8 @@
 		3D65EE0D1A235983005DB486 /* MultiChoiceItemVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiChoiceItemVO.m; sourceTree = "<group>"; };
 		3D65EE0E1A235983005DB486 /* SpaceItemVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceItemVO.h; sourceTree = "<group>"; };
 		3D65EE0F1A235983005DB486 /* SpaceItemVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceItemVO.m; sourceTree = "<group>"; };
+		3D65EE161A236825005DB486 /* ExamVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamVO.h; sourceTree = "<group>"; };
+		3D65EE171A236825005DB486 /* ExamVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamVO.m; sourceTree = "<group>"; };
 		3D6AE17D1A07BA7100C0BB71 /* MyPayInfoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPayInfoTVC.h; sourceTree = "<group>"; };
 		3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPayInfoTVC.m; sourceTree = "<group>"; };
 		3D6AE1801A07BA8600C0BB71 /* MyPointTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPointTVC.h; sourceTree = "<group>"; };
@@ -405,17 +390,9 @@
 				3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */,
 				3D2521C519F52B3B00FC72A7 /* ExamHomeTVC.h */,
 				3D2521C619F52B3B00FC72A7 /* ExamHomeTVC.m */,
-				3D2521C119F52A6F00FC72A7 /* ExamRoomSimulateTVC.h */,
-				3D2521C219F52A6F00FC72A7 /* ExamRoomSimulateTVC.m */,
-				3D2521C819F52FCD00FC72A7 /* SimulationExamTVC.h */,
-				3D2521C919F52FCD00FC72A7 /* SimulationExamTVC.m */,
-				3D2521CB19F533D900FC72A7 /* PayTVC.h */,
-				3D2521CC19F533D900FC72A7 /* PayTVC.m */,
-				3D2521CE19F533FA00FC72A7 /* IntegrationTVC.h */,
-				3D2521CF19F533FA00FC72A7 /* IntegrationTVC.m */,
-				3D2521D119F5340800FC72A7 /* AlipayTVC.h */,
-				3D2521D219F5340800FC72A7 /* AlipayTVC.m */,
 				3DB238AC19FE79FB002CD73D /* Exam.storyboard */,
+				3D65EE161A236825005DB486 /* ExamVO.h */,
+				3D65EE171A236825005DB486 /* ExamVO.m */,
 			);
 			name = "考试模式";
 			path = ExamMode;
@@ -509,16 +486,6 @@
 				3D32E6911A1A214300978C5A /* beck.db */,
 			);
 			path = DB;
-			sourceTree = "<group>";
-		};
-		3D3835E019F69A85006C9DB0 /* 工具 */ = {
-			isa = PBXGroup;
-			children = (
-				3D3835E119F69AA1006C9DB0 /* BeckTools.h */,
-				3D3835E219F69AA1006C9DB0 /* BeckTools.m */,
-			);
-			name = "工具";
-			path = Tools;
 			sourceTree = "<group>";
 		};
 		3D65EE031A235983005DB486 /* VO */ = {
@@ -638,7 +605,6 @@
 				3D2521BE19F52A4800FC72A7 /* 练习模式 */,
 				3D2521BD19F529D900FC72A7 /* 考试模式 */,
 				3D2521E619F5411900FC72A7 /* 更多 */,
-				3D3835E019F69A85006C9DB0 /* 工具 */,
 				3DC1C57819E645FD004F23E1 /* AppDelegate.h */,
 				3DC1C57919E645FD004F23E1 /* AppDelegate.m */,
 				3D8765EE1A10F13600ED25CE /* Launch Screen.xib */,
@@ -948,7 +914,6 @@
 			files = (
 				3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */,
 				3D0EFB9C19FFC6E30017A539 /* BeckAchievementTVC.m in Sources */,
-				3D2521CA19F52FCD00FC72A7 /* SimulationExamTVC.m in Sources */,
 				3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */,
 				3D65EE151A235983005DB486 /* SpaceItemVO.m in Sources */,
 				3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */,
@@ -964,11 +929,9 @@
 				3D9789491A1257F200835549 /* BeckCustomVC1.m in Sources */,
 				3D9789461A12575100835549 /* BeckChangeExamPlaceBtn.m in Sources */,
 				3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */,
-				3D2521D019F533FA00FC72A7 /* IntegrationTVC.m in Sources */,
 				3D0256C01A1E276D00C46B0E /* ItemTVC.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D65EE111A235983005DB486 /* CompatibilityItemVO.m in Sources */,
-				3D2521C419F52A6F00FC72A7 /* ExamRoomSimulateTVC.m in Sources */,
 				3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */,
 				3D0EFBA819FFC9FF0017A539 /* EnterPasswordVC.m in Sources */,
 				3D9944A119E6C29E009A1A1F /* OTSBorder.m in Sources */,
@@ -986,6 +949,7 @@
 				3D0256CC1A1E27C600C46B0E /* SpaceItemTVC.m in Sources */,
 				3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */,
 				3D4CEEB11A1CDB400078AA38 /* NSObject+swizzle.m in Sources */,
+				3D65EE181A236825005DB486 /* ExamVO.m in Sources */,
 				3D0EFB9919FFC4EA0017A539 /* ViewItemPVC.m in Sources */,
 				3D65EE141A235983005DB486 /* MultiChoiceItemVO.m in Sources */,
 				3D2521F319F543CB00FC72A7 /* TestingCentreTVC.m in Sources */,
@@ -994,13 +958,11 @@
 				3D0EFBA719FFC9FF0017A539 /* EnterCodeVC.m in Sources */,
 				3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */,
 				3DAE70861A1F88CD0001C3E2 /* ItemPVC.m in Sources */,
-				3D2521CD19F533D900FC72A7 /* PayTVC.m in Sources */,
 				3D17826C1A02630200F6904C /* ItemEntity.m in Sources */,
 				3D965F9D1A1F71B6009AB423 /* CompatibilityItemBtn.m in Sources */,
 				3D1782691A02630100F6904C /* ExamEntity.m in Sources */,
 				3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */,
 				3D0256CF1A1E27D200C46B0E /* DecisionItemTVC.m in Sources */,
-				3D2521D319F5340800FC72A7 /* AlipayTVC.m in Sources */,
 				3D4CEEAE1A1CDA360078AA38 /* NSMutableDictionary+safe.m in Sources */,
 				3D99449B19E6BF31009A1A1F /* UIView+create.m in Sources */,
 				3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */,
@@ -1016,7 +978,6 @@
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
 				3D0256C61A1E279F00C46B0E /* CompatibilityItemTVC.m in Sources */,
 				3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */,
-				3D3835E319F69AA1006C9DB0 /* BeckTools.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,
 				3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */,
 				3D2521DD19F53B4F00FC72A7 /* ChooseQuestionBankTVC.m in Sources */,

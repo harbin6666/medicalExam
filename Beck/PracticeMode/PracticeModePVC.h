@@ -8,10 +8,6 @@
 
 #import "ItemPVC.h"
 
-#import "ItemVO.h"
-
 @interface PracticeModePVC : ItemPVC
-
-@property (nonatomic, strong) NSArray *items;//<ItemVO>
 
 @end
