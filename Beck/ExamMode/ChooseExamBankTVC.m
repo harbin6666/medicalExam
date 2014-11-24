@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSMutableArray *numbers;
 
+@property (nonatomic, strong) NSDictionary *examInfos;
+
 @end
 
 @implementation ChooseExamBankTVC
@@ -79,6 +81,7 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
+                self.examInfos = [aResponseObject[@"list"] lastObject];
                 [self getItemsAndToNext:aResponseObject[@"list"]];
             }
         }
@@ -111,8 +114,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     ExamModePVC *vc = segue.destinationViewController;
+    vc.examInfos = self.examInfos;
     vc.items = sender;
     vc.fromExam = self.fromExam;
+    self.examInfos = nil;
 }
 
 @end

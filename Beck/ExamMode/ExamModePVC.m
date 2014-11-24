@@ -12,6 +12,10 @@
 
 @interface ExamModePVC ()
 
+@property (weak, nonatomic) IBOutlet UIButton *timeBtn;
+
+@property (nonatomic, strong) NSTimer *countdownTimer;
+@property (nonatomic, copy) NSDate *deadTime;
 @property (nonatomic, strong) NSDate *beginTime;
 
 @end
@@ -21,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.beginTime = [NSDate date];
+    [self setTime];
     
     if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
         UITabBarItem *item1 = self.cusTabbar.items[0];
@@ -63,6 +67,36 @@
     if (self.fromExam) {
         UIButton *btn = (UIButton *)self.navigationItem.leftBarButtonItem.customView;
         [btn setTitle:@"真题考试" forState:UIControlStateNormal];
+    }
+}
+
+- (void)setTime
+{
+    [self.countdownTimer invalidate];
+    NSNumber *answerTime = self.examInfos[@"answerTime"];
+    self.beginTime = [NSDate date];
+    self.deadTime = [NSDate dateWithTimeIntervalSinceNow:answerTime.longLongValue * 60];
+    WEAK_SELF;
+    self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.f target:weakSelf selector:@selector(runCountdown) userInfo:nil repeats:YES];
+    NSRunLoop* runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addTimer:self.countdownTimer forMode:NSRunLoopCommonModes];
+    [self.countdownTimer fire];
+}
+
+- (void)runCountdown
+{
+    NSDate *now = [NSDate date];
+    if ([self.deadTime compare:now] == NSOrderedDescending) {
+        NSTimeInterval timeInterval = [self.deadTime timeIntervalSinceDate:now];
+        NSDate *endingDate = now;
+        NSDate *startingDate = [endingDate dateByAddingTimeInterval:-timeInterval];
+        
+        NSCalendarUnit components = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+        NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:components fromDate:startingDate toDate:endingDate options:(NSCalendarOptions)0];
+        [self.timeBtn setTitle:[NSString stringWithFormat:@"%02d:%02d", (int)dateComponents.minute, (int)dateComponents.second] forState:UIControlStateNormal];
+    }
+    else {
+        [self.countdownTimer invalidate];
     }
 }
 
