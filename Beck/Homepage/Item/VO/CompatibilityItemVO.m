@@ -19,7 +19,7 @@
 - (NSString *)getAnswer
 {
     __block NSString *answer = @"";
-    [self.userAnswers.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [self.userAnswers.allKeys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSArray *itemAnswer = obj;
         answer = [answer stringByAppendingString:itemAnswer[1]];
     }];
