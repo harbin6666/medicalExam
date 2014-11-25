@@ -87,65 +87,6 @@
 //        
 //    }];
     
-    //    {
-    //        News *news = [NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:self.managedObjectContext];
-    
-    //        news.title = @"今日头条";
-    //        news.date = [NSDate date];
-    //        news.count = @20;
-    //    }
-    //
-    //    {
-    //        NSError *error = nil;
-    //        BOOL isSave =   [self.managedObjectContext save:&error];
-    //        if (!isSave) {
-    //            NSLog(@"error:%@,%@",error,[error userInfo]);
-    //        }
-    //        else{
-    //            NSLog(@"保存成功");
-    //        }
-    //    }
-    
-    //    {
-    //        //创建取回数据请求
-    //        NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    //        //设置要检索哪种类型的实体对象
-    //        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Item"inManagedObjectContext:self.managedObjectContext];
-    //        //设置请求实体
-    //        [request setEntity:entity];
-    //        //指定对结果的排序方式
-    //        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"ascending:NO];
-    //        NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
-    //        [request setSortDescriptors:sortDescriptions];
-    //        NSError *error = nil;
-    //        //执行获取数据请求，返回数组
-    //        NSMutableArray *mutableFetchResult = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-    //        if (mutableFetchResult == nil) {
-    //            NSLog(@"Error: %@,%@",error,[error userInfo]);
-    //        }
-    //
-    //        NSLog(@"%@",mutableFetchResult);
-    //    }
-    //
-    //    NSLog(@"\n");
-    //
-    //    {
-    //        //创建取回数据请求
-    //        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
-    //        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    //        NSArray *sortDescriptions = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
-    //        [request setSortDescriptors:sortDescriptions];
-    //
-    //        NSError *error = nil;
-    //        //执行获取数据请求，返回数组
-    //        NSMutableArray *mutableFetchResult = [[self.managedObjectContext executeFetchRequest:request error:&error] mutableCopy];
-    //        if (mutableFetchResult == nil) {
-    //            NSLog(@"Error: %@,%@",error,[error userInfo]);
-    //        }
-    //
-    //        NSLog(@"%@",mutableFetchResult);
-    //    }
-    
     return YES;
 }
 
