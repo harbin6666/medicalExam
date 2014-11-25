@@ -32,7 +32,8 @@
         [item1 setSelectedImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         UITabBarItem *item2 = self.cusTabbar.items[1];
-        [item2 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item2 setSelectedImage:[[UIImage imageNamed:@"favorate"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
         
         UITabBarItem *item3 = self.cusTabbar.items[2];
         [item3 setSelectedImage:[[UIImage imageNamed:@"setting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -51,7 +52,8 @@
         [item1 setFinishedSelectedImage:[UIImage imageNamed:@"back_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"back"]];
         
         UITabBarItem *item2 = self.cusTabbar.items[1];
-        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"favorate_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"favorate"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
         
         UITabBarItem *item3 = self.cusTabbar.items[2];
         [item3 setFinishedSelectedImage:[UIImage imageNamed:@"setting"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting"]];
@@ -117,10 +119,35 @@
     }
 }
 
-//- (void)onPressedBtn2:(UIButton *)sender {
-//    self.currentTVC.favorated = !self.currentTVC.favorated;
-//    sender.selected = self.currentTVC.favorated;
-//}
+- (void)onPressedBtn2:(UIButton *)sender {
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"add";
+    params[@"titleId"] = self.currentTVC.itemVO.itemId;
+    params[@"typeId"] = @(self.currentTVC.itemVO.type);
+    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.integerValue == 2) {
+                self.currentTVC.showAnswer = YES;
+                [[OTSAlertView alertWithMessage:@"收藏成功" andCompleteBlock:nil] show];
+                [self configTabBar];
+            }
+            else {
+                self.currentTVC.showAnswer = NO;
+                [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
+        }
+    }];
+}
 
 //- (void)onPressedBtn3:(UIButton *)sender {
 //    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
@@ -172,6 +199,36 @@
             [[OTSAlertView alertWithMessage:@"提交失败" andCompleteBlock:nil] show];
         }
     }];
+}
+
+- (void)configTabBar
+{
+    [super configTabBar];
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        if (self.currentTVC.itemVO.favorated) {
+            UITabBarItem *item2 = self.cusTabbar.items[1];
+            [item2 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        else {
+            UITabBarItem *item2 = self.cusTabbar.items[1];
+            [item2 setSelectedImage:[[UIImage imageNamed:@"favorate"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+    }
+    else {
+        if (self.currentTVC.itemVO.favorated) {
+            UITabBarItem *item2 = self.cusTabbar.items[1];
+            [item2 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        else {
+            UITabBarItem *item2 = self.cusTabbar.items[1];
+            [item2 setFinishedSelectedImage:[UIImage imageNamed:@"favorate"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        
+    }
 }
 
 @end

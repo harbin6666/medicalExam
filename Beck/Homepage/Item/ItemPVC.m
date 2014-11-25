@@ -94,37 +94,11 @@
                   }];
 }
 
-- (void)onPressedBtn2:(UIButton *)sender {
+//- (void)onPressedBtn2:(UIButton *)sender {
 //    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
 //    sender.selected = self.currentTVC.showAnswer;
 //    [self.currentTVC.tableView reloadData];
-    NSMutableDictionary *params = @{}.mutableCopy;
-    params[@"token"] = @"add";
-    params[@"titleId"] = self.currentTVC.itemVO.itemId;
-    params[@"typeId"] = @(self.currentTVC.itemVO.type);
-    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-    
-    WEAK_SELF;
-    [self showLoading];
-    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
-        [self hideLoading];
-        if (!anError) {
-            NSNumber *errorcode = aResponseObject[@"errorcode"];
-            if (errorcode.integerValue == 2) {
-                self.currentTVC.showAnswer = YES;
-                [[OTSAlertView alertWithMessage:@"收藏成功" andCompleteBlock:nil] show];
-            }
-            else {
-                self.currentTVC.showAnswer = NO;
-                [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
-            }
-        }
-        else {
-            [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
-        }
-    }];
-}
+//}
 
 - (void)onPressedBtn3:(UIButton *)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
