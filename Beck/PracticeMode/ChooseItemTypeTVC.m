@@ -24,7 +24,8 @@
 {
     [super awakeFromNib];
     
-    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题",@"填空题"];
+//    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题",@"填空题"];
+    self.names = @[@"单选题",@"多选题",@"配伍题"];
 }
 
 - (void)viewDidLoad {
@@ -32,12 +33,17 @@
     
     self.numbers = @[].mutableCopy;
     
-    [[AFSQLManager sharedManager] performQuery:
-     @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
-     select custom_id, count(decision_id) from decision_question union all\
-     select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
-     select custom_id, count(id) from compatibility_info union all\
-     select custom_id, count(space_id) from space_question" withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+    NSString *sql1 = @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
+    select custom_id, count(decision_id) from decision_question union all\
+    select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
+    select custom_id, count(id) from compatibility_info union all\
+    select custom_id, count(space_id) from space_question";
+    
+    NSString *sql2 = @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
+    select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
+    select custom_id, count(id) from compatibility_info";
+    
+    [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
         if (finished) {
             [self.tableView reloadData];
@@ -82,28 +88,28 @@
             sql = @"select choice_id, custom_id from choice_questions where custom_id == 1";
         }
             break;
+//        case 1:
+//        {
+//            sql = @"select decision_id, custom_id from decision_question where custom_id == 2";
+//        }
+//            break;
         case 1:
-        {
-            sql = @"select decision_id, custom_id from decision_question where custom_id == 2";
-        }
-            break;
-        case 2:
         {
             sql = @"select choice_id, custom_id from choice_questions where custom_id == 3";
         }
             break;
             
-        case 3:
+        case 2:
         {
             sql = @"select id, custom_id from compatibility_info where custom_id == 4";
         }
             break;
             
-        case 4:
-        {
-            sql = @"select space_id, custom_id from space_question where custom_id == 5";
-        }
-            break;
+//        case 4:
+//        {
+//            sql = @"select space_id, custom_id from space_question where custom_id == 5";
+//        }
+//            break;
             
         default:
             break;
