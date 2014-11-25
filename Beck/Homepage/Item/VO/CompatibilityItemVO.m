@@ -18,8 +18,13 @@
 
 - (NSString *)getAnswer
 {
-    NSArray *answer = self.userAnswers.allKeys.lastObject;
-    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer[1],self.type];
+    __block NSString *answer = @"";
+    [self.userAnswers.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSArray *itemAnswer = obj;
+        answer = [answer stringByAppendingString:itemAnswer[1]];
+    }];
+    
+    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer,self.type];
 }
 
 - (BOOL)isRight
