@@ -98,6 +98,30 @@
 //    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
 //    sender.selected = self.currentTVC.showAnswer;
 //    [self.currentTVC.tableView reloadData];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"add";
+    params[@"titleId"] = self.currentTVC.itemVO.itemId;
+    params[@"typeId"] = @(self.currentTVC.itemVO.type);
+    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.integerValue == 2) {
+                self.currentTVC.showAnswer = YES;
+            }
+            else {
+                self.currentTVC.showAnswer = NO;
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 - (void)onPressedBtn3:(UIButton *)sender {
