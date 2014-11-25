@@ -117,10 +117,10 @@
     }
 }
 
-- (void)onPressedBtn2:(UIButton *)sender {
-    self.currentTVC.favorated = !self.currentTVC.favorated;
-    sender.selected = self.currentTVC.favorated;
-}
+//- (void)onPressedBtn2:(UIButton *)sender {
+//    self.currentTVC.favorated = !self.currentTVC.favorated;
+//    sender.selected = self.currentTVC.favorated;
+//}
 
 //- (void)onPressedBtn3:(UIButton *)sender {
 //    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];

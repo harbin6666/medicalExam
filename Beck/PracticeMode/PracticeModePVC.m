@@ -57,11 +57,11 @@
     }
 }
 
-- (void)onPressedBtn2:(UIButton *)sender {
-    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
-    sender.selected = self.currentTVC.showAnswer;
-    [self.currentTVC.tableView reloadData];
-}
+//- (void)onPressedBtn2:(UIButton *)sender {
+//    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
+//    sender.selected = self.currentTVC.showAnswer;
+//    [self.currentTVC.tableView reloadData];
+//}
 
 //- (void)onPressedBtn3:(UIButton *)sender {
 //    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
