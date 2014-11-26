@@ -18,12 +18,12 @@
 
 - (NSString *)getAnswer
 {
-    __block NSString *answer = @"";
-    [self.userAnswers.allKeys enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    NSMutableArray *answers = @[].mutableCopy;
+    [self.userAnswers.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSArray *itemAnswer = obj;
-        answer = [answer stringByAppendingString:itemAnswer[1]];
+        [answers addObject:itemAnswer[1]];
     }];
-    
+    NSString *answer = [answers componentsJoinedByString:@"|"];
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer,self.type];
 }
 

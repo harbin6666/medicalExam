@@ -22,11 +22,12 @@
 
 - (NSString *)getAnswer
 {
-    __block NSString *answer = @"";
+    NSMutableArray *answers = @[].mutableCopy;
     [self.userAnswers.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSArray *itemAnswer = obj;
-        answer = [answer stringByAppendingString:itemAnswer[2]];
+        [answers addObject:itemAnswer[2]];
     }];
+    NSString *answer = [answers componentsJoinedByString:@"|"];
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer,self.type];
 }
 
