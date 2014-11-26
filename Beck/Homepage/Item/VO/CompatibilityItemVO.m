@@ -23,6 +23,12 @@
         NSArray *itemAnswer = obj;
         [answers addObject:itemAnswer[1]];
     }];
+    answers = [answers.copy sortedArrayUsingComparator:^(id a, id b) {
+        NSInteger len = MIN([a length], [b length]);
+        NSLocale *local = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_hans"];
+        NSComparisonResult ret = [a compare:b options:NSLiteralSearch range:NSMakeRange(0, len) locale:local];
+        return ret;
+    }].mutableCopy;
     NSString *answer = [answers componentsJoinedByString:@"|"];
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer,self.type];
 }
