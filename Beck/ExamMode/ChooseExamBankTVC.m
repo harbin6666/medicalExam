@@ -107,7 +107,13 @@
         }];
     }];
     
-    [self performSegueWithIdentifier:@"toNext" sender:ids];
+    if (!ids.count) {
+        [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+        [[OTSAlertView alertWithMessage:@"获取试卷失败" andCompleteBlock:nil] show];
+    }
+    else {
+        [self performSegueWithIdentifier:@"toNext" sender:ids];
+    }
     [self hideLoading];
 }
 
