@@ -131,7 +131,7 @@
 
 - (void)getValueWithBeckUrl:(NSString *)url params:(NSDictionary *)params CompleteBlock:(BeckCompletionBlock)block
 {
-    NSString *beckUrl = [@"http://115.28.161.246:7080/beck" stringByAppendingString:url];
+    NSString *beckUrl = [@"http://115.28.161.246:5080/beck" stringByAppendingString:url];
     [self getValueWithUrl:beckUrl params:params CompleteBlock:block];
 }
 
