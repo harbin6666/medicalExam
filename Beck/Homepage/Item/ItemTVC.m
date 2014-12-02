@@ -155,7 +155,10 @@
             STRONG_SELF;
             [self showLoading];
             NSString *note = [alertView textFieldAtIndex:0].text;
-            note = (note ?: @"");
+            if (!note.length) {
+                [[OTSAlertView alertWithTitle:@"提交笔记失败" message:@"" andCompleteBlock:nil] show];
+                return ;
+            }
             [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:@{@"token":@"addUpdate",@"json":@"note"} CompleteBlock:^(id aResponseObject, NSError *anError) {
                 if (!anError) {
                     NSNumber *errorcode = aResponseObject[@"errorcode"];

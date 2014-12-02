@@ -18,7 +18,9 @@
 
 - (NSString *)getAnswer
 {
-    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,self.userAnswers.allKeys.lastObject,self.type];
+    NSString *string = [self.userAnswers.allKeys.lastObject description];
+    string = (string ?: @"");
+    return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,string,self.type];
 }
 
 - (BOOL)isRight

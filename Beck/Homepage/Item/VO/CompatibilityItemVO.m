@@ -13,7 +13,7 @@
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     NSArray *itemAnswer = self.itemAnswers[index];
-    self.userAnswers[answer] = itemAnswer[4];
+    self.userAnswers[itemAnswer] = answer;
 }
 
 - (NSString *)getAnswer
