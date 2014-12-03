@@ -19,16 +19,13 @@
 - (NSString *)getAnswer
 {
     NSMutableArray *answers = @[].mutableCopy;
-    [self.userAnswers.allValues enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSArray *itemAnswer = obj;
-        [answers addObject:itemAnswer[1]];
+    [self.itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSArray *answer = self.userAnswers[obj];
+        if (answer[1]) {
+            [answers addObject:answer[1]];
+        }
     }];
-    answers = [answers.copy sortedArrayUsingComparator:^(id a, id b) {
-        NSInteger len = MIN([a length], [b length]);
-        NSLocale *local = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_hans"];
-        NSComparisonResult ret = [a compare:b options:NSLiteralSearch range:NSMakeRange(0, len) locale:local];
-        return ret;
-    }].mutableCopy;
+    
     NSString *answer = [answers componentsJoinedByString:@"|"];
     return [NSString stringWithFormat:@"%@:%@:%d",self.itemId,answer,self.type];
 }
