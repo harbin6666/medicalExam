@@ -23,14 +23,14 @@
         case ItemTypeChoice:
             itemVO = [ChoiceItemVO new];
             break;
-        case ItemTypeDecision:
-            itemVO = [DecisionItemVO new];
-            break;
         case ItemTypeMultiChoice:
             itemVO = [MultiChoiceItemVO new];
             break;
         case ItemTypeCompatibility:
             itemVO = [CompatibilityItemVO new];
+            break;
+        case ItemTypeDecision:
+            itemVO = [DecisionItemVO new];
             break;
         case ItemTypeSpace:
             itemVO = [SpaceItemVO new];
