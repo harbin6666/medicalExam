@@ -8,15 +8,11 @@
 
 #import "ChooseExamBankTVC.h"
 
-#import "ExamModePVC.h"
+#import "ExamMakeSureVC.h"
 
 @interface ChooseExamBankTVC ()
 
 @property (nonatomic, strong) NSArray *questionBanks;
-
-@property (nonatomic, strong) NSMutableArray *numbers;
-
-@property (nonatomic, strong) NSDictionary *examInfos;
 
 @end
 
@@ -67,63 +63,12 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSDictionary *questionBank = self.questionBanks[indexPath.row];
-    WEAK_SELF;
-    [self showLoading];
-    [self getValueWithBeckUrl:@"/front/examPaperAct.htm" params:@{@"token":@"content",@"examPaperId":questionBank[@"id"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
-        [self hideLoading];
-        if (!anError) {
-            NSNumber *errorcode = aResponseObject[@"errorcode"];
-            if (errorcode.boolValue) {
-                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
-            }
-            else {
-                self.examInfos = [aResponseObject[@"list"] lastObject];
-                [self getItemsAndToNext:aResponseObject[@"list"]];
-            }
-        }
-        else {
-            [[OTSAlertView alertWithMessage:@"获取试题失败" andCompleteBlock:nil] show];
-        }
-    }];
-}
-
-- (void)getItemsAndToNext:(NSArray *)infos
-{
-    [self showLoading];
-    NSArray *listComposition = infos.lastObject[@"listComposition"];
-    NSMutableArray *ids = [NSMutableArray array];
-    [listComposition enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSDictionary *part = obj;
-        NSString *customId = part[@"customId"];
-        NSArray *listContent = part[@"listContent"];
-        [listContent enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSDictionary *item = obj;
-            ItemVO *itemVO = [ItemVO createWithItemId:item[@"itemId"] andType:customId.intValue score:item[@"score"]];
-            [ids addObject:itemVO];
-        }];
-    }];
-    
-    if (!ids.count) {
-        [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
-        [[OTSAlertView alertWithMessage:@"获取试卷失败" andCompleteBlock:nil] show];
-    }
-    else {
-        [self performSegueWithIdentifier:@"toNext" sender:ids];
-    }
-    [self hideLoading];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ExamModePVC *vc = segue.destinationViewController;
-    vc.examInfos = self.examInfos;
-    vc.items = sender;
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    ExamMakeSureVC *vc = segue.destinationViewController;
     vc.fromExam = self.fromExam;
-    self.examInfos = nil;
+    vc.questionBank = self.questionBanks[path.row];
 }
 
 @end

@@ -81,6 +81,7 @@
 		3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */; };
 		3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */; };
 		3DA6453C1A091FED00AC34FB /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6453B1A091FED00AC34FB /* RennSDK.bundle */; };
+		3DABFDA51A32BD6D000B0661 /* ExamMakeSureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DABFDA41A32BD6D000B0661 /* ExamMakeSureVC.m */; };
 		3DAE70831A1F83F30001C3E2 /* NSString+clear.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE70821A1F83F30001C3E2 /* NSString+clear.m */; };
 		3DAE70861A1F88CD0001C3E2 /* ItemPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE70851A1F88CD0001C3E2 /* ItemPVC.m */; };
 		3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB04E2C1A1B7C1000B6964B /* ChooseExamBankTVC.m */; };
@@ -260,6 +261,8 @@
 		3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticCVC.h; sourceTree = "<group>"; };
 		3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticCVC.m; sourceTree = "<group>"; };
 		3DA6453B1A091FED00AC34FB /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		3DABFDA31A32BD6D000B0661 /* ExamMakeSureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamMakeSureVC.h; sourceTree = "<group>"; };
+		3DABFDA41A32BD6D000B0661 /* ExamMakeSureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamMakeSureVC.m; sourceTree = "<group>"; };
 		3DAE70811A1F83F30001C3E2 /* NSString+clear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+clear.h"; sourceTree = "<group>"; };
 		3DAE70821A1F83F30001C3E2 /* NSString+clear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+clear.m"; sourceTree = "<group>"; };
 		3DAE70841A1F88CD0001C3E2 /* ItemPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemPVC.h; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 			children = (
 				3DB04E2B1A1B7C1000B6964B /* ChooseExamBankTVC.h */,
 				3DB04E2C1A1B7C1000B6964B /* ChooseExamBankTVC.m */,
+				3DABFDA31A32BD6D000B0661 /* ExamMakeSureVC.h */,
+				3DABFDA41A32BD6D000B0661 /* ExamMakeSureVC.m */,
 				3D2521BF19F52A6F00FC72A7 /* ExamModePVC.h */,
 				3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */,
 				3D2521C519F52B3B00FC72A7 /* ExamHomeTVC.h */,
@@ -819,6 +824,7 @@
 				TargetAttributes = {
 					3DC1C57019E645FD004F23E1 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = H563K59824;
 					};
 					3DC1C58C19E645FD004F23E1 = {
 						CreatedOnToolsVersion = 6.1;
@@ -938,6 +944,7 @@
 				3D1782631A02630100F6904C /* WrongItemEntity.m in Sources */,
 				3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */,
 				3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */,
+				3DABFDA51A32BD6D000B0661 /* ExamMakeSureVC.m in Sources */,
 				3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */,
 				3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
@@ -1092,6 +1099,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1109,6 +1118,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
@@ -1119,6 +1129,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Beck/ThirdParty/OpenQQ",
@@ -1134,6 +1146,7 @@
 					"$(PROJECT_DIR)/Beck/ThirdParty/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
