@@ -70,10 +70,63 @@
 //}
 
 - (void)onPressedBtn4:(UIButton *)sender {
-    self.currentTVC.favorated = !self.currentTVC.favorated;
-    sender.selected = self.currentTVC.favorated;
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"add";
+    params[@"titleId"] = self.currentTVC.itemVO.itemId;
+    params[@"typeId"] = @(self.currentTVC.itemVO.type);
+    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.integerValue == 2) {
+                self.currentTVC.showAnswer = YES;
+                [[OTSAlertView alertWithMessage:@"收藏成功" andCompleteBlock:nil] show];
+                [self configTabBar];
+            }
+            else {
+                self.currentTVC.showAnswer = NO;
+                [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
-
+- (void)configTabBar
+{
+    [super configTabBar];
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        if (self.currentTVC.itemVO.favorated) {
+            UITabBarItem *item4 = self.cusTabbar.items[4];
+            [item4 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item4 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        else {
+            UITabBarItem *item4 = self.cusTabbar.items[4];
+            [item4 setSelectedImage:[[UIImage imageNamed:@"favorate"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item4 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+    }
+    else {
+        if (self.currentTVC.itemVO.favorated) {
+            UITabBarItem *item4 = self.cusTabbar.items[4];
+            [item4 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item4 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        else {
+            UITabBarItem *item4 = self.cusTabbar.items[4];
+            [item4 setFinishedSelectedImage:[UIImage imageNamed:@"favorate"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+            [item4 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        
+    }
+}
 
 @end
