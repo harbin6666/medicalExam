@@ -80,7 +80,7 @@
         return;
     }
     
-    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] - 1]];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -129,7 +129,7 @@
         return;
     }
     
-    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] + 1]];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -200,7 +200,7 @@
     }
     
     if (self.items.count) {
-        self.title = [NSString stringWithFormat:@"%d/%d",(int)[self.items indexOfObject:self.currentTVC.itemVO] + 1,(int)self.items.count];
+        self.title = [NSString stringWithFormat:@"%d/%d",(int)[self.items indexOfObjectIdenticalTo:self.currentTVC.itemVO] + 1,(int)self.items.count];
     }
     else {
         self.title = @"0/0";
@@ -218,7 +218,7 @@
         return nil;
     }
     
-    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] - 1]];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
     return vc;
 }
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
@@ -230,7 +230,7 @@
         return nil;
     }
     
-    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObject:tempVC.itemVO] + 1]];
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
     return vc;
 }
 
