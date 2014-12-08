@@ -33,15 +33,16 @@
     
     self.numbers = @[].mutableCopy;
     
-    NSString *sql1 = @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
-    select custom_id, count(decision_id) from decision_question union all\
-    select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
-    select custom_id, count(id) from compatibility_info union all\
-    select custom_id, count(space_id) from space_question";
+//    NSString *sql1 = @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
+//    select custom_id, count(decision_id) from decision_question union all\
+//    select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
+//    select custom_id, count(id) from compatibility_info union all\
+//    select custom_id, count(space_id) from space_question";
     
-    NSString *sql2 = @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
-    select custom_id, count(choice_id) from choice_questions where custom_id == \"3\" union all\
-    select custom_id, count(id) from compatibility_info";
+    NSString *sql2 =
+    @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\
+    select custom_id, count(id) from compatibility_info union all\
+    select custom_id, count(choice_id) from choice_questions where custom_id == \"3\"";
     
     [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
         NSLog(@"%@,%@,%d",row,error,finished);
@@ -93,15 +94,15 @@
 //            sql = @"select decision_id, custom_id from decision_question where custom_id == 2";
 //        }
 //            break;
-        case 1:
+        case 2:
         {
             sql = @"select choice_id, custom_id from choice_questions where custom_id == 3";
         }
             break;
             
-        case 2:
+        case 1:
         {
-            sql = @"select id, custom_id from compatibility_info where custom_id == 4";
+            sql = @"select id, custom_id from compatibility_info where custom_id == 2";
         }
             break;
             

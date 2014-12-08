@@ -11,8 +11,8 @@
 typedef enum ItemType
 {
     ItemTypeChoice = 1,
-    ItemTypeMultiChoice,
     ItemTypeCompatibility,
+    ItemTypeMultiChoice,
     ItemTypeDecision,
     ItemTypeSpace
 } ItemType;
