@@ -23,6 +23,7 @@ typedef enum ItemType
 @property (nonatomic, strong) NSArray *itemAnswers;
 
 @property (nonatomic, strong) NSString *itemId;
+@property (nonatomic, strong) NSString *outlineId;
 @property (nonatomic, strong) NSNumber *score;
 @property (nonatomic) ItemType type;
 

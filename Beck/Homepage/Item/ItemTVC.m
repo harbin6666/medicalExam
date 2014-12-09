@@ -153,13 +153,22 @@
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"添加笔记" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
             STRONG_SELF;
-            [self showLoading];
             NSString *note = [alertView textFieldAtIndex:0].text;
             if (!note.length) {
-                [[OTSAlertView alertWithTitle:@"提交笔记失败" message:@"" andCompleteBlock:nil] show];
                 return ;
             }
-            [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:@{@"token":@"addUpdate",@"json":@"note"} CompleteBlock:^(id aResponseObject, NSError *anError) {
+            
+            NSMutableDictionary *params = @{}.mutableCopy;
+            params[@"token"] = @"addUpdate";
+            params[@"titleId"] = self.itemVO.itemId;
+            params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+            params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+//            params[@"outlineId"] = self.itemVO.outlineId;
+            params[@"typeId"] = @(self.itemVO.type);
+            params[@"Note"] = note;
+            
+            [self showLoading];
+            [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
                 if (!anError) {
                     NSNumber *errorcode = aResponseObject[@"errorcode"];
                     if (errorcode.boolValue) {
@@ -170,7 +179,7 @@
                     }
                 }
                 else {
-                    [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+                    [[OTSAlertView alertWithMessage:@"提交笔记失败" andCompleteBlock:nil] show];
                 }
                 [self hideLoading];
             }];

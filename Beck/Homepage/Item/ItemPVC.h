@@ -27,4 +27,6 @@
 
 - (void)configTabBar;
 
+- (void)doFavorate;
+
 @end
