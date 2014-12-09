@@ -170,16 +170,24 @@
 {
     [self showLoading];
     NSMutableDictionary *params = @{}.mutableCopy;
-    params[@"paperId"] = self.examInfos[@"id"];
-    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-    params[@"beginTime"] = self.beginTime.description;
-    params[@"endTime"] = [NSDate date].description;
+    params[@"token"] = @"add";
+    NSMutableDictionary *json = @{}.mutableCopy;
+    json[@"paperId"] = self.examInfos[@"id"];
+    json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    json[@"beginTime"] = self.beginTime.description;
+    json[@"endTime"] = [NSDate date].description;
     
     ExamVO *vo = [ExamVO createWithExamInfos:self.examInfos withItemVOs:self.items];
-    params[@"Score"] = vo.getScore.stringValue;
-    params[@"userAnswer"] = vo.getAnswer;
-    params[@"rightAmount"] = vo.getRightAmount.stringValue;
-    params[@"wrongAmount"] = vo.getWrongAmount.stringValue;
+    json[@"Score"] = vo.getScore.stringValue;
+    json[@"userAnswer"] = vo.getAnswer;
+    json[@"rightAmount"] = vo.getRightAmount.stringValue;
+    json[@"wrongAmount"] = vo.getWrongAmount.stringValue;
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    params[@"json"] = jsonString;
     
     WEAK_SELF;
     [self showLoading];
