@@ -51,7 +51,7 @@
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"查询统计失败" andCompleteBlock:nil] show];
         }
     }];
 }

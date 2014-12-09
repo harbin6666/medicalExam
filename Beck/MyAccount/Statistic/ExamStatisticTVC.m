@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSArray *exams;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentView;
+
 @end
 
 @implementation ExamStatisticTVC
@@ -21,10 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
+    NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"list";
-    params[@"type"] = @"2";
-    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    params[@"type"] = @(self.segmentView.selectedSegmentIndex + 1).stringValue;
     
     [self showLoading];
     WEAK_SELF;
@@ -42,7 +44,7 @@
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"登录查询考试统计失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"查询统计失败" andCompleteBlock:nil] show];
         }
     }];
 }

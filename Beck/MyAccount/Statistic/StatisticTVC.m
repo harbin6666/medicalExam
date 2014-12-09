@@ -16,20 +16,10 @@
 
 @implementation StatisticTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"练习统计", @"考试统计"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.names = @[@"练习统计", @"考试统计"];
 }
 
 #pragma mark - Table view data source
