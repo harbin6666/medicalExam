@@ -297,4 +297,9 @@
     }];
 }
 
+- (void)setTabBarItemImage:(NSString *)image index:(NSInteger)index
+{
+    
+}
+
 @end
