@@ -62,7 +62,7 @@
 + (instancetype)createWithAnswer:(NSString *)answer
 {
     NSArray *infos = [answer componentsSeparatedByString:@":"];
-    ItemVO *vo = [self createWithItemId:infos[2] andType:[infos[0] intValue]];
+    ItemVO *vo = [self createWithItemId:infos[0] andType:[infos[2] intValue]];
     vo.answerString = infos[1];
     vo.showAnswer = YES;
     return vo;

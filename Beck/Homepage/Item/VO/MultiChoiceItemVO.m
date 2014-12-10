@@ -66,11 +66,10 @@
     
     if (self.answerString) {
         NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
-        NSString *answer = answers.firstObject;
         [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSArray *itemAnswer = obj;
             NSString *itemNumber = itemAnswer[2];
-            if ([itemNumber isEqualToString:answer]) {
+            if ([answers containsObject:itemNumber]) {
                 [self setAnswer:nil andIndex:idx];
             }
         }];

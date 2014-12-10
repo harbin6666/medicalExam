@@ -56,16 +56,16 @@
     _itemAnswers = itemAnswers;
     
     if (self.answerString) {
-//        NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
-//        NSString *answer = answers.firstObject;
-//        [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//            NSArray *itemAnswer = obj;
-//            NSString *itemNumber = itemAnswer[3];
-//            if ([itemNumber isEqualToString:answer]) {
-//                [self setAnswer:nil andIndex:idx];
-//                *stop = YES;
-//            }
-//        }];
+        NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
+        NSString *answer = answers.firstObject;
+        [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSArray *itemAnswer = obj;
+            NSString *itemNumber = itemAnswer[3];
+            if ([itemNumber isEqualToString:answer]) {
+                [self setAnswer:nil andIndex:idx];
+                *stop = YES;
+            }
+        }];
     }
 }
 
