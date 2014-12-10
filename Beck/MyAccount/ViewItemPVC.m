@@ -30,7 +30,9 @@
         [item3 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
         
         UITabBarItem *item4 = self.cusTabbar.items[3];
-        [item4 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item4 setSelectedImage:[[UIImage imageNamed:@"favorate"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item4 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+        [item4 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
         
         UITabBarItem *item5 = self.cusTabbar.items[4];
         [item5 setSelectedImage:[[UIImage imageNamed:@"next_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -46,7 +48,7 @@
         [item3 setFinishedSelectedImage:[UIImage imageNamed:@"setting"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting"]];
         
         UITabBarItem *item4 = self.cusTabbar.items[3];
-        [item4 setFinishedSelectedImage:[UIImage imageNamed:@"favorate_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+        [item4 setFinishedSelectedImage:[UIImage imageNamed:@"favorate"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
         
         UITabBarItem *item5 = self.cusTabbar.items[4];
         [item5 setFinishedSelectedImage:[UIImage imageNamed:@"next_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"next"]];
@@ -66,8 +68,37 @@
 //}
 
 - (void)onPressedBtn4:(UIButton *)sender {
-    self.currentTVC.favorated = !self.currentTVC.favorated;
-    sender.selected = self.currentTVC.favorated;
+    [self doFavorate];
+}
+
+- (void)configTabBar
+{
+    [super configTabBar];
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        if (self.currentTVC.itemVO.favorated) {
+            UITabBarItem *item2 = self.cusTabbar.items[4];
+            [item2 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        else {
+            UITabBarItem *item2 = self.cusTabbar.items[4];
+            [item2 setSelectedImage:[[UIImage imageNamed:@"favorate"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+    }
+    else {
+        if (self.currentTVC.itemVO.favorated) {
+            UITabBarItem *item2 = self.cusTabbar.items[4];
+            [item2 setSelectedImage:[[UIImage imageNamed:@"favorate_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        else {
+            UITabBarItem *item2 = self.cusTabbar.items[4];
+            [item2 setFinishedSelectedImage:[UIImage imageNamed:@"favorate"] withFinishedUnselectedImage:[UIImage imageNamed:@"favorate"]];
+            [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+        }
+        
+    }
 }
 
 @end
