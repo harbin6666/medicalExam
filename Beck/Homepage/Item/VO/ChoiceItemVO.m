@@ -9,6 +9,7 @@
 #import "ChoiceItemVO.h"
 
 @implementation ChoiceItemVO
+@synthesize itemAnswers = _itemAnswers;
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
@@ -28,6 +29,24 @@
 {
     NSNumber *isAnswer = self.userAnswers.allValues.lastObject[5];
     return [isAnswer boolValue];
+}
+
+- (void)setItemAnswers:(NSArray *)itemAnswers
+{
+    _itemAnswers = itemAnswers;
+    
+    if (self.answerString) {
+        NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
+        NSString *answer = answers.firstObject;
+        [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSArray *itemAnswer = obj;
+            NSString *itemNumber = itemAnswer[2];
+            if ([itemNumber isEqualToString:answer]) {
+                [self setAnswer:nil andIndex:idx];
+                *stop = YES;
+            }
+        }];
+    }
 }
 
 @end
