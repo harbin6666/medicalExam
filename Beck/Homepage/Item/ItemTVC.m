@@ -165,7 +165,7 @@
             json[@"titleId"] = self.itemVO.itemId;
             json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
             json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
-//            params[@"outlineId"] = self.itemVO.outlineId;
+//            json[@"outlineId"] = self.itemVO.outlineId;
             json[@"typeId"] = @(self.itemVO.type);
             json[@"Note"] = note;
             

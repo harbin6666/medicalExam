@@ -260,9 +260,19 @@
 {
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"add";
-    params[@"titleId"] = self.currentTVC.itemVO.itemId;
-    params[@"typeId"] = @(self.currentTVC.itemVO.type);
-    params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    
+    NSMutableDictionary *json = @{}.mutableCopy;
+    json[@"titleId"] = self.currentTVC.itemVO.itemId;
+    json[@"typeId"] = @(self.currentTVC.itemVO.type);
+    json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+//    json[@"outlineId"] = self.itemVO.outlineId;
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    params[@"json"] = jsonString;
     
     WEAK_SELF;
     [self showLoading];
