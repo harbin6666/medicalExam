@@ -165,9 +165,10 @@
             json[@"titleId"] = self.itemVO.itemId;
             json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
             json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
-//            json[@"outlineId"] = self.itemVO.outlineId;
+            json[@"outlineId"] = self.itemVO.outlineId;
             json[@"typeId"] = @(self.itemVO.type);
             json[@"Note"] = note;
+            json[@"type"] = @0;
             
             NSError *error;
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];

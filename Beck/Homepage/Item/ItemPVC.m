@@ -266,7 +266,7 @@
     json[@"typeId"] = @(self.currentTVC.itemVO.type);
     json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
     json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
-//    json[@"outlineId"] = self.itemVO.outlineId;
+    json[@"outlineId"] = self.currentTVC.itemVO.outlineId;
     
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];

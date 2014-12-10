@@ -73,6 +73,7 @@
     [infos[@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSNumber *titleId = obj[@"titleId"];
         ItemVO *itemVO = [ItemVO createWithItemId:titleId.stringValue andType:customId.intValue];
+        itemVO.outlineId = self.examOutlineId;
         [ids addObject:itemVO];
     }];
     
