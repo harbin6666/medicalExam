@@ -43,6 +43,8 @@ typedef enum ItemType
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index;
 
+- (id)getAnswerAtIndex:(NSInteger)index;
+
 - (BOOL)isRight;
 
 - (BOOL)isSelectedAtIndex:(NSInteger)index;

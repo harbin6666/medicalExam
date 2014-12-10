@@ -17,6 +17,12 @@
     self.userAnswers[itemAnswer] = answer;
 }
 
+- (id)getAnswerAtIndex:(NSInteger)index
+{
+    NSArray *itemAnswer = self.itemAnswers[index];
+    return self.userAnswers[itemAnswer];
+}
+
 - (NSString *)getAnswer
 {
     NSMutableArray *answers = @[].mutableCopy;
@@ -57,14 +63,14 @@
     
     if (self.answerString) {
         NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
-        NSString *answer = answers.firstObject;
-        [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSArray *itemAnswer = obj;
-            NSString *itemNumber = itemAnswer[3];
-            if ([itemNumber isEqualToString:answer]) {
-                [self setAnswer:nil andIndex:idx];
-                *stop = YES;
-            }
+        [self.itemInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSArray *itemInfo = obj;
+            [answers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                NSString *answer = obj;
+                if ([itemInfo[1] isEqualToString:answer]) {
+                    [self setAnswer:itemInfo andIndex:idx];
+                }
+            }];
         }];
     }
 }

@@ -73,6 +73,11 @@
     
 }
 
+- (id)getAnswerAtIndex:(NSInteger)index
+{
+    return nil;
+}
+
 - (BOOL)isRight
 {
     return NO;

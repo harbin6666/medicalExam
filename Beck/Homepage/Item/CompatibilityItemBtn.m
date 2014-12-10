@@ -62,6 +62,15 @@
     [self setTitle:answer[1] forState:UIControlStateNormal];
 }
 
+- (void)setItemVO:(ItemVO *)itemVO
+{
+    _itemVO = itemVO;
+    NSArray *answer = [_itemVO getAnswerAtIndex:self.answerIndex];
+    if (answer) {
+        [self setTitle:answer[1] forState:UIControlStateNormal];
+    }
+}
+
 // returns the number of 'columns' to display.
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
