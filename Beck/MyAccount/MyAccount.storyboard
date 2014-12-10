@@ -577,7 +577,6 @@
                                     <outlet property="highLbl" destination="ztj-hg-LKe" id="Yan-tK-4Q5"/>
                                     <outlet property="lowLbl" destination="Rs4-VX-snQ" id="DVJ-sJ-w9d"/>
                                     <outlet property="titleLbl" destination="Ua0-Xw-ePK" id="srH-dO-63j"/>
-                                    <segue destination="tE6-vy-aDm" kind="push" id="o4e-cF-nHM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -603,6 +602,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="segmentedControl" destination="lNA-SS-He1" id="eFP-b5-0Q1"/>
+                        <segue destination="tE6-vy-aDm" kind="push" identifier="toNext" id="MqV-se-VtE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCq-o6-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -818,6 +818,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="o4e-cF-nHM"/>
+        <segue reference="MqV-se-VtE"/>
     </inferredMetricsTieBreakers>
 </document>

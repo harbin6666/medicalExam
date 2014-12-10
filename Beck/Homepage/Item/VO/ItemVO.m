@@ -59,6 +59,20 @@
     return [self createWithItemId:itemId andType:type score:@0];
 }
 
++ (instancetype)createWithAnswer:(NSString *)answer
+{
+    NSArray *infos = [answer componentsSeparatedByString:@":"];
+    ItemVO *vo = [self createWithItemId:infos[0] andType:[infos[2] intValue]];
+    [vo setAnswer:infos[1]];
+    vo.showAnswer = YES;
+    return vo;
+}
+
+- (void)setAnswer:(NSString *)answer
+{
+    
+}
+
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     

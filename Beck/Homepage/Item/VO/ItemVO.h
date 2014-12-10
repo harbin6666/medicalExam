@@ -19,6 +19,10 @@ typedef enum ItemType
 
 @interface ItemVO : NSObject
 
+@property (nonatomic) BOOL showAnswer;
+@property (nonatomic) BOOL showNote;
+@property (nonatomic) BOOL favorated;
+
 @property (nonatomic, strong) NSArray *itemInfo;
 @property (nonatomic, strong) NSArray *itemAnswers;
 
@@ -27,14 +31,15 @@ typedef enum ItemType
 @property (nonatomic, strong) NSNumber *score;
 @property (nonatomic) ItemType type;
 
-@property (nonatomic) BOOL showNote;
-@property (nonatomic) BOOL favorated;
-
 @property (nonatomic, strong) NSMutableDictionary *userAnswers;
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type score:(NSNumber *)score;
+
++ (instancetype)createWithAnswer:(NSString *)answer;
+
+- (void)setAnswer:(NSString *)answer;
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index;
 

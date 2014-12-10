@@ -9,6 +9,8 @@
 #import "ExamStatisticTVC.h"
 
 #import "ExamStatisticCell.h"
+#import "ItemVO.h"
+#import "ViewItemPVC.h"
 
 @interface ExamStatisticTVC ()
 
@@ -96,6 +98,56 @@
     cell.avgLabel.text = [NSString stringWithFormat:@"平均分：%@分",exam[@"average"]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *exam = self.exams[indexPath.row];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"paper";
+    params[@"paperId"] = exam[@"id"];
+    
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                [self createItems:aResponseObject[@"list"]];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"查询考试详情失败" andCompleteBlock:nil] show];
+        }
+    }];
+}
+
+- (void)createItems:(NSString *)answers
+{
+    NSMutableArray *items = @[].mutableCopy;
+    NSArray *answerStrings = [answers componentsSeparatedByString:@","];
+    [answerStrings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *answer = obj;
+        ItemVO *vo = [ItemVO createWithAnswer:answer];
+        [items addObject:vo];
+    }];
+    
+    if (!items.count) {
+        return ;
+    }
+    
+    [self performSegueWithIdentifier:@"toNext" sender:items];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ViewItemPVC *vc = segue.destinationViewController;
+    vc.items = sender;
 }
 
 @end
