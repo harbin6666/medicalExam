@@ -31,6 +31,9 @@
         if (answer[1]) {
             [answers addObject:answer[1]];
         }
+        else {
+            [answers addObject:@""];
+        }
     }];
     
     NSString *answer = [answers componentsJoinedByString:@"|"];
