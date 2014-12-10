@@ -114,4 +114,22 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *item = self.items[indexPath.row];
+    
+    NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
+    if (self.segmentedControl.selectedSegmentIndex == 0) {
+        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+    else if (self.segmentedControl.selectedSegmentIndex == 1) {
+//        params[@"outlineId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    }
+
+    
+    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        
+    }];
+}
+
 @end

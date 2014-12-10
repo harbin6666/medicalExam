@@ -650,9 +650,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tE6-vy-aDm" kind="push" id="au8-qX-qFs"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -679,6 +676,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="tY9-no-pDT" id="Gjz-9H-fdS"/>
                         <outlet property="tableView" destination="lcZ-vi-Au0" id="8sr-hn-luT"/>
+                        <segue destination="tE6-vy-aDm" kind="push" identifier="toNext" id="8RS-ai-Fep"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcq-JA-4LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -818,6 +816,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MqV-se-VtE"/>
+        <segue reference="8RS-ai-Fep"/>
     </inferredMetricsTieBreakers>
 </document>
