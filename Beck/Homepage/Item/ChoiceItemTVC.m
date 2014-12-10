@@ -106,11 +106,6 @@
     return cell;
 }
 
-- (NSString *)answerParse
-{
-    return self.itemVO.itemInfo[11];
-}
-
 - (NSString *)noteParse
 {
     return @"我是笔记啊";

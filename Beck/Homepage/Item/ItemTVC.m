@@ -210,7 +210,7 @@
 
 - (NSString *)answerParse
 {
-    return @"我是答案";
+    return [self.itemVO answerParse] ?: @"无";
 }
 
 - (NSString *)noteParse

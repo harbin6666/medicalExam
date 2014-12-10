@@ -93,6 +93,11 @@
     return @"";
 }
 
+- (NSString *)answerParse
+{
+    return @"";
+}
+
 - (BOOL)isSelectedAtIndex:(NSInteger)index
 {
     return [self.userAnswers.allKeys containsObject:@(index)];

@@ -49,4 +49,9 @@
     }
 }
 
+- (NSString *)answerParse
+{
+    return self.itemInfo[11] ?: @"无";
+}
+
 @end

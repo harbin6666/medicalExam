@@ -78,4 +78,15 @@
     }
 }
 
+- (NSString *)answerParse
+{
+    NSMutableArray *parses = @[].mutableCopy;
+    [self.itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSArray *itemAnswer = obj;
+        [parses addObject:itemAnswer[3]];
+    }];
+    
+    return [parses componentsJoinedByString:@"\n"];
+}
+
 @end
