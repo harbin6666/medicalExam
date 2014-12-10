@@ -160,12 +160,20 @@
             
             NSMutableDictionary *params = @{}.mutableCopy;
             params[@"token"] = @"addUpdate";
-            params[@"titleId"] = self.itemVO.itemId;
-            params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-            params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+            
+            NSMutableDictionary *json = @{}.mutableCopy;
+            json[@"titleId"] = self.itemVO.itemId;
+            json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+            json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
 //            params[@"outlineId"] = self.itemVO.outlineId;
-            params[@"typeId"] = @(self.itemVO.type);
-            params[@"Note"] = note;
+            json[@"typeId"] = @(self.itemVO.type);
+            json[@"Note"] = note;
+            
+            NSError *error;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            
+            params[@"json"] = jsonString;
             
             [self showLoading];
             [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
