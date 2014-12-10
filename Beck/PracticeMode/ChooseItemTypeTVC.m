@@ -25,7 +25,7 @@
     [super awakeFromNib];
     
 //    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题",@"填空题"];
-    self.names = @[@"单选题",@"多选题",@"配伍题"];
+    self.names = @[@"单选题",@"配伍题",@"多选题"];
 }
 
 - (void)viewDidLoad {
