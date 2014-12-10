@@ -11,8 +11,9 @@
 @interface ExamStatisticCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLbl;
-@property (weak, nonatomic) IBOutlet UILabel *dateLbl;
-@property (weak, nonatomic) IBOutlet UILabel *itemCountLbl;
-@property (weak, nonatomic) IBOutlet UILabel *infoLbl;
+@property (weak, nonatomic) IBOutlet UILabel *countLbl;
+@property (weak, nonatomic) IBOutlet UILabel *highLbl;
+@property (weak, nonatomic) IBOutlet UILabel *lowLbl;
+@property (weak, nonatomic) IBOutlet UILabel *avgLabel;
 
 @end

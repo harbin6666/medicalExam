@@ -486,7 +486,7 @@
         <scene sceneID="iqR-RF-TiS">
             <objects>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="4Dq-pk-871" userLabel="统计分析" customClass="ExamStatisticTVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" sectionHeaderHeight="22" sectionFooterHeight="22" id="o7p-RH-vbd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="22" sectionFooterHeight="22" id="o7p-RH-vbd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -497,14 +497,17 @@
                                 <segment title="模拟考试统计"/>
                                 <segment title="真题考试统计"/>
                             </segments>
+                            <connections>
+                                <action selector="changeValue:" destination="4Dq-pk-871" eventType="valueChanged" id="7oS-X9-4Dg"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="128" id="UJd-lb-dF3" customClass="ExamStatisticCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="UJd-lb-dF3" customClass="ExamStatisticCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJd-lb-dF3" id="Twk-54-oLk">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-Xw-ePK">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-Xw-ePK">
                                             <rect key="frame" x="18" y="8" width="294" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="h0d-DI-yO8"/>
@@ -513,7 +516,7 @@
                                             <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lif-Rf-N9z">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="888" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lif-Rf-N9z">
                                             <rect key="frame" x="18" y="37" width="294" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="tkW-JR-1Rt"/>
@@ -522,7 +525,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-hg-LKe">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="777" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-hg-LKe">
                                             <rect key="frame" x="18" y="66" width="294" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="IsS-QZ-APt"/>
@@ -531,7 +534,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs4-VX-snQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="666" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs4-VX-snQ">
                                             <rect key="frame" x="18" y="95" width="294" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="eow-YI-ciW"/>
@@ -540,8 +543,18 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyA-oG-521">
+                                            <rect key="frame" x="18" y="124" width="284" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Np3-wv-AGl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="NyA-oG-521" firstAttribute="leading" secondItem="Twk-54-oLk" secondAttribute="leadingMargin" constant="10" id="2RA-ww-3El"/>
                                         <constraint firstItem="Rs4-VX-snQ" firstAttribute="leading" secondItem="Twk-54-oLk" secondAttribute="leadingMargin" constant="10" id="39F-Qv-sue"/>
                                         <constraint firstItem="Lif-Rf-N9z" firstAttribute="leading" secondItem="Twk-54-oLk" secondAttribute="leadingMargin" constant="10" id="4uj-Ln-B96"/>
                                         <constraint firstItem="ztj-hg-LKe" firstAttribute="top" secondItem="Lif-Rf-N9z" secondAttribute="bottom" constant="8" symbolic="YES" id="7eY-ID-Una"/>
@@ -549,18 +562,21 @@
                                         <constraint firstItem="Ua0-Xw-ePK" firstAttribute="top" secondItem="Twk-54-oLk" secondAttribute="topMargin" id="CkG-E6-kdJ"/>
                                         <constraint firstItem="Ua0-Xw-ePK" firstAttribute="leading" secondItem="Twk-54-oLk" secondAttribute="leadingMargin" constant="10" id="bEo-79-VJI"/>
                                         <constraint firstItem="ztj-hg-LKe" firstAttribute="leading" secondItem="Twk-54-oLk" secondAttribute="leadingMargin" constant="10" id="bH8-Xm-mm6"/>
+                                        <constraint firstItem="NyA-oG-521" firstAttribute="top" secondItem="Rs4-VX-snQ" secondAttribute="bottom" constant="8" id="er8-T1-DL5"/>
                                         <constraint firstItem="Rs4-VX-snQ" firstAttribute="top" secondItem="ztj-hg-LKe" secondAttribute="bottom" constant="8" symbolic="YES" id="fNa-70-lBa"/>
                                         <constraint firstItem="Rs4-VX-snQ" firstAttribute="trailing" secondItem="Twk-54-oLk" secondAttribute="trailingMargin" id="hcg-YR-kgP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NyA-oG-521" secondAttribute="trailing" constant="10" id="iUV-eE-O3w"/>
                                         <constraint firstItem="Lif-Rf-N9z" firstAttribute="trailing" secondItem="Twk-54-oLk" secondAttribute="trailingMargin" id="mCZ-BI-wDl"/>
                                         <constraint firstItem="ztj-hg-LKe" firstAttribute="trailing" secondItem="Twk-54-oLk" secondAttribute="trailingMargin" id="pGu-Bt-gYh"/>
                                         <constraint firstItem="Ua0-Xw-ePK" firstAttribute="trailing" secondItem="Twk-54-oLk" secondAttribute="trailingMargin" id="yLn-63-bvI"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLbl" destination="Lif-Rf-N9z" id="Ffr-62-9tK"/>
-                                    <outlet property="infoLbl" destination="Rs4-VX-snQ" id="o4M-gx-nYs"/>
-                                    <outlet property="itemCountLbl" destination="ztj-hg-LKe" id="49l-Td-7Za"/>
-                                    <outlet property="titleLbl" destination="Ua0-Xw-ePK" id="K92-Zb-2ll"/>
+                                    <outlet property="avgLabel" destination="NyA-oG-521" id="Q5D-am-ZOB"/>
+                                    <outlet property="countLbl" destination="Lif-Rf-N9z" id="Dng-Kh-h95"/>
+                                    <outlet property="highLbl" destination="ztj-hg-LKe" id="Yan-tK-4Q5"/>
+                                    <outlet property="lowLbl" destination="Rs4-VX-snQ" id="DVJ-sJ-w9d"/>
+                                    <outlet property="titleLbl" destination="Ua0-Xw-ePK" id="srH-dO-63j"/>
                                     <segue destination="tE6-vy-aDm" kind="push" id="o4e-cF-nHM"/>
                                 </connections>
                             </tableViewCell>
@@ -586,7 +602,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="segmentView" destination="lNA-SS-He1" id="PSz-e7-XZO"/>
+                        <outlet property="segmentedControl" destination="lNA-SS-He1" id="eFP-b5-0Q1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCq-o6-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

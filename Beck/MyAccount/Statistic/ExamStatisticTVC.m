@@ -14,19 +14,42 @@
 
 @property (nonatomic, strong) NSArray *exams;
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
 @implementation ExamStatisticTVC
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.segmentedControl = (UISegmentedControl *)self.tableView.tableHeaderView;
+    CGRect rc = self.segmentedControl.bounds;
+    rc.size.height = 44;
+    self.segmentedControl.bounds = rc;
+    
+    [self.segmentedControl setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    [self.segmentedControl setDividerImage:[UIImage imageWithColor:[UIColor clearColor]] forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    [self.segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]} forState:UIControlStateNormal];
+    [self.segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor brownColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0],NSUnderlineStyleAttributeName:@4.f} forState:UIControlStateSelected];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self changeValue:self.segmentedControl];
+}
+
+- (IBAction)changeValue:(UISegmentedControl *)sender {
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"list";
     params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-    params[@"type"] = @(self.segmentView.selectedSegmentIndex + 1).stringValue;
+    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+    params[@"type"] = @(self.segmentedControl.selectedSegmentIndex + 1).stringValue;
+    
+    self.exams = nil;
     
     [self showLoading];
     WEAK_SELF;
@@ -40,12 +63,13 @@
             }
             else {
                 self.exams = aResponseObject[@"list"];
-                [self.tableView reloadData];
             }
         }
         else {
             [[OTSAlertView alertWithMessage:@"查询统计失败" andCompleteBlock:nil] show];
         }
+        
+        [self.tableView reloadData];
     }];
 }
 
@@ -65,10 +89,11 @@
     
     NSDictionary *exam = self.exams[indexPath.row];
     
-    cell.titleLbl.text = @"职业中药师考试模拟测试联系题库";
-    cell.dateLbl.text = [NSDate date].description;
-    cell.itemCountLbl.text = @"100道";
-    cell.infoLbl.text = @"对：80 错：20 正确率：80%";
+    cell.titleLbl.text = exam[@"examName"];
+    cell.countLbl.text = [NSString stringWithFormat:@"考试次数：%@次",exam[@"examName"]];
+    cell.highLbl.text = [NSString stringWithFormat:@"最高分：%@分",exam[@"highest"]];
+    cell.lowLbl.text = [NSString stringWithFormat:@"最低分：%@分",exam[@"lowGrade"]];
+    cell.avgLabel.text = [NSString stringWithFormat:@"平均分：%@分",exam[@"average"]];
     
     return cell;
 }
