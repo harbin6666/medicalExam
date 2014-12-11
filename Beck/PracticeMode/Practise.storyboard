@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8lf-yM-XVR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8lf-yM-XVR">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--练习模式 NC-->
@@ -40,6 +40,11 @@
                                     <action selector="leftBtnClick:" destination="OC7-ep-qxH" eventType="touchUpInside" id="td7-ce-ckS"/>
                                 </connections>
                             </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="提交    " id="WLt-oO-ob8">
+                            <connections>
+                                <action selector="onPressedSubmit:" destination="OC7-ep-qxH" id="eqo-E9-rzR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -288,12 +293,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="answer" width="26" height="23"/>
-        <image name="back" width="26" height="23"/>
+        <image name="answer" width="24" height="21"/>
+        <image name="back" width="24" height="21"/>
         <image name="backImage" width="9" height="14"/>
-        <image name="favorate" width="26" height="23"/>
-        <image name="next" width="26" height="23"/>
-        <image name="setting" width="26" height="23"/>
+        <image name="favorate" width="24" height="21"/>
+        <image name="next" width="24" height="21"/>
+        <image name="setting" width="24" height="21"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

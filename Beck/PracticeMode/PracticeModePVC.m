@@ -12,6 +12,8 @@
 
 #import "AnswerCVC.h"
 
+#import "PractiseVO.h"
+
 @interface PracticeModePVC ()
 
 @end
@@ -101,6 +103,46 @@
         }
         
     }
+}
+
+- (IBAction)onPressedSubmit:(id)sender {
+    [self showLoading];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"add";
+    
+    PractiseVO *vo = [PractiseVO createWithItemVOs:self.items];
+    
+    NSMutableDictionary *json = @{}.mutableCopy;
+    json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+    json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+    json[@"Amount"] = vo.getAmount;
+    json[@"accurateRate"] = vo.getAccurateRate;
+    json[@"list"] = vo.getAnswerList;
+    
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    params[@"json"] = jsonString;
+    
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/userExerciseAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"提交失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 @end

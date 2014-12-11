@@ -55,4 +55,6 @@ typedef enum ItemType
 
 - (NSString *)answerParse;
 
+- (NSString *)getOnlyAnswer;
+
 @end

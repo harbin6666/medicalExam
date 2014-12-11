@@ -113,4 +113,9 @@
     return NO;
 }
 
+- (NSString *)getOnlyAnswer
+{
+    return [self.getAnswer componentsSeparatedByString:@":"][1];
+}
+
 @end
