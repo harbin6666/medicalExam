@@ -72,7 +72,18 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                self.items = aResponseObject[@"list"];
+                if (self.segmentedControl.selectedSegmentIndex == 3) {
+                    NSDictionary *dict = [aResponseObject[@"list"] firstObject];
+                    NSMutableArray *items = @[].mutableCopy;
+                    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                        [items addObject:@{key:obj}];
+                    }];
+                    self.items = items;
+                }
+                else {
+                    self.items = aResponseObject[@"list"];
+                }
+                
                 [self.tableView reloadData];
             }
         }
@@ -106,10 +117,37 @@
         cell.textLabel.text = item[@"customName"];
     }
     else {
-        cell.textLabel.text = nil;
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"今天";
+        }
+        else if (indexPath.row == 1) {
+            cell.textLabel.text = @"三天";
+        }
+        else if (indexPath.row == 2) {
+            cell.textLabel.text = @"七天";
+        }
+        else {
+            cell.textLabel.text = @"更久";
+        }
     }
     
-    cell.detailTextLabel.text = item[@"count"];
+    if (self.segmentedControl.selectedSegmentIndex == 3) {
+        if (indexPath.row == 0) {
+            cell.detailTextLabel.text = [item[@"today"] stringValue];
+        }
+        else if (indexPath.row == 1) {
+            cell.detailTextLabel.text = [item[@"threeDays"] stringValue];
+        }
+        else if (indexPath.row == 2) {
+            cell.detailTextLabel.text = [item[@"sevenDays"] stringValue];
+        }
+        else {
+            cell.detailTextLabel.text = [item[@"longer"] stringValue];
+        }
+    }
+    else {
+        cell.detailTextLabel.text = item[@"count"];
+    }
     
     return cell;
 }
@@ -119,14 +157,34 @@
     NSDictionary *item = self.items[indexPath.row];
     
     NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
-    params[@"token"] = @"outlineList";
+    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+        params[@"token"] = @"subjectList";
     }
     else if (self.segmentedControl.selectedSegmentIndex == 1) {
-//        params[@"outlineId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+        params[@"token"] = @"outlineList";
+        params[@"outlineId"] = item[@"outlineId"];
     }
-
+    else if (self.segmentedControl.selectedSegmentIndex == 2) {
+        params[@"token"] = @"typeList";
+        params[@"type"] = item[@"customId"];;
+    }
+    else {
+        params[@"token"] = @"timeList";
+        if (indexPath.row == 0) {
+            params[@"type"] = @0;
+        }
+        else if (indexPath.row == 1) {
+            params[@"type"] = @3;
+        }
+        else if (indexPath.row == 2) {
+            params[@"type"] = @7;
+        }
+        else {
+            params[@"type"] = @8;
+        }
+    }
     
     [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         
