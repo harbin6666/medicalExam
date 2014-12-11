@@ -25,6 +25,7 @@
     [self configTabBar];
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items.firstObject];
+    vc.canShowNote = self.canShowNote;
     
     if (!vc) {
         return;
@@ -81,6 +82,7 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
+    vc.canShowNote = self.canShowNote;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -130,6 +132,7 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
+    vc.canShowNote = self.canShowNote;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -219,6 +222,8 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
+    vc.canShowNote = self.canShowNote;
+    
     return vc;
 }
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
@@ -231,6 +236,8 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
+    vc.canShowNote = self.canShowNote;
+    
     return vc;
 }
 
@@ -240,6 +247,7 @@
     [self.navigationController popViewControllerAnimated:YES];
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[index]];
+    vc.canShowNote = self.canShowNote;
     
     if (!vc) {
         return;
@@ -300,6 +308,11 @@
 - (void)setTabBarItemImage:(NSString *)image index:(NSInteger)index
 {
     
+}
+
+- (BOOL)canShowNote
+{
+    return YES;
 }
 
 @end

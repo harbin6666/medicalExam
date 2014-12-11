@@ -16,6 +16,8 @@
 @property (nonatomic) BOOL showNote;
 @property (nonatomic) BOOL favorated;
 
+@property (nonatomic) BOOL canShowNote;
+
 @property (nonatomic) ItemType type;
 
 @property (nonatomic, strong) ItemVO *itemVO;

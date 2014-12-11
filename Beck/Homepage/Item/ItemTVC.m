@@ -42,6 +42,7 @@
     }
     
     vc.itemVO = aVO;
+    vc.canShowNote = YES;
     
     return vc;
 }
@@ -83,7 +84,12 @@
         return 44.f;
     }
     else if (indexPath.section == 3){
-        return 44.f;
+        if (self.canShowNote) {
+            return 44.f;
+        }
+        else {
+            return 0.f;
+        }
     }
     else if (indexPath.section == 4){
         if (self.showAnswer) {

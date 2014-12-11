@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NSArray *items;//<ItemVO>
 
+@property (nonatomic) BOOL canShowNote;
+
 - (void)onPressedBtn1:(UIButton *)sender;
 - (void)onPressedBtn2:(UIButton *)sender;
 - (void)onPressedBtn3:(UIButton *)sender;

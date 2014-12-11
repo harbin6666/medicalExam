@@ -72,6 +72,11 @@
     }
 }
 
+- (BOOL)canShowNote
+{
+    return NO;
+}
+
 - (void)leftBtnClick:(UIButton *)sender
 {
     WEAK_SELF;
