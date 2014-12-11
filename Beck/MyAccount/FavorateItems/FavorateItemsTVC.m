@@ -88,7 +88,7 @@
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"获取收藏失败" andCompleteBlock:nil] show];
         }
     }];
 }
@@ -186,8 +186,23 @@
         }
     }
     
+    [self showLoading];
+    WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
-        
+        STRONG_SELF;
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取收藏列表失败" andCompleteBlock:nil] show];
+        }
+        [self hideLoading];
     }];
 }
 
