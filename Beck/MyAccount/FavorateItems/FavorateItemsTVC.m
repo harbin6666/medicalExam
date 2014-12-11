@@ -8,6 +8,9 @@
 
 #import "FavorateItemsTVC.h"
 
+#import "ItemVO.h"
+#import "ViewItemPVC.h"
+
 @interface FavorateItemsTVC ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
@@ -196,7 +199,16 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
+                NSMutableArray *ids = [NSMutableArray array];
+                [[aResponseObject[@"list"] firstObject][@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSDictionary *infos = obj;
+                    ItemVO *itemVO = [ItemVO createWithItemId:[infos[@"titleId"] stringValue] andType:[infos[@"type"] intValue]];
+                    [ids addObject:itemVO];
+                }];
                 
+                if (ids.count > 0) {
+                    [self performSegueWithIdentifier:@"toNext" sender:ids];
+                }
             }
         }
         else {
@@ -204,6 +216,12 @@
         }
         [self hideLoading];
     }];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ViewItemPVC *vc = segue.destinationViewController;
+    vc.items = sender;
 }
 
 @end
