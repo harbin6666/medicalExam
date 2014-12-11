@@ -75,7 +75,7 @@
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"获取笔记失败" andCompleteBlock:nil] show];
         }
     }];
 }
@@ -126,7 +126,7 @@
     }
     else if (self.segmentedControl.selectedSegmentIndex == 2) {
         params[@"token"] = @"typeList";
-        params[@"type"] = item[@"customId"];;
+        params[@"type"] = item[@"customId"];
     }
     
     [self showLoading];
@@ -152,7 +152,7 @@
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"获取收藏列表失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"获取笔记列表失败" andCompleteBlock:nil] show];
         }
         [self hideLoading];
     }];

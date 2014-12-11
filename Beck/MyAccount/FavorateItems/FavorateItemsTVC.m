@@ -48,21 +48,19 @@
     [self showLoading];
     
     NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
+    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
     
     if (sender.selectedSegmentIndex == 0) {
         params[@"token"] = @"subject";
     }
     else if (sender.selectedSegmentIndex == 1) {
         params[@"token"] = @"outline";
-        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
     }
     else if (sender.selectedSegmentIndex == 2)  {
         params[@"token"] = @"type";
-        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
     }
     else {
         params[@"token"] = @"time";
-        params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
     }
     
     WEAK_SELF;
