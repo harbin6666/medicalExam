@@ -119,6 +119,7 @@
     NSDictionary *item = self.items[indexPath.row];
     
     NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
+    params[@"token"] = @"outlineList";
     if (self.segmentedControl.selectedSegmentIndex == 0) {
         params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
     }
