@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  Beck
+//
+//  Created by Aimy on 10/9/14.
+//  Copyright (c) 2014 Aimy. All rights reserved.
+//
+
+#ifndef Beck_PrefixHeader_pch
+#define Beck_PrefixHeader_pch
+
+#import "UIView+create.h"
+#import "UIImage+tool.h"
+#import "OTSBorder.h"
+#import "OTSAlertView.h"
+#import "NSMutableArray+safe.h"
+#import "NSMutableDictionary+safe.h"
+#import "NSString+clear.h"
+
+#define WEAK_SELF __weak typeof(self)weakSelf = self
+#define STRONG_SELF typeof(weakSelf)self = weakSelf
+
+#define kOpenQQAppKey       @"100344815"
+
+#define kSinaAppKey         @"2045436852"
+#define kSinaRedirectURI    @"http://www.sina.com"
+#define sinaid @"com.sina.weibo.SNWeiboSDKDemo"
+
+#define kRenRenAppId        @"168802"
+#define kRenRenAppKey       @"e884884ac90c4182a426444db12915bf"
+#define kRenRenAppSecretKey @"094de55dc157411e8a5435c6a7c134c5"
+#define renrenid @"com.renren.Demo"
+
+#endif
