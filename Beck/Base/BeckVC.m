@@ -115,6 +115,8 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/json", @"application/json", @"text/javascript", @"text/html",@"text/plain", nil];
 
     AFHTTPRequestOperation *operation = [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"\n\nabsoluteString = %@",[operation.request.URL.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
+        
         NSLog(@"\n\nurl = %@\n\nparams = %@\n\nresponseObject = %@",url,params,responseObject);
         if (block) {
             block(responseObject, nil);
