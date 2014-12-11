@@ -132,6 +132,7 @@
     }
     else if (indexPath.section == 3){
         cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
+        cell.hidden = !self.canShowNote;
     }
     else if (indexPath.section == 4){
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell" forIndexPath:indexPath];
