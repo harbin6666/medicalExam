@@ -6,75 +6,73 @@
 	<dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>Pods-JSONModel.xcscheme</key>
+		<key>Pods-AFSQLManager.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-MBProgressHUD.xcscheme</key>
+		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
+		<key>Pods-MBProgressHUD.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>Pods-Toast.xcscheme</key>
+		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>Pods-Toast.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>37C44F290C0E1BD5A71EABAD</key>
+		<key>1997E86FFB67405AA05802E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>547903F5E1C26DF5844A7861</key>
+		<key>2103D9F320314E3EBCD19201</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B4AD89A6D24C7F288B9FCFA</key>
+		<key>6C1222A18B374C9494DB213D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F186851370BD44CFAA49A1C</key>
+		<key>A92BCAAABD2C4554AF35384F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9548CDE65EF556452435BCB1</key>
+		<key>CE50E6519F9C41A89AC65C1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD3B8D6C587D9C694D5CF3E7</key>
+		<key>DAFD870BE7CC451F9887400F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDA1882ACB2F442CAFB557DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
