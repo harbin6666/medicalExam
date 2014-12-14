@@ -174,7 +174,7 @@
             json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
             json[@"outlineId"] = self.itemVO.outlineId;
             json[@"typeId"] = @(self.itemVO.type);
-            json[@"Note"] = note;
+            json[@"note"] = note;
             json[@"type"] = @0;
             
             NSError *error;
