@@ -174,16 +174,16 @@
     else {
         params[@"token"] = @"timeList";
         if (indexPath.row == 0) {
-            params[@"type"] = @0;
+            params[@"time"] = @0;
         }
         else if (indexPath.row == 1) {
-            params[@"type"] = @3;
+            params[@"time"] = @3;
         }
         else if (indexPath.row == 2) {
-            params[@"type"] = @7;
+            params[@"time"] = @7;
         }
         else {
-            params[@"type"] = @8;
+            params[@"time"] = @8;
         }
     }
     
