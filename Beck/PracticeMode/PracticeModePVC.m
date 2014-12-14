@@ -115,6 +115,7 @@
     NSMutableDictionary *json = @{}.mutableCopy;
     json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
     json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+    json[@"outlineId"] = self.examOutlineId;
     json[@"Amount"] = vo.getAmount;
     json[@"accurateRate"] = vo.getAccurateRate;
     json[@"list"] = vo.getAnswerList;

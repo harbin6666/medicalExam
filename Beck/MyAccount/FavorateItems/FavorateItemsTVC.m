@@ -169,7 +169,7 @@
     }
     else if (self.segmentedControl.selectedSegmentIndex == 2) {
         params[@"token"] = @"typeList";
-        params[@"type"] = item[@"customId"];;
+        params[@"type"] = item[@"customId"];
     }
     else {
         params[@"token"] = @"timeList";

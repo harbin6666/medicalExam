@@ -87,6 +87,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     PracticeModePVC *vc = segue.destinationViewController;
+    vc.examOutlineId = self.examOutlineId;
     vc.items = sender;
 }
 

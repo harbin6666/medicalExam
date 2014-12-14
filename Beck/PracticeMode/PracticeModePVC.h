@@ -10,4 +10,6 @@
 
 @interface PracticeModePVC : ItemPVC
 
+@property (nonatomic, strong) NSString *examOutlineId;
+
 @end
