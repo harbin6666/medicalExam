@@ -22,13 +22,14 @@
 
 #define kOpenQQAppKey       @"100344815"
 
-#define kSinaAppKey         @"2045436852"
-#define kSinaRedirectURI    @"http://www.sina.com"
-#define sinaid @"com.sina.weibo.SNWeiboSDKDemo"
+#define kSinaAppKey         @"238406070"
+#define kSinaRedirectURI    @"http://www.beck.com"
+//#define sinaid @"com.sina.weibo.SNWeiboSDKDemo"
 
-#define kRenRenAppId        @"168802"
-#define kRenRenAppKey       @"e884884ac90c4182a426444db12915bf"
-#define kRenRenAppSecretKey @"094de55dc157411e8a5435c6a7c134c5"
+#define kRenRenAppId        @"473852"
+#define kRenRenAppKey       @"50047f5dfd9d468bbf58caf6580a8f07"
+#define kRenRenAppSecretKey @"a8e2924a91cb495c981a8b6f05a46410"
+#define kRenRenRedirectURI  @"http://www.beck.com"
 #define renrenid @"com.renren.Demo"
 
 #endif

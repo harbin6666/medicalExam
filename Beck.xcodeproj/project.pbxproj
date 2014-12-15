@@ -32,6 +32,7 @@
 		3D1782691A02630100F6904C /* ExamEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782681A02630100F6904C /* ExamEntity.m */; };
 		3D17826C1A02630200F6904C /* ItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17826B1A02630200F6904C /* ItemEntity.m */; };
 		3D17826F1A02630200F6904C /* NoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17826E1A02630200F6904C /* NoteEntity.m */; };
+		3D1AF4FE1A3F26C7005321BF /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DC1A010EA70079CC01 /* RennSDK.framework */; };
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
 		3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521BB19F526C500FC72A7 /* BeckVC.m */; };
 		3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */; };
@@ -333,6 +334,7 @@
 				3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */,
 				3DB238D419FE8AC3002CD73D /* Foundation.framework in Frameworks */,
 				3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */,
+				3D1AF4FE1A3F26C7005321BF /* RennSDK.framework in Frameworks */,
 				8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

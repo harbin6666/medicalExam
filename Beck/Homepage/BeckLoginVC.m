@@ -15,7 +15,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <RennSDK/RennSDK.h>
 
-@interface BeckLoginVC () <TencentSessionDelegate>
+@interface BeckLoginVC () <TencentSessionDelegate,RennLoginDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
@@ -38,14 +38,13 @@
     
     [WeiboSDK registerApp:kSinaAppKey];
     
-//    [RennClient initWithAppId:kRenRenAppId
-//                       apiKey:kRenRenAppKey
-//                    secretKey:kRenRenAppSecretKey];
+    [RennClient initWithAppId:kRenRenAppId
+                       apiKey:kRenRenAppKey
+                    secretKey:kRenRenAppSecretKey];
 
     //不设置则获取默认权限
 //    [RennClient setScope:@"read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
     
-
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"] &&
         [[NSUserDefaults standardUserDefaults] stringForKey:@"passWord"] &&
         [[NSUserDefaults standardUserDefaults] boolForKey:@"autologin"]) {
@@ -142,12 +141,12 @@
 }
 
 - (IBAction)onPressedRenRen:(id)sender {
-//    if ([RennClient isLogin]) {
-//        [RennClient logoutWithDelegate:self];
-//    }
-//    else {
-//        [RennClient loginWithDelegate:self];
-//    }
+    if ([RennClient isLogin]) {
+        [RennClient logoutWithDelegate:self];
+    }
+    else {
+        [RennClient loginWithDelegate:self];
+    }
 }
 
 #pragma mark - <TencentLoginDelegate>
