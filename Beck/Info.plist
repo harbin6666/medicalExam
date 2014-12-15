@@ -36,10 +36,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.yihaodian.onethestore</string>
+			<string>com.weibo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>beck</string>
+				<string>wb238406070</string>
 			</array>
 		</dict>
 	</array>

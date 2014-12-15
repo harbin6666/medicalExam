@@ -30,6 +30,6 @@
 #define kRenRenAppKey       @"50047f5dfd9d468bbf58caf6580a8f07"
 #define kRenRenAppSecretKey @"a8e2924a91cb495c981a8b6f05a46410"
 #define kRenRenRedirectURI  @"http://www.beck.com"
-#define renrenid @"com.renren.Demo"
+//#define renrenid @"com.renren.Demo"
 
 #endif
