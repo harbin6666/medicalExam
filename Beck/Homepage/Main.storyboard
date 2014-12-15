@@ -40,8 +40,12 @@
                                 <rect key="frame" x="0.0" y="371" width="320" height="137"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbh-84-n05">
-                                        <rect key="frame" x="45" y="54" width="30" height="30"/>
-                                        <state key="normal" title="QQ">
+                                        <rect key="frame" x="35" y="44" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Jbw-qZ-zQy"/>
+                                            <constraint firstAttribute="height" constant="50" id="kk4-er-Ucb"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="qq">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -49,8 +53,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-Lh-Sh3">
-                                        <rect key="frame" x="145" y="54" width="31" height="30"/>
-                                        <state key="normal" title="Sina">
+                                        <rect key="frame" x="135" y="44" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9Ie-5v-Nup"/>
+                                            <constraint firstAttribute="width" constant="50" id="JV4-Wc-EPf"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="sina">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -58,8 +66,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maR-cx-ebV">
-                                        <rect key="frame" x="233" y="54" width="55" height="30"/>
-                                        <state key="normal" title="RenRen">
+                                        <rect key="frame" x="235" y="44" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ibQ-jb-0C4"/>
+                                            <constraint firstAttribute="width" constant="50" id="l8a-S7-LPh"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="renren">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1154,6 +1166,9 @@
         <image name="homejiang" width="241" height="180"/>
         <image name="info" width="101" height="22"/>
         <image name="nonet" width="71" height="71"/>
+        <image name="qq" width="126" height="131"/>
+        <image name="renren" width="50" height="50"/>
+        <image name="sina" width="32" height="32"/>
         <image name="tab1" width="33" height="29"/>
         <image name="tab2" width="33" height="29"/>
         <image name="tab3" width="33" height="29"/>

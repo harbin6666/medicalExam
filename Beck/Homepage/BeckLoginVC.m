@@ -123,10 +123,15 @@
 }
 
 - (IBAction)onPressedQQ:(id)sender {
-    NSArray *permissions = @[kOPEN_PERMISSION_GET_USER_INFO,
-                             kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,
-                             kOPEN_PERMISSION_GET_INFO];
-    [self.tencentOAuth authorize:permissions inSafari:NO];
+    if ([TencentOAuth iphoneQQSupportSSOLogin]) {
+        NSArray *permissions = @[kOPEN_PERMISSION_GET_USER_INFO,
+                                 kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,
+                                 kOPEN_PERMISSION_GET_INFO];
+        [self.tencentOAuth authorize:permissions];
+    }
+    else {
+        [[OTSAlertView alertWithMessage:@"您没有安装QQ,不能登录" andCompleteBlock:nil] show];
+    }
 }
 
 - (IBAction)onPressedSina:(id)sender {
@@ -144,9 +149,8 @@
     if ([RennClient isLogin]) {
         [RennClient logoutWithDelegate:self];
     }
-    else {
-        [RennClient loginWithDelegate:self];
-    }
+    
+    [RennClient loginWithDelegate:self];
 }
 
 #pragma mark - <TencentLoginDelegate>
@@ -195,7 +199,7 @@
 - (void)rennLoginSuccess
 {
     NSLog(@"Renren 登录成功");
-//    NSLog(@"renren uid = %@, accessToken = %@", [RennClient uid], [RennClient accessToken]);
+    NSLog(@"renren uid = %@, accessToken = %@", [RennClient uid], [RennClient accessToken]);
 }
 
 - (void)rennLogoutSuccess
