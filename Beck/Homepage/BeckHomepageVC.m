@@ -57,13 +57,13 @@
         [item1 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
         
         UITabBarItem *item2 = self.tabbar.items[1];
-        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"tab2_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab2"]];
         
         UITabBarItem *item3 = self.tabbar.items[2];
-        [item3 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+        [item3 setFinishedSelectedImage:[UIImage imageNamed:@"tab3_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab3"]];
         
         UITabBarItem *item4 = self.tabbar.items[3];
-        [item4 setFinishedSelectedImage:[UIImage imageNamed:@"tab1_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab1"]];
+        [item4 setFinishedSelectedImage:[UIImage imageNamed:@"tab4_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab4"]];
     }
     
     WEAK_SELF;
