@@ -20,7 +20,8 @@
 {
     [super awakeFromNib];
     
-    self.names = @[@"章节练习",@"题库练习"];
+    self.names = @[@"章节练习"];
+//    self.names = @[@"章节练习",@"题库练习"];
 }
 
 - (void)viewDidLoad {
@@ -40,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.names.count;;
+    return self.names.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
