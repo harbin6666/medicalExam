@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yihaodian.onethestore</string>
+	<string>com.zxl.beck</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -49,14 +49,14 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>rm473852com.yihaodian.onethestore</string>
+				<string>rm473852com.zxl.beck</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.yihaodian.onethestore</string>
+			<string>com.zxl.beck</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>beck</string>
