@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8lf-yM-XVR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8lf-yM-XVR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -8,7 +8,7 @@
         <!--练习模式 NC-->
         <scene sceneID="VKO-0u-Cat">
             <objects>
-                <navigationController id="btU-HZ-wDD" userLabel="练习模式 NC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TopNC" id="btU-HZ-wDD" userLabel="练习模式 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="练习模式" id="yWA-BS-hTt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kct-v4-idu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -158,7 +158,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="PQ9-m0-EOm">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="YKL-cT-73T">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="YKL-cT-73T">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zJX-Rw-ZaV">
                                 <rect key="frame" x="16" y="7" width="81" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

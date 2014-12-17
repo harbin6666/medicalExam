@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AP6-oX-m96">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AP6-oX-m96">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -62,7 +62,7 @@
         <!--考试模式 NC-->
         <scene sceneID="cOz-fl-4G6">
             <objects>
-                <navigationController id="mPR-Wy-esM" userLabel="考试模式 NC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TopNC" id="mPR-Wy-esM" userLabel="考试模式 NC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="考试模式" id="PaK-OE-lC3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eo4-3m-Lcr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,7 +171,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="flu-d9-SXE">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="flu-d9-SXE">
                             <button key="customView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QV5-Ha-SdT">
                                 <rect key="frame" x="264" y="7" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

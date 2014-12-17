@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -86,7 +86,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K24-wk-Dqr">
-                                            <rect key="frame" x="240" y="9" width="62" height="25"/>
+                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
                                             <state key="normal" image="biji">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,7 +239,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-by-bf6">
-                                            <rect key="frame" x="240" y="9" width="62" height="25"/>
+                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
                                             <state key="normal" image="biji">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -402,7 +402,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-z2-rsA">
-                                            <rect key="frame" x="240" y="9" width="62" height="25"/>
+                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
                                             <state key="normal" image="biji">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -570,7 +570,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-Y2-NFJ">
-                                            <rect key="frame" x="240" y="9" width="62" height="25"/>
+                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
                                             <state key="normal" image="biji">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -752,7 +752,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-3s-sN1">
-                                            <rect key="frame" x="240" y="9" width="62" height="25"/>
+                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
                                             <state key="normal" image="biji">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -867,7 +867,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="ph8-mO-Wb7">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="lYi-At-AiT">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="lYi-At-AiT">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HG7-Zk-6mm">
                                 <rect key="frame" x="16" y="7" width="81" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -890,11 +890,11 @@
     </scenes>
     <resources>
         <image name="backImage" width="9" height="14"/>
-        <image name="biji" width="62" height="25"/>
+        <image name="biji" width="57" height="23"/>
         <image name="checkbox" width="24" height="24"/>
-        <image name="jilu" width="50" height="35"/>
-        <image name="radio" width="19" height="20"/>
-        <image name="radio_sel" width="19" height="20"/>
+        <image name="jilu" width="46" height="32"/>
+        <image name="radio" width="19" height="19"/>
+        <image name="radio_sel" width="19" height="19"/>
         <image name="uncheckbox" width="24" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
