@@ -24,7 +24,7 @@
     [self showLoading];
     
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/examPaperAct.htm" params:@{@"token":@"list",@"subjectId":self.subjectId,@"type":(self.fromExam ? @"2" : @"1")} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/examPaperAct.htm" params:@{@"token":@"list",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"],@"subjectId":self.subjectId,@"type":(self.fromExam ? @"2" : @"1")} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
