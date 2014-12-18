@@ -14,6 +14,7 @@
 @interface ChooseSectionTVC ()
 
 @property (nonatomic, strong) NSArray *sections;
+@property (nonatomic, strong) NSString *examOutlineId;
 
 @end
 
@@ -25,7 +26,7 @@
     [self showLoading];
     
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"testQuestions",@"subjectId":[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"],@"examOutlineId":self.examOutlineId,@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"userExamOutline",@"subjectId":self.subjectId,@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -58,36 +59,67 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *section = self.sections[indexPath.row];
     
-    cell.textLabel.text = section[@"suctom"];
-    NSArray *items = section[@"titleList"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%d题",(int)items.count];
+    cell.textLabel.text = section[@"courseName"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@题",section[@"number"]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self showLoading];
-    NSMutableArray *ids = [NSMutableArray array];
-    NSDictionary *infos = self.sections[indexPath.row];
-    NSNumber *customId = infos[@"typeId"];
-    [infos[@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSNumber *titleId = obj[@"titleId"];
-        ItemVO *itemVO = [ItemVO createWithItemId:titleId.stringValue andType:customId.intValue];
-        itemVO.outlineId = self.examOutlineId;
-        [ids addObject:itemVO];
-    }];
+    WEAK_SELF;
+    NSDictionary *section = self.sections[indexPath.row];
+    self.examOutlineId = section[@"id"];
     
-    if (ids.count > 0) {
-        [self performSegueWithIdentifier:@"toNext" sender:ids];
+    if (!self.examOutlineId) {
+        [[OTSAlertView alertWithMessage:@"获取章节练习试题失败" andCompleteBlock:nil] show];
+        return ;
     }
     
-    [self hideLoading];
+    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"testQuestions",@"subjectId":self.subjectId,@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"],@"examOutlineId":self.examOutlineId} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                NSMutableArray *ids = aResponseObject[@"list"];
+                if (ids.count > 0) {
+                    [self createItems:ids];
+                }
+                else {
+                    [[OTSAlertView alertWithMessage:@"获取章节练习试题失败" andCompleteBlock:nil] show];
+                }
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取章节练习试题失败" andCompleteBlock:nil] show];
+        }
+    }];
+}
+
+- (void)createItems:(NSArray *)ids
+{
+    NSMutableArray *items = @[].mutableCopy;
+    [ids enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSDictionary *infos = obj;
+        [infos[@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSDictionary *itemInfo = obj;
+            ItemVO *itemVO = [ItemVO createWithItemId:itemInfo[@"titleId"] andType:[infos[@"typeId"] intValue]];
+            itemVO.outlineId = self.examOutlineId;
+            [items addObject:itemVO];
+        }];
+    }];
+    
+    [self performSegueWithIdentifier:@"toNext" sender:items];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     PracticeModePVC *vc = segue.destinationViewController;
-    vc.examOutlineId = self.examOutlineId;
+    vc.examOutlineId = self.subjectId;
     vc.items = sender;
 }
 

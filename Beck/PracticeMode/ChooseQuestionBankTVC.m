@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSArray *questionBanks;
 
-@property (nonatomic, strong) NSString *examOutlineId;
+@property (nonatomic, strong) NSString *subjectId;
 
 @end
 
@@ -26,7 +26,7 @@
     [self showLoading];
     
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/examOutlineAct.htm" params:@{@"token":@"userExamOutline",@"subjectId":[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userExamSubjectAct.htm" params:@{@"token":@"userExamSubject",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -60,7 +60,7 @@
     
     NSDictionary *questionBank = self.questionBanks[indexPath.row];
     
-    cell.textLabel.text = questionBank[@"courseName"];
+    cell.textLabel.text = questionBank[@"subjectName"];
     
     return cell;
 }
@@ -68,14 +68,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *questionBank = self.questionBanks[indexPath.row];
-    self.examOutlineId = questionBank[@"id"];
+    self.subjectId = questionBank[@"id"];
     [self performSegueWithIdentifier:@"toNext" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     ChooseSectionTVC *vc = segue.destinationViewController;
-    vc.examOutlineId = self.examOutlineId;
+    vc.subjectId = self.subjectId;
 }
 
 @end
