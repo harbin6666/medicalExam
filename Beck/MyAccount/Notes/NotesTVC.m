@@ -105,7 +105,7 @@
         cell.textLabel.text = note[@"outlineName"];
     }
     
-    cell.detailTextLabel.text = note[@"count"];
+    cell.detailTextLabel.text = [note[@"count"] stringValue];
     
     return cell;
 }

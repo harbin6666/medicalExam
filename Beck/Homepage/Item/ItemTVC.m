@@ -171,7 +171,7 @@
             NSMutableDictionary *json = @{}.mutableCopy;
             json[@"titleId"] = self.itemVO.itemId;
             json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-            json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+            json[@"subjectId"] = self.itemVO.subjectId;
             json[@"outlineId"] = self.itemVO.outlineId;
             json[@"typeId"] = @(self.itemVO.type);
             json[@"note"] = note;
@@ -196,7 +196,7 @@
                         [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
                     }
                     else {
-                        
+                        [[OTSAlertView alertWithMessage:@"提交笔记成功" andCompleteBlock:nil] show];
                     }
                 }
                 else {
