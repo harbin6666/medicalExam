@@ -63,6 +63,8 @@
         params[@"token"] = @"time";
     }
     
+    self.items = nil;
+    
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
@@ -85,12 +87,13 @@
                     self.items = aResponseObject[@"list"];
                 }
                 
-                [self.tableView reloadData];
             }
         }
         else {
             [[OTSAlertView alertWithMessage:@"获取收藏失败" andCompleteBlock:nil] show];
         }
+        
+        [self.tableView reloadData];
     }];
 }
 

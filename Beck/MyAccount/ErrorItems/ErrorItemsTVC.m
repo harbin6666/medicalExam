@@ -148,7 +148,7 @@
         }
     }
     else {
-        cell.detailTextLabel.text = item[@"count"];
+        cell.detailTextLabel.text = [item[@"count"] stringValue];
     }
     
     return cell;
