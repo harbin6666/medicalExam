@@ -175,7 +175,12 @@
             json[@"outlineId"] = self.itemVO.outlineId;
             json[@"typeId"] = @(self.itemVO.type);
             json[@"note"] = note;
-            json[@"type"] = @0;
+            if (self.itemVO.hasNote) {
+                json[@"type"] = @1;
+            }
+            else {
+                json[@"type"] = @0;
+            }
             
             NSError *error;
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];

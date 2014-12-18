@@ -23,6 +23,8 @@ typedef enum ItemType
 @property (nonatomic) BOOL showNote;
 @property (nonatomic) BOOL favorated;
 
+@property (nonatomic) BOOL hasNote;
+
 @property (nonatomic, strong) NSArray *itemInfo;
 @property (nonatomic, strong) NSArray *itemAnswers;
 

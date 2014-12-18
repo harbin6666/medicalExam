@@ -109,6 +109,10 @@
             NSDictionary *itemInfo = obj;
             ItemVO *itemVO = [ItemVO createWithItemId:itemInfo[@"titleId"] andType:[infos[@"typeId"] intValue]];
             itemVO.outlineId = self.examOutlineId;
+            if ([itemInfo[@"type"] intValue] == 1) {
+                itemVO.hasNote = YES;
+            }
+            
             [items addObject:itemVO];
         }];
     }];

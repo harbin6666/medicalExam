@@ -291,6 +291,11 @@
             NSNumber *errorcode = aResponseObject[@"errorcode"];
             if (errorcode.integerValue == 2) {
                 self.currentTVC.showAnswer = YES;
+                [[OTSAlertView alertWithMessage:@"已经收藏" andCompleteBlock:nil] show];
+                [self configTabBar];
+            }
+            else if (errorcode.integerValue == 0) {
+                self.currentTVC.showAnswer = YES;
                 [[OTSAlertView alertWithMessage:@"收藏成功" andCompleteBlock:nil] show];
                 [self configTabBar];
             }
