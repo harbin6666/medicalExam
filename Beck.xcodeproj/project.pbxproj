@@ -67,6 +67,7 @@
 		3D65EE141A235983005DB486 /* MultiChoiceItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE0D1A235983005DB486 /* MultiChoiceItemVO.m */; };
 		3D65EE151A235983005DB486 /* SpaceItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE0F1A235983005DB486 /* SpaceItemVO.m */; };
 		3D65EE181A236825005DB486 /* ExamVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE171A236825005DB486 /* ExamVO.m */; };
+		3D6782751A430964007057C5 /* ExamSubjectTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6782741A430964007057C5 /* ExamSubjectTVC.m */; };
 		3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */; };
 		3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AE1811A07BA8600C0BB71 /* MyPointTVC.m */; };
 		3D8765EF1A10F13600ED25CE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8765EE1A10F13600ED25CE /* Launch Screen.xib */; };
@@ -235,6 +236,8 @@
 		3D65EE0F1A235983005DB486 /* SpaceItemVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceItemVO.m; sourceTree = "<group>"; };
 		3D65EE161A236825005DB486 /* ExamVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamVO.h; sourceTree = "<group>"; };
 		3D65EE171A236825005DB486 /* ExamVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamVO.m; sourceTree = "<group>"; };
+		3D6782731A430964007057C5 /* ExamSubjectTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamSubjectTVC.h; sourceTree = "<group>"; };
+		3D6782741A430964007057C5 /* ExamSubjectTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamSubjectTVC.m; sourceTree = "<group>"; };
 		3D6AE17D1A07BA7100C0BB71 /* MyPayInfoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPayInfoTVC.h; sourceTree = "<group>"; };
 		3D6AE17E1A07BA7100C0BB71 /* MyPayInfoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPayInfoTVC.m; sourceTree = "<group>"; };
 		3D6AE1801A07BA8600C0BB71 /* MyPointTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPointTVC.h; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 			children = (
 				3DB04E2B1A1B7C1000B6964B /* ChooseExamBankTVC.h */,
 				3DB04E2C1A1B7C1000B6964B /* ChooseExamBankTVC.m */,
+				3D6782731A430964007057C5 /* ExamSubjectTVC.h */,
+				3D6782741A430964007057C5 /* ExamSubjectTVC.m */,
 				3DABFDA31A32BD6D000B0661 /* ExamMakeSureVC.h */,
 				3DABFDA41A32BD6D000B0661 /* ExamMakeSureVC.m */,
 				3D2521BF19F52A6F00FC72A7 /* ExamModePVC.h */,
@@ -984,6 +989,7 @@
 				3D2521F119F543CB00FC72A7 /* TestingCentreCategoryTVC.m in Sources */,
 				3D4CEEAD1A1CDA360078AA38 /* NSMutableArray+safe.m in Sources */,
 				3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */,
+				3D6782751A430964007057C5 /* ExamSubjectTVC.m in Sources */,
 				3D65EE121A235983005DB486 /* DecisionItemVO.m in Sources */,
 				3D99449E19E6C03A009A1A1F /* UIImage+tool.m in Sources */,
 				3DAE70831A1F83F30001C3E2 /* NSString+clear.m in Sources */,

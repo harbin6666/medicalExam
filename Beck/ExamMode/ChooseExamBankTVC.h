@@ -11,5 +11,6 @@
 @interface ChooseExamBankTVC : BeckTVC
 
 @property (nonatomic) BOOL fromExam;
+@property (nonatomic, strong) NSString *subjectId;
 
 @end

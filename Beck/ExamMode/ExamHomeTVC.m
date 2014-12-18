@@ -32,8 +32,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    ChooseExamBankTVC *vc = segue.destinationViewController;
+    vc.subjectId = self.subjectId;
+    
     if (path.row == 1) {
-        ChooseExamBankTVC *vc = segue.destinationViewController;
         vc.fromExam = YES;
     }
 }

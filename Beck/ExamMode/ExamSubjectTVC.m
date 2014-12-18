@@ -1,22 +1,22 @@
 //
-//  ChooseExamBankTVC.m
+//  ExamSubjectTVC.m
 //  Beck
 //
-//  Created by Aimy on 14/11/18.
+//  Created by Aimy on 14/12/18.
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "ChooseExamBankTVC.h"
+#import "ExamSubjectTVC.h"
 
-#import "ExamMakeSureVC.h"
+#import "ExamHomeTVC.h"
 
-@interface ChooseExamBankTVC ()
+@interface ExamSubjectTVC ()
 
-@property (nonatomic, strong) NSArray *questionBanks;
+@property (nonatomic, strong) NSArray *subjects;
 
 @end
 
-@implementation ChooseExamBankTVC
+@implementation ExamSubjectTVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +24,7 @@
     [self showLoading];
     
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/examPaperAct.htm" params:@{@"token":@"list",@"subjectId":self.subjectId,@"type":(self.fromExam ? @"2" : @"1")} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userExamSubjectAct.htm" params:@{@"token":@"userExamSubject",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -33,7 +33,7 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                self.questionBanks = aResponseObject[@"list"];
+                self.subjects = aResponseObject[@"list"];
                 [self.tableView reloadData];
             }
         }
@@ -50,15 +50,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.questionBanks.count;
+    return self.subjects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSDictionary *questionBank = self.questionBanks[indexPath.row];
+    NSDictionary *subjects = self.subjects[indexPath.row];
     
-    cell.textLabel.text = questionBank[@"paperName"];
+    cell.textLabel.text = subjects[@"subjectName"];
     
     return cell;
 }
@@ -66,9 +66,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    ExamMakeSureVC *vc = segue.destinationViewController;
-    vc.fromExam = self.fromExam;
-    vc.questionBank = self.questionBanks[path.row];
+    NSDictionary *subjects = self.subjects[path.row];
+    ExamHomeTVC *vc = segue.destinationViewController;
+    vc.subjectId = subjects[@"id"];
 }
 
 @end
