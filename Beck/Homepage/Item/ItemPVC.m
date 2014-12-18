@@ -294,11 +294,6 @@
                 [[OTSAlertView alertWithMessage:@"已经收藏" andCompleteBlock:nil] show];
                 [self configTabBar];
             }
-            else if (errorcode.integerValue == 0) {
-                self.currentTVC.showAnswer = YES;
-                [[OTSAlertView alertWithMessage:@"收藏成功" andCompleteBlock:nil] show];
-                [self configTabBar];
-            }
             else {
                 self.currentTVC.showAnswer = NO;
                 [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
