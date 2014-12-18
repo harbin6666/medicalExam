@@ -69,6 +69,7 @@
     ExamMakeSureVC *vc = segue.destinationViewController;
     vc.fromExam = self.fromExam;
     vc.questionBank = self.questionBanks[path.row];
+    vc.subjectId = self.subjectId;
 }
 
 @end

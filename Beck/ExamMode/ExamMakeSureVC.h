@@ -11,7 +11,7 @@
 @interface ExamMakeSureVC : BeckVC
 
 @property (nonatomic) BOOL fromExam;
-
+@property (nonatomic, strong) NSString *subjectId;
 @property (nonatomic, strong) NSDictionary *questionBank;
 
 @end
