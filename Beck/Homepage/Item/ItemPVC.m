@@ -273,7 +273,7 @@
     json[@"titleId"] = self.currentTVC.itemVO.itemId;
     json[@"typeId"] = @(self.currentTVC.itemVO.type);
     json[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-    json[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+    json[@"subjectId"] = self.currentTVC.itemVO.subjectId;
     json[@"outlineId"] = self.currentTVC.itemVO.outlineId;
     
     NSError *error;

@@ -109,6 +109,7 @@
             NSDictionary *itemInfo = obj;
             ItemVO *itemVO = [ItemVO createWithItemId:itemInfo[@"titleId"] andType:[infos[@"typeId"] intValue]];
             itemVO.outlineId = self.examOutlineId;
+            itemVO.subjectId = self.subjectId;
             if ([itemInfo[@"type"] intValue] == 1) {
                 itemVO.hasNote = YES;
             }
@@ -123,7 +124,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     PracticeModePVC *vc = segue.destinationViewController;
-    vc.examOutlineId = self.subjectId;
+    vc.examOutlineId = self.examOutlineId;
+    vc.subjectId = self.subjectId;
     vc.items = sender;
 }
 

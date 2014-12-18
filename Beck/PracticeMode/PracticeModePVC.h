@@ -11,5 +11,6 @@
 @interface PracticeModePVC : ItemPVC
 
 @property (nonatomic, strong) NSString *examOutlineId;
+@property (nonatomic, strong) NSString *subjectId;
 
 @end
