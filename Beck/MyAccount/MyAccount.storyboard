@@ -47,9 +47,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tE6-vy-aDm" kind="push" id="OjE-Bk-vh3"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -76,6 +73,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="7W3-uf-k7t" id="Sqy-LR-qYa"/>
                         <outlet property="tableView" destination="h5F-eM-0Iy" id="ru9-sa-MJ1"/>
+                        <segue destination="tE6-vy-aDm" kind="push" identifier="toNext" id="9qk-bC-Pju"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z67-RH-GOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -723,9 +721,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tE6-vy-aDm" kind="push" id="oao-a5-5O1"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -752,6 +747,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="6fE-9O-50E" id="rAt-ai-xc6"/>
                         <outlet property="tableView" destination="A7p-VG-90h" id="7jj-81-FUD"/>
+                        <segue destination="tE6-vy-aDm" kind="push" identifier="toNext" id="nSz-4F-hwd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="not-gA-cbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,6 +812,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MqV-se-VtE"/>
+        <segue reference="9qk-bC-Pju"/>
     </inferredMetricsTieBreakers>
 </document>
