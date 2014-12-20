@@ -162,6 +162,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     ViewItemPVC *vc = segue.destinationViewController;
+    vc.canShowNote = NO;
     vc.items = sender;
 }
 

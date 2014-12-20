@@ -14,6 +14,12 @@
 
 @implementation ItemPVC
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.canShowNote = YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -308,11 +314,6 @@
 - (void)setTabBarItemImage:(NSString *)image index:(NSInteger)index
 {
     
-}
-
-- (BOOL)canShowNote
-{
-    return YES;
 }
 
 @end
