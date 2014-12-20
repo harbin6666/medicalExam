@@ -119,6 +119,7 @@
     json[@"amount"] = vo.getAmount;
     json[@"accurateRate"] = vo.getAccurateRate;
     json[@"list"] = vo.getAnswerList;
+    json[@"score"] = vo.getScore;
     
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json options:kNilOptions error:&error];

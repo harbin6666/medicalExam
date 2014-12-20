@@ -20,6 +20,7 @@
 - (NSNumber *)getWrongAmount;
 - (NSNumber *)getAmount;
 - (NSNumber *)getAccurateRate;
+- (NSNumber *)getScore;
 
 - (NSArray *)getAnswerList;
 

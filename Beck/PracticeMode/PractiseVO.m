@@ -53,6 +53,19 @@
     return @(self.getRightAmount.floatValue / self.getAmount.floatValue);
 }
 
+- (NSNumber *)getScore
+{
+    __block int score = 0;
+    [self.itemVOs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        if (vo.isRight) {
+            score += [vo getScore].intValue;
+        }
+    }];
+    
+    return @(score);
+}
+
 - (NSArray *)getAnswerList
 {
     NSMutableArray *answers = @[].mutableCopy;
