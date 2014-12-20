@@ -136,7 +136,7 @@
         }
     }
     
-    if (self.segmentedControl.selectedSegmentIndex == 2) {
+    if (self.segmentedControl.selectedSegmentIndex == 1) {
         if (indexPath.row == 0) {
             cell.detailTextLabel.text = [item[@"oneTime"] stringValue];
         }
@@ -185,16 +185,16 @@
     else if (self.segmentedControl.selectedSegmentIndex == 1) {
         params[@"token"] = @"errorRateList";
         if (indexPath.row == 0) {
-            params[@"oneTime"] = @1;
+            params[@"count"] = @1;
         }
         else if (indexPath.row == 1) {
-            params[@"twoTime"] = @2;
+            params[@"count"] = @2;
         }
         else if (indexPath.row == 2) {
-            params[@"threeTime"] = @3;
+            params[@"count"] = @3;
         }
         else {
-            params[@"threeTimes"] = @4;
+            params[@"count"] = @4;
         }
     }
     else {
