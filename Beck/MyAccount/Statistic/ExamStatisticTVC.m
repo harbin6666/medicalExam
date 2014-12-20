@@ -88,7 +88,7 @@
     NSDictionary *exam = self.exams[indexPath.row];
     
     cell.titleLbl.text = exam[@"examName"];
-    cell.countLbl.text = [NSString stringWithFormat:@"考试次数：%@次",exam[@"examName"]];
+    cell.countLbl.text = [NSString stringWithFormat:@"考试次数：%@次",exam[@"count"]];
     cell.highLbl.text = [NSString stringWithFormat:@"最高分：%@分",exam[@"highest"]];
     cell.lowLbl.text = [NSString stringWithFormat:@"最低分：%@分",exam[@"lowGrade"]];
     cell.avgLabel.text = [NSString stringWithFormat:@"平均分：%@分",exam[@"average"]];
