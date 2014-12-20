@@ -105,7 +105,7 @@
         cell.textLabel.text = note[@"outlineName"];
     }
     
-    cell.detailTextLabel.text = [note[@"count"] stringValue];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",note[@"count"]];
     
     return cell;
 }
