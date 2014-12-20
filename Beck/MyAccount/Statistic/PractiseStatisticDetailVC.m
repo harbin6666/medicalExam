@@ -51,12 +51,23 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                NSMutableArray *ids = aResponseObject[@"list"];
+                NSMutableArray *ids = [NSMutableArray array];
+                NSArray *infos = aResponseObject[@"list"];
+                [infos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSDictionary *info = obj;
+                    NSNumber *type = info[@"typeId"];
+                    NSArray *titleList = info[@"titleList"];
+                    [titleList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        NSDictionary *itemInfo = obj;
+                        ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue]];
+                        if (itemVO) {
+                            [ids addObject:itemVO];
+                        }
+                    }];
+                }];
+                
                 if (ids.count > 0) {
-                    [self createItems:ids];
-                }
-                else {
-                    [[OTSAlertView alertWithMessage:@"查询答题记录失败" andCompleteBlock:nil] show];
+                    [self performSegueWithIdentifier:@"toNext" sender:ids];
                 }
             }
         }
@@ -64,29 +75,6 @@
             [[OTSAlertView alertWithMessage:@"查询答题记录失败" andCompleteBlock:nil] show];
         }
     }];
-}
-
-- (void)createItems:(NSArray *)ids
-{
-    NSMutableArray *items = @[].mutableCopy;
-    [ids enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSDictionary *infos = obj;
-        [infos[@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSDictionary *itemInfo = obj;
-            ItemVO *itemVO = [ItemVO createWithItemId:itemInfo[@"titleId"] andType:[infos[@"typeId"] intValue]];
-//            itemVO.outlineId = self.examOutlineId;
-            itemVO.subjectId = self.subjectId;
-            if ([itemInfo[@"type"] intValue] == 1) {
-                itemVO.hasNote = YES;
-            }
-            
-            if (itemVO) {
-                [items addObject:itemVO];
-            }
-        }];
-    }];
-    
-    [self performSegueWithIdentifier:@"toNext" sender:items];
 }
 
 #pragma mark - Navigation

@@ -58,7 +58,7 @@
                     <items>
                         <tabBarItem title="上一题" image="back" id="yKQ-3h-pS7"/>
                         <tabBarItem tag="1" title="查看答案" image="answer" id="6j3-tY-zas"/>
-                        <tabBarItem tag="2" title="设置" image="setting" id="3NF-SE-wpu"/>
+                        <tabBarItem tag="2" title="快捷选题" image="setting" id="3NF-SE-wpu"/>
                         <tabBarItem tag="3" title="收藏" image="favorate" id="KjM-Ym-8dc"/>
                         <tabBarItem tag="4" title="下一题" image="next" id="Bqo-mt-joI"/>
                     </items>
