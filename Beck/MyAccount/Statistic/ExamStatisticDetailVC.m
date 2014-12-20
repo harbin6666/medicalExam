@@ -74,7 +74,7 @@
     NSMutableArray *items = @[].mutableCopy;
     [ids enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *answer = obj;
-        ItemVO *itemVO = [ItemVO createWithAnswer:answer];
+        ItemVO *itemVO = [ItemVO createWithExamAnswer:answer];
         
         if (itemVO) {
             [items addObject:itemVO];

@@ -59,7 +59,7 @@
                     NSArray *titleList = info[@"titleList"];
                     [titleList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                         NSDictionary *itemInfo = obj;
-                        ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue]];
+                        ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue] andAnswer:itemInfo[@"userAnwer"]];
                         if (itemVO) {
                             [ids addObject:itemVO];
                         }

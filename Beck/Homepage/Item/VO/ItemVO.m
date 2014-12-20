@@ -63,11 +63,19 @@
     return [self createWithItemId:itemId andType:type score:@0];
 }
 
-+ (instancetype)createWithAnswer:(NSString *)answer
++ (instancetype)createWithExamAnswer:(NSString *)answer
 {
     NSArray *infos = [answer componentsSeparatedByString:@":"];
     ItemVO *vo = [self createWithItemId:infos[0] andType:[infos[2] intValue]];
     vo.answerString = infos[1];
+    vo.showAnswer = YES;
+    return vo;
+}
+
++ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type andAnswer:(NSString *)answer
+{
+    ItemVO *vo = [self createWithItemId:itemId andType:type];
+    vo.answerString = answer;
     vo.showAnswer = YES;
     return vo;
 }

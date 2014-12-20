@@ -44,7 +44,9 @@ typedef enum ItemType
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type score:(NSNumber *)score;
 
-+ (instancetype)createWithAnswer:(NSString *)answer;
++ (instancetype)createWithExamAnswer:(NSString *)answer;
+
++ (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type andAnswer:(NSString *)answer;
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index;
 
