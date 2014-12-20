@@ -100,6 +100,8 @@
         ids = [ids stringByAppendingFormat:@"%@,",subjectPosition[@"id"]];
     }];
     
+    ids = [ids substringToIndex:ids.length - 1];
+    
     [self showLoading];
     [self getValueWithBeckUrl:@"/front/userExamSubjectAct.htm" params:@{@"token":@"update",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"],@"subjectIdList":ids} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
