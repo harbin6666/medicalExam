@@ -47,9 +47,6 @@
     params[@"subjectId"] = self.subjectId;
     
     if (sender.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subject";
-    }
-    else if (sender.selectedSegmentIndex == 1) {
         params[@"token"] = @"type";
     }
     else {
@@ -92,9 +89,6 @@
     NSDictionary *note = self.items[indexPath.row];
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        cell.textLabel.text = note[@"subjectName"];
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 1) {
         cell.textLabel.text = note[@"customName"];
     }
     else {
@@ -114,15 +108,12 @@
     params[@"subjectId"] = self.subjectId;
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subject";
+        params[@"token"] = @"typeList";
+        params[@"type"] = item[@"customId"];
     }
     else if (self.segmentedControl.selectedSegmentIndex == 1) {
         params[@"token"] = @"outlineList";
         params[@"outlineId"] = item[@"outlineId"];
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 2) {
-        params[@"token"] = @"typeList";
-        params[@"type"] = item[@"customId"];
     }
     
     [self showLoading];

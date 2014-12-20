@@ -18,7 +18,6 @@
                             <rect key="frame" x="0.0" y="64" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="按科目"/>
                                 <segment title="按题型"/>
                                 <segment title="出错频率"/>
                                 <segment title="遗忘曲线"/>
@@ -602,7 +601,6 @@
                             <rect key="frame" x="0.0" y="64" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="按科目"/>
                                 <segment title="按章节"/>
                                 <segment title="按题型"/>
                                 <segment title="按时间"/>
@@ -734,7 +732,6 @@
                             <rect key="frame" x="0.0" y="64" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="按科目"/>
                                 <segment title="按题型"/>
                                 <segment title="按章节"/>
                             </segments>
@@ -978,6 +975,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="qkH-yL-RsJ"/>
-        <segue reference="jsY-2c-sfK"/>
+        <segue reference="9qk-bC-Pju"/>
     </inferredMetricsTieBreakers>
 </document>

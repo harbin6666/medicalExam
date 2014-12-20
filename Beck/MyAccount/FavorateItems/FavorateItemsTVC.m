@@ -46,12 +46,9 @@
     params[@"subjectId"] = self.subjectId;
     
     if (sender.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subject";
-    }
-    else if (sender.selectedSegmentIndex == 1) {
         params[@"token"] = @"outline";
     }
-    else if (sender.selectedSegmentIndex == 2)  {
+    else if (sender.selectedSegmentIndex == 1)  {
         params[@"token"] = @"type";
     }
     else {
@@ -70,7 +67,7 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                if (self.segmentedControl.selectedSegmentIndex == 3) {
+                if (self.segmentedControl.selectedSegmentIndex == 2) {
                     NSDictionary *dict = [aResponseObject[@"list"] firstObject];
                     NSMutableArray *items = @[].mutableCopy;
                     [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
@@ -107,12 +104,9 @@
     NSDictionary *item = self.items[indexPath.row];
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        cell.textLabel.text = item[@"subjectName"];
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 1) {
         cell.textLabel.text = item[@"outlineName"];
     }
-    else if (self.segmentedControl.selectedSegmentIndex == 2)  {
+    else if (self.segmentedControl.selectedSegmentIndex == 1)  {
         cell.textLabel.text = item[@"customName"];
     }
     else {
@@ -130,7 +124,7 @@
         }
     }
     
-    if (self.segmentedControl.selectedSegmentIndex == 3) {
+    if (self.segmentedControl.selectedSegmentIndex == 2) {
         if (indexPath.row == 0) {
             cell.detailTextLabel.text = [item[@"today"] stringValue];
         }
@@ -159,13 +153,10 @@
     params[@"subjectId"] = self.subjectId;
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subject";
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 1) {
         params[@"token"] = @"outlineList";
         params[@"outlineId"] = item[@"outlineId"];
     }
-    else if (self.segmentedControl.selectedSegmentIndex == 2) {
+    else if (self.segmentedControl.selectedSegmentIndex == 1) {
         params[@"token"] = @"typeList";
         params[@"type"] = item[@"customId"];
     }

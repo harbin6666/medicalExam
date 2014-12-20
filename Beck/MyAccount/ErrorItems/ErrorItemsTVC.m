@@ -43,19 +43,18 @@
     [self showLoading];
     
     NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
-    params[@"subjectId"] = self.subjectId;
     
     if (sender.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subject";
-    }
-    else if (sender.selectedSegmentIndex == 1) {
         params[@"token"] = @"type";
+        params[@"subjectId"] = self.subjectId;
     }
-    else if (sender.selectedSegmentIndex == 2)  {
+    else if (sender.selectedSegmentIndex == 1)  {
         params[@"token"] = @"errorRate";
+        params[@"subjectId"] = self.subjectId;
     }
     else {
         params[@"token"] = @"curve";
+        params[@"subjectId"] = self.subjectId;
     }
     
     WEAK_SELF;
@@ -94,12 +93,9 @@
     NSDictionary *item = self.items[indexPath.row];
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        cell.textLabel.text = item[@"subjectName"];
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 1) {
         cell.textLabel.text = item[@"customName"];
     }
-    else if (self.segmentedControl.selectedSegmentIndex == 2)  {
+    else if (self.segmentedControl.selectedSegmentIndex == 1)  {
         if (indexPath.row == 0) {
             cell.textLabel.text = @"错一次";
         }
@@ -128,18 +124,18 @@
         }
     }
     
-    if (self.segmentedControl.selectedSegmentIndex == 3) {
+    if (self.segmentedControl.selectedSegmentIndex == 2) {
         if (indexPath.row == 0) {
-            cell.detailTextLabel.text = [item[@"today"] stringValue];
+            cell.detailTextLabel.text = [item[@"oneTime"] stringValue];
         }
         else if (indexPath.row == 1) {
-            cell.detailTextLabel.text = [item[@"threeDays"] stringValue];
+            cell.detailTextLabel.text = [item[@"twoTime"] stringValue];
         }
         else if (indexPath.row == 2) {
-            cell.detailTextLabel.text = [item[@"sevenDays"] stringValue];
+            cell.detailTextLabel.text = [item[@"threeTime"] stringValue];
         }
         else {
-            cell.detailTextLabel.text = [item[@"longer"] stringValue];
+            cell.detailTextLabel.text = [item[@"threeTimes"] stringValue];
         }
     }
     else {
@@ -157,13 +153,10 @@
     params[@"subjectId"] = self.subjectId;
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subject";
+        params[@"token"] = @"typeList";
+        params[@"type"] = item[@"customId"];
     }
     else if (self.segmentedControl.selectedSegmentIndex == 1) {
-        params[@"token"] = @"typeList";
-        params[@"outlineId"] = item[@"outlineId"];
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 2) {
         params[@"token"] = @"errorRateList";
         if (indexPath.row == 0) {
             params[@"count"] = @1;
