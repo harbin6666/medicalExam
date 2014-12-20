@@ -953,6 +953,7 @@
                         <outlet property="lbl3" destination="M9M-W0-j3i" id="6RH-9E-dHb"/>
                         <outlet property="lbl4" destination="Diy-6r-ebI" id="Ojs-PB-3cF"/>
                         <outlet property="lbl5" destination="9jX-T9-sZ5" id="T17-yP-aPI"/>
+                        <segue destination="tE6-vy-aDm" kind="push" identifier="toNext" id="jsY-2c-sfK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE0-2n-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -977,6 +978,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="qkH-yL-RsJ"/>
-        <segue reference="Oos-Mb-7Fc"/>
+        <segue reference="jsY-2c-sfK"/>
     </inferredMetricsTieBreakers>
 </document>

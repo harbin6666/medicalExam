@@ -101,13 +101,13 @@
     NSDictionary *exam = self.exams[indexPath.row];
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"details";
-    params[@"exerciseId"] = exam[@"id"];
+    params[@"paperId"] = exam[@"id"];
     
     self.exams = nil;
     
     [self showLoading];
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userExerciseAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -116,7 +116,7 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                
+                [self performSegueWithIdentifier:@"toNext" sender:[aResponseObject[@"list"] firstObject]];
             }
         }
         else {
@@ -129,6 +129,7 @@
 {
     ExamStatisticDetailVC *vc = segue.destinationViewController;
     vc.detail = sender;
+    vc.subjectId = self.subjectId;
 }
 
 @end

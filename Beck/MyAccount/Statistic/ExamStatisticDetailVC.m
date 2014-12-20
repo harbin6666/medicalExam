@@ -29,44 +29,22 @@
     [super viewDidLoad];
     
     self.lbl1.text = [NSString stringWithFormat:@"第%d次考试",(int)self.index];
-    self.lbl2.text = [NSString stringWithFormat:@"日期：%@",self.detail[@"date"]];
-    self.lbl3.text = [NSString stringWithFormat:@"答对：%@题",self.detail[@"right"]];
-    self.lbl4.text = [NSString stringWithFormat:@"答错：%@题",self.detail[@"wrong"]];
-    self.lbl5.text = [NSString stringWithFormat:@"正确率：%@",self.detail[@"accuracy"]];
+    self.lbl2.text = [NSString stringWithFormat:@"日期：%@",self.detail[@"time"]];
+    self.lbl3.text = [NSString stringWithFormat:@"答对：%@题",self.detail[@"rightAmount"]];
+    self.lbl4.text = [NSString stringWithFormat:@"答错：%@题",self.detail[@"wrongAmount"]];
+    self.lbl5.text = [NSString stringWithFormat:@"正确率：%@",self.detail[@"correct"]];
     [self.btn setTitle:[NSString stringWithFormat:@"成绩：%@分",self.detail[@"score"]] forState:UIControlStateNormal];
 }
 - (IBAction)onPressedBtn:(id)sender
 {
-//    NSDictionary *exam = self.exams[indexPath.row];
-//    NSMutableDictionary *params = @{}.mutableCopy;
-//    params[@"token"] = @"paper";
-//    params[@"paperId"] = exam[@"id"];
-//    
-//    [self showLoading];
-//    WEAK_SELF;
-//    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
-//        STRONG_SELF;
-//        [self hideLoading];
-//        if (!anError) {
-//            NSNumber *errorcode = aResponseObject[@"errorcode"];
-//            if (errorcode.boolValue) {
-//                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
-//            }
-//            else {
-//                [self createItems:aResponseObject[@"list"]];
-//            }
-//        }
-//        else {
-//            [[OTSAlertView alertWithMessage:@"查询考试详情失败" andCompleteBlock:nil] show];
-//        }
-//    }];
+    NSDictionary *exam = self.detail;
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"paper";
+    params[@"paperId"] = exam[@"id"];
     
-    NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
-    params[@"token"] = @"details";
-    params[@"exerciseId"] = self.detail[@"id"];
-    
+    [self showLoading];
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userExerciseAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -75,17 +53,18 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                NSMutableArray *ids = aResponseObject[@"list"];
-                if (ids.count > 0) {
-                    [self createItems:ids];
+                NSString *answer = aResponseObject[@"list"];
+                NSArray *answers = [answer componentsSeparatedByString:@","];
+                if (answers.count) {
+                    [self createItems:answers];
                 }
                 else {
-                    [[OTSAlertView alertWithMessage:@"查询答题记录失败" andCompleteBlock:nil] show];
+                    [[OTSAlertView alertWithMessage:@"查询考试题目失败" andCompleteBlock:nil] show];
                 }
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"查询答题记录失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"查询考试题目失败" andCompleteBlock:nil] show];
         }
     }];
 }
@@ -94,20 +73,12 @@
 {
     NSMutableArray *items = @[].mutableCopy;
     [ids enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSDictionary *infos = obj;
-        [infos[@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            NSDictionary *itemInfo = obj;
-            ItemVO *itemVO = [ItemVO createWithItemId:itemInfo[@"titleId"] andType:[infos[@"typeId"] intValue]];
-            //            itemVO.outlineId = self.examOutlineId;
-            itemVO.subjectId = self.subjectId;
-            if ([itemInfo[@"type"] intValue] == 1) {
-                itemVO.hasNote = YES;
-            }
-            
-            if (itemVO) {
-                [items addObject:itemVO];
-            }
-        }];
+        NSString *answer = obj;
+        ItemVO *itemVO = [ItemVO createWithAnswer:answer];
+        
+        if (itemVO) {
+            [items addObject:itemVO];
+        }
     }];
     
     [self performSegueWithIdentifier:@"toNext" sender:items];
