@@ -187,12 +187,18 @@
             }
             else {
                 NSMutableArray *ids = [NSMutableArray array];
-                [[aResponseObject[@"list"] firstObject][@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                    NSDictionary *infos = obj;
-                    ItemVO *itemVO = [ItemVO createWithItemId:[infos[@"titleId"] stringValue] andType:[infos[@"type"] intValue]];
-                    if (itemVO) {
-                        [ids addObject:itemVO];
-                    }
+                NSArray *infos = aResponseObject[@"list"];
+                [infos enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSDictionary *info = obj;
+                    NSNumber *type = info[@"typeId"];
+                    NSArray *titleList = info[@"titleList"];
+                    [titleList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        NSDictionary *itemInfo = obj;
+                        ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue]];
+                        if (itemVO) {
+                            [ids addObject:itemVO];
+                        }
+                    }];
                 }];
                 
                 if (ids.count > 0) {

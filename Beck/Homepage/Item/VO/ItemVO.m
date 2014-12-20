@@ -18,6 +18,10 @@
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type score:(NSNumber *)score
 {
+    if (!itemId) {
+        return nil;
+    }
+    
     ItemVO *itemVO = nil;
     switch (type) {
         case ItemTypeChoice:
