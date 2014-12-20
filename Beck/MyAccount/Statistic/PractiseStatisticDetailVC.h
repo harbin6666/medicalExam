@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSDictionary *detail;
 @property (nonatomic) NSInteger index;
+@property (nonatomic, strong) NSString *subjectId;
 
 @end

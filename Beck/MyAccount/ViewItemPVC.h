@@ -10,4 +10,6 @@
 
 @interface ViewItemPVC : ItemPVC
 
+@property (nonatomic, strong) NSString *subjectId;
+
 @end

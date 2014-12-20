@@ -8,6 +8,8 @@
 
 #import "PractiseStatisticCVC.h"
 
+#import "PractiseStatisticDetailVC.h"
+
 @interface PractiseStatisticCVC () <UICollectionViewDelegate, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -42,12 +44,13 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                self.exams = aResponseObject[@"list"];
+                NSDictionary *exam = [aResponseObject[@"list"] lastObject];
+                self.exams = exam[@"list"];
                 [self.collectionView reloadData];
-                self.lbl1.text = [NSString stringWithFormat:@"您总共进行了%@次模拟练习",aResponseObject[@"count"]];
-                self.lbl5.text = [NSString stringWithFormat:@"最高成绩：%@分",aResponseObject[@"highest"]];
-                self.lbl6.text = [NSString stringWithFormat:@"最低成绩：%@分",aResponseObject[@"lowGrade"]];
-                self.lbl7.text = [NSString stringWithFormat:@"平均成绩：%@分",aResponseObject[@"average"]];
+                self.lbl1.text = [NSString stringWithFormat:@"您总共进行了%@次模拟练习",exam[@"count"]];
+                self.lbl5.text = [NSString stringWithFormat:@"最高成绩：%@分",exam[@"highest"]];
+                self.lbl6.text = [NSString stringWithFormat:@"最低成绩：%@分",exam[@"lowGrade"]];
+                self.lbl7.text = [NSString stringWithFormat:@"平均成绩：%@分",exam[@"average"]];
             }
         }
         else {
@@ -78,16 +81,19 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"toPractiseDetail" sender:self];
+    [self performSegueWithIdentifier:@"toPractiseDetail" sender:indexPath];
 }
 
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PractiseStatisticDetailVC *vc = segue.destinationViewController;
+    vc.detail = self.exams[[sender row]];
+    vc.index = [sender row] + 1;
+    vc.subjectId = self.subjectId;
 }
- 
 
 @end
