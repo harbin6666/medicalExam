@@ -48,7 +48,7 @@
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"list";
     params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
-    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"];
+    params[@"subjectId"] = self.subjectId;
     params[@"type"] = @(self.segmentedControl.selectedSegmentIndex + 1).stringValue;
     
     self.exams = nil;

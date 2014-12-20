@@ -48,7 +48,7 @@
     [self showLoading];
     
     NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
-    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    params[@"subjectId"] = self.subjectId;
     
     if (sender.selectedSegmentIndex == 0) {
         params[@"token"] = @"subject";
@@ -115,7 +115,7 @@
     NSDictionary *item = self.items[indexPath.row];
     
     NSMutableDictionary *params = @{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]}.mutableCopy;
-    params[@"subjectId"] = [[NSUserDefaults standardUserDefaults] valueForKey:@"subjectId"];
+    params[@"subjectId"] = self.subjectId;
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
         params[@"token"] = @"subjectList";
