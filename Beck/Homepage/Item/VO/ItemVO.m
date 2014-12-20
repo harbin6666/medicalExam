@@ -54,6 +54,7 @@
     
     itemVO.score = score;
     itemVO.userAnswers = @{}.mutableCopy;
+    itemVO.canShowNote = YES;
     
     return itemVO;
 }

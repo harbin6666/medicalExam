@@ -117,7 +117,7 @@
         
         NSCalendarUnit components = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
         NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:components fromDate:startingDate toDate:endingDate options:(NSCalendarOptions)0];
-        [self.timeBtn setTitle:[NSString stringWithFormat:@"%02d:%02d", (int)dateComponents.minute, (int)dateComponents.second] forState:UIControlStateNormal];
+        [self.timeBtn setTitle:[NSString stringWithFormat:@"%02d:%02d", (int)dateComponents.minute + dateComponents.hour * 60, (int)dateComponents.second] forState:UIControlStateNormal];
     }
     else {
         [self.countdownTimer invalidate];

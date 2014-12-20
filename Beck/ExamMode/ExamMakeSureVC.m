@@ -70,6 +70,7 @@
             NSDictionary *item = obj;
             ItemVO *itemVO = [ItemVO createWithItemId:item[@"itemId"] andType:customId.intValue score:item[@"score"]];
             itemVO.subjectId = self.subjectId;
+            itemVO.canShowNote = NO;
             
             if (itemVO) {
                 [ids addObject:itemVO];
