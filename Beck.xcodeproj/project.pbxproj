@@ -51,6 +51,7 @@
 		3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220219F5441C00FC72A7 /* NotesTVC.m */; };
 		3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */; };
 		3D2F420C1A4509C80091E7E7 /* MyAccountSubjectTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F420B1A4509C80091E7E7 /* MyAccountSubjectTVC.m */; };
+		3D2F420F1A45235F0091E7E7 /* ExamStatisticDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F420E1A45235F0091E7E7 /* ExamStatisticDetailVC.m */; };
 		3D32E6921A1A214300978C5A /* beck.db in Resources */ = {isa = PBXBuildFile; fileRef = 3D32E6911A1A214300978C5A /* beck.db */; };
 		3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */; };
 		3D4CEEAD1A1CDA360078AA38 /* NSMutableArray+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEAA1A1CDA360078AA38 /* NSMutableArray+safe.m */; };
@@ -206,6 +207,8 @@
 		3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseExamTVC.m; sourceTree = "<group>"; };
 		3D2F420A1A4509C80091E7E7 /* MyAccountSubjectTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountSubjectTVC.h; sourceTree = "<group>"; };
 		3D2F420B1A4509C80091E7E7 /* MyAccountSubjectTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountSubjectTVC.m; sourceTree = "<group>"; };
+		3D2F420D1A45235F0091E7E7 /* ExamStatisticDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamStatisticDetailVC.h; sourceTree = "<group>"; };
+		3D2F420E1A45235F0091E7E7 /* ExamStatisticDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamStatisticDetailVC.m; sourceTree = "<group>"; };
 		3D32E6911A1A214300978C5A /* beck.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = beck.db; sourceTree = "<group>"; };
 		3D4CEEA31A1CB39B0078AA38 /* OTSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSAlertView.h; sourceTree = "<group>"; };
 		3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSAlertView.m; sourceTree = "<group>"; };
@@ -582,6 +585,8 @@
 			children = (
 				3DA4FA231A05FE2200C7D362 /* ExamStatisticTVC.h */,
 				3DA4FA241A05FE2200C7D362 /* ExamStatisticTVC.m */,
+				3D2F420D1A45235F0091E7E7 /* ExamStatisticDetailVC.h */,
+				3D2F420E1A45235F0091E7E7 /* ExamStatisticDetailVC.m */,
 				3D092D431A14DD8500C19F69 /* ExamStatisticCell.h */,
 				3D092D441A14DD8500C19F69 /* ExamStatisticCell.m */,
 				3DA4FA251A05FE2200C7D362 /* StatisticTVC.h */,
@@ -963,6 +968,7 @@
 				3D2521D619F53A4800FC72A7 /* PractiseHomeTVC.m in Sources */,
 				3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */,
 				3DABFDA51A32BD6D000B0661 /* ExamMakeSureVC.m in Sources */,
+				3D2F420F1A45235F0091E7E7 /* ExamStatisticDetailVC.m in Sources */,
 				3D6AE1821A07BA8600C0BB71 /* MyPointTVC.m in Sources */,
 				3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,

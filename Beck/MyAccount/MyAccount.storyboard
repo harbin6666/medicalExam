@@ -339,10 +339,10 @@
             </objects>
             <point key="canvasLocation" x="1203" y="-3929"/>
         </scene>
-        <!--考试详情-->
+        <!--练习详情-->
         <scene sceneID="Otp-74-duF">
             <objects>
-                <viewController id="XLN-tn-qaY" userLabel="考试详情" customClass="PractiseStatisticDetailVC" sceneMemberID="viewController">
+                <viewController id="XLN-tn-qaY" userLabel="练习详情" customClass="PractiseStatisticDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fb-tk-lKg"/>
                         <viewControllerLayoutGuide type="bottom" id="M2d-6U-M6t"/>
@@ -401,7 +401,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLW-in-ld1">
+                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLW-in-ld1">
                                 <rect key="frame" x="60" y="269" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YBc-Ee-5qm"/>
@@ -440,7 +440,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S3O-f7-cXI">
                                 <rect key="frame" x="16" y="11" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="查看考试详情" image="backImage">
+                                <state key="normal" title="查看练习详情" image="backImage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -483,13 +483,13 @@
                             </connections>
                         </segmentedControl>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="UJd-lb-dF3" customClass="ExamStatisticCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="160" id="UJd-lb-dF3" customClass="ExamStatisticCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJd-lb-dF3" id="Twk-54-oLk">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-Xw-ePK">
-                                            <rect key="frame" x="18" y="8" width="294" height="21"/>
+                                            <rect key="frame" x="18" y="8" width="261" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="h0d-DI-yO8"/>
                                             </constraints>
@@ -498,7 +498,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="888" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lif-Rf-N9z">
-                                            <rect key="frame" x="18" y="37" width="294" height="21"/>
+                                            <rect key="frame" x="18" y="37" width="261" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="tkW-JR-1Rt"/>
                                             </constraints>
@@ -507,7 +507,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="777" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-hg-LKe">
-                                            <rect key="frame" x="18" y="66" width="294" height="21"/>
+                                            <rect key="frame" x="18" y="66" width="261" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="IsS-QZ-APt"/>
                                             </constraints>
@@ -516,7 +516,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="666" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs4-VX-snQ">
-                                            <rect key="frame" x="18" y="95" width="294" height="21"/>
+                                            <rect key="frame" x="18" y="95" width="261" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="eow-YI-ciW"/>
                                             </constraints>
@@ -525,7 +525,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyA-oG-521">
-                                            <rect key="frame" x="18" y="124" width="284" height="21"/>
+                                            <rect key="frame" x="18" y="124" width="251" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Np3-wv-AGl"/>
                                             </constraints>
@@ -583,7 +583,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="segmentedControl" destination="lNA-SS-He1" id="eFP-b5-0Q1"/>
-                        <segue destination="tE6-vy-aDm" kind="push" identifier="toNext" id="MqV-se-VtE"/>
+                        <segue destination="xbq-5A-12H" kind="push" identifier="toNext" id="Jbm-CB-w5a"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCq-o6-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -835,6 +835,129 @@
                 </tabBar>
             </objects>
             <point key="canvasLocation" x="1782" y="-1922"/>
+        </scene>
+        <!--考试详情-->
+        <scene sceneID="iHT-xK-ZlK">
+            <objects>
+                <viewController id="xbq-5A-12H" userLabel="考试详情" customClass="ExamStatisticDetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fvU-ds-CD5"/>
+                        <viewControllerLayoutGuide type="bottom" id="mEn-JH-Oa4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0WX-ni-0bL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第10次考试" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhY-La-xz3">
+                                <rect key="frame" x="116.5" y="84" width="87.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qKj-6x-1D0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFY-zP-IxI">
+                                <rect key="frame" x="60" y="309" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Q71-qf-cBe"/>
+                                    <constraint firstAttribute="height" constant="30" id="pW8-3T-6ye"/>
+                                </constraints>
+                                <state key="normal" title="查看答题纪录" backgroundImage="chakan_sel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressedBtn:" destination="xbq-5A-12H" eventType="touchUpInside" id="F5A-6X-8Na"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期：2014-10-6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvN-M3-sPL">
+                                <rect key="frame" x="60" y="125" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="D3a-FF-idr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答对：90题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9M-W0-j3i">
+                                <rect key="frame" x="60" y="155.5" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答错：10题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diy-6r-ebI">
+                                <rect key="frame" x="60" y="186" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正确率：90%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-T9-sZ5">
+                                <rect key="frame" x="60" y="216.5" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikH-hp-cHb">
+                                <rect key="frame" x="60" y="269" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1vO-gb-mhH"/>
+                                    <constraint firstAttribute="height" constant="30" id="If6-wP-hqF"/>
+                                </constraints>
+                                <state key="normal" title="成绩：90分" backgroundImage="chakan">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yhY-La-xz3" firstAttribute="top" secondItem="fvU-ds-CD5" secondAttribute="bottom" constant="20" id="2wc-2K-EQB"/>
+                            <constraint firstItem="Diy-6r-ebI" firstAttribute="top" secondItem="M9M-W0-j3i" secondAttribute="bottom" constant="10" id="54O-Fd-Tob"/>
+                            <constraint firstAttribute="centerX" secondItem="M9M-W0-j3i" secondAttribute="centerX" id="7MR-M1-Sfj"/>
+                            <constraint firstItem="M9M-W0-j3i" firstAttribute="top" secondItem="JvN-M3-sPL" secondAttribute="bottom" constant="10" id="8WP-Qk-Amp"/>
+                            <constraint firstAttribute="centerX" secondItem="9jX-T9-sZ5" secondAttribute="centerX" id="GhC-vx-erI"/>
+                            <constraint firstItem="uFY-zP-IxI" firstAttribute="top" secondItem="ikH-hp-cHb" secondAttribute="bottom" constant="10" id="ITl-pN-dvm"/>
+                            <constraint firstAttribute="centerX" secondItem="ikH-hp-cHb" secondAttribute="centerX" id="LQf-5e-1Ry"/>
+                            <constraint firstItem="JvN-M3-sPL" firstAttribute="width" secondItem="M9M-W0-j3i" secondAttribute="width" id="Lqg-VG-tJt"/>
+                            <constraint firstAttribute="centerX" secondItem="uFY-zP-IxI" secondAttribute="centerX" id="Q9R-F4-zlU"/>
+                            <constraint firstAttribute="centerX" secondItem="JvN-M3-sPL" secondAttribute="centerX" id="a9c-tM-1YI"/>
+                            <constraint firstItem="JvN-M3-sPL" firstAttribute="width" secondItem="9jX-T9-sZ5" secondAttribute="width" id="elm-bD-LXB"/>
+                            <constraint firstItem="JvN-M3-sPL" firstAttribute="width" secondItem="Diy-6r-ebI" secondAttribute="width" id="eop-FA-1rK"/>
+                            <constraint firstAttribute="centerX" secondItem="Diy-6r-ebI" secondAttribute="centerX" id="k2d-TI-RFj"/>
+                            <constraint firstAttribute="centerX" secondItem="yhY-La-xz3" secondAttribute="centerX" id="mZ4-r6-hOd"/>
+                            <constraint firstItem="ikH-hp-cHb" firstAttribute="top" secondItem="9jX-T9-sZ5" secondAttribute="bottom" constant="32" id="mfQ-Ut-QDO"/>
+                            <constraint firstItem="JvN-M3-sPL" firstAttribute="top" secondItem="yhY-La-xz3" secondAttribute="bottom" constant="20" id="nsz-zg-fdD"/>
+                            <constraint firstItem="9jX-T9-sZ5" firstAttribute="top" secondItem="Diy-6r-ebI" secondAttribute="bottom" constant="10" id="xMi-gO-zSJ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="z7c-yx-kFo">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="fC2-eO-Aqp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5B0-vI-g7j">
+                                <rect key="frame" x="16" y="11" width="130" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查看考试详情" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="xbq-5A-12H" eventType="touchUpInside" id="rS2-1n-qTN"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btn" destination="ikH-hp-cHb" id="FSf-dV-LZQ"/>
+                        <outlet property="lbl1" destination="yhY-La-xz3" id="z5D-br-EMM"/>
+                        <outlet property="lbl2" destination="JvN-M3-sPL" id="JFC-6Y-0dE"/>
+                        <outlet property="lbl3" destination="M9M-W0-j3i" id="6RH-9E-dHb"/>
+                        <outlet property="lbl4" destination="Diy-6r-ebI" id="Ojs-PB-3cF"/>
+                        <outlet property="lbl5" destination="9jX-T9-sZ5" id="T17-yP-aPI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lE0-2n-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="-3283"/>
         </scene>
     </scenes>
     <resources>

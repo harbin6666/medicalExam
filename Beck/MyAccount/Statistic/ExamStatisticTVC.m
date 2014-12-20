@@ -10,7 +10,7 @@
 
 #import "ExamStatisticCell.h"
 #import "ItemVO.h"
-#import "ViewItemPVC.h"
+#import "ExamStatisticDetailVC.h"
 
 @interface ExamStatisticTVC ()
 
@@ -100,12 +100,14 @@
 {
     NSDictionary *exam = self.exams[indexPath.row];
     NSMutableDictionary *params = @{}.mutableCopy;
-    params[@"token"] = @"paper";
-    params[@"paperId"] = exam[@"id"];
+    params[@"token"] = @"details";
+    params[@"exerciseId"] = exam[@"id"];
+    
+    self.exams = nil;
     
     [self showLoading];
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userExerciseAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
@@ -114,38 +116,19 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                [self createItems:aResponseObject[@"list"]];
+                
             }
         }
         else {
-            [[OTSAlertView alertWithMessage:@"查询考试详情失败" andCompleteBlock:nil] show];
+            [[OTSAlertView alertWithMessage:@"查询考试失败" andCompleteBlock:nil] show];
         }
     }];
-}
-
-- (void)createItems:(NSString *)answers
-{
-    NSMutableArray *items = @[].mutableCopy;
-    NSArray *answerStrings = [answers componentsSeparatedByString:@","];
-    [answerStrings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSString *answer = obj;
-        ItemVO *vo = [ItemVO createWithAnswer:answer];
-        if (vo) {
-            [items addObject:vo];
-        }
-    }];
-    
-    if (!items.count) {
-        return ;
-    }
-    
-    [self performSegueWithIdentifier:@"toNext" sender:items];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ViewItemPVC *vc = segue.destinationViewController;
-    vc.items = sender;
+    ExamStatisticDetailVC *vc = segue.destinationViewController;
+    vc.detail = sender;
 }
 
 @end
