@@ -73,7 +73,7 @@
         @autoreleasepool {
             ItemVO *vo = obj;
             NSMutableDictionary *infos = @{}.mutableCopy;
-            infos[@"itemId"] = vo.itemId;
+            infos[@"titleId"] = vo.itemId;
             infos[@"titleTypeId"] = @(vo.type);
             infos[@"userAnswer"] = vo.getOnlyAnswer;
             infos[@"isRight"] = (vo.isRight ? @"true" : @"false");
