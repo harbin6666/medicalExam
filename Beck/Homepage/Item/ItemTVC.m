@@ -35,7 +35,6 @@
     }
     
     vc.itemVO = aVO;
-    vc.canShowNote = YES;
     
     return vc;
 }
@@ -77,7 +76,7 @@
         return 44.f;
     }
     else if (indexPath.section == 3){
-        if (self.canShowNote) {
+        if (self.itemVO.canShowNote) {
             return 44.f;
         }
         else {
@@ -85,7 +84,7 @@
         }
     }
     else if (indexPath.section == 4){
-        if (self.showAnswer) {
+        if (self.itemVO.showAnswer) {
             return 80.f;
         }
         else {
@@ -125,14 +124,14 @@
     }
     else if (indexPath.section == 3){
         cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
-        cell.hidden = !self.canShowNote;
+        cell.hidden = !self.itemVO.canShowNote;
     }
     else if (indexPath.section == 4){
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell" forIndexPath:indexPath];
         cell.detailTextLabel.text = [self answerParse];
         
-        cell.textLabel.hidden = !self.showAnswer;
-        cell.detailTextLabel.hidden = !self.showAnswer;
+        cell.textLabel.hidden = !self.itemVO.showAnswer;
+        cell.detailTextLabel.hidden = !self.itemVO.showAnswer;
     }
     else if (indexPath.section == 5){
         cell = [tableView dequeueReusableCellWithIdentifier:@"NoteCell" forIndexPath:indexPath];

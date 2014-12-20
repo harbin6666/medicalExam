@@ -54,8 +54,8 @@
 }
 
 - (void)onPressedBtn2:(UIButton *)sender {
-    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
-    sender.selected = self.currentTVC.showAnswer;
+    self.currentTVC.itemVO.showAnswer = !self.currentTVC.itemVO.showAnswer;
+    sender.selected = self.currentTVC.itemVO.showAnswer;
     [self.currentTVC.tableView reloadData];
 }
 

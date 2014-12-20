@@ -31,7 +31,6 @@
     [self configTabBar];
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items.firstObject];
-    vc.canShowNote = self.canShowNote;
     
     if (!vc) {
         return;
@@ -88,7 +87,6 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
-    vc.canShowNote = self.canShowNote;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -138,7 +136,6 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
-    vc.canShowNote = self.canShowNote;
     
     WEAK_SELF;
     [self setViewControllers:@[vc]
@@ -228,7 +225,6 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
-    vc.canShowNote = self.canShowNote;
     
     return vc;
 }
@@ -242,7 +238,6 @@
     }
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
-    vc.canShowNote = self.canShowNote;
     
     return vc;
 }
@@ -253,7 +248,6 @@
     [self.navigationController popViewControllerAnimated:YES];
     
     ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[index]];
-    vc.canShowNote = self.canShowNote;
     
     if (!vc) {
         return;
@@ -296,12 +290,12 @@
         if (!anError) {
             NSNumber *errorcode = aResponseObject[@"errorcode"];
             if (errorcode.integerValue == 2) {
-                self.currentTVC.showAnswer = YES;
+                self.currentTVC.itemVO.showAnswer = YES;
                 [[OTSAlertView alertWithMessage:@"已经收藏" andCompleteBlock:nil] show];
                 [self configTabBar];
             }
             else {
-                self.currentTVC.showAnswer = NO;
+                self.currentTVC.itemVO.showAnswer = NO;
                 [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
             }
         }
