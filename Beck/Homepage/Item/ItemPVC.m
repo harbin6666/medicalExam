@@ -290,12 +290,11 @@
         if (!anError) {
             NSNumber *errorcode = aResponseObject[@"errorcode"];
             if (errorcode.integerValue == 2) {
-                self.currentTVC.itemVO.showAnswer = YES;
+                self.currentTVC.itemVO.favorated = YES;
                 [[OTSAlertView alertWithMessage:@"已经收藏" andCompleteBlock:nil] show];
                 [self configTabBar];
             }
             else {
-                self.currentTVC.itemVO.showAnswer = NO;
                 [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
             }
         }
