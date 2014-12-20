@@ -10,7 +10,7 @@
 
 #import "ExamStatisticCell.h"
 #import "ItemVO.h"
-#import "ExamStatisticDetailVC.h"
+#import "ExamStatisticDetailTVC.h"
 
 @interface ExamStatisticTVC ()
 
@@ -96,37 +96,11 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSDictionary *exam = self.exams[indexPath.row];
-    NSMutableDictionary *params = @{}.mutableCopy;
-    params[@"token"] = @"details";
-    params[@"paperId"] = exam[@"id"];
-    
-    [self showLoading];
-    WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
-        [self hideLoading];
-        if (!anError) {
-            NSNumber *errorcode = aResponseObject[@"errorcode"];
-            if (errorcode.boolValue) {
-                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
-            }
-            else {
-                [self performSegueWithIdentifier:@"toNext" sender:[aResponseObject[@"list"] firstObject]];
-            }
-        }
-        else {
-            [[OTSAlertView alertWithMessage:@"查询考试失败" andCompleteBlock:nil] show];
-        }
-    }];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ExamStatisticDetailVC *vc = segue.destinationViewController;
-    vc.detail = sender;
+    NSDictionary *exam = self.exams[self.tableView.indexPathForSelectedRow.row];
+    ExamStatisticDetailTVC *vc = segue.destinationViewController;
+    vc.exam = exam;
     vc.subjectId = self.subjectId;
 }
 
