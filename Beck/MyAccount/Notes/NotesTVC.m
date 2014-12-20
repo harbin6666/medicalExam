@@ -118,7 +118,7 @@
     params[@"subjectId"] = self.subjectId;
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {
-        params[@"token"] = @"subjectList";
+        params[@"token"] = @"subject";
     }
     else if (self.segmentedControl.selectedSegmentIndex == 1) {
         params[@"token"] = @"outlineList";
@@ -143,7 +143,9 @@
                 [[aResponseObject[@"list"] firstObject][@"titleList"] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                     NSDictionary *infos = obj;
                     ItemVO *itemVO = [ItemVO createWithItemId:[infos[@"titleId"] stringValue] andType:[infos[@"type"] intValue]];
-                    [ids addObject:itemVO];
+                    if (itemVO) {
+                        [ids addObject:itemVO];
+                    }
                 }];
                 
                 if (ids.count > 0) {

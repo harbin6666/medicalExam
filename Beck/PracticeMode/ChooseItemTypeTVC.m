@@ -128,7 +128,9 @@
         }
         else {
             ItemVO *vo = [ItemVO createWithItemId:row[0] andType:[row[1] intValue]];
-            [ids addObject:vo];
+            if (vo) {
+                [ids addObject:vo];
+            }
         }
     }];
 }

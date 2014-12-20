@@ -134,7 +134,9 @@
     [answerStrings enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *answer = obj;
         ItemVO *vo = [ItemVO createWithAnswer:answer];
-        [items addObject:vo];
+        if (vo) {
+            [items addObject:vo];
+        }
     }];
     
     if (!items.count) {

@@ -114,7 +114,9 @@
                 itemVO.hasNote = YES;
             }
             
-            [items addObject:itemVO];
+            if (itemVO) {
+                [items addObject:itemVO];
+            }
         }];
     }];
     
