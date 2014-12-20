@@ -140,6 +140,7 @@
                         itemVO.noteString = itemInfo[@"note"];
                         itemVO.hasNote = YES;
                         itemVO.showNote = YES;
+                        itemVO.canShowNote = NO;
                         
                         if (itemVO) {
                             [ids addObject:itemVO];
