@@ -95,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpq-VG-bqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="-2346"/>
+            <point key="canvasLocation" x="-507" y="-2334"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="Scg-qH-cY6">
@@ -141,15 +141,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="eYf-nT-bS6" kind="push" identifier="toNotes" id="CTu-PM-Zj8"/>
-                        <segue destination="dTN-76-Te1" kind="push" identifier="toFavorate" id="09e-E9-YkR"/>
-                        <segue destination="SYG-6p-dsv" kind="push" identifier="toError" id="Fvq-52-mWE"/>
                         <segue destination="tGN-yu-t7Q" kind="push" identifier="toStatistic" id="0Sb-lK-bGT"/>
+                        <segue destination="mza-so-uFP" kind="push" identifier="toNext" id="PRX-WN-iRa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SJy-FS-eaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516" y="-2346"/>
+            <point key="canvasLocation" x="-14" y="-2334"/>
         </scene>
         <!--统计-->
         <scene sceneID="30y-bO-To1">
@@ -174,24 +172,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1Y8-wD-gab" kind="push" id="kj0-pA-ubD"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell1" textLabel="uYX-he-vHs" style="IBUITableViewCellStyleDefault" id="6IO-b0-BEq">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IO-b0-BEq" id="Gsp-d0-6yN">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uYX-he-vHs">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="4Dq-pk-871" kind="push" id="Gor-Lf-hDi"/>
+                                    <segue destination="mza-so-uFP" kind="push" id="qkH-yL-RsJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -219,7 +200,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgP-Ki-78W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="-3460"/>
+            <point key="canvasLocation" x="571" y="-3420"/>
         </scene>
         <!--练习统计-->
         <scene sceneID="7Ti-tq-gaS">
@@ -356,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vk2-fe-Qjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="-3753"/>
+            <point key="canvasLocation" x="1203" y="-3929"/>
         </scene>
         <!--考试详情-->
         <scene sceneID="Otp-74-duF">
@@ -478,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgR-g9-5V0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168" y="-3753"/>
+            <point key="canvasLocation" x="1782" y="-3929"/>
         </scene>
         <!--统计分析-->
         <scene sceneID="iqR-RF-TiS">
@@ -605,7 +586,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCq-o6-sBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="-3115"/>
+            <point key="canvasLocation" x="1203" y="-3283"/>
         </scene>
         <!--题目收藏-->
         <scene sceneID="bVn-En-luE">
@@ -680,6 +661,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcq-JA-4LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1203" y="-1922"/>
+        </scene>
+        <!--选择科目-->
+        <scene sceneID="6Lx-2P-d57">
+            <objects>
+                <tableViewController id="mza-so-uFP" userLabel="选择科目" customClass="MyAccountSubjectTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sfX-98-2YJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="AEo-le-TDP" style="IBUITableViewCellStyleDefault" id="YH2-06-cZR">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YH2-06-cZR" id="rg1-hJ-Gpf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AEo-le-TDP">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mza-so-uFP" id="o8N-hc-IBR"/>
+                            <outlet property="delegate" destination="mza-so-uFP" id="020-Sp-GQ1"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZbU-67-cIb">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="AYE-Wn-hHi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aMh-98-1EN">
+                                <rect key="frame" x="16" y="11" width="81" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择科目" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="guB-5w-9aC" eventType="touchUpInside" id="QpQ-Yj-r8e"/>
+                                    <action selector="leftBtnClick:" destination="mza-so-uFP" eventType="touchUpInside" id="jq4-s5-HQm"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="eYf-nT-bS6" kind="push" identifier="toNotes" id="1Nh-nI-uhR"/>
+                        <segue destination="dTN-76-Te1" kind="push" identifier="toFavorate" id="Pe1-oX-uXa"/>
+                        <segue destination="SYG-6p-dsv" kind="push" identifier="toError" id="9cl-Kq-WKG"/>
+                        <segue destination="1Y8-wD-gab" kind="push" identifier="toPractise" id="zjC-7x-crK"/>
+                        <segue destination="4Dq-pk-871" kind="push" identifier="toExam" id="5lg-Lq-Z95"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7c-9C-eAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="-2334"/>
         </scene>
         <!--笔记总结-->
         <scene sceneID="SXv-DU-ufA">
@@ -812,6 +851,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9qk-bC-Pju"/>
+        <segue reference="qkH-yL-RsJ"/>
+        <segue reference="MqV-se-VtE"/>
     </inferredMetricsTieBreakers>
 </document>

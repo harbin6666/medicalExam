@@ -8,6 +8,8 @@
 
 #import "MyAccountHomeTVC.h"
 
+#import "MyAccountSubjectTVC.h"
+
 @interface MyAccountHomeTVC ()
 
 @property (nonatomic, strong) NSArray *names;
@@ -56,14 +58,25 @@
     if (indexPath.row == 0) {
         [self performSegueWithIdentifier:@"toStatistic" sender:nil];
     }
-    else if (indexPath.row == 1) {
-        [self performSegueWithIdentifier:@"toNotes" sender:nil];
-    }
-    else if (indexPath.row == 2) {
-        [self performSegueWithIdentifier:@"toFavorate" sender:nil];
-    }
     else {
-        [self performSegueWithIdentifier:@"toError" sender:nil];
+        [self performSegueWithIdentifier:@"toNext" sender:indexPath];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender) {
+        NSIndexPath *path = sender;
+        MyAccountSubjectTVC *vc = segue.destinationViewController;
+        if (path.row == 1) {
+            vc.toType = toNotes;
+        }
+        else if (path.row == 2) {
+            vc.toType = toFavorate;
+        }
+        else {
+            vc.toType = toError;
+        }
     }
 }
 

@@ -10,4 +10,6 @@
 
 @interface ErrorItemsTVC : BeckTVC
 
+@property (nonatomic, strong) NSString *subjectId;
+
 @end

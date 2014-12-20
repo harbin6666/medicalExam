@@ -10,4 +10,6 @@
 
 @interface PractiseStatisticCVC : BeckVC
 
+@property (nonatomic, strong) NSString *subjectId;
+
 @end

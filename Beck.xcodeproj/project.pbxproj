@@ -50,6 +50,7 @@
 		3D25220619F5441C00FC72A7 /* FavorateItemsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521FD19F5441C00FC72A7 /* FavorateItemsTVC.m */; };
 		3D25220819F5441C00FC72A7 /* NotesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220219F5441C00FC72A7 /* NotesTVC.m */; };
 		3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */; };
+		3D2F420C1A4509C80091E7E7 /* MyAccountSubjectTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F420B1A4509C80091E7E7 /* MyAccountSubjectTVC.m */; };
 		3D32E6921A1A214300978C5A /* beck.db in Resources */ = {isa = PBXBuildFile; fileRef = 3D32E6911A1A214300978C5A /* beck.db */; };
 		3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */; };
 		3D4CEEAD1A1CDA360078AA38 /* NSMutableArray+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CEEAA1A1CDA360078AA38 /* NSMutableArray+safe.m */; };
@@ -203,6 +204,8 @@
 		3D25220219F5441C00FC72A7 /* NotesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesTVC.m; sourceTree = "<group>"; };
 		3D25220919F5455100FC72A7 /* ChooseExamTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseExamTVC.h; sourceTree = "<group>"; };
 		3D25220A19F5455100FC72A7 /* ChooseExamTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseExamTVC.m; sourceTree = "<group>"; };
+		3D2F420A1A4509C80091E7E7 /* MyAccountSubjectTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountSubjectTVC.h; sourceTree = "<group>"; };
+		3D2F420B1A4509C80091E7E7 /* MyAccountSubjectTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountSubjectTVC.m; sourceTree = "<group>"; };
 		3D32E6911A1A214300978C5A /* beck.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = beck.db; sourceTree = "<group>"; };
 		3D4CEEA31A1CB39B0078AA38 /* OTSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSAlertView.h; sourceTree = "<group>"; };
 		3D4CEEA41A1CB39B0078AA38 /* OTSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSAlertView.m; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 				3D2521FE19F5441C00FC72A7 /* 查看笔记 */,
 				3D2521E019F53C9100FC72A7 /* MyAccountHomeTVC.h */,
 				3D2521E119F53C9100FC72A7 /* MyAccountHomeTVC.m */,
+				3D2F420A1A4509C80091E7E7 /* MyAccountSubjectTVC.h */,
+				3D2F420B1A4509C80091E7E7 /* MyAccountSubjectTVC.m */,
 				3D0EFB9719FFC4EA0017A539 /* ViewItemPVC.h */,
 				3D0EFB9819FFC4EA0017A539 /* ViewItemPVC.m */,
 				3DB238D219FE803E002CD73D /* MyAccount.storyboard */,
@@ -962,6 +967,7 @@
 				3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
 				3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */,
+				3D2F420C1A4509C80091E7E7 /* MyAccountSubjectTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
 				3D0256C31A1E278900C46B0E /* ChoiceItemTVC.m in Sources */,
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,

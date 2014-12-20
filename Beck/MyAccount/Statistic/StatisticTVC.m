@@ -8,6 +8,8 @@
 
 #import "StatisticTVC.h"
 
+#import "MyAccountSubjectTVC.h"
+
 @interface StatisticTVC ()
 
 @property (nonatomic, strong) NSArray *names;
@@ -34,12 +36,23 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellName = indexPath.row ? @"Cell1" : @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.names[indexPath.row];
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    MyAccountSubjectTVC *vc = segue.destinationViewController;
+    NSIndexPath *path = self.tableView.indexPathForSelectedRow;
+    if (path.row == 0) {
+        vc.toType = toPractise;
+    }
+    else {
+        vc.toType = toExam;
+    }
 }
 
 @end

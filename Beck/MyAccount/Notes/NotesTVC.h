@@ -10,4 +10,6 @@
 
 @interface NotesTVC : BeckTVC
 
+@property (nonatomic, strong) NSString *subjectId;
+
 @end
