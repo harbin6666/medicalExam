@@ -57,6 +57,8 @@
         params[@"subjectId"] = self.subjectId;
     }
     
+    self.items = nil;
+    
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userWrongItemAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
@@ -67,13 +69,23 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                self.items = aResponseObject[@"list"];
-                [self.tableView reloadData];
+                if (self.segmentedControl.selectedSegmentIndex == 1 || self.segmentedControl.selectedSegmentIndex == 2) {
+                    NSDictionary *dict = [aResponseObject[@"list"] firstObject];
+                    NSMutableArray *items = @[].mutableCopy;
+                    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                        [items addObject:@{key:obj}];
+                    }];
+                    self.items = items;
+                }
+                else {
+                    self.items = aResponseObject[@"list"];
+                }
             }
         }
         else {
             [[OTSAlertView alertWithMessage:@"获取错题失败" andCompleteBlock:nil] show];
         }
+        [self.tableView reloadData];
     }];
 }
 
@@ -138,6 +150,20 @@
             cell.detailTextLabel.text = [item[@"threeTimes"] stringValue];
         }
     }
+    else if (self.segmentedControl.selectedSegmentIndex == 2) {
+        if (indexPath.row == 0) {
+            cell.detailTextLabel.text = [item[@"today"] stringValue];
+        }
+        else if (indexPath.row == 1) {
+            cell.detailTextLabel.text = [item[@"threeDays"] stringValue];
+        }
+        else if (indexPath.row == 2) {
+            cell.detailTextLabel.text = [item[@"sevenDays"] stringValue];
+        }
+        else {
+            cell.detailTextLabel.text = [item[@"longer"] stringValue];
+        }
+    }
     else {
         cell.detailTextLabel.text = [item[@"count"] stringValue];
     }
@@ -159,37 +185,37 @@
     else if (self.segmentedControl.selectedSegmentIndex == 1) {
         params[@"token"] = @"errorRateList";
         if (indexPath.row == 0) {
-            params[@"count"] = @1;
+            params[@"oneTime"] = @1;
         }
         else if (indexPath.row == 1) {
-            params[@"count"] = @2;
+            params[@"twoTime"] = @2;
         }
         else if (indexPath.row == 2) {
-            params[@"count"] = @3;
+            params[@"threeTime"] = @3;
         }
         else {
-            params[@"count"] = @4;
+            params[@"threeTimes"] = @4;
         }
     }
     else {
         params[@"token"] = @"curveList";
         if (indexPath.row == 0) {
-            params[@"type"] = @0;
+            params[@"time"] = @0;
         }
         else if (indexPath.row == 1) {
-            params[@"type"] = @3;
+            params[@"time"] = @3;
         }
         else if (indexPath.row == 2) {
-            params[@"type"] = @7;
+            params[@"time"] = @7;
         }
         else {
-            params[@"type"] = @8;
+            params[@"time"] = @8;
         }
     }
     
     [self showLoading];
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/userWrongItemAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         if (!anError) {
             NSNumber *errorcode = aResponseObject[@"errorcode"];

@@ -53,6 +53,8 @@
         params[@"token"] = @"outline";
     }
     
+    self.items = nil;
+    
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
@@ -64,12 +66,12 @@
             }
             else {
                 self.items = aResponseObject[@"list"];
-                [self.tableView reloadData];
             }
         }
         else {
             [[OTSAlertView alertWithMessage:@"获取笔记失败" andCompleteBlock:nil] show];
         }
+        [self.tableView reloadData];
     }];
 }
 
