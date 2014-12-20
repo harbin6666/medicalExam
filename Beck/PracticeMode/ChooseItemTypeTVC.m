@@ -20,17 +20,10 @@
 
 @implementation ChooseItemTypeTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-//    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题",@"填空题"];
-    self.names = @[@"单选题",@"配伍题",@"多选题"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //    self.names = @[@"单选题",@"判断题",@"多选题",@"配伍题",@"填空题"];
+    self.names = @[@"单选题",@"配伍题",@"多选题"];
     self.numbers = @[].mutableCopy;
     
 //    NSString *sql1 = @"select custom_id, count(choice_id) from choice_questions where custom_id == \"1\" union all\

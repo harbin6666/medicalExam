@@ -16,15 +16,9 @@
 
 @implementation BeckMCTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"发现新版本"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.names = @[@"发现新版本"];
 }
 
 - (void)didReceiveMemoryWarning {

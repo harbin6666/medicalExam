@@ -18,15 +18,9 @@
 
 @implementation ExamHomeTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"模拟考试", @"真题考试"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.names = @[@"模拟考试", @"真题考试"];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

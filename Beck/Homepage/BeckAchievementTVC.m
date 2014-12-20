@@ -17,17 +17,11 @@
 
 @implementation BeckAchievementTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
+- (void)viewDidLoad {
+    [super viewDidLoad];
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     
     self.tableView.tableFooterView = self.footerView;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
     
     self.sectionNames = @[@"    我的宣章", @"    我的统计", @"    我的积分"];
 }

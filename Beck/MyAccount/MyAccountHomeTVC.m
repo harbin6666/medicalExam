@@ -18,15 +18,9 @@
 
 @implementation MyAccountHomeTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"统计", @"查看笔记", @"题目收藏", @"错题重做"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.names = @[@"统计", @"查看笔记", @"题目收藏", @"错题重做"];
 }
 
 - (void)didReceiveMemoryWarning {

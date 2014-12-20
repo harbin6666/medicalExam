@@ -16,15 +16,9 @@
 
 @implementation MoreHomeTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"高频考点", @"考试科目", @"意见反馈", @"使用帮助", @"软件分享", @"版本更新", @"个人档案"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.names = @[@"高频考点", @"考试科目", @"意见反馈", @"使用帮助", @"软件分享", @"版本更新", @"个人档案"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -18,11 +18,6 @@
 
 @implementation BeckHomepageVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

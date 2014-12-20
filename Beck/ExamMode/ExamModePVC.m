@@ -157,7 +157,7 @@
     json[@"endTime"] = [NSDate date].description;
     
     ExamVO *vo = [ExamVO createWithExamInfos:self.examInfos withItemVOs:self.items];
-    json[@"Score"] = vo.getScore.stringValue;
+    json[@"score"] = vo.getScore.stringValue;
     json[@"userAnswer"] = vo.getAnswer;
     json[@"rightAmount"] = vo.getRightAmount.stringValue;
     json[@"wrongAmount"] = vo.getWrongAmount.stringValue;

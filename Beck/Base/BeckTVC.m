@@ -14,11 +14,6 @@
 
 @implementation BeckTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

@@ -22,9 +22,8 @@
 
 @implementation FavorateItemsTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     self.segmentedControl = (UISegmentedControl *)self.tableView.tableHeaderView;
     CGRect rc = self.segmentedControl.bounds;
     rc.size.height = 44;
@@ -36,10 +35,6 @@
     
     [self.segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor lightGrayColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0]} forState:UIControlStateNormal];
     [self.segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor brownColor], NSFontAttributeName:[UIFont systemFontOfSize:16.0],NSUnderlineStyleAttributeName:@4.f} forState:UIControlStateSelected];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
     
     [self changeValue:self.segmentedControl];
 }

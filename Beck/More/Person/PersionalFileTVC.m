@@ -18,15 +18,9 @@
 
 @implementation PersionalFileTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
     
     self.titleLabel.text = [NSString stringWithFormat:@"%@,欢迎您",[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]];
 }

@@ -16,16 +16,10 @@
 
 @implementation PractiseHomeTVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    self.names = @[@"章节练习"];
-//    self.names = @[@"章节练习",@"题库练习"];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.names = @[@"章节练习"];
+    //    self.names = @[@"章节练习",@"题库练习"];
 }
 
 - (void)didReceiveMemoryWarning {
