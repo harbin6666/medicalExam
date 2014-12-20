@@ -103,8 +103,6 @@
     params[@"token"] = @"details";
     params[@"paperId"] = exam[@"id"];
     
-    self.exams = nil;
-    
     [self showLoading];
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userExamAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
