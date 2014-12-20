@@ -8,13 +8,6 @@
 
 #import "ItemtVC.h"
 
-@interface ItemTVC ()
-
-- (NSString *)answerParse;
-- (NSString *)noteParse;
-
-@end
-
 @implementation ItemTVC
 
 + (instancetype)createWitleItemVO:(ItemVO *)aVO
@@ -228,7 +221,7 @@
 
 - (NSString *)noteParse
 {
-    return @"我是笔记";
+    return self.itemVO.noteString;
 }
 
 - (void)dealloc

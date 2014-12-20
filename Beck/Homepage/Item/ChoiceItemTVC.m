@@ -106,11 +106,6 @@
     return cell;
 }
 
-- (NSString *)noteParse
-{
-    return @"我是笔记啊";
-}
-
 - (NSString *)itemDespretion
 {
     return @"最佳选择题：题干在前，选项在后。共有A，B，C，D，E五个备选答案，其中只有一个为最佳答案，其余选项为干扰答案。考生须在5个选项中选出一个最符合题意的答案。";

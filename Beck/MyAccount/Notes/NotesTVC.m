@@ -137,6 +137,10 @@
                     [titleList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                         NSDictionary *itemInfo = obj;
                         ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue]];
+                        itemVO.noteString = itemInfo[@"note"];
+                        itemVO.hasNote = YES;
+                        itemVO.showNote = YES;
+                        
                         if (itemVO) {
                             [ids addObject:itemVO];
                         }
