@@ -67,12 +67,72 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
-                if (self.segmentedControl.selectedSegmentIndex == 1 || self.segmentedControl.selectedSegmentIndex == 2) {
+                if (self.segmentedControl.selectedSegmentIndex == 1) {
                     NSDictionary *dict = [aResponseObject[@"list"] firstObject];
                     NSMutableArray *items = @[].mutableCopy;
-                    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-                        [items addObject:@{key:obj}];
-                    }];
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"错一次";
+                        infos[@"count"] = dict[@"oneTime"];
+                        [items addObject:infos];
+                    }
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"错2次";
+                        infos[@"count"] = dict[@"twoTime"];
+                        [items addObject:infos];
+                    }
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"错三次";
+                        infos[@"count"] = dict[@"threeTime"];
+                        [items addObject:infos];
+                    }
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"三次以上";
+                        infos[@"count"] = dict[@"threeTimes"];
+                        [items addObject:infos];
+                    }
+                    
+                    self.items = items;
+                }
+                else if (self.segmentedControl.selectedSegmentIndex == 2) {
+                    NSDictionary *dict = [aResponseObject[@"list"] firstObject];
+                    NSMutableArray *items = @[].mutableCopy;
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"今天";
+                        infos[@"count"] = dict[@"today"];
+                        [items addObject:infos];
+                    }
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"三天";
+                        infos[@"count"] = dict[@"threeDays"];
+                        [items addObject:infos];
+                    }
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"七天";
+                        infos[@"count"] = dict[@"sevenDays"];
+                        [items addObject:infos];
+                    }
+                    
+                    {
+                        NSMutableDictionary *infos = @{}.mutableCopy;
+                        infos[@"name"] = @"更久";
+                        infos[@"count"] = dict[@"longer"];
+                        [items addObject:infos];
+                    }
+                    
                     self.items = items;
                 }
                 else {
@@ -107,68 +167,11 @@
     if (self.segmentedControl.selectedSegmentIndex == 0) {
         cell.textLabel.text = item[@"customName"];
     }
-    else if (self.segmentedControl.selectedSegmentIndex == 1)  {
-        if (indexPath.row == 0) {
-            cell.textLabel.text = @"错一次";
-        }
-        else if (indexPath.row == 1) {
-            cell.textLabel.text = @"错两次";
-        }
-        else if (indexPath.row == 2) {
-            cell.textLabel.text = @"错三次";
-        }
-        else {
-            cell.textLabel.text = @"三次以上";
-        }
-    }
     else {
-        if (indexPath.row == 0) {
-            cell.textLabel.text = @"今天";
-        }
-        else if (indexPath.row == 1) {
-            cell.textLabel.text = @"三天";
-        }
-        else if (indexPath.row == 2) {
-            cell.textLabel.text = @"七天";
-        }
-        else {
-            cell.textLabel.text = @"更久";
-        }
+        cell.textLabel.text = item[@"name"];
     }
     
-    if (self.segmentedControl.selectedSegmentIndex == 1) {
-        if (indexPath.row == 0) {
-            cell.detailTextLabel.text = [item[@"oneTime"] stringValue];
-        }
-        else if (indexPath.row == 1) {
-            cell.detailTextLabel.text = [item[@"twoTime"] stringValue];
-        }
-        else if (indexPath.row == 2) {
-            cell.detailTextLabel.text = [item[@"threeTime"] stringValue];
-        }
-        else {
-            cell.detailTextLabel.text = [item[@"threeTimes"] stringValue];
-        }
-    }
-    else if (self.segmentedControl.selectedSegmentIndex == 2) {
-        if (indexPath.row == 0) {
-            cell.detailTextLabel.text = [item[@"today"] stringValue];
-        }
-        else if (indexPath.row == 1) {
-            cell.detailTextLabel.text = [item[@"threeDays"] stringValue];
-        }
-        else if (indexPath.row == 2) {
-            cell.detailTextLabel.text = [item[@"sevenDays"] stringValue];
-        }
-        else {
-            cell.detailTextLabel.text = [item[@"longer"] stringValue];
-        }
-    }
-    else {
-        cell.detailTextLabel.text = [item[@"count"] stringValue];
-    }
-    
-    [cell layoutIfNeeded];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",item[@"count"]];
     
     return cell;
 }
