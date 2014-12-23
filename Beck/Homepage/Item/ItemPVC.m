@@ -49,7 +49,7 @@
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
-    switch (item.tag) {
+    switch ([tabBar.items indexOfObject:item]) {
         case 0:
             [self onPressedBtn1:nil];
             break;
@@ -71,82 +71,27 @@
 }
 
 - (void)onPressedBtn1:(UIButton *)sender {
-    static BOOL done = YES;
-    
-    if (!done) {
-        return;
-    }
-    
-    done = NO;
-    
-    ItemTVC *tempVC = self.currentTVC;
-    if (self.items.firstObject == tempVC.itemVO) {
-        [self configTabBar];
-        done = YES;
-        return;
-    }
-    
-    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
-    
-    WEAK_SELF;
-    [self setViewControllers:@[vc]
-                   direction:UIPageViewControllerNavigationDirectionReverse
-                    animated:YES
-                  completion:^(BOOL finished) {
-                      STRONG_SELF;
-                      self.currentTVC = vc;
-                      [self configTabBar];
-                      done = YES;
-                  }];
+    [self doBack];
 }
 
 - (void)onPressedBtn2:(UIButton *)sender {
-//    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
-//    sender.selected = self.currentTVC.showAnswer;
-//    [self.currentTVC.tableView reloadData];
+    if (self.cusTabbar.items.count == 4) {
+        [self doJumpToItem];
+    }
 }
 
 - (void)onPressedBtn3:(UIButton *)sender {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
-    vc.items = self.items;
-    vc.vcDelegate = self;
-    [self.navigationController pushViewController:vc animated:YES];
+    [self doJumpToItem];
 }
 
 - (void)onPressedBtn4:(UIButton *)sender {
-//    self.currentTVC.favorated = !self.currentTVC.favorated;
-//    sender.selected = self.currentTVC.favorated;
+    if (self.cusTabbar.items.count == 4) {
+        [self doNext];
+    }
 }
 
 - (void)onPressedBtn5:(UIButton *)sender {
-    static BOOL done = YES;
-    
-    if (!done) {
-        return;
-    }
-    
-    done = NO;
-    
-    ItemTVC *tempVC = self.currentTVC;
-    if (self.items.lastObject == tempVC.itemVO) {
-        [self configTabBar];
-        done = YES;
-        return;
-    }
-    
-    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
-    
-    WEAK_SELF;
-    [self setViewControllers:@[vc]
-                   direction:UIPageViewControllerNavigationDirectionForward
-                    animated:YES
-                  completion:^(BOOL finished) {
-                      STRONG_SELF;
-                      self.currentTVC = vc;
-                      [self configTabBar];
-                      done = YES;
-                  }];
+    [self doNext];
 }
 
 - (void)configTabBar
@@ -154,7 +99,7 @@
     ItemTVC *tempVC = self.currentTVC;
     
     UITabBarItem *item1 = self.cusTabbar.items[0];
-    UITabBarItem *item5 = self.cusTabbar.items[4];
+    UITabBarItem *item5 = self.cusTabbar.items[3];
     if (self.items.firstObject == tempVC.itemVO) {
         if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
             [item1 setImage:[[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -302,6 +247,77 @@
             [[OTSAlertView alertWithMessage:@"收藏失败" andCompleteBlock:nil] show];
         }
     }];
+}
+
+- (void)doBack
+{
+    static BOOL done = YES;
+    
+    if (!done) {
+        return;
+    }
+    
+    done = NO;
+    
+    ItemTVC *tempVC = self.currentTVC;
+    if (self.items.firstObject == tempVC.itemVO) {
+        [self configTabBar];
+        done = YES;
+        return;
+    }
+    
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] - 1]];
+    
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionReverse
+                    animated:YES
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configTabBar];
+                      done = YES;
+                  }];
+}
+
+- (void)doNext
+{
+    static BOOL done = YES;
+    
+    if (!done) {
+        return;
+    }
+    
+    done = NO;
+    
+    ItemTVC *tempVC = self.currentTVC;
+    if (self.items.lastObject == tempVC.itemVO) {
+        [self configTabBar];
+        done = YES;
+        return;
+    }
+    
+    ItemTVC *vc = [ItemTVC createWitleItemVO:self.items[[self.items indexOfObjectIdenticalTo:tempVC.itemVO] + 1]];
+    
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:YES
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configTabBar];
+                      done = YES;
+                  }];
+}
+
+- (void)doJumpToItem
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
+    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
+    vc.items = self.items;
+    vc.vcDelegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setTabBarItemImage:(NSString *)image index:(NSInteger)index

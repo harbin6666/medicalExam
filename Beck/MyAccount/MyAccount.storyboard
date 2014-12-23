@@ -823,7 +823,6 @@
                         <tabBarItem title="上一题" image="back" id="sGy-QW-7q9"/>
                         <tabBarItem tag="1" title="查看答案" image="answer" id="r76-qe-zz4"/>
                         <tabBarItem tag="2" title="快捷选题" image="setting" id="9eO-9O-IoO"/>
-                        <tabBarItem tag="3" title="收藏" image="favorate" id="mQq-4k-Vbz"/>
                         <tabBarItem tag="4" title="下一题" image="next" id="Exu-8M-Fqu"/>
                     </items>
                     <connections>
@@ -859,7 +858,7 @@
                                             </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期：2014-10-6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXK-mw-e8U">
-                                            <rect key="frame" x="60" y="10" width="200" height="20.5"/>
+                                            <rect key="frame" x="60" y="10" width="200" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="200" id="SYI-Vr-GoS"/>
                                             </constraints>
@@ -868,13 +867,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="888" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答对：90题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJt-rh-A8P">
-                                            <rect key="frame" x="60" y="41" width="200" height="20.5"/>
+                                            <rect key="frame" x="60" y="41" width="200" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="777" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="答错：10题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGF-WM-287">
-                                            <rect key="frame" x="60" y="71" width="200" height="20.5"/>
+                                            <rect key="frame" x="60" y="71" width="200" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -891,7 +890,7 @@
                                             </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="666" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正确率：90%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ima-ze-xiq">
-                                            <rect key="frame" x="60" y="101.5" width="200" height="20.5"/>
+                                            <rect key="frame" x="60" y="102" width="200" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -953,7 +952,6 @@
         <image name="backImage" width="9" height="14"/>
         <image name="chakan" width="202" height="40"/>
         <image name="chakan_sel" width="202" height="40"/>
-        <image name="favorate" width="24" height="21"/>
         <image name="next" width="24" height="21"/>
         <image name="setting" width="24" height="21"/>
     </resources>
