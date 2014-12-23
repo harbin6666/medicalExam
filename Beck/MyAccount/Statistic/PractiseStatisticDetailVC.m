@@ -42,6 +42,7 @@
     params[@"exerciseId"] = self.detail[@"id"];
     
     WEAK_SELF;
+    [self showLoading];
     [self getValueWithBeckUrl:@"/front/userExerciseAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
@@ -60,6 +61,7 @@
                     [titleList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                         NSDictionary *itemInfo = obj;
                         ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue] andAnswer:itemInfo[@"userAnwer"]];
+                        itemVO.canShowNote = NO;
                         if (itemVO) {
                             [ids addObject:itemVO];
                         }
