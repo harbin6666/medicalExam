@@ -53,11 +53,41 @@
     self.currentTVC.itemVO.showAnswer = !self.currentTVC.itemVO.showAnswer;
     sender.selected = self.currentTVC.itemVO.showAnswer;
     [self.currentTVC.tableView reloadData];
+    [self configTabBar];
 }
 
 - (void)configTabBar
 {
     [super configTabBar];
+
+    UITabBarItem *item2 = self.cusTabbar.items[1];
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        if (self.currentTVC.itemVO.showAnswer) {
+            [item2 setSelectedImage:[[UIImage imageNamed:@"answer_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setImage:[[UIImage imageNamed:@"answer_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            [item2 setSelectedImage:[[UIImage imageNamed:@"answer"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setImage:[[UIImage imageNamed:@"answer"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+    }
+    else {
+        if (self.currentTVC.itemVO.showAnswer) {
+            [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer_sel"]];
+        }
+        else {
+            [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer"]];
+        }
+    }
+    
+    if (self.currentTVC.itemVO.showAnswer) {
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+    }
+    else {
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+    }
 }
 
 @end
