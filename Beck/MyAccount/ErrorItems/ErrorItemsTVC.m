@@ -57,8 +57,6 @@
         params[@"subjectId"] = self.subjectId;
     }
     
-    self.items = nil;
-    
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userWrongItemAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
@@ -83,8 +81,10 @@
             }
         }
         else {
+            self.items = nil;
             [[OTSAlertView alertWithMessage:@"获取错题失败" andCompleteBlock:nil] show];
         }
+        
         [self.tableView reloadData];
     }];
 }
@@ -100,7 +100,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ErrorItemsCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSDictionary *item = self.items[indexPath.row];
     

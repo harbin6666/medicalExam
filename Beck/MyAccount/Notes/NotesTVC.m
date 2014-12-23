@@ -53,8 +53,6 @@
         params[@"token"] = @"outline";
     }
     
-    self.items = nil;
-    
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userNoteAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
@@ -69,6 +67,7 @@
             }
         }
         else {
+            self.items = nil;
             [[OTSAlertView alertWithMessage:@"获取笔记失败" andCompleteBlock:nil] show];
         }
         [self.tableView reloadData];
@@ -86,7 +85,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NotesCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSDictionary *note = self.items[indexPath.row];
     

@@ -55,8 +55,6 @@
         params[@"token"] = @"time";
     }
     
-    self.items = nil;
-    
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userCollectionAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
@@ -82,6 +80,7 @@
             }
         }
         else {
+            self.items = nil;
             [[OTSAlertView alertWithMessage:@"获取收藏失败" andCompleteBlock:nil] show];
         }
         
@@ -100,7 +99,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FavorateItemsCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *item = self.items[indexPath.row];
     
     if (self.segmentedControl.selectedSegmentIndex == 0) {

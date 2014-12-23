@@ -109,6 +109,19 @@
 }
 
 - (IBAction)onPressedSubmit:(id)sender {
+    WEAK_SELF;
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否提交?" message:@"" leftBtn:@"提交" rightBtn:@"取消" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            STRONG_SELF;
+            [self submitPractise];
+        }
+    }];
+    [alertView show];
+}
+
+- (void)submitPractise
+{
+    
     [self showLoading];
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"add";
