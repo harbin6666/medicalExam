@@ -28,7 +28,7 @@
         [item1 setSelectedImage:[[UIImage imageNamed:@"back_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         UITabBarItem *item2 = self.cusTabbar.items[1];
-        [item2 setSelectedImage:[[UIImage imageNamed:@"answer_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        [item2 setSelectedImage:[[UIImage imageNamed:@"answer"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         UITabBarItem *item3 = self.cusTabbar.items[2];
         [item3 setSelectedImage:[[UIImage imageNamed:@"setting"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
@@ -46,7 +46,7 @@
         [item1 setFinishedSelectedImage:[UIImage imageNamed:@"back_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"back"]];
         
         UITabBarItem *item2 = self.cusTabbar.items[1];
-        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer"]];
+        [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer"]];
         
         UITabBarItem *item3 = self.cusTabbar.items[2];
         [item3 setFinishedSelectedImage:[UIImage imageNamed:@"setting"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting"]];
@@ -59,17 +59,11 @@
     }
 }
 
-//- (void)onPressedBtn2:(UIButton *)sender {
-//    self.currentTVC.showAnswer = !self.currentTVC.showAnswer;
-//    sender.selected = self.currentTVC.showAnswer;
-//    [self.currentTVC.tableView reloadData];
-//}
-
-//- (void)onPressedBtn3:(UIButton *)sender {
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
-//    AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
-//    [self.navigationController pushViewController:vc animated:YES];
-//}
+- (void)onPressedBtn2:(UIButton *)sender {
+    self.currentTVC.itemVO.showAnswer = !self.currentTVC.itemVO.showAnswer;
+    [self.currentTVC.tableView reloadData];
+    [self configTabBar];
+}
 
 - (void)onPressedBtn4:(UIButton *)sender {
     [self doFavorate];
@@ -78,6 +72,35 @@
 - (void)configTabBar
 {
     [super configTabBar];
+    UITabBarItem *item2 = self.cusTabbar.items[1];
+    if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
+        if (self.currentTVC.itemVO.showAnswer) {
+            [item2 setSelectedImage:[[UIImage imageNamed:@"answer_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setImage:[[UIImage imageNamed:@"answer_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+        else {
+            [item2 setSelectedImage:[[UIImage imageNamed:@"answer"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            [item2 setImage:[[UIImage imageNamed:@"answer"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        }
+    }
+    else {
+        if (self.currentTVC.itemVO.showAnswer) {
+            [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer_sel"]];
+        }
+        else {
+            [item2 setFinishedSelectedImage:[UIImage imageNamed:@"answer"] withFinishedUnselectedImage:[UIImage imageNamed:@"answer"]];
+        }
+    }
+    
+    if (self.currentTVC.itemVO.showAnswer) {
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor redColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+    }
+    else {
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateNormal];
+        [item2 setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor], NSFontAttributeName: [UIFont systemFontOfSize:12.f]} forState:UIControlStateSelected];
+    }
+    
     UITabBarItem *item4 = self.cusTabbar.items[3];
     if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
         if (self.currentTVC.itemVO.favorated) {

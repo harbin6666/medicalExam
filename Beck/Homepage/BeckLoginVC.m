@@ -73,6 +73,8 @@
         return;
     }
     
+    [self.view endEditing:YES];
+    
     [self showLoading];
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/userAct.htm" params:@{@"token":@"login",@"loginName":self.usernameTF.text,@"passWord":self.passwordTF.text} CompleteBlock:^(id aResponseObject, NSError *anError) {

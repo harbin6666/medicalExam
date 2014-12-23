@@ -51,7 +51,6 @@
 
 - (void)onPressedBtn2:(UIButton *)sender {
     self.currentTVC.itemVO.showAnswer = !self.currentTVC.itemVO.showAnswer;
-    sender.selected = self.currentTVC.itemVO.showAnswer;
     [self.currentTVC.tableView reloadData];
     [self configTabBar];
 }
