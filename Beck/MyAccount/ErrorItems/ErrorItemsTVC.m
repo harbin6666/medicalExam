@@ -168,6 +168,8 @@
         cell.detailTextLabel.text = [item[@"count"] stringValue];
     }
     
+    [cell layoutIfNeeded];
+    
     return cell;
 }
 

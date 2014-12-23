@@ -97,6 +97,7 @@
     }
     
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",note[@"count"]];
+    [cell layoutIfNeeded];
     
     return cell;
 }

@@ -141,6 +141,8 @@
         cell.detailTextLabel.text = item[@"count"];
     }
     
+    [cell layoutIfNeeded];
+    
     return cell;
 }
 
