@@ -25,6 +25,28 @@
     [super viewWillAppear:animated];
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     self.tabbar.selectedItem = nil;
+    
+    [super viewDidAppear:animated];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/examSubjectAct.htm" params:@{@"token":@"countdown",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                
+            }
+            else {
+                NSNumber *days = aResponseObject[@"numberDay"];
+                int h = days.intValue / 100;
+                int t = (days.intValue - h * 100) / 10;
+                int c = days.intValue - h * 100 - t * 10;
+                self.hIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",h]];
+                self.tIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",t]];
+                self.cIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",c]];
+            }
+        }
+    }];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -62,30 +84,6 @@
         UITabBarItem *item4 = self.tabbar.items[3];
         [item4 setFinishedSelectedImage:[UIImage imageNamed:@"tab4_sel"] withFinishedUnselectedImage:[UIImage imageNamed:@"tab4"]];
     }
-    
-    WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/examSubjectAct.htm" params:@{@"token":@"countdown",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
-        STRONG_SELF;
-        [self hideLoading];
-        if (!anError) {
-            NSNumber *errorcode = aResponseObject[@"errorcode"];
-            if (errorcode.boolValue) {
-                
-            }
-            else {
-                NSNumber *days = aResponseObject[@"numberDay"];
-                int h = days.intValue / 100;
-                int t = (days.intValue - h * 100) / 10;
-                int c = days.intValue - h * 100 - t * 10;
-                self.hIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",h]];
-                self.tIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",t]];
-                self.cIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",c]];
-            }
-        }
-        else {
-            
-        }
-    }];
 }
 
 - (IBAction)onPressedSignIn:(id)sender
