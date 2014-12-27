@@ -134,16 +134,29 @@
 - (IBAction)onPressedSubmit:(id)sender
 {
     __block BOOL done = NO;
+    __block BOOL canSubmit = NO;
+    NSMutableArray *notDones = @[].mutableCopy;
     [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         ItemVO *vo = obj;
         if (vo.userAnswers.count) {
             done = YES;
-            *stop = YES;
+        }
+        else {
+            [notDones addObject:@(idx + 1)];
         }
     }];
     
+    if (notDones.count == self.items.count) {
+        canSubmit = YES;
+    }
+    
     if (!done) {
         [[OTSAlertView alertWithMessage:@"当前练习无效" andCompleteBlock:nil] show];
+        return;
+    }
+    else if (!canSubmit) {
+        NSString *noteDone = [notDones componentsJoinedByString:@","];
+        [[OTSAlertView alertWithTitle:@"未做的题目" message:noteDone andCompleteBlock:nil] show];
         return;
     }
     
