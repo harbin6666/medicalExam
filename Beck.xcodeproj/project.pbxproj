@@ -62,6 +62,8 @@
 		3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */; };
 		3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */; };
 		3D63BDEC1A4EE681006A5BFD /* AnswerCVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63BDEB1A4EE681006A5BFD /* AnswerCVCCell.m */; };
+		3D63BDEF1A4EFD9A006A5BFD /* HonorCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63BDEE1A4EFD9A006A5BFD /* HonorCVCell.m */; };
+		3D63BDF21A4EFDE3006A5BFD /* HonorTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63BDF11A4EFDE3006A5BFD /* HonorTVCell.m */; };
 		3D65EDFC1A235945005DB486 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EDEE1A235945005DB486 /* AnswerCVC.m */; };
 		3D65EE101A235983005DB486 /* ChoiceItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE051A235983005DB486 /* ChoiceItemVO.m */; };
 		3D65EE111A235983005DB486 /* CompatibilityItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE071A235983005DB486 /* CompatibilityItemVO.m */; };
@@ -229,6 +231,10 @@
 		3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordVC.m; sourceTree = "<group>"; };
 		3D63BDEA1A4EE681006A5BFD /* AnswerCVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVCCell.h; sourceTree = "<group>"; };
 		3D63BDEB1A4EE681006A5BFD /* AnswerCVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVCCell.m; sourceTree = "<group>"; };
+		3D63BDED1A4EFD9A006A5BFD /* HonorCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HonorCVCell.h; sourceTree = "<group>"; };
+		3D63BDEE1A4EFD9A006A5BFD /* HonorCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonorCVCell.m; sourceTree = "<group>"; };
+		3D63BDF01A4EFDE3006A5BFD /* HonorTVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HonorTVCell.h; sourceTree = "<group>"; };
+		3D63BDF11A4EFDE3006A5BFD /* HonorTVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonorTVCell.m; sourceTree = "<group>"; };
 		3D65EDED1A235945005DB486 /* AnswerCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVC.h; sourceTree = "<group>"; };
 		3D65EDEE1A235945005DB486 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
 		3D65EE041A235983005DB486 /* ChoiceItemVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceItemVO.h; sourceTree = "<group>"; };
@@ -701,6 +707,10 @@
 				3DB238A619FE79B0002CD73D /* BeckHomepageVC.m */,
 				3D0EFB9A19FFC6E30017A539 /* BeckAchievementTVC.h */,
 				3D0EFB9B19FFC6E30017A539 /* BeckAchievementTVC.m */,
+				3D63BDF01A4EFDE3006A5BFD /* HonorTVCell.h */,
+				3D63BDF11A4EFDE3006A5BFD /* HonorTVCell.m */,
+				3D63BDED1A4EFD9A006A5BFD /* HonorCVCell.h */,
+				3D63BDEE1A4EFD9A006A5BFD /* HonorCVCell.m */,
 				3D0EFB9D19FFC9400017A539 /* BeckMCTVC.h */,
 				3D0EFB9E19FFC9400017A539 /* BeckMCTVC.m */,
 				3D9789441A12575100835549 /* BeckChangeExamPlaceBtn.h */,
@@ -954,6 +964,7 @@
 				3D0256C91A1E27BA00C46B0E /* MultiChoiceItemTVC.m in Sources */,
 				3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */,
 				3DA4FA271A05FE2200C7D362 /* ExamStatisticTVC.m in Sources */,
+				3D63BDEF1A4EFD9A006A5BFD /* HonorCVCell.m in Sources */,
 				3D65EDFC1A235945005DB486 /* AnswerCVC.m in Sources */,
 				3D2521C719F52B3B00FC72A7 /* ExamHomeTVC.m in Sources */,
 				3D97894C1A1257FF00835549 /* BeckCustomVC2.m in Sources */,
@@ -964,6 +975,7 @@
 				3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */,
 				3D0256C01A1E276D00C46B0E /* ItemTVC.m in Sources */,
 				3D63BDEC1A4EE681006A5BFD /* AnswerCVCCell.m in Sources */,
+				3D63BDF21A4EFDE3006A5BFD /* HonorTVCell.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D9C236F1A39BDDF00251B87 /* PractiseVO.m in Sources */,
 				3D65EE111A235983005DB486 /* CompatibilityItemVO.m in Sources */,

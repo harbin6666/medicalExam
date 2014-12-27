@@ -592,12 +592,52 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HonorCell" id="2nS-9B-XeI">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HonorCell" rowHeight="100" id="2nS-9B-XeI" customClass="HonorTVCell">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2nS-9B-XeI" id="PA5-nK-ucY">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F3h-ez-eop">
+                                            <rect key="frame" x="0.0" y="-1" width="320" height="100"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="9gS-ZV-IWk">
+                                                <size key="itemSize" width="69" height="89"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sBr-Fd-hxl" customClass="HonorCVCell">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="89"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHP-Sn-AYr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="69" height="89"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="GHP-Sn-AYr" firstAttribute="top" secondItem="sBr-Fd-hxl" secondAttribute="top" id="Da8-vm-6ik"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GHP-Sn-AYr" secondAttribute="trailing" id="OdM-6D-vJY"/>
+                                                        <constraint firstItem="GHP-Sn-AYr" firstAttribute="leading" secondItem="sBr-Fd-hxl" secondAttribute="leading" id="ca3-Hy-fVo"/>
+                                                        <constraint firstAttribute="bottom" secondItem="GHP-Sn-AYr" secondAttribute="bottom" id="fBL-GZ-lSi"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="imageView" destination="GHP-Sn-AYr" id="MiC-6H-ogT"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="PA5-nK-ucY" id="ocO-Pn-DQq"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StatisticCell" textLabel="W3T-0g-w1T" style="IBUITableViewCellStyleDefault" id="WJL-Ms-ZMr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -674,7 +714,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-26" y="1680"/>
+            <point key="canvasLocation" x="-26" y="1680.5"/>
         </scene>
         <!--个性化设置2-->
         <scene sceneID="lJh-CA-4Wa">
