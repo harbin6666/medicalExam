@@ -9,7 +9,31 @@
 #import "ChoiceItemVO.h"
 
 @implementation ChoiceItemVO
-@synthesize itemAnswers = _itemAnswers;
+@synthesize answerString = _answerString;
+
+- (void)getInfoFramDB
+{
+    NSString *sql1 = [@"select * from choice_questions where choice_id == " stringByAppendingFormat:@"%@",self.itemId];
+    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+
+        }
+        else {
+            self.itemInfo = row;
+        }
+    }];
+    
+    NSMutableArray *itemAnswers = @[].mutableCopy;
+    NSString *sql2 = [@"select * from choice_items where choice_id == " stringByAppendingFormat:@"%@",self.itemId];
+    [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+            self.itemAnswers = itemAnswers;
+        }
+        else {
+            [itemAnswers addObject:row];
+        }
+    }];
+}
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
@@ -31,14 +55,13 @@
     return [isAnswer boolValue];
 }
 
-- (void)setItemAnswers:(NSArray *)itemAnswers
+- (void)setAnswerString:(NSString *)answerString
 {
-    _itemAnswers = itemAnswers;
-    
+    _answerString = answerString;
     if (self.answerString) {
         NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
         NSString *answer = answers.firstObject;
-        [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self.itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSArray *itemAnswer = obj;
             NSString *itemNumber = itemAnswer[2];
             if ([itemNumber isEqualToString:answer]) {

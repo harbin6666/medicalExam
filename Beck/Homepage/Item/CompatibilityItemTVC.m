@@ -19,32 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSMutableArray *itemInfo = @[].mutableCopy;
-    NSString *sql1 = [@"select * from compatibility_items where compatibility_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
-    
-    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        if (finished) {
-            self.itemVO.itemInfo = itemInfo;
-            [self.tableView reloadData];
-        }
-        else {
-            [itemInfo addObject:row];
-        }
-    }];
-    
-    NSMutableArray *itemAnswers = @[].mutableCopy;
-    NSString *sql2 = [@"select * from compatibility_questions where compatibility_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
-    
-    [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        if (finished) {
-            self.itemVO.itemAnswers = itemAnswers;
-            [self.tableView reloadData];
-        }
-        else {
-            [itemAnswers addObject:row];
-        }
-    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

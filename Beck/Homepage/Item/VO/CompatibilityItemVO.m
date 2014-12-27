@@ -9,7 +9,32 @@
 #import "CompatibilityItemVO.h"
 
 @implementation CompatibilityItemVO
-@synthesize itemAnswers = _itemAnswers;
+@synthesize answerString = _answerString;
+
+- (void)getInfoFramDB
+{
+    NSMutableArray *itemInfo = @[].mutableCopy;
+    NSString *sql1 = [@"select * from compatibility_items where compatibility_id == " stringByAppendingFormat:@"%@",self.itemId];
+    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+            self.itemInfo = itemInfo;
+        }
+        else {
+            [itemInfo addObject:row];
+        }
+    }];
+    
+    NSMutableArray *itemAnswers = @[].mutableCopy;
+    NSString *sql2 = [@"select * from compatibility_questions where compatibility_id == " stringByAppendingFormat:@"%@",self.itemId];
+    [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+            self.itemAnswers = itemAnswers;
+        }
+        else {
+            [itemAnswers addObject:row];
+        }
+    }];
+}
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
@@ -60,10 +85,9 @@
     return right;
 }
 
-- (void)setItemAnswers:(NSArray *)itemAnswers
+- (void)setAnswerString:(NSString *)answerString
 {
-    _itemAnswers = itemAnswers;
-    
+    _answerString = answerString;
     if (self.answerString) {
         NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
         [self.itemInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

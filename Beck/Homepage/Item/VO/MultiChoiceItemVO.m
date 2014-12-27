@@ -9,7 +9,7 @@
 #import "MultiChoiceItemVO.h"
 
 @implementation MultiChoiceItemVO
-@synthesize itemAnswers = _itemAnswers;
+@synthesize answerString = _answerString;
 
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
@@ -60,13 +60,13 @@
     return right;
 }
 
-- (void)setItemAnswers:(NSArray *)itemAnswers
+- (void)setAnswerString:(NSString *)answerString
 {
-    _itemAnswers = itemAnswers;
+    _answerString = answerString;
     
     if (self.answerString) {
         NSArray *answers = [self.answerString componentsSeparatedByString:@"|"];
-        [itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self.itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSArray *itemAnswer = obj;
             NSString *itemNumber = itemAnswer[2];
             if ([answers containsObject:itemNumber]) {

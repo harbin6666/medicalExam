@@ -39,8 +39,8 @@
         case ItemTypeSpace:
             itemVO = [SpaceItemVO new];
             break;
-            
         default:
+            return nil;
             break;
     }
     
@@ -57,7 +57,14 @@
     itemVO.canShowNote = YES;
     itemVO.canChange = YES;
     
+    [itemVO getInfoFramDB];
+    
     return itemVO;
+}
+
+- (void)getInfoFramDB
+{
+    
 }
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type

@@ -17,16 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *sql1 = [@"select * from decision_question where decision_id == " stringByAppendingFormat:@"%@",self.itemVO.itemId];
-    
-    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
-        if (finished) {
-            [self.tableView reloadData];
-        }
-        else {
-            self.itemVO.itemInfo = row;
-        }
-    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

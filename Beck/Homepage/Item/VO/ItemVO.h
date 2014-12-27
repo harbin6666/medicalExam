@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <AFSQLManager/AFSQLManager.h>
+
 typedef enum ItemType
 {
     ItemTypeChoice = 1,
@@ -43,6 +45,8 @@ typedef enum ItemType
 @property (nonatomic, strong) NSMutableDictionary *userAnswers;
 
 @property (nonatomic, strong) NSString *answerString;
+
+- (void)getInfoFramDB;
 
 + (instancetype)createWithItemId:(NSString *)itemId andType:(ItemType)type;
 

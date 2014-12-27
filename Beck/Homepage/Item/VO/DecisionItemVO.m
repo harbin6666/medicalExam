@@ -10,6 +10,19 @@
 
 @implementation DecisionItemVO
 
+- (void)getInfoFramDB
+{
+    NSString *sql1 = [@"select * from decision_question where decision_id == " stringByAppendingFormat:@"%@",self.itemId];
+    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+
+        }
+        else {
+            self.itemInfo = row;
+        }
+    }];
+}
+
 - (void)setAnswer:(id)answer andIndex:(NSInteger)index
 {
     [self.userAnswers removeAllObjects];
