@@ -96,15 +96,15 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     UIStoryboard *sb = nil;
-    switch (item.tag) {
+    switch ([tabBar.items indexOfObject:item]) {
         case 0:
-            sb = [UIStoryboard storyboardWithName:@"MyAccount" bundle:nil];
-            break;
-        case 1:
             sb = [UIStoryboard storyboardWithName:@"Practise" bundle:nil];
             break;
-        case 2:
+        case 1:
             sb = [UIStoryboard storyboardWithName:@"Exam" bundle:nil];
+            break;
+        case 2:
+            sb = [UIStoryboard storyboardWithName:@"MyAccount" bundle:nil];
             break;
         case 3:
             sb = [UIStoryboard storyboardWithName:@"More" bundle:nil];
