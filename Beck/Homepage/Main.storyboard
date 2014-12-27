@@ -332,9 +332,9 @@
                                     <constraint firstAttribute="height" constant="49" id="8MD-Bd-c6x"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem title="个人中心" image="tab1" id="hH1-y6-QcL"/>
                                     <tabBarItem tag="1" title="练习模式" image="tab2" id="0MU-hF-hWT"/>
                                     <tabBarItem tag="2" title="考试模式" image="tab3" id="07L-TY-9Ri"/>
+                                    <tabBarItem title="个人中心" image="tab1" id="hH1-y6-QcL"/>
                                     <tabBarItem tag="3" title="更多" image="tab4" id="lOB-yy-UxM"/>
                                 </items>
                                 <connections>
