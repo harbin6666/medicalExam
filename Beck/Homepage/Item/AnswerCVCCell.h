@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ItemVO.h"
+
 @interface AnswerCVCCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *countLbl;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
+- (void)updateWithItemVO:(ItemVO *)aVO andIndex:(NSInteger)aIndex;
 
 @end

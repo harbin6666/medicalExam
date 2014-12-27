@@ -29,7 +29,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AnswerCVCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
-    cell.countLbl.text = @(indexPath.row + 1).stringValue;
+    [cell updateWithItemVO:self.items[indexPath.row] andIndex:indexPath.row];
     return cell;
 }
 
