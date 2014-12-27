@@ -14,12 +14,6 @@
 
 @implementation ItemPVC
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    self.canShowNote = YES;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -317,6 +311,7 @@
     AnswerCVC *vc = [sb instantiateViewControllerWithIdentifier:@"AnswerCVC"];
     vc.items = self.items;
     vc.vcDelegate = self;
+    vc.showRightInItemCVC = self.showRightInItemCVC;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

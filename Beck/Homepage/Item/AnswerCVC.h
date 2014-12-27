@@ -18,5 +18,6 @@
 
 @property (nonatomic, strong) NSArray *items;//<ItemVO>
 @property (nonatomic, weak) id <AnswerCVCDelegate> vcDelegate;
+@property (nonatomic) BOOL showRightInItemCVC;
 
 @end

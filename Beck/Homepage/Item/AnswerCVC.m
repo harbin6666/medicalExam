@@ -29,7 +29,12 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AnswerCVCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
-    [cell updateWithItemVO:self.items[indexPath.row] andIndex:indexPath.row];
+    if (self.showRightInItemCVC) {
+        [cell updateWithItemVO:self.items[indexPath.row] andIndex:indexPath.row];
+    }
+    else {
+        [cell updateWithIndex:indexPath.row];
+    }
     return cell;
 }
 

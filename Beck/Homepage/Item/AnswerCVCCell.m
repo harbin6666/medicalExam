@@ -17,6 +17,12 @@
 
 @implementation AnswerCVCCell
 
+- (void)updateWithIndex:(NSInteger)aIndex
+{
+    self.countLbl.backgroundColor = [UIColor colorWithRed:0.898f green:0.898f blue:0.898f alpha:1.00f];
+    self.countLbl.text = @(aIndex + 1).stringValue;
+}
+
 - (void)updateWithItemVO:(ItemVO *)aVO andIndex:(NSInteger)aIndex
 {
     if (aVO.userAnswers.count) {

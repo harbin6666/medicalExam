@@ -12,6 +12,7 @@
 
 @interface AnswerCVCCell : UICollectionViewCell
 
+- (void)updateWithIndex:(NSInteger)aIndex;
 - (void)updateWithItemVO:(ItemVO *)aVO andIndex:(NSInteger)aIndex;
 
 @end

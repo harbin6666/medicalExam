@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) NSArray *items;//<ItemVO>
 
-@property (nonatomic) BOOL canShowNote;
+@property (nonatomic) BOOL showRightInItemCVC;
 
 - (void)onPressedBtn1:(UIButton *)sender;
 - (void)onPressedBtn2:(UIButton *)sender;

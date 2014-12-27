@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.showRightInItemCVC = YES;
+    
     UITabBarItem *item1 = self.cusTabbar.items[0];
     UITabBarItem *item2 = self.cusTabbar.items[1];
     UITabBarItem *item3 = self.cusTabbar.items[2];
