@@ -131,7 +131,22 @@
     }
 }
 
-- (IBAction)onPressedSubmit:(id)sender {
+- (IBAction)onPressedSubmit:(id)sender
+{
+    __block BOOL done = NO;
+    [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        if (vo.userAnswers.count) {
+            done = YES;
+            *stop = YES;
+        }
+    }];
+    
+    if (!done) {
+        [[OTSAlertView alertWithMessage:@"当前练习无效" andCompleteBlock:nil] show];
+        return;
+    }
+    
     WEAK_SELF;
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否提交?" message:@"" leftBtn:@"提交" rightBtn:@"取消" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
@@ -144,7 +159,6 @@
 
 - (void)submitPractise
 {
-    
     [self showLoading];
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"add";
