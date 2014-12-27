@@ -102,23 +102,23 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7d6-fj-Nad">
-                                <rect key="frame" x="16" y="84" width="288" height="30"/>
+                                <rect key="frame" x="16" y="84" width="288" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="M12-Qd-hb5"/>
+                                    <constraint firstAttribute="height" constant="44" id="M12-Qd-hb5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7c-B3-QVj">
-                                <rect key="frame" x="16" y="128" width="288" height="30"/>
+                                <rect key="frame" x="16" y="142" width="288" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="QPf-0y-UEK"/>
+                                    <constraint firstAttribute="height" constant="44" id="QPf-0y-UEK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6p-VR-S0C">
-                                <rect key="frame" x="16" y="168" width="84" height="30"/>
+                                <rect key="frame" x="16" y="196" width="84" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MTX-98-u0P"/>
                                     <constraint firstAttribute="width" constant="84" id="iTJ-dj-2Yg"/>
@@ -133,10 +133,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bli-5K-Sbi">
-                                <rect key="frame" x="16" y="208" width="288" height="30"/>
+                                <rect key="frame" x="16" y="236" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fmm-jK-33V"/>
+                                    <constraint firstAttribute="height" constant="44" id="fmm-jK-33V"/>
                                 </constraints>
                                 <state key="normal" title="登陆">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,7 +147,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV2-sR-OUj">
-                                <rect key="frame" x="237" y="245" width="67" height="30"/>
+                                <rect key="frame" x="237" y="287" width="67" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MhZ-23-Q29"/>
                                     <constraint firstAttribute="width" constant="67" id="xkv-OW-A9U"/>
@@ -1194,6 +1194,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Qdh-Vz-X6p"/>
-        <segue reference="ieV-CZ-EPD"/>
+        <segue reference="d1f-2z-2BA"/>
     </inferredMetricsTieBreakers>
 </document>

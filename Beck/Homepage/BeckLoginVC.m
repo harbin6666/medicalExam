@@ -64,12 +64,12 @@
 
 - (IBAction)onPressedLogin:(id)sender {
     if (!self.usernameTF.text.length) {
-        [[OTSAlertView alertWithMessage:@"请输入密码" andCompleteBlock:nil] show];
+        [[OTSAlertView alertWithMessage:@"请输入账号" andCompleteBlock:nil] show];
         return;
     }
     
     if (!self.passwordTF.text.length) {
-        [[OTSAlertView alertWithMessage:@"请输入账号" andCompleteBlock:nil] show];
+        [[OTSAlertView alertWithMessage:@"请输入密码" andCompleteBlock:nil] show];
         return;
     }
     
