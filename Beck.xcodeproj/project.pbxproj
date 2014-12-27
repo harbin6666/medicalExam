@@ -61,6 +61,7 @@
 		3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677819F7DC9200ED8FA4 /* BeckPVC.m */; };
 		3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */; };
 		3D4F678219F7F9E500ED8FA4 /* ModifyPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */; };
+		3D63BDEC1A4EE681006A5BFD /* AnswerCVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D63BDEB1A4EE681006A5BFD /* AnswerCVCCell.m */; };
 		3D65EDFC1A235945005DB486 /* AnswerCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EDEE1A235945005DB486 /* AnswerCVC.m */; };
 		3D65EE101A235983005DB486 /* ChoiceItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE051A235983005DB486 /* ChoiceItemVO.m */; };
 		3D65EE111A235983005DB486 /* CompatibilityItemVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D65EE071A235983005DB486 /* CompatibilityItemVO.m */; };
@@ -226,6 +227,8 @@
 		3D4F677B19F7E97900ED8FA4 /* BeckCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckCVC.m; sourceTree = "<group>"; };
 		3D4F678019F7F9E500ED8FA4 /* ModifyPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordVC.h; sourceTree = "<group>"; };
 		3D4F678119F7F9E500ED8FA4 /* ModifyPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordVC.m; sourceTree = "<group>"; };
+		3D63BDEA1A4EE681006A5BFD /* AnswerCVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVCCell.h; sourceTree = "<group>"; };
+		3D63BDEB1A4EE681006A5BFD /* AnswerCVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVCCell.m; sourceTree = "<group>"; };
 		3D65EDED1A235945005DB486 /* AnswerCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCVC.h; sourceTree = "<group>"; };
 		3D65EDEE1A235945005DB486 /* AnswerCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCVC.m; sourceTree = "<group>"; };
 		3D65EE041A235983005DB486 /* ChoiceItemVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceItemVO.h; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				3DAE70851A1F88CD0001C3E2 /* ItemPVC.m */,
 				3D65EDED1A235945005DB486 /* AnswerCVC.h */,
 				3D65EDEE1A235945005DB486 /* AnswerCVC.m */,
+				3D63BDEA1A4EE681006A5BFD /* AnswerCVCCell.h */,
+				3D63BDEB1A4EE681006A5BFD /* AnswerCVCCell.m */,
 				3D0256BE1A1E276D00C46B0E /* ItemTVC.h */,
 				3D0256BF1A1E276D00C46B0E /* ItemTVC.m */,
 				3D0256C11A1E278900C46B0E /* ChoiceItemTVC.h */,
@@ -958,6 +963,7 @@
 				3D9789461A12575100835549 /* BeckChangeExamPlaceBtn.m in Sources */,
 				3D4CEEB41A1CE5A90078AA38 /* PractiseStatisticDetailVC.m in Sources */,
 				3D0256C01A1E276D00C46B0E /* ItemTVC.m in Sources */,
+				3D63BDEC1A4EE681006A5BFD /* AnswerCVCCell.m in Sources */,
 				3D2521E919F5418C00FC72A7 /* MoreHomeTVC.m in Sources */,
 				3D9C236F1A39BDDF00251B87 /* PractiseVO.m in Sources */,
 				3D65EE111A235983005DB486 /* CompatibilityItemVO.m in Sources */,

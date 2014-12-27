@@ -8,6 +8,9 @@
 
 #import "AnswerCVC.h"
 
+#import "ItemVO.h"
+#import "AnswerCVCCell.h"
+
 @interface AnswerCVC ()
 
 @end
@@ -25,19 +28,8 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
-    if (!label) {
-        label = [UILabel viewWithFrame:cell.contentView.bounds];
-        label.tag = 999;
-        label.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:label];
-        cell.backgroundColor = [UIColor lightGrayColor];
-        cell.layer.cornerRadius = 5.f;
-    }
-    
-    label.text = @(indexPath.row + 1).stringValue;
-    
+    AnswerCVCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+    cell.countLbl.text = @(indexPath.row + 1).stringValue;
     return cell;
 }
 
