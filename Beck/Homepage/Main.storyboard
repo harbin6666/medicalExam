@@ -439,7 +439,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择考试地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-0e-lYi">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择考试地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-0e-lYi">
                                 <rect key="frame" x="16" y="72" width="102" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ng3-gE-uOs"/>
@@ -448,7 +448,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyB-u6-ABt" customClass="BeckChangeExamPlaceBtn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyB-u6-ABt" customClass="BeckChangeExamPlaceBtn">
                                 <rect key="frame" x="126" y="72" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NHq-6o-lcx"/>
@@ -463,15 +463,6 @@
                                     <outlet property="toolbar" destination="YYq-jF-xgI" id="gaz-V1-uJu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择资格考试名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GZ-q6-XL1">
-                                <rect key="frame" x="16" y="110" width="288" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="C5S-CU-sqj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDB-AZ-INa">
                                 <rect key="frame" x="16" y="528" width="288" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -487,7 +478,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-2O-gGV">
-                                <rect key="frame" x="16" y="141" width="288" height="377"/>
+                                <rect key="frame" x="16" y="103" width="288" height="415"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Iuo-Ub-9lr">
                                     <rect key="frame" x="0.0" y="66" width="288" height="20"/>
@@ -525,11 +516,20 @@
                                     <outlet property="delegate" destination="fAa-4x-MXv" id="3b6-f9-Vd7"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择资格考试名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GZ-q6-XL1">
+                                <rect key="frame" x="16" y="72" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="C5S-CU-sqj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4GZ-q6-XL1" firstAttribute="top" secondItem="iwF-0e-lYi" secondAttribute="bottom" constant="8" id="07a-fX-vnM"/>
                             <constraint firstItem="PDB-AZ-INa" firstAttribute="leading" secondItem="Sbj-f9-qhC" secondAttribute="leadingMargin" id="3mZ-sd-RDG"/>
+                            <constraint firstItem="4GZ-q6-XL1" firstAttribute="top" secondItem="BEn-41-oYR" secondAttribute="bottom" constant="8" id="8dh-Fh-54K"/>
                             <constraint firstItem="4GZ-q6-XL1" firstAttribute="leading" secondItem="Sbj-f9-qhC" secondAttribute="leadingMargin" id="BCy-ce-X15"/>
                             <constraint firstItem="Gbt-2O-gGV" firstAttribute="leading" secondItem="Sbj-f9-qhC" secondAttribute="leadingMargin" id="G1t-AT-YxE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gbt-2O-gGV" secondAttribute="trailing" id="KL1-9V-xaw"/>

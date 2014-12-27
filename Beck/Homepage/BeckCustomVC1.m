@@ -81,10 +81,10 @@
 }
 
 - (IBAction)onPressedBtn:(id)sender {
-    if (!self.provinceBtn.province) {
-        [[OTSAlertView alertWithMessage:@"请选择省份" andCompleteBlock:nil] show];
-        return;
-    }
+//    if (!self.provinceBtn.province) {
+//        [[OTSAlertView alertWithMessage:@"请选择省份" andCompleteBlock:nil] show];
+//        return;
+//    }
     
     if (!self.path) {
         [[OTSAlertView alertWithMessage:@"请选择职位" andCompleteBlock:nil] show];
@@ -99,7 +99,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     BeckCustomVC2 *vc = segue.destinationViewController;
-    vc.province = self.provinceBtn.province;
+//    vc.province = self.provinceBtn.province;
     vc.position = self.positions[self.path.row];
 }
 
