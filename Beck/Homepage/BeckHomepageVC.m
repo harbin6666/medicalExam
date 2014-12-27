@@ -12,7 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITabBar *tabbar;
 
-@property (weak, nonatomic) IBOutlet UILabel *countDownLbl;
+@property (weak, nonatomic) IBOutlet UIImageView *hIV;
+@property (weak, nonatomic) IBOutlet UIImageView *tIV;
+@property (weak, nonatomic) IBOutlet UIImageView *cIV;
 
 @end
 
@@ -72,7 +74,12 @@
             }
             else {
                 NSNumber *days = aResponseObject[@"numberDay"];
-                self.countDownLbl.text = [NSString stringWithFormat:@"距离考试还有%@天",days];
+                int h = days.intValue / 100;
+                int t = (days.intValue - h * 100) / 10;
+                int c = days.intValue - h * 100 - t * 10;
+                self.hIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",h]];
+                self.tIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",t]];
+                self.cIV.image = [UIImage imageNamed:[NSString stringWithFormat:@"num%d",c]];
             }
         }
         else {
@@ -81,15 +88,10 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onPressedSignIn:(id)sender
+{
+    
 }
-*/
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {

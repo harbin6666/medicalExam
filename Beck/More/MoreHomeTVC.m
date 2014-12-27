@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.names = @[@"高频考点", @"考试科目", @"意见反馈", @"使用帮助", @"软件分享", @"版本更新", @"个人档案"];
+    self.names = @[@"高频考点", @"考试科目", @"意见反馈", @"使用帮助", @"软件分享", @"版本更新", @"个人档案", @"我的消息", @"题库更新"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,7 +89,7 @@
             }
         }];
     }
-    else {
+    else if (indexPath.row == 6) {
         [self performSegueWithIdentifier:@"toPersonalFile" sender:nil];
     }
 }
