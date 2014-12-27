@@ -10,8 +10,6 @@
 
 #import "ItemTVC.h"
 
-#import "AnswerCVC.h"
-
 #import "PractiseVO.h"
 
 @interface PracticeModePVC ()
