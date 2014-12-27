@@ -115,6 +115,8 @@
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
         btn.answerIndex = indexPath.row;
         btn.itemVO = self.itemVO;
+        btn.userInteractionEnabled = self.itemVO.canChange;
+        
         return cell;
     }
     

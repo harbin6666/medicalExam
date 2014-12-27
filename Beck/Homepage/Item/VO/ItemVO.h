@@ -19,6 +19,8 @@ typedef enum ItemType
 
 @interface ItemVO : NSObject
 
+@property (nonatomic) BOOL canChange;
+
 @property (nonatomic) BOOL showAnswer;
 @property (nonatomic) BOOL showNote;
 @property (nonatomic) BOOL favorated;

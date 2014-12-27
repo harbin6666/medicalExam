@@ -194,6 +194,7 @@
                         NSDictionary *itemInfo = obj;
                         ItemVO *itemVO = [ItemVO createWithItemId:[itemInfo[@"titleId"] stringValue] andType:[type intValue]];
                         itemVO.canShowNote = NO;
+                        itemVO.canChange = NO;
                         
                         if (itemVO) {
                             [ids addObject:itemVO];

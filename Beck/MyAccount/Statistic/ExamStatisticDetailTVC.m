@@ -117,6 +117,8 @@
         NSString *answer = obj;
         ItemVO *itemVO = [ItemVO createWithExamAnswer:answer];
         itemVO.canShowNote = NO;
+        itemVO.canChange = NO;
+        
         if (itemVO) {
             [items addObject:itemVO];
         }
