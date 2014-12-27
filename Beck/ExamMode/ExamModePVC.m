@@ -120,7 +120,35 @@
     }
 }
 
-- (void)onPressedBtn3:(UIButton *)sender {
+- (void)onPressedBtn3:(UIButton *)sender
+{
+    __block BOOL done = NO;
+    __block BOOL canSubmit = NO;
+    NSMutableArray *notDones = @[].mutableCopy;
+    [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ItemVO *vo = obj;
+        if (vo.userAnswers.count) {
+            done = YES;
+        }
+        else {
+            [notDones addObject:@(idx + 1)];
+        }
+    }];
+    
+    if (notDones.count == self.items.count) {
+        canSubmit = YES;
+    }
+    
+    if (!done) {
+        [[OTSAlertView alertWithMessage:@"当前考试无效" andCompleteBlock:nil] show];
+        return;
+    }
+    else if (!canSubmit) {
+        NSString *noteDone = [notDones componentsJoinedByString:@","];
+        [[OTSAlertView alertWithTitle:@"未做的题目" message:noteDone andCompleteBlock:nil] show];
+        return;
+    }
+    
     WEAK_SELF;
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"是否交卷?" message:@"" leftBtn:@"交卷" rightBtn:@"取消" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
