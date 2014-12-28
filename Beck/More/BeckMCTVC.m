@@ -36,6 +36,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.names[indexPath.row];
+    cell.detailTextLabel.text = self.names[indexPath.row];
     
     return cell;
 }
