@@ -446,6 +446,7 @@
                         <segue destination="wx7-3Q-fD4" kind="push" identifier="toPersonalFile" id="sVg-q8-dm1"/>
                         <segue destination="M6r-b4-ZBx" kind="push" identifier="toHelp" id="DfX-CB-AwS"/>
                         <segue destination="egH-vV-o07" kind="push" identifier="toFeedBack" id="nas-sW-fF1"/>
+                        <segue destination="BcW-yn-XjW" kind="push" identifier="toMessage" id="Qjx-i2-TH7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMy-en-7uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -728,10 +729,68 @@
             </objects>
             <point key="canvasLocation" x="214" y="1206"/>
         </scene>
+        <!--消息中心-->
+        <scene sceneID="m9B-0G-Yxo">
+            <objects>
+                <tableViewController id="BcW-yn-XjW" userLabel="消息中心" customClass="BeckMCTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="d2X-ev-Aev">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="u4X-zK-JZ8" detailTextLabel="vqU-6i-hIK" imageView="3TM-Eg-j4d" style="IBUITableViewCellStyleSubtitle" id="OkN-Ce-y2c">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OkN-Ce-y2c" id="W0H-WV-ytq">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u4X-zK-JZ8">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vqU-6i-hIK">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="m_p" id="3TM-Eg-j4d">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BcW-yn-XjW" id="Q8d-w4-HIA"/>
+                            <outlet property="delegate" destination="BcW-yn-XjW" id="a7Q-Ae-7ek"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Bos-N7-SXi">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="0mW-c0-k0D">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ika-Rd-Y0q">
+                                <rect key="frame" x="16" y="7" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="我的消息" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="BcW-yn-XjW" eventType="touchUpInside" id="CXX-xv-lav"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9y-BM-CyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2293" y="1207"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backImage" width="9" height="14"/>
         <image name="checkbox" width="24" height="24"/>
+        <image name="m_p" width="19" height="16"/>
         <image name="personalbg" width="320" height="51"/>
         <image name="uncheckbox" width="24" height="24"/>
     </resources>

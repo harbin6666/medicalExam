@@ -21,7 +21,6 @@
 		3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9519FFBF980017A539 /* HelpVC.m */; };
 		3D0EFB9919FFC4EA0017A539 /* ViewItemPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9819FFC4EA0017A539 /* ViewItemPVC.m */; };
 		3D0EFB9C19FFC6E30017A539 /* BeckAchievementTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9B19FFC6E30017A539 /* BeckAchievementTVC.m */; };
-		3D0EFB9F19FFC9400017A539 /* BeckMCTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFB9E19FFC9400017A539 /* BeckMCTVC.m */; };
 		3D0EFBA719FFC9FF0017A539 /* EnterCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA219FFC9FF0017A539 /* EnterCodeVC.m */; };
 		3D0EFBA819FFC9FF0017A539 /* EnterPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA419FFC9FF0017A539 /* EnterPasswordVC.m */; };
 		3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA619FFC9FF0017A539 /* RegisterVC.m */; };
@@ -112,6 +111,7 @@
 		3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */; };
 		3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */; };
 		3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E91A010F3C0079CC01 /* libz.dylib */; };
+		3DD100081A4FD31C00E3F503 /* BeckMCTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD100071A4FD31C00E3F503 /* BeckMCTVC.m */; };
 		3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */; };
 		8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D5D4D704E4BA88EBD7F48 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -153,8 +153,6 @@
 		3D0EFB9819FFC4EA0017A539 /* ViewItemPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewItemPVC.m; sourceTree = "<group>"; };
 		3D0EFB9A19FFC6E30017A539 /* BeckAchievementTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckAchievementTVC.h; sourceTree = "<group>"; };
 		3D0EFB9B19FFC6E30017A539 /* BeckAchievementTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckAchievementTVC.m; sourceTree = "<group>"; };
-		3D0EFB9D19FFC9400017A539 /* BeckMCTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeckMCTVC.h; sourceTree = "<group>"; };
-		3D0EFB9E19FFC9400017A539 /* BeckMCTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeckMCTVC.m; sourceTree = "<group>"; };
 		3D0EFBA119FFC9FF0017A539 /* EnterCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterCodeVC.h; sourceTree = "<group>"; };
 		3D0EFBA219FFC9FF0017A539 /* EnterCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterCodeVC.m; sourceTree = "<group>"; };
 		3D0EFBA319FFC9FF0017A539 /* EnterPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPasswordVC.h; sourceTree = "<group>"; };
@@ -334,6 +332,8 @@
 		3DCB50E01A010EA70079CC01 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3DCB50E91A010F3C0079CC01 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3DD100061A4FD31C00E3F503 /* BeckMCTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeckMCTVC.h; path = Beck/More/BeckMCTVC.h; sourceTree = SOURCE_ROOT; };
+		3DD100071A4FD31C00E3F503 /* BeckMCTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeckMCTVC.m; path = Beck/More/BeckMCTVC.m; sourceTree = SOURCE_ROOT; };
 		3DF5B86119E8E5E10050165F /* Beck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beck.xcdatamodel; sourceTree = "<group>"; };
 		457D5D4D704E4BA88EBD7F48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		646B6BD972844B829AA84FB4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -473,6 +473,8 @@
 		3D2521EA19F543CB00FC72A7 /* 高频考点 */ = {
 			isa = PBXGroup;
 			children = (
+				3DD100061A4FD31C00E3F503 /* BeckMCTVC.h */,
+				3DD100071A4FD31C00E3F503 /* BeckMCTVC.m */,
 				3D2521EB19F543CB00FC72A7 /* TestingCentreCategoryTVC.h */,
 				3D2521EC19F543CB00FC72A7 /* TestingCentreCategoryTVC.m */,
 				3D2521ED19F543CB00FC72A7 /* TestingCentreDetailVC.h */,
@@ -711,8 +713,6 @@
 				3D63BDF11A4EFDE3006A5BFD /* HonorTVCell.m */,
 				3D63BDED1A4EFD9A006A5BFD /* HonorCVCell.h */,
 				3D63BDEE1A4EFD9A006A5BFD /* HonorCVCell.m */,
-				3D0EFB9D19FFC9400017A539 /* BeckMCTVC.h */,
-				3D0EFB9E19FFC9400017A539 /* BeckMCTVC.m */,
 				3D9789441A12575100835549 /* BeckChangeExamPlaceBtn.h */,
 				3D9789451A12575100835549 /* BeckChangeExamPlaceBtn.m */,
 				3D9789471A1257F200835549 /* BeckCustomVC1.h */,
@@ -1028,6 +1028,7 @@
 				3D0EFB9619FFBF980017A539 /* HelpVC.m in Sources */,
 				3DB238A719FE79B0002CD73D /* BeckHomepageVC.m in Sources */,
 				3D0256C61A1E279F00C46B0E /* CompatibilityItemTVC.m in Sources */,
+				3DD100081A4FD31C00E3F503 /* BeckMCTVC.m in Sources */,
 				3D4CEEA51A1CB39B0078AA38 /* OTSAlertView.m in Sources */,
 				3D2521E219F53C9100FC72A7 /* MyAccountHomeTVC.m in Sources */,
 				3D4F677C19F7E97900ED8FA4 /* BeckCVC.m in Sources */,
@@ -1035,7 +1036,6 @@
 				3D25220419F5441C00FC72A7 /* ErrorItemsTVC.m in Sources */,
 				3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */,
 				3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */,
-				3D0EFB9F19FFC9400017A539 /* BeckMCTVC.m in Sources */,
 				3D4F677919F7DC9200ED8FA4 /* BeckPVC.m in Sources */,
 				3D6AE17F1A07BA7100C0BB71 /* MyPayInfoTVC.m in Sources */,
 				3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */,

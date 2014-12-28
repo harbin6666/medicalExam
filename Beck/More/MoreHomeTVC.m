@@ -92,6 +92,12 @@
     else if (indexPath.row == 6) {
         [self performSegueWithIdentifier:@"toPersonalFile" sender:nil];
     }
+    else if (indexPath.row == 7) {
+        [self performSegueWithIdentifier:@"toMessage" sender:nil];
+    }
+    else if (indexPath.row == 8) {
+        
+    }
 }
 
 @end
