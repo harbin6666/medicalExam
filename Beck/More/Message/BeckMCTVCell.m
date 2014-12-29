@@ -29,4 +29,11 @@
     // Configure the view for the selected state
 }
 
++ (CGFloat)heightWithData:(id)data
+{
+    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:14.f]};
+    CGSize size = [@"升级" boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 38 - 10, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    return size.height + 51;
+}
+
 @end

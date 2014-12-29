@@ -751,19 +751,19 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统消息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBV-CB-bKQ">
-                                            <rect key="frame" x="39" y="7" width="68" height="21"/>
+                                            <rect key="frame" x="39" y="8.5" width="68" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.38823529411764707" green="0.27058823529411763" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1990-10-10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn7-vq-Xre">
-                                            <rect key="frame" x="245" y="10" width="65" height="15"/>
+                                            <rect key="frame" x="245" y="11.5" width="65" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="升级" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOG-vZ-5Ar">
-                                            <rect key="frame" x="39" y="38" width="271" height="52"/>
+                                            <rect key="frame" x="39" y="39" width="271" height="51"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -773,7 +773,7 @@
                                         <constraint firstItem="mOG-vZ-5Ar" firstAttribute="leading" secondItem="cBV-CB-bKQ" secondAttribute="leading" id="6hU-a9-8oe"/>
                                         <constraint firstItem="cBV-CB-bKQ" firstAttribute="leading" secondItem="tfs-Wn-pGz" secondAttribute="trailing" constant="10" id="9Ii-W8-OOx"/>
                                         <constraint firstItem="tfs-Wn-pGz" firstAttribute="leading" secondItem="W0H-WV-ytq" secondAttribute="leading" constant="10" id="Fth-4B-TYX"/>
-                                        <constraint firstItem="cBV-CB-bKQ" firstAttribute="centerY" secondItem="tfs-Wn-pGz" secondAttribute="centerY" constant="-0.5" id="aYD-ZA-aYo"/>
+                                        <constraint firstItem="cBV-CB-bKQ" firstAttribute="centerY" secondItem="tfs-Wn-pGz" secondAttribute="centerY" id="aYD-ZA-aYo"/>
                                         <constraint firstAttribute="trailing" secondItem="mOG-vZ-5Ar" secondAttribute="trailing" constant="10" id="dOt-7r-7rG"/>
                                         <constraint firstItem="tfs-Wn-pGz" firstAttribute="top" secondItem="W0H-WV-ytq" secondAttribute="top" constant="10" id="fXG-nj-Kqs"/>
                                         <constraint firstItem="vn7-vq-Xre" firstAttribute="centerY" secondItem="cBV-CB-bKQ" secondAttribute="centerY" id="gJL-i8-kUC"/>

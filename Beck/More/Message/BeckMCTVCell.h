@@ -10,4 +10,6 @@
 
 @interface BeckMCTVCell : UITableViewCell
 
++ (CGFloat)heightWithData:(id)data;
+
 @end
