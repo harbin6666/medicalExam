@@ -96,8 +96,41 @@
         [self performSegueWithIdentifier:@"toMessage" sender:nil];
     }
     else if (indexPath.row == 8) {
-        
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [self showLoading];
+        WEAK_SELF;
+        [self getValueWithBeckUrl:@"/front/versionUpdateAct.htm" params:@{@"token":@"db",@"paramValue":@"1.0"} CompleteBlock:^(id aResponseObject, NSError *anError) {
+            STRONG_SELF;
+            [self hideLoading];
+            if (!anError) {
+                NSNumber *errorcode = aResponseObject[@"errorcode"];
+                if (errorcode.boolValue) {
+                    [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+                }
+                else {
+                    [self updateDB];
+                }
+            }
+            else {
+                [[OTSAlertView alertWithMessage:@"获取更新失败" andCompleteBlock:nil] show];
+            }
+        }];
     }
+}
+
+- (void)updateDB
+{
+    [self showLoading];
+    NSMutableDictionary *params = @{}.mutableCopy;
+    params[@"token"] = @"datebase";
+    params[@"choiceId"] = @"datebase";
+    params[@"compatId"] = @"datebase";
+    
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/customQuestionTypeAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+    }];
 }
 
 @end
