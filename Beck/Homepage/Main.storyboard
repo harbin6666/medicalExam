@@ -142,6 +142,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onPressedLogin:" destination="MRK-IG-3lV" eventType="touchUpInside" id="NBg-ku-3i6"/>
                                 </connections>
@@ -395,21 +400,26 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDB-AZ-INa">
-                                <rect key="frame" x="16" y="528" width="288" height="30"/>
+                                <rect key="frame" x="16" y="514" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="IIu-9j-RSq"/>
+                                    <constraint firstAttribute="height" constant="44" id="IIu-9j-RSq"/>
                                 </constraints>
                                 <state key="normal" title="下一步">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onPressedBtn:" destination="fAa-4x-MXv" eventType="touchUpInside" id="kKU-OR-h1z"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-2O-gGV">
-                                <rect key="frame" x="16" y="103" width="288" height="415"/>
+                                <rect key="frame" x="16" y="103" width="288" height="401"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Iuo-Ub-9lr">
                                     <rect key="frame" x="0.0" y="66" width="288" height="20"/>
@@ -669,22 +679,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hza-7p-w8F">
-                                <rect key="frame" x="16" y="528" width="288" height="30"/>
+                                <rect key="frame" x="16" y="514" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="k2v-eP-rYv"/>
-                                    <constraint firstAttribute="height" constant="30" id="uhb-oF-Lpo"/>
+                                    <constraint firstAttribute="height" constant="44" id="uhb-oF-Lpo"/>
                                 </constraints>
                                 <state key="normal" title="确定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onPressedBtn:" destination="Itq-M7-wKH" eventType="touchUpInside" id="oc5-NB-ZDn"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="E4V-P1-9xU">
-                                <rect key="frame" x="16" y="105" width="288" height="413"/>
+                                <rect key="frame" x="16" y="105" width="288" height="399"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Rho-ws-vVD">
                                     <rect key="frame" x="0.0" y="66" width="288" height="20"/>
@@ -850,18 +864,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  请输入手机号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VBt-44-vqq">
-                                <rect key="frame" x="16" y="84" width="288" height="30"/>
+                                <rect key="frame" x="16" y="84" width="288" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="LwE-nv-7Ng"/>
+                                    <constraint firstAttribute="height" constant="44" id="LwE-nv-7Ng"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TT-dB-sa1">
-                                <rect key="frame" x="16" y="134" width="288" height="30"/>
+                                <rect key="frame" x="16" y="148" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ce0-Ud-Mva"/>
+                                    <constraint firstAttribute="height" constant="44" id="Ce0-Ud-Mva"/>
                                 </constraints>
                                 <state key="normal" title="下一步">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -946,18 +960,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-tG-tzz">
-                                <rect key="frame" x="16" y="115" width="178" height="30"/>
+                                <rect key="frame" x="16" y="115" width="178" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KZj-3c-Y2S"/>
+                                    <constraint firstAttribute="height" constant="44" id="KZj-3c-Y2S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efn-NO-iMP">
-                                <rect key="frame" x="16" y="165" width="288" height="30"/>
+                                <rect key="frame" x="16" y="179" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wyl-Cd-j2T"/>
+                                    <constraint firstAttribute="height" constant="44" id="wyl-Cd-j2T"/>
                                 </constraints>
                                 <state key="normal" title="确认">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -968,11 +982,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaG-qB-w2w">
-                                <rect key="frame" x="214" y="115" width="80" height="30"/>
+                                <rect key="frame" x="214" y="115" width="80" height="44"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="LDg-CH-Seb"/>
-                                    <constraint firstAttribute="height" constant="30" id="zjw-dI-S1b"/>
+                                    <constraint firstAttribute="height" constant="44" id="zjw-dI-S1b"/>
                                 </constraints>
                                 <state key="normal" title="重新发送">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1056,26 +1070,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-HM-MG1">
-                                <rect key="frame" x="16" y="115" width="288" height="30"/>
+                                <rect key="frame" x="16" y="115" width="288" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4fc-FY-mTt"/>
+                                    <constraint firstAttribute="height" constant="44" id="4fc-FY-mTt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1e-24-6Ej">
-                                <rect key="frame" x="16" y="165" width="288" height="30"/>
+                                <rect key="frame" x="16" y="179" width="288" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="low-SX-Ivf"/>
+                                    <constraint firstAttribute="height" constant="44" id="low-SX-Ivf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBm-D4-8kL">
-                                <rect key="frame" x="16" y="215" width="288" height="30"/>
+                                <rect key="frame" x="16" y="243" width="288" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Fco-9h-eBN"/>
+                                    <constraint firstAttribute="height" constant="44" id="Fco-9h-eBN"/>
                                 </constraints>
                                 <state key="normal" title="确认">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1165,6 +1179,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Qdh-Vz-X6p"/>
-        <segue reference="d1f-2z-2BA"/>
+        <segue reference="ieV-CZ-EPD"/>
     </inferredMetricsTieBreakers>
 </document>
