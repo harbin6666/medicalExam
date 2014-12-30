@@ -21,9 +21,26 @@
     [super viewDidLoad];
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     
-    self.tableView.tableFooterView = self.footerView;
-    
-    self.sectionNames = @[@"    我的宣章", @"    我的统计", @"    我的积分"];
+    [self showLoading];
+    WEAK_SELF;
+    [self getValueWithBeckUrl:@"/front/userAct.htm" params:@{@"token":@"personal",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.sectionNames = @[@"    我的宣章", @"    我的统计", @"    我的积分"];
+                self.tableView.tableFooterView = self.footerView;
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取成就失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 #pragma mark - Table view data source
