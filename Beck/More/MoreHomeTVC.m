@@ -19,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.names = @[@"高频考点", @"考试科目", @"意见反馈", @"使用帮助", @"软件分享", @"版本更新", @"个人档案", @"我的消息", @"题库更新"];
+    
+    NSString *value = [[NSUserDefaults standardUserDefaults] stringForKey:@"value"];
+    if (!value) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"1.0" forKey:@"value"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,11 +103,11 @@
     }
     else if (indexPath.row == 8) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        [self showLoading];
+        [self showLoadingWithMessage:nil onView:self.navigationController.view hideAfter:0.f];
         WEAK_SELF;
         [self getValueWithBeckUrl:@"/front/versionUpdateAct.htm" params:@{@"token":@"db",@"paramValue":@"1.0"} CompleteBlock:^(id aResponseObject, NSError *anError) {
             STRONG_SELF;
-            [self hideLoading];
+            [self hideLoadingOnView:self.navigationController.view];
             if (!anError) {
                 NSNumber *errorcode = aResponseObject[@"errorcode"];
                 if (errorcode.boolValue) {
@@ -120,17 +126,91 @@
 
 - (void)updateDB
 {
-    [self showLoading];
+    [self showLoadingWithMessage:nil onView:self.navigationController.view hideAfter:0.f];
     NSMutableDictionary *params = @{}.mutableCopy;
-    params[@"token"] = @"datebase";
-    params[@"choiceId"] = @"datebase";
-    params[@"compatId"] = @"datebase";
+    params[@"token"] = @"database";
+    
+    NSString *sql1 = @"select max(choice_id) from choice_questions";
+    [[AFSQLManager sharedManager] performQuery:sql1 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+
+        }
+        else {
+            params[@"choiceId"] = row.firstObject;
+        }
+    }];
+    
+    NSString *sql2 = @"select max(id) from compatibility_info";
+    [[AFSQLManager sharedManager] performQuery:sql2 withBlock:^(NSArray *row, NSError *error, BOOL finished) {
+        if (finished) {
+            
+        }
+        else {
+            params[@"compatId"] = row.firstObject;
+        }
+    }];
     
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/customQuestionTypeAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
-        [self hideLoading];
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                NSDictionary *dateBaseBean = aResponseObject[@"dateBaseBean"];
+                NSMutableArray *sqls = @[].mutableCopy;
+                NSArray *choiceItemList = dateBaseBean[@"choiceItemList"];
+                
+                if (choiceItemList.count) {
+                    [sqls addObjectsFromArray:choiceItemList];
+                }
+                
+                NSArray *choiceList = dateBaseBean[@"choiceList"];
+                
+                if (choiceList.count) {
+                    [sqls addObjectsFromArray:choiceList];
+                }
+                
+                NSArray *compatItemList = dateBaseBean[@"compatItemList"];
+                
+                if (choiceList.count) {
+                    [sqls addObjectsFromArray:compatItemList];
+                }
+                
+                NSArray *compatList = dateBaseBean[@"compatList"];
+                
+                if (choiceList.count) {
+                    [sqls addObjectsFromArray:compatList];
+                }
+                
+                NSArray *compatQuestionList = dateBaseBean[@"compatQuestionList"];
+                
+                if (choiceList.count) {
+                    [sqls addObjectsFromArray:compatQuestionList];
+                }
+                
+                [sqls enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    NSString *sql = obj;
+                    [self performSql:sql];
+                }];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:aResponseObject[@"value"] forKey:@"value"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取更新失败" andCompleteBlock:nil] show];
+        }
+        
+        [self hideLoadingOnView:self.navigationController.view];
     }];
+}
+
+- (void)performSql:(NSString *)sql
+{
+    [[AFSQLManager sharedManager] performQuery:sql withBlock:nil];
 }
 
 @end
