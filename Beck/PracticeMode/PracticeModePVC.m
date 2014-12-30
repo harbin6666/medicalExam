@@ -140,7 +140,7 @@
             done = YES;
         }
         else {
-            [notDones addObject:@(idx + 1)];
+            [notDones addObject:[NSString stringWithFormat:@"(%@)",@(idx + 1)]];
         }
     }];
     
@@ -149,7 +149,7 @@
     }
     
     if (!done) {
-        [[OTSAlertView alertWithMessage:@"当前练习无效" andCompleteBlock:nil] show];
+        [[OTSAlertView alertWithMessage:@"当前练习一题未做，视为无效，是否继续练习" andCompleteBlock:nil] show];
         return;
     }
     else if (!canSubmit) {
