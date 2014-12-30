@@ -131,7 +131,7 @@
             done = YES;
         }
         else {
-            [notDones addObject:@(idx + 1)];
+            [notDones addObject:[NSString stringWithFormat:@"(%@)",@(idx + 1)]];
         }
     }];
     
