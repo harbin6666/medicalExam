@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSArray *sectionNames;
 @property (strong, nonatomic) IBOutlet UIView *footerView;
 
+@property (nonatomic, strong) NSDictionary *infos;
+
 @end
 
 @implementation BeckAchievementTVC
@@ -32,6 +34,7 @@
                 [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
             }
             else {
+                self.infos = aResponseObject;
                 self.sectionNames = @[@"    我的宣章", @"    我的统计", @"    我的积分"];
                 self.tableView.tableFooterView = self.footerView;
                 [self.tableView reloadData];
@@ -91,13 +94,13 @@
     }
     else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"您已经做了5套模拟试题，共计500题";
+        cell.textLabel.text = [NSString stringWithFormat:@"您已经做了%@套模拟试题，共计%@题",self.infos[@"count"],self.infos[@"problem"]];
     }
     else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"PointCell" forIndexPath:indexPath];
         if (indexPath.row == 0) {
             cell.textLabel.text = @"当前积分";
-            cell.detailTextLabel.text = @"20";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",self.infos[@"integral"]];
         }
         else {
             cell.textLabel.text = @"累计积分";
