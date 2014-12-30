@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
+    self.names = @[@"我的积分", @"消息提醒", @"修改密码"];
+//    self.names = @[@"我的积分", @"消息提醒", @"修改密码", @"支付信息"];
     
     self.titleLabel.text = [NSString stringWithFormat:@"%@,欢迎您",[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]];
 }
@@ -43,7 +44,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 4){
+    if (indexPath.row == 3){
         return [tableView dequeueReusableCellWithIdentifier:@"BottomCell" forIndexPath:indexPath];
     }
     
@@ -70,9 +71,9 @@
     else if (indexPath.row == 2){
         [self performSegueWithIdentifier:@"toModifyPassword" sender:nil];
     }
-    else if (indexPath.row == 3){
-        [self performSegueWithIdentifier:@"toPayInfo" sender:nil];
-    }
+//    else if (indexPath.row == 3){
+//        [self performSegueWithIdentifier:@"toPayInfo" sender:nil];
+//    }
 }
 
 - (IBAction)onPressedExit:(id)sender {
