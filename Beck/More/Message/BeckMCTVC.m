@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.names = @[@"发现新版本"];
+
     [self showLoading];
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/bulletinAct.htm" params:@{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"], @"token":@"message"} CompleteBlock:^(id aResponseObject, NSError *anError) {
