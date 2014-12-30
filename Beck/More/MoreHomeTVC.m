@@ -104,8 +104,12 @@
     else if (indexPath.row == 8) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         [self showLoadingWithMessage:nil onView:self.navigationController.view hideAfter:0.f];
+        NSMutableDictionary *params = @{}.mutableCopy;
+        params[@"token"] = @"db";
+        params[@"paramValue"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"value"];
+        
         WEAK_SELF;
-        [self getValueWithBeckUrl:@"/front/versionUpdateAct.htm" params:@{@"token":@"db",@"paramValue":@"1.0"} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        [self getValueWithBeckUrl:@"/front/versionUpdateAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
             STRONG_SELF;
             [self hideLoadingOnView:self.navigationController.view];
             if (!anError) {
