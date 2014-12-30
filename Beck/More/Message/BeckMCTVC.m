@@ -26,7 +26,19 @@
     [self getValueWithBeckUrl:@"/front/bulletinAct.htm" params:@{@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"], @"token":@"message"} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
-        
+        if (!anError) {
+            NSNumber *errorcode = aResponseObject[@"errorcode"];
+            if (errorcode.boolValue) {
+                [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+            }
+            else {
+                self.names = aResponseObject[@"list"];
+                [self.tableView reloadData];
+            }
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"获取消息失败" andCompleteBlock:nil] show];
+        }
     }];
 }
 
@@ -43,11 +55,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [BeckMCTVCell heightWithData:nil];
+    NSDictionary *infos = self.names[indexPath.row];
+    return [BeckMCTVCell heightWithData:infos];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BeckMCTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    NSDictionary *infos = self.names[indexPath.row];
+    [cell updateWithData:infos];
     return cell;
 }
 

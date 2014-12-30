@@ -19,21 +19,26 @@
 
 @implementation BeckMCTVCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
-+ (CGFloat)heightWithData:(id)data
++ (CGFloat)heightWithData:(NSDictionary *)info
 {
     NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:14.f]};
-    CGSize size = [@"升级" boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 38 - 10, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+    CGSize size = [info[@"content"] boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 38 - 10, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
     return size.height + 51;
+}
+
+- (void)updateWithData:(NSDictionary *)info
+{
+    self.typeLabel.text = info[@"title"];
+    self.messageLabel.text = info[@"content"];
+    self.dateLabel.text = info[@"issueTime"];
+    
+    NSNumber *type = info[@"type"];
+    if (type.intValue == 5) {
+        self.typeImageView.image = [UIImage imageNamed:@"m_s"];
+    }
+    else {
+        self.typeImageView.image = [UIImage imageNamed:@"m_p"];
+    }
 }
 
 @end

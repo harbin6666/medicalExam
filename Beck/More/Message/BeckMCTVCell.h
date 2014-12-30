@@ -10,6 +10,8 @@
 
 @interface BeckMCTVCell : UITableViewCell
 
-+ (CGFloat)heightWithData:(id)data;
++ (CGFloat)heightWithData:(NSDictionary *)info;
+
+- (void)updateWithData:(NSDictionary *)info;
 
 @end
