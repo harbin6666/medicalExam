@@ -88,7 +88,19 @@
 
 - (IBAction)onPressedSignIn:(id)sender
 {
-    
+    WEAK_SELF;
+    [self showLoading];
+    [self getValueWithBeckUrl:@"/front/signInAct.htm" params:@{@"token":@"sign",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
+        STRONG_SELF;
+        [self hideLoading];
+        if (!anError) {
+            NSString *msg = aResponseObject[@"msg"];
+            [[OTSAlertView alertWithMessage:msg andCompleteBlock:nil] show];
+        }
+        else {
+            [[OTSAlertView alertWithMessage:@"签到失败" andCompleteBlock:nil] show];
+        }
+    }];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
