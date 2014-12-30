@@ -160,7 +160,9 @@
             }
             else {
                 NSDictionary *dateBaseBean = aResponseObject[@"dateBaseBean"];
+                
                 NSMutableArray *sqls = @[].mutableCopy;
+                
                 NSArray *choiceItemList = dateBaseBean[@"choiceItemList"];
                 
                 if (choiceItemList.count) {
@@ -175,19 +177,19 @@
                 
                 NSArray *compatItemList = dateBaseBean[@"compatItemList"];
                 
-                if (choiceList.count) {
+                if (compatItemList.count) {
                     [sqls addObjectsFromArray:compatItemList];
                 }
                 
                 NSArray *compatList = dateBaseBean[@"compatList"];
                 
-                if (choiceList.count) {
+                if (compatList.count) {
                     [sqls addObjectsFromArray:compatList];
                 }
                 
                 NSArray *compatQuestionList = dateBaseBean[@"compatQuestionList"];
                 
-                if (choiceList.count) {
+                if (compatQuestionList.count) {
                     [sqls addObjectsFromArray:compatQuestionList];
                 }
                 
