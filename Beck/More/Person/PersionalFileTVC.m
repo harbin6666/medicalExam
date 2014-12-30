@@ -80,7 +80,7 @@
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"提示" message:@"是否退出当前账号？" leftBtn:@"否" rightBtn:@"退出" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 1) {
             STRONG_SELF;
-            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"subjectId"];
+//            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"subjectId"];
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"loginName"];
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"autologin"];
             [[NSUserDefaults standardUserDefaults] synchronize];
