@@ -140,7 +140,7 @@
     }
     
     if (!done) {
-        [[OTSAlertView alertWithMessage:@"当前考试无效" andCompleteBlock:nil] show];
+        [[OTSAlertView alertWithMessage:@"当前考试一题未做" andCompleteBlock:nil] show];
         return;
     }
     else if (!canSubmit) {
