@@ -205,6 +205,11 @@
 
 - (void)doFavorate
 {
+    if (![AFNetworkReachabilityManager sharedManager].reachable) {
+        [[OTSAlertView alertWithMessage:@"您当前无网情况下不能操作" andCompleteBlock:nil] show];
+        return ;
+    }
+    
     NSMutableDictionary *params = @{}.mutableCopy;
     params[@"token"] = @"add";
     

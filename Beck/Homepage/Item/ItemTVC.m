@@ -155,6 +155,12 @@
 }
 
 - (IBAction)addNote:(UIButton *)sender {
+    
+    if (![AFNetworkReachabilityManager sharedManager].reachable) {
+        [[OTSAlertView alertWithMessage:@"您当前无网情况下不能操作" andCompleteBlock:nil] show];
+        return ;
+    }
+    
     WEAK_SELF;
     NSString *title = nil;
     if (self.itemVO.hasNote) {

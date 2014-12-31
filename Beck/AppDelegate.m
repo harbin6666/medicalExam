@@ -57,6 +57,8 @@
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
     
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
 //注册
 //    [RCIM initWithAppKey:@"pwe86ga5er666" deviceToken:nil];
     
