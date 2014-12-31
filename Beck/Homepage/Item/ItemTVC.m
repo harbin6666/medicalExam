@@ -125,6 +125,13 @@
     else if (indexPath.section == 3){
         cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
         cell.hidden = !self.itemVO.canShowNote;
+        UIButton *btn = (UIButton *)[cell.contentView viewWithTag:999];
+        if (self.itemVO.hasNote) {
+            [btn setTitle:@"更新笔记" forState:UIControlStateNormal];
+        }
+        else {
+            [btn setTitle:@"添加笔记" forState:UIControlStateNormal];
+        }
     }
     else if (indexPath.section == 4){
         cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell" forIndexPath:indexPath];
@@ -147,7 +154,7 @@
     return cell;
 }
 
-- (IBAction)addNote:(id)sender {
+- (IBAction)addNote:(UIButton *)sender {
     WEAK_SELF;
     OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"添加笔记" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
@@ -188,6 +195,8 @@
                         [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
                     }
                     else {
+                        self.itemVO.hasNote = YES;
+                        [sender setTitle:@"更新笔记" forState:UIControlStateNormal];
                         [[OTSAlertView alertWithMessage:@"提交笔记成功" andCompleteBlock:nil] show];
                     }
                 }
