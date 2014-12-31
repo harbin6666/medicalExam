@@ -149,7 +149,13 @@
     }
     
     if (!done) {
-        [[OTSAlertView alertWithMessage:@"当前练习一题未做，视为无效，是否继续练习" andCompleteBlock:nil] show];
+        WEAK_SELF;
+        [[OTSAlertView alertWithTitle:@"" message:@"当前练习一题未做，要放弃练习吗？" leftBtn:@"继续做题" rightBtn:@"确定" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+            if (buttonIndex == 1) {
+                STRONG_SELF;
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }] show];
         return;
     }
     else if (!canSubmit) {
