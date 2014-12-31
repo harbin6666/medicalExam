@@ -86,8 +86,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K24-wk-Dqr">
-                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
-                                            <state key="normal" image="biji">
+                                            <rect key="frame" x="238" y="5.5" width="64" height="32"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="添加笔记">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -239,8 +241,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcK-by-bf6">
-                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
-                                            <state key="normal" image="biji">
+                                            <rect key="frame" x="238" y="5.5" width="64" height="32"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="添加笔记">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -402,8 +406,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-z2-rsA">
-                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
-                                            <state key="normal" image="biji">
+                                            <rect key="frame" x="238" y="5.5" width="64" height="32"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="添加笔记">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -570,8 +576,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-Y2-NFJ">
-                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
-                                            <state key="normal" image="biji">
+                                            <rect key="frame" x="238" y="5.5" width="64" height="32"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="添加笔记">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -752,8 +760,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" clipsSubviews="YES" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEi-3s-sN1">
-                                            <rect key="frame" x="245" y="10" width="57" height="23"/>
-                                            <state key="normal" image="biji">
+                                            <rect key="frame" x="238" y="5.5" width="64" height="32"/>
+                                            <color key="backgroundColor" red="0.13725490200000001" green="0.58039215690000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="添加笔记">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -922,7 +932,6 @@
     </scenes>
     <resources>
         <image name="backImage" width="9" height="14"/>
-        <image name="biji" width="57" height="23"/>
         <image name="checkbox" width="24" height="24"/>
         <image name="jilu" width="46" height="32"/>
         <image name="radio" width="19" height="19"/>

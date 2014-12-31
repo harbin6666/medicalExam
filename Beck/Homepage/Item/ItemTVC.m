@@ -156,7 +156,15 @@
 
 - (IBAction)addNote:(UIButton *)sender {
     WEAK_SELF;
-    OTSAlertView *alertView = [OTSAlertView alertWithTitle:@"添加笔记" message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+    NSString *title = nil;
+    if (self.itemVO.hasNote) {
+        title = @"更新笔记";
+    }
+    else {
+        title = @"添加笔记";
+    }
+    
+    OTSAlertView *alertView = [OTSAlertView alertWithTitle:title message:@"" andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
         if (buttonIndex == 0) {
             STRONG_SELF;
             NSString *note = [alertView textFieldAtIndex:0].text;
