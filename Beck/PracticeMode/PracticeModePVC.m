@@ -159,8 +159,14 @@
         return;
     }
     else if (!canSubmit) {
+        WEAK_SELF;
         NSString *noteDone = [notDones componentsJoinedByString:@","];
-        [[OTSAlertView alertWithTitle:@"未做的题目" message:noteDone andCompleteBlock:nil] show];
+        [[OTSAlertView alertWithTitle:@"未做的题目" message:noteDone leftBtn:@"继续做题" rightBtn:@"提交" extraData:nil andCompleteBlock:^(OTSAlertView *alertView, NSInteger buttonIndex) {
+            if (buttonIndex == 1) {
+                STRONG_SELF;
+                [self submitPractise];
+            }
+        }] show];
         return;
     }
     
