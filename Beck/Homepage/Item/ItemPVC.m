@@ -92,8 +92,8 @@
 {
     ItemTVC *tempVC = self.currentTVC;
     
-    UITabBarItem *item1 = self.cusTabbar.items[0];
-    UITabBarItem *item5 = self.cusTabbar.items[3];
+    UITabBarItem *item1 = self.cusTabbar.items.firstObject;
+    UITabBarItem *item5 = self.cusTabbar.items.lastObject;
     if (self.items.firstObject == tempVC.itemVO) {
         if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_7_0) {
             [item1 setImage:[[UIImage imageNamed:@"back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
