@@ -111,9 +111,9 @@
                     <navigationItem key="navigationItem" id="aDR-Rd-EUB">
                         <barButtonItem key="leftBarButtonItem" style="done" id="sId-l7-s7A">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zZI-cm-pSd">
-                                <rect key="frame" x="16" y="11" width="117" height="22"/>
+                                <rect key="frame" x="16" y="11" width="123" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="选择考试科目" image="backImage">
+                                <state key="normal" title=" 选择考试科目" image="backImage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
