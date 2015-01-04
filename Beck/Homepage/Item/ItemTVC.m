@@ -61,7 +61,7 @@
 {
     if (indexPath.section == 0){
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
-        CGSize size = [[self itemDespretion] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [[self itemDespretion] boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 60.f) {
             return 60.f;

@@ -27,7 +27,7 @@
     if (indexPath.section == 1){
         NSString *info = self.itemVO.itemInfo[9];
         NSDictionary *attribute = @{NSFontAttributeName: font};
-        CGSize size = [info.clearString boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [info.clearString boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 60.f) {
             return 60.f;
@@ -40,7 +40,7 @@
         NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[3];
         NSDictionary *attribute = @{NSFontAttributeName: font};
-        CGSize size = [answer.clearString boundingRectWithSize:CGSizeMake(200, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+        CGSize size = [answer.clearString boundingRectWithSize:CGSizeMake(250, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 44.f) {
             return 44.f;
