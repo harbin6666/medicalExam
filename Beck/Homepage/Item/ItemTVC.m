@@ -90,7 +90,7 @@
     }
     else if (indexPath.section == 4){
         if (self.itemVO.showAnswer) {
-            NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+            NSDictionary *attribute = @{NSFontAttributeName: font};
             CGSize size = [[self answerParse] boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
             
             if (size.height < 80.f) {
@@ -105,7 +105,7 @@
     }
     else if (indexPath.section == 5){
         if (self.showNote) {
-            NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+            NSDictionary *attribute = @{NSFontAttributeName: font};
             CGSize size = [[self noteParse] boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
             
             if (size.height < 80.f) {
