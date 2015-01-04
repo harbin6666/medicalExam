@@ -861,7 +861,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell1" id="hFg-3Z-t20" customClass="AnswerCVCCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellNormal" id="hFg-3Z-t20" customClass="AnswerCVCCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -875,21 +875,12 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rwk-kf-hIu">
-                                            <rect key="frame" x="37" y="19" width="8" height="6"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="6" id="Jls-ab-XCv"/>
-                                                <constraint firstAttribute="width" constant="8" id="bBo-0p-fj7"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Rwk-kf-hIu" secondAttribute="bottom" constant="5" id="JJa-72-5gp"/>
                                     <constraint firstAttribute="bottom" secondItem="zLV-jr-Yr1" secondAttribute="bottom" id="Jki-ZL-jhO"/>
                                     <constraint firstItem="zLV-jr-Yr1" firstAttribute="leading" secondItem="hFg-3Z-t20" secondAttribute="leading" id="hC5-td-yBB"/>
-                                    <constraint firstAttribute="trailing" secondItem="Rwk-kf-hIu" secondAttribute="trailing" constant="5" id="o95-Tu-AtG"/>
                                     <constraint firstItem="zLV-jr-Yr1" firstAttribute="top" secondItem="hFg-3Z-t20" secondAttribute="top" id="vSR-Xn-41L"/>
                                     <constraint firstAttribute="trailing" secondItem="zLV-jr-Yr1" secondAttribute="trailing" id="zhc-iM-vAX"/>
                                 </constraints>
@@ -900,7 +891,90 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="countLbl" destination="zLV-jr-Yr1" id="HX5-M1-4lH"/>
-                                    <outlet property="imageView" destination="Rwk-kf-hIu" id="KYV-0U-YQc"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellRight" id="5bE-ZW-qS2" customClass="AnswerCVCCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5q-On-Ovy">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                            <color key="backgroundColor" red="0.47450980392156861" green="0.90588235294117647" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dui" translatesAutoresizingMaskIntoConstraints="NO" id="v5G-Dr-vkD">
+                                            <rect key="frame" x="37" y="19" width="8" height="6"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="C5u-nY-Ep7"/>
+                                                <constraint firstAttribute="width" constant="8" id="KcT-qw-Mrx"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="R5q-On-Ovy" secondAttribute="bottom" id="0d4-gC-5LD"/>
+                                    <constraint firstAttribute="trailing" secondItem="R5q-On-Ovy" secondAttribute="trailing" id="1iR-ff-p1X"/>
+                                    <constraint firstAttribute="trailing" secondItem="v5G-Dr-vkD" secondAttribute="trailing" constant="5" id="ElY-bd-N1f"/>
+                                    <constraint firstItem="R5q-On-Ovy" firstAttribute="leading" secondItem="5bE-ZW-qS2" secondAttribute="leading" id="gR9-Jg-NPw"/>
+                                    <constraint firstAttribute="bottom" secondItem="v5G-Dr-vkD" secondAttribute="bottom" constant="5" id="sHL-4h-HZT"/>
+                                    <constraint firstItem="R5q-On-Ovy" firstAttribute="top" secondItem="5bE-ZW-qS2" secondAttribute="top" id="tYi-9X-pym"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="countLbl" destination="R5q-On-Ovy" id="Nm4-we-ScB"/>
+                                    <outlet property="imageView" destination="v5G-Dr-vkD" id="2ck-n8-5kM"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellWrong" id="J7l-ZS-FIv" customClass="AnswerCVCCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ya-D7-z2p">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                            <color key="backgroundColor" red="0.99215686274509807" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cuo" translatesAutoresizingMaskIntoConstraints="NO" id="vKw-OH-32W">
+                                            <rect key="frame" x="37" y="19" width="8" height="6"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="6" id="7Us-W9-A2b"/>
+                                                <constraint firstAttribute="width" constant="8" id="DS3-cS-GDa"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vKw-OH-32W" secondAttribute="trailing" constant="5" id="Enm-8S-OG1"/>
+                                    <constraint firstItem="5ya-D7-z2p" firstAttribute="leading" secondItem="J7l-ZS-FIv" secondAttribute="leading" id="G1T-6O-wpW"/>
+                                    <constraint firstItem="5ya-D7-z2p" firstAttribute="top" secondItem="J7l-ZS-FIv" secondAttribute="top" id="bMX-Zu-xQX"/>
+                                    <constraint firstAttribute="trailing" secondItem="5ya-D7-z2p" secondAttribute="trailing" id="bua-jB-7BK"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ya-D7-z2p" secondAttribute="bottom" id="dW5-nW-Iah"/>
+                                    <constraint firstAttribute="bottom" secondItem="vKw-OH-32W" secondAttribute="bottom" constant="5" id="gkY-kp-cxm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="countLbl" destination="5ya-D7-z2p" id="Fho-0M-nH1"/>
+                                    <outlet property="imageView" destination="vKw-OH-32W" id="5mM-yQ-EEa"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1088,6 +1162,8 @@
     <resources>
         <image name="backImage" width="9" height="14"/>
         <image name="checkbox" width="24" height="24"/>
+        <image name="cuo" width="8" height="6"/>
+        <image name="dui" width="8" height="6"/>
         <image name="jilu" width="46" height="32"/>
         <image name="radio" width="19" height="19"/>
         <image name="radio_sel" width="19" height="19"/>

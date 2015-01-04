@@ -28,13 +28,22 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    AnswerCVCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell1" forIndexPath:indexPath];
+    AnswerCVCCell *cell = nil;
     if (self.showRightInItemCVC) {
-        [cell updateWithItemVO:self.items[indexPath.row] andIndex:indexPath.row];
+        ItemVO *vo = self.items[indexPath.row];
+        if (vo.isRight) {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellRight" forIndexPath:indexPath];
+        }
+        else {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellWrong" forIndexPath:indexPath];
+        }
     }
     else {
-        [cell updateWithIndex:indexPath.row];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellNormal" forIndexPath:indexPath];
     }
+    
+    [cell updateWithIndex:indexPath.row];
+    
     return cell;
 }
 
