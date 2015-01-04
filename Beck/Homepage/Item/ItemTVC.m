@@ -41,6 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0);
 }
 
 #pragma mark - Table view data source
