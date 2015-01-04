@@ -33,7 +33,7 @@
             return 60.f;
         }
         
-        return size.height;
+        return ceil(size.height);
     }
     
     if (indexPath.section == 2){
@@ -46,7 +46,7 @@
             return 44.f;
         }
         
-        return size.height;
+        return ceil(size.height);
     }
     
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];

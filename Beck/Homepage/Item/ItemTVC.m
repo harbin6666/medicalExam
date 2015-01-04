@@ -67,7 +67,7 @@
             return 60.f;
         }
         
-        return size.height;
+        return ceil(size.height);
     }
     else if (indexPath.section == 1){
         return 60.f;
