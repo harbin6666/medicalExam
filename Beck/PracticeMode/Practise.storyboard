@@ -50,8 +50,19 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cusTabbar" destination="sK7-w0-MEI" id="yBF-m1-fCH"/>
+                        <outlet property="jumpBtn" destination="KCg-pT-K1u" id="1D5-bm-oCU"/>
                     </connections>
                 </pageViewController>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KCg-pT-K1u">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="changeitem">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doJumpToItem" destination="OC7-ep-qxH" eventType="touchUpInside" id="tui-QY-MLc"/>
+                    </connections>
+                </button>
                 <tabBar contentMode="scaleToFill" id="sK7-w0-MEI">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -296,9 +307,10 @@
         <image name="answer" width="24" height="21"/>
         <image name="back" width="24" height="21"/>
         <image name="backImage" width="9" height="14"/>
+        <image name="changeitem" width="42" height="42"/>
         <image name="favorate" width="24" height="21"/>
         <image name="next" width="24" height="21"/>
-        <image name="setting" width="24" height="21"/>
+        <image name="setting" width="23" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

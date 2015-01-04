@@ -236,9 +236,20 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cusTabbar" destination="TR5-gR-Udh" id="K1T-Mz-hxY"/>
+                        <outlet property="jumpBtn" destination="7YA-ki-0Dn" id="MKp-AW-2rx"/>
                         <outlet property="timeBtn" destination="QV5-Ha-SdT" id="po4-xU-BiU"/>
                     </connections>
                 </pageViewController>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7YA-ki-0Dn">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="changeitem">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doJumpToItem" destination="f68-Aq-7ve" eventType="touchUpInside" id="1XY-AT-YRZ"/>
+                    </connections>
+                </button>
                 <tabBar contentMode="scaleToFill" id="TR5-gR-Udh">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -313,6 +324,7 @@
         <image name="back" width="24" height="21"/>
         <image name="backImage" width="9" height="14"/>
         <image name="chakan" width="202" height="40"/>
+        <image name="changeitem" width="42" height="42"/>
         <image name="next" width="24" height="21"/>
         <image name="submit" width="24" height="21"/>
         <image name="weizuo" width="24" height="21"/>
