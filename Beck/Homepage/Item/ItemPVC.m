@@ -48,6 +48,13 @@
         STRONG_SELF;
         [self.currentTVC.tableView reloadData];
     }];
+    
+    self.jumpBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.jumpBtn];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_jumpBtn]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_jumpBtn)]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_jumpBtn]-59-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_jumpBtn)]];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item

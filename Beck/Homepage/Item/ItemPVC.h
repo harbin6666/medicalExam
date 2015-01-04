@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) ItemTVC *currentTVC;
 
+@property (strong, nonatomic) IBOutlet UIButton *jumpBtn;
+
 @property (strong, nonatomic) IBOutlet UITabBar *cusTabbar;
 
 @property (nonatomic, strong) NSArray *items;//<ItemVO>
@@ -30,6 +32,6 @@
 - (void)configTabBar;
 
 - (void)doFavorate;
-- (void)doJumpToItem;
+- (IBAction)doJumpToItem;
 
 @end

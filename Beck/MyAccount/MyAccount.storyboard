@@ -813,9 +813,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cusTabbar" destination="4fj-pq-73m" id="oSh-Uv-knk"/>
+                        <outlet property="jumpBtn" destination="cP2-a8-E1p" id="CJT-ye-JwI"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHf-l9-xle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cP2-a8-E1p">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="changeitem">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doJumpToItem" destination="tE6-vy-aDm" eventType="touchUpInside" id="OQ4-BP-Na6"/>
+                    </connections>
+                </button>
                 <tabBar contentMode="scaleToFill" id="4fj-pq-73m">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -952,8 +963,9 @@
         <image name="backImage" width="9" height="14"/>
         <image name="chakan" width="202" height="40"/>
         <image name="chakan_sel" width="202" height="40"/>
+        <image name="changeitem" width="42" height="42"/>
         <image name="next" width="24" height="21"/>
-        <image name="setting" width="24" height="21"/>
+        <image name="setting" width="23" height="23"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
