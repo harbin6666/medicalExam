@@ -59,6 +59,12 @@
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    if (!fontValue) {
+        [[NSUserDefaults standardUserDefaults] setInteger:17 forKey:@"fontValue"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
 //注册
 //    [RCIM initWithAppKey:@"pwe86ga5er666" deviceToken:nil];
     

@@ -20,10 +20,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{    
+{
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    UIFont *font = [UIFont systemFontOfSize:fontValue];
+    
     if (indexPath.section == 1){
         NSString *info = self.itemVO.itemInfo[9];
-        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+        NSDictionary *attribute = @{NSFontAttributeName: font};
         CGSize size = [info.clearString boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 60.f) {
@@ -36,7 +39,7 @@
     if (indexPath.section == 2){
         NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[3];
-        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
+        NSDictionary *attribute = @{NSFontAttributeName: font};
         CGSize size = [answer.clearString boundingRectWithSize:CGSizeMake(200, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 44.f) {
@@ -59,15 +62,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    UIFont *font = [UIFont systemFontOfSize:fontValue];
     
-    if (indexPath.section == 0) {
-        cell.textLabel.text = [self itemDespretion];
-    }
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         label.text = [self.itemVO.itemInfo[9] clearString];
+        label.font = font;
         return cell;
     }
     
@@ -75,6 +78,8 @@
         if (self.itemVO.itemAnswers.count) {
             NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
             cell.textLabel.text = [itemAnswer[3] clearString];
+            cell.textLabel.font = font;
+            
             cell.imageView.highlighted = [self.itemVO isSelectedAtIndex:indexPath.row];
             cell.userInteractionEnabled = self.itemVO.canChange;
         }

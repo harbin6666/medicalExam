@@ -56,7 +56,7 @@
     else {
         self.slider.maximumValue = 20.f;
         self.slider.minimumValue = 10.f;
-        self.slider.value = [[NSUserDefaults standardUserDefaults] floatForKey:@"fontValue"];
+        self.slider.value = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
         self.label.text = [NSString stringWithFormat:@"%d",(int)self.slider.value];
     }
 }
@@ -79,7 +79,7 @@
 - (IBAction)onPressedOK:(id)sender {
     CGFloat value = self.slider.value;
     if (self.selectedBtn == self.fontBtn) {
-        [[NSUserDefaults standardUserDefaults] setFloat:value forKey:@"fontValue"];
+        [[NSUserDefaults standardUserDefaults] setInteger:value forKey:@"fontValue"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     

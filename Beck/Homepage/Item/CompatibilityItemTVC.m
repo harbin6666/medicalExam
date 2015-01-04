@@ -23,10 +23,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    UIFont *font = [UIFont systemFontOfSize:fontValue];
+    
     if (indexPath.section == 1){
         NSArray *itemInfo = self.itemVO.itemInfo[indexPath.row];
         NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
-        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+        NSDictionary *attribute = @{NSFontAttributeName: font};
         CGSize size = [[info clearString] boundingRectWithSize:CGSizeMake(300, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 30.f) {
@@ -39,7 +42,7 @@
     if (indexPath.section == 2){
         NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
         NSString *answer = itemAnswer[1];
-        NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
+        NSDictionary *attribute = @{NSFontAttributeName: font};
         CGSize size = [[answer clearString] boundingRectWithSize:CGSizeMake(200, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
         
         if (size.height < 44.f) {
@@ -66,17 +69,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    UIFont *font = [UIFont systemFontOfSize:fontValue];
     
-    if (indexPath.section == 0) {
-        cell.textLabel.text = [self itemDespretion];
-    }
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemInfo = self.itemVO.itemInfo[indexPath.row];
         NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
         label.text = [info clearString];
+        label.font = font;
         return cell;
     }
     
@@ -85,6 +88,7 @@
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemAnswer = self.itemVO.itemAnswers[indexPath.row];
         label.text = [itemAnswer[1] clearString];
+        label.font = font;
         
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
         btn.answerIndex = indexPath.row;
@@ -108,15 +112,6 @@
 
 - (IBAction)onSelectedChoice:(UITapGestureRecognizer *)sender {
     
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    if (indexPath.section == 2) {
-//        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//        CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
-//        [self.itemVO setAnswer:self.itemVO.itemInfo[btn.answerIndex] andIndex:indexPath.row];
-//    }
 }
 
 @end
