@@ -114,4 +114,13 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //    if (indexPath.section == 2) {
+    //        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //        CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
+    //        [self.itemVO setAnswer:self.itemVO.itemInfo[btn.answerIndex] andIndex:indexPath.row];
+    //    }
+}
+
 @end
