@@ -59,6 +59,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    UIFont *font = [UIFont systemFontOfSize:fontValue];
+    
     if (indexPath.section == 0){
         NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
         CGSize size = [[self itemDespretion] boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
@@ -85,7 +88,14 @@
     }
     else if (indexPath.section == 4){
         if (self.itemVO.showAnswer) {
-            return 80.f;
+            NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+            CGSize size = [[self answerParse] boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+            
+            if (size.height < 80.f) {
+                return 80.f;
+            }
+            
+            return ceil(size.height);
         }
         else {
             return 0.f;
@@ -93,7 +103,14 @@
     }
     else if (indexPath.section == 5){
         if (self.showNote) {
-            return 80.f;
+            NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:17.f]};
+            CGSize size = [[self noteParse] boundingRectWithSize:CGSizeMake(270, 0) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+            
+            if (size.height < 80.f) {
+                return 80.f;
+            }
+            
+            return ceil(size.height);
         }
         else {
             return 0.f;
@@ -105,6 +122,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
+    UIFont *font = [UIFont systemFontOfSize:fontValue];
+    
     UITableViewCell *cell;
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"SubjectCell" forIndexPath:indexPath];
@@ -139,6 +159,7 @@
         
         cell.textLabel.hidden = !self.itemVO.showAnswer;
         cell.detailTextLabel.hidden = !self.itemVO.showAnswer;
+        cell.detailTextLabel.font = font;
     }
     else if (indexPath.section == 5){
         cell = [tableView dequeueReusableCellWithIdentifier:@"NoteCell" forIndexPath:indexPath];
@@ -146,6 +167,7 @@
         
         cell.textLabel.hidden = !self.showNote;
         cell.detailTextLabel.hidden = !self.showNote;
+        cell.detailTextLabel.font = font;
     }
     else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"MoreCell" forIndexPath:indexPath];
