@@ -97,7 +97,7 @@
                 return 80.f;
             }
             
-            return ceil(size.height);
+            return ceil(size.height) + 40;
         }
         else {
             return 0.f;
@@ -112,7 +112,7 @@
                 return 80.f;
             }
             
-            return ceil(size.height);
+            return ceil(size.height) + 40;
         }
         else {
             return 0.f;
