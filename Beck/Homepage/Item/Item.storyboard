@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--题目界面-->
@@ -928,6 +929,160 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wj-0h-rtF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660" y="980"/>
+        </scene>
+        <!--Setting PanVC-->
+        <scene sceneID="Kee-5X-qGI">
+            <objects>
+                <viewController storyboardIdentifier="settingPanVC" id="D4d-fx-3fE" customClass="SettingPanVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Dm-F0-88p"/>
+                        <viewControllerLayoutGuide type="bottom" id="Av2-yE-y1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XNr-nD-oOX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXG-y5-zVD">
+                                <rect key="frame" x="10" y="245" width="300" height="200"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-9j-IQU">
+                                        <rect key="frame" x="18" y="100" width="264" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="onValueChange:" destination="D4d-fx-3fE" eventType="valueChanged" id="38l-Rz-gJ2"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boF-v8-QtN">
+                                        <rect key="frame" x="53" y="150" width="44" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="foI-Vj-6RO"/>
+                                        </constraints>
+                                        <state key="normal" title="确定">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPressedOK:" destination="D4d-fx-3fE" eventType="touchUpInside" id="3Nh-Nw-Meb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUR-wM-zO3">
+                                        <rect key="frame" x="140" y="59" width="19.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iX-OF-Mia">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ucB-Py-YMu"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="亮度调节">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPressedBtn:" destination="D4d-fx-3fE" eventType="touchUpInside" id="aXt-Ds-eGt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTt-mn-TtV">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="iOa-Bj-cIm"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="字体大小">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPressedBtn:" destination="D4d-fx-3fE" eventType="touchUpInside" id="hwX-Rd-r6c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA5-Sf-Z9e">
+                                        <rect key="frame" x="203" y="150" width="44" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="2Rj-Zo-CL9"/>
+                                        </constraints>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPressedCancel:" destination="D4d-fx-3fE" eventType="touchUpInside" id="gPW-5c-9cO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="boF-v8-QtN" firstAttribute="centerX" secondItem="QXG-y5-zVD" secondAttribute="centerX" multiplier="1/2" id="5Zv-jJ-VTj"/>
+                                    <constraint firstAttribute="bottom" secondItem="DA5-Sf-Z9e" secondAttribute="bottom" constant="20" id="8dk-on-2eO"/>
+                                    <constraint firstAttribute="bottom" secondItem="boF-v8-QtN" secondAttribute="bottom" constant="20" id="B94-rB-rnV"/>
+                                    <constraint firstAttribute="height" constant="200" id="LuT-Pc-VlN"/>
+                                    <constraint firstAttribute="width" secondItem="nTt-mn-TtV" secondAttribute="width" multiplier="2" id="PvG-Iq-Dm7"/>
+                                    <constraint firstItem="9iX-OF-Mia" firstAttribute="top" secondItem="QXG-y5-zVD" secondAttribute="top" id="Qk8-Ra-0Nd"/>
+                                    <constraint firstItem="nTt-mn-TtV" firstAttribute="top" secondItem="QXG-y5-zVD" secondAttribute="top" id="VyN-GR-icu"/>
+                                    <constraint firstItem="9iX-OF-Mia" firstAttribute="leading" secondItem="QXG-y5-zVD" secondAttribute="leading" id="Wpi-AS-IFt"/>
+                                    <constraint firstItem="o9b-9j-IQU" firstAttribute="leading" secondItem="QXG-y5-zVD" secondAttribute="leading" constant="20" id="Xay-O0-W6D"/>
+                                    <constraint firstItem="o9b-9j-IQU" firstAttribute="top" secondItem="gUR-wM-zO3" secondAttribute="bottom" constant="20" id="Z3t-M0-Fks"/>
+                                    <constraint firstAttribute="trailing" secondItem="nTt-mn-TtV" secondAttribute="trailing" id="ZiO-Kt-XZU"/>
+                                    <constraint firstAttribute="width" secondItem="9iX-OF-Mia" secondAttribute="width" multiplier="2" id="oAR-E3-vMb"/>
+                                    <constraint firstAttribute="trailing" secondItem="o9b-9j-IQU" secondAttribute="trailing" constant="20" id="pMg-bB-0ji"/>
+                                    <constraint firstAttribute="centerX" secondItem="gUR-wM-zO3" secondAttribute="centerX" id="rtr-Q6-vZe"/>
+                                    <constraint firstItem="DA5-Sf-Z9e" firstAttribute="centerX" secondItem="QXG-y5-zVD" secondAttribute="centerX" multiplier="3/2" id="sju-fG-DVv"/>
+                                    <constraint firstItem="DA5-Sf-Z9e" firstAttribute="top" secondItem="o9b-9j-IQU" secondAttribute="bottom" constant="20" id="zoA-Dv-RR4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="49h-In-wpV" appends="YES" id="aX2-hC-Vnk"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="QXG-y5-zVD" firstAttribute="leading" secondItem="XNr-nD-oOX" secondAttribute="leading" constant="10" id="86t-0r-cEg"/>
+                            <constraint firstAttribute="trailing" secondItem="QXG-y5-zVD" secondAttribute="trailing" constant="10" id="DCg-3h-DbD"/>
+                            <constraint firstItem="Av2-yE-y1w" firstAttribute="top" secondItem="QXG-y5-zVD" secondAttribute="bottom" constant="123" id="fDn-0l-Mv6"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wYO-Lq-pHu" appends="YES" id="aUW-2g-ph4"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="brightnessBtn" destination="9iX-OF-Mia" id="PXz-zm-iMb"/>
+                        <outlet property="cancelBtn" destination="DA5-Sf-Z9e" id="vxt-GL-F6T"/>
+                        <outlet property="doneBtn" destination="boF-v8-QtN" id="zcO-5G-8k1"/>
+                        <outlet property="fontBtn" destination="nTt-mn-TtV" id="WzN-S9-lli"/>
+                        <outlet property="label" destination="gUR-wM-zO3" id="lEd-rK-e8Q"/>
+                        <outlet property="slider" destination="o9b-9j-IQU" id="sao-Xn-Ps5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHg-2g-GIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wYO-Lq-pHu">
+                    <connections>
+                        <action selector="onPressedTap:" destination="D4d-fx-3fE" id="POP-JF-z88"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="49h-In-wpV"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="980"/>
         </scene>
     </scenes>
     <resources>

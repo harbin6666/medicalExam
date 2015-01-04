@@ -90,6 +90,7 @@
 		3DA4FA281A05FE2200C7D362 /* StatisticTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA261A05FE2200C7D362 /* StatisticTVC.m */; };
 		3DA4FA2E1A0600BE00C7D362 /* PractiseStatisticCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */; };
 		3DA6453C1A091FED00AC34FB /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DA6453B1A091FED00AC34FB /* RennSDK.bundle */; };
+		3DA6C8291A596A0A00B32672 /* SettingPanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6C8281A596A0A00B32672 /* SettingPanVC.m */; };
 		3DABFDA51A32BD6D000B0661 /* ExamMakeSureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DABFDA41A32BD6D000B0661 /* ExamMakeSureVC.m */; };
 		3DAE70831A1F83F30001C3E2 /* NSString+clear.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE70821A1F83F30001C3E2 /* NSString+clear.m */; };
 		3DAE70861A1F88CD0001C3E2 /* ItemPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE70851A1F88CD0001C3E2 /* ItemPVC.m */; };
@@ -286,6 +287,8 @@
 		3DA4FA2C1A0600BE00C7D362 /* PractiseStatisticCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PractiseStatisticCVC.h; sourceTree = "<group>"; };
 		3DA4FA2D1A0600BE00C7D362 /* PractiseStatisticCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PractiseStatisticCVC.m; sourceTree = "<group>"; };
 		3DA6453B1A091FED00AC34FB /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		3DA6C8271A596A0A00B32672 /* SettingPanVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingPanVC.h; sourceTree = "<group>"; };
+		3DA6C8281A596A0A00B32672 /* SettingPanVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingPanVC.m; sourceTree = "<group>"; };
 		3DABFDA31A32BD6D000B0661 /* ExamMakeSureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamMakeSureVC.h; sourceTree = "<group>"; };
 		3DABFDA41A32BD6D000B0661 /* ExamMakeSureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamMakeSureVC.m; sourceTree = "<group>"; };
 		3DAE70811A1F83F30001C3E2 /* NSString+clear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+clear.h"; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 				3D965F9C1A1F71B6009AB423 /* CompatibilityItemBtn.m */,
 				3D0256CA1A1E27C500C46B0E /* SpaceItemTVC.h */,
 				3D0256CB1A1E27C600C46B0E /* SpaceItemTVC.m */,
+				3DA6C8271A596A0A00B32672 /* SettingPanVC.h */,
+				3DA6C8281A596A0A00B32672 /* SettingPanVC.m */,
 				3D0256D01A1E285400C46B0E /* Item.storyboard */,
 			);
 			path = Item;
@@ -1010,6 +1015,7 @@
 				3D0256C31A1E278900C46B0E /* ChoiceItemTVC.m in Sources */,
 				3D25220B19F5455100FC72A7 /* ChooseExamTVC.m in Sources */,
 				3D092D451A14DD8500C19F69 /* ExamStatisticCell.m in Sources */,
+				3DA6C8291A596A0A00B32672 /* SettingPanVC.m in Sources */,
 				3D0256CC1A1E27C600C46B0E /* SpaceItemTVC.m in Sources */,
 				3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */,
 				3D2F42121A45A9620091E7E7 /* ExamStatisticDetailTVC.m in Sources */,

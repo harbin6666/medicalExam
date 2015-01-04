@@ -8,7 +8,11 @@
 
 #import "ItemPVC.h"
 
+#import "SettingPanVC.h"
+
 @interface ItemPVC () <AnswerCVCDelegate>
+
+@property (nonatomic, strong) SettingPanVC *settingPanVC;
 
 @end
 
@@ -39,6 +43,11 @@
                       self.currentTVC = vc;
                       [self configTabBar];
                   }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"updatefont" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        STRONG_SELF;
+        [self.currentTVC.tableView reloadData];
+    }];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
@@ -70,12 +79,12 @@
 
 - (void)onPressedBtn2:(UIButton *)sender {
     if (self.cusTabbar.items.count == 4) {
-        [self doJumpToItem];
+        [self doSetting];
     }
 }
 
 - (void)onPressedBtn3:(UIButton *)sender {
-    [self doJumpToItem];
+    [self doSetting];
 }
 
 - (void)onPressedBtn4:(UIButton *)sender {
@@ -318,6 +327,13 @@
     vc.vcDelegate = self;
     vc.showRightInItemCVC = self.showRightInItemCVC;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)doSetting
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Item" bundle:[NSBundle mainBundle]];
+    self.settingPanVC = [sb instantiateViewControllerWithIdentifier:@"settingPanVC"];
+    [self.view addSubview:self.settingPanVC.view];
 }
 
 - (void)setTabBarItemImage:(NSString *)image index:(NSInteger)index

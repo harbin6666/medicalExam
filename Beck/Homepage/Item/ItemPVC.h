@@ -31,7 +31,5 @@
 
 - (void)doFavorate;
 - (void)doJumpToItem;
-- (void)doBack;
-- (void)doNext;
 
 @end
