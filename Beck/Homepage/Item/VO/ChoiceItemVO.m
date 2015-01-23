@@ -55,6 +55,13 @@
     return [isAnswer boolValue];
 }
 
+- (BOOL)isAnswerAtIndex:(NSInteger)index
+{
+    NSArray *answer = self.itemAnswers[index];
+    NSNumber *isAnswer = answer[5];
+    return [isAnswer boolValue];
+}
+
 - (void)setAnswerString:(NSString *)answerString
 {
     _answerString = answerString;

@@ -80,8 +80,14 @@
             cell.textLabel.text = [itemAnswer[3] clearString];
             cell.textLabel.font = font;
             
-            cell.imageView.highlighted = [self.itemVO isSelectedAtIndex:indexPath.row];
-            cell.userInteractionEnabled = self.itemVO.canChange;
+            if (self.itemVO.showAnswer) {
+                cell.imageView.highlighted = [self.itemVO isAnswerAtIndex:indexPath.row];
+                cell.userInteractionEnabled = NO;
+            }
+            else {
+                cell.imageView.highlighted = [self.itemVO isSelectedAtIndex:indexPath.row];
+                cell.userInteractionEnabled = self.itemVO.canChange;
+            }
         }
         return cell;
     }

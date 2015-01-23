@@ -63,6 +63,8 @@ typedef enum ItemType
 - (BOOL)isRight;
 
 - (BOOL)isSelectedAtIndex:(NSInteger)index;
+- (BOOL)isAnswerAtIndex:(NSInteger)index;
+
 
 - (NSNumber *)getScore;
 

@@ -124,6 +124,11 @@
     return [self.userAnswers.allKeys containsObject:@(index)];
 }
 
+- (BOOL)isAnswerAtIndex:(NSInteger)index
+{
+    return NO;
+}
+
 - (BOOL)isEqual:(id)object
 {
     ItemVO *another = object;
