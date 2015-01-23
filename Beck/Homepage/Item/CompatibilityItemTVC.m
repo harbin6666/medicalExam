@@ -77,7 +77,7 @@
     if (indexPath.section == 1) {
         UILabel *label = (UILabel *)[cell.contentView viewWithTag:999];
         NSArray *itemInfo = self.itemVO.itemInfo[indexPath.row];
-        NSString *info = [NSString stringWithFormat:@"%@%@",itemInfo[1],itemInfo[2]];
+        NSString *info = [NSString stringWithFormat:@"%@ %@",itemInfo[1],itemInfo[2]];
         label.text = [info clearString];
         label.font = font;
         return cell;
