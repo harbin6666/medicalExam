@@ -60,7 +60,7 @@
         return 1;
     }
     else {
-        return 2;
+        return 1;
     }
 }
 
@@ -101,10 +101,6 @@
         if (indexPath.row == 0) {
             cell.textLabel.text = @"当前积分";
             cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",self.infos[@"integral"]];
-        }
-        else {
-            cell.textLabel.text = @"累计积分";
-            cell.detailTextLabel.text = @"500";
         }
     }
     
