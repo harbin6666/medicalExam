@@ -66,7 +66,7 @@
             cell.textLabel.text = @"错";
         }
         
-        cell.imageView.highlighted = [self.itemVO isSelectedAtIndex:indexPath.row];
+        cell.imageView.highlighted = [self.itemVO isUserAnswerAtIndex:indexPath.row];
         
         return cell;
     }

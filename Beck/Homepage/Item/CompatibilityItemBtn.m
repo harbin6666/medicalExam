@@ -65,9 +65,12 @@
 - (void)setItemVO:(ItemVO *)itemVO
 {
     _itemVO = itemVO;
-    NSArray *answer = [_itemVO getAnswerAtIndex:self.answerIndex];
+    NSArray *answer = [self.itemVO getUserAnswerAtIndex:self.answerIndex];
     if (answer) {
         [self setTitle:answer[1] forState:UIControlStateNormal];
+    }
+    else {
+        [self setTitle:@"答案" forState:UIControlStateNormal];
     }
 }
 

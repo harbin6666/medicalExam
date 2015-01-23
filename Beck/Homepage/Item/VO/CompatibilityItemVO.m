@@ -42,10 +42,24 @@
     self.userAnswers[itemAnswer] = answer;
 }
 
-- (id)getAnswerAtIndex:(NSInteger)index
+- (id)getUserAnswerAtIndex:(NSInteger)index
 {
     NSArray *itemAnswer = self.itemAnswers[index];
     return self.userAnswers[itemAnswer];
+}
+
+- (NSString *)getAnswerAtIndex:(NSInteger)index
+{
+    NSArray *itemAnswer = self.itemAnswers[index];
+    NSString *itemId = itemAnswer[4];
+    __block NSString *answer = @"答案";
+    [self.itemInfo enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSArray *info = obj;
+        if ([info[0] isEqual:itemId]) {
+            answer = info[1];
+        }
+    }];
+    return answer;
 }
 
 - (NSString *)getAnswer

@@ -94,7 +94,7 @@
     
 }
 
-- (id)getAnswerAtIndex:(NSInteger)index
+- (id)getUserAnswerAtIndex:(NSInteger)index
 {
     return nil;
 }
@@ -119,7 +119,7 @@
     return @"";
 }
 
-- (BOOL)isSelectedAtIndex:(NSInteger)index
+- (BOOL)isUserAnswerAtIndex:(NSInteger)index
 {
     return [self.userAnswers.allKeys containsObject:@(index)];
 }
@@ -127,6 +127,11 @@
 - (BOOL)isAnswerAtIndex:(NSInteger)index
 {
     return NO;
+}
+
+- (NSString *)getAnswerAtIndex:(NSInteger)index
+{
+    return nil;
 }
 
 - (BOOL)isEqual:(id)object

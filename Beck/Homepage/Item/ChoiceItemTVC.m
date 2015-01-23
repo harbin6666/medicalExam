@@ -85,7 +85,7 @@
                 cell.userInteractionEnabled = NO;
             }
             else {
-                cell.imageView.highlighted = [self.itemVO isSelectedAtIndex:indexPath.row];
+                cell.imageView.highlighted = [self.itemVO isUserAnswerAtIndex:indexPath.row];
                 cell.userInteractionEnabled = self.itemVO.canChange;
             }
         }

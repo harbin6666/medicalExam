@@ -92,8 +92,15 @@
         
         CompatibilityItemBtn *btn = (CompatibilityItemBtn *)[cell.contentView viewWithTag:888];
         btn.answerIndex = indexPath.row;
-        btn.itemVO = self.itemVO;
-        btn.userInteractionEnabled = self.itemVO.canChange;
+        
+        if (self.itemVO.showAnswer) {
+            [btn setTitle:[self.itemVO getAnswerAtIndex:indexPath.row] forState:UIControlStateNormal];
+            btn.userInteractionEnabled = NO;
+        }
+        else {
+            btn.itemVO = self.itemVO;
+            btn.userInteractionEnabled = self.itemVO.canChange;
+        }
         
         return cell;
     }
