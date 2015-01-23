@@ -28,7 +28,7 @@
 - (IBAction)onPressedRefreshBtn:(id)sender {
     [self showLoading];
     WEAK_SELF;
-    [self getValueWithBeckUrl:@"/front/sendsmsAct.htm" params:@{@"loginName":self.phoneNum} CompleteBlock:^(id aResponseObject, NSError *anError) {
+    [self getValueWithBeckUrl:@"/front/sendTemplateSmsAct.htm" params:@{@"loginName":self.phoneNum} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
         [self hideLoading];
         if (!anError) {
