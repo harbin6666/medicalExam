@@ -48,12 +48,38 @@
     if ([[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"] &&
         [[NSUserDefaults standardUserDefaults] stringForKey:@"passWord"] &&
         [[NSUserDefaults standardUserDefaults] boolForKey:@"autologin"]) {
-        if ([[NSUserDefaults standardUserDefaults] stringForKey:@"subjectId"]) {
-            [self performSegueWithIdentifier:@"toHome" sender:self];
-        }
-        else {
-            [self performSegueWithIdentifier:@"toCus" sender:self];
-        }
+        
+        NSMutableDictionary *params = @{}.mutableCopy;
+        params[@"token"] = @"login";
+        params[@"loginName"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"];
+        params[@"passWord"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"passWord"];
+        
+        [self showLoading];
+        WEAK_SELF;
+        [self getValueWithBeckUrl:@"/front/userAct.htm" params:params CompleteBlock:^(id aResponseObject, NSError *anError) {
+            STRONG_SELF;
+            [self hideLoading];
+            if (!anError) {
+                NSNumber *errorcode = aResponseObject[@"errorcode"];
+                if (errorcode.boolValue) {
+                    [[OTSAlertView alertWithMessage:aResponseObject[@"msg"] andCompleteBlock:nil] show];
+                }
+                else {
+                    NSNumber *titleId = aResponseObject[@"titleId"];
+                    if (titleId) {
+                        [[NSUserDefaults standardUserDefaults] setObject:titleId forKey:@"subjectId"];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
+                        [self performSegueWithIdentifier:@"toHome" sender:self];
+                    }
+                    else {
+                        [self performSegueWithIdentifier:@"toCus" sender:self];
+                    }
+                }
+            }
+            else {
+                [[OTSAlertView alertWithMessage:@"登录失败" andCompleteBlock:nil] show];
+            }
+        }];
     }
 }
 
