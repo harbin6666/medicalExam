@@ -121,10 +121,13 @@
     NSMutableArray *parses = @[].mutableCopy;
     [self.itemAnswers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSArray *itemAnswer = obj;
-        [parses addObject:itemAnswer[3]];
+        NSString *parse = itemAnswer[3];
+        if (parse.length) {
+            [parses addObject:parse];
+        }
     }];
     
-    return [parses componentsJoinedByString:@"\n"];
+    return [parses componentsJoinedByString:@" \n "];
 }
 
 @end

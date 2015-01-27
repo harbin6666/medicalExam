@@ -97,7 +97,7 @@
                 return 80.f;
             }
             
-            return ceil(size.height) + 40;
+            return ceil(size.height) + 20;
         }
         else {
             return 0.f;
