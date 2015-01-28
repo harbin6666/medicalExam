@@ -48,7 +48,25 @@
     
     cell.textLabel.text = self.names[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"more%li",(long)indexPath.row]];
+    
+    if (indexPath.row == 0 || indexPath.row == 8) {
+        cell.contentView.hidden = YES;
+    }
+    else {
+        cell.contentView.hidden = NO;
+    }
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0 || indexPath.row == 8) {
+        return 0.f;
+    }
+    else {
+        return 44.f;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
