@@ -113,6 +113,7 @@
 		3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */; };
 		3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */; };
 		3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E91A010F3C0079CC01 /* libz.dylib */; };
+		3DE60AA51A79078F00C330A6 /* PointRuleTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE60AA41A79078F00C330A6 /* PointRuleTVC.m */; };
 		3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */; };
 		8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D5D4D704E4BA88EBD7F48 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -337,6 +338,8 @@
 		3DCB50E01A010EA70079CC01 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3DCB50E91A010F3C0079CC01 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3DE60AA31A79078F00C330A6 /* PointRuleTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointRuleTVC.h; sourceTree = "<group>"; };
+		3DE60AA41A79078F00C330A6 /* PointRuleTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointRuleTVC.m; sourceTree = "<group>"; };
 		3DF5B86119E8E5E10050165F /* Beck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Beck.xcdatamodel; sourceTree = "<group>"; };
 		457D5D4D704E4BA88EBD7F48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		646B6BD972844B829AA84FB4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -727,6 +730,8 @@
 				3D0EFB9B19FFC6E30017A539 /* BeckAchievementTVC.m */,
 				3D63BDF01A4EFDE3006A5BFD /* HonorTVCell.h */,
 				3D63BDF11A4EFDE3006A5BFD /* HonorTVCell.m */,
+				3DE60AA31A79078F00C330A6 /* PointRuleTVC.h */,
+				3DE60AA41A79078F00C330A6 /* PointRuleTVC.m */,
 				3D9789441A12575100835549 /* BeckChangeExamPlaceBtn.h */,
 				3D9789451A12575100835549 /* BeckChangeExamPlaceBtn.m */,
 				3D9789471A1257F200835549 /* BeckCustomVC1.h */,
@@ -1003,6 +1008,7 @@
 				3D8468241A517797003F8376 /* BeckMCTVCell.m in Sources */,
 				3DB04E2D1A1B7C1000B6964B /* ChooseExamBankTVC.m in Sources */,
 				3D2521F219F543CB00FC72A7 /* TestingCentreDetailVC.m in Sources */,
+				3DE60AA51A79078F00C330A6 /* PointRuleTVC.m in Sources */,
 				3D092D421A14D3F200C19F69 /* ChooseItemTypeTVC.m in Sources */,
 				3D2F420C1A4509C80091E7E7 /* MyAccountSubjectTVC.m in Sources */,
 				3D2521DE19F53B4F00FC72A7 /* ChooseSectionTVC.m in Sources */,
