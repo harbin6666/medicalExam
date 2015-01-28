@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="guB-5w-9aC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="guB-5w-9aC">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -195,7 +195,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgP-Ki-78W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -707,7 +706,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="eYf-nT-bS6" kind="push" identifier="toNotes" id="1Nh-nI-uhR"/>
                         <segue destination="dTN-76-Te1" kind="push" identifier="toFavorate" id="Pe1-oX-uXa"/>
@@ -781,7 +779,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentedControl" destination="6fE-9O-50E" id="rAt-ai-xc6"/>
                         <outlet property="tableView" destination="A7p-VG-90h" id="7jj-81-FUD"/>
@@ -974,6 +971,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="qkH-yL-RsJ"/>
-        <segue reference="9qk-bC-Pju"/>
+        <segue reference="nSz-4F-hwd"/>
     </inferredMetricsTieBreakers>
 </document>

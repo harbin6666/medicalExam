@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 Aimy. All rights reserved.
 //
 
-#import "BeckVC.h"
+#import "BeckCVC.h"
 
-@interface HelpVC : BeckVC
+@interface HelpCVC : BeckCVC
 
 @end

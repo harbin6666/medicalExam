@@ -117,44 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-1494" y="1206"/>
         </scene>
-        <!--Feed BackVC-->
-        <scene sceneID="5ZJ-fQ-32y">
-            <objects>
-                <viewController id="M6r-b4-ZBx" customClass="FeedBackVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UJe-js-gHv"/>
-                        <viewControllerLayoutGuide type="bottom" id="cHj-QM-gpo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l8i-87-gge">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="8Zx-28-DgT">
-                        <barButtonItem key="leftBarButtonItem" style="done" id="na9-Dc-3I1">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bWm-kp-6kt">
-                                <rect key="frame" x="16" y="11" width="98" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title=" 使用帮助" image="backImage">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="leftBtnClick:" destination="pOz-6c-ITA" eventType="touchUpInside" id="Jh6-f9-GvU"/>
-                                    <action selector="leftBtnClick:" destination="M6r-b4-ZBx" eventType="touchUpInside" id="OKg-2d-G38"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4yF-Zv-Ogr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-710" y="1207"/>
-        </scene>
-        <!--Feed BackVC-->
+        <!--意见反馈-->
         <scene sceneID="XLj-ib-Py1">
             <objects>
-                <viewController id="egH-vV-o07" customClass="FeedBackVC" sceneMemberID="viewController">
+                <viewController id="egH-vV-o07" userLabel="意见反馈" customClass="FeedBackVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="me2-Y1-BGD"/>
                         <viewControllerLayoutGuide type="bottom" id="kPb-7B-ih5"/>
@@ -204,6 +170,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCW-v6-niK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1078" y="1207"/>
+        </scene>
+        <!--HelpCVC-->
+        <scene sceneID="Djs-dl-QYt">
+            <objects>
+                <collectionViewController id="J2t-0z-EUX" customClass="HelpCVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DeF-w6-Huh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="K1R-kf-KqY">
+                            <size key="itemSize" width="190" height="169"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HelpCVCell" id="i7K-wS-OBL" customClass="HelpCVCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="169"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iza-sZ-eD4">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="169"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Iza-sZ-eD4" firstAttribute="top" secondItem="i7K-wS-OBL" secondAttribute="top" id="4LG-uM-w4v"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iza-sZ-eD4" secondAttribute="trailing" id="8m7-r3-4D8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iza-sZ-eD4" secondAttribute="bottom" id="MQP-bM-ZtD"/>
+                                    <constraint firstItem="Iza-sZ-eD4" firstAttribute="leading" secondItem="i7K-wS-OBL" secondAttribute="leading" id="T0Q-9Q-kKu"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="image" destination="Iza-sZ-eD4" id="j66-GC-Fh2"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="J2t-0z-EUX" id="GZu-QX-ZzK"/>
+                            <outlet property="delegate" destination="J2t-0z-EUX" id="F3k-lf-W2r"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yhX-qU-qGg">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="o3V-kI-3lW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Isy-Dj-FPf">
+                                <rect key="frame" x="16" y="11" width="98" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" 使用帮助" image="backImage">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="pOz-6c-ITA" eventType="touchUpInside" id="Rpc-DR-iwv"/>
+                                    <action selector="leftBtnClick:" destination="J2t-0z-EUX" eventType="touchUpInside" id="uO2-XA-ca1"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SlJ-Jl-AvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="1206"/>
         </scene>
         <!--个人档案-->
         <scene sceneID="F6d-Q6-nDM">
@@ -439,14 +470,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="pOz-6c-ITA" kind="push" identifier="toTestingCentre" id="EK8-Kv-1xX"/>
                         <segue destination="v37-nG-6fS" kind="push" identifier="toChooseExam" id="WeF-Yd-3iO"/>
                         <segue destination="wx7-3Q-fD4" kind="push" identifier="toPersonalFile" id="sVg-q8-dm1"/>
-                        <segue destination="M6r-b4-ZBx" kind="push" identifier="toHelp" id="DfX-CB-AwS"/>
                         <segue destination="egH-vV-o07" kind="push" identifier="toFeedBack" id="nas-sW-fF1"/>
                         <segue destination="BcW-yn-XjW" kind="push" identifier="toMessage" id="Qjx-i2-TH7"/>
+                        <segue destination="J2t-0z-EUX" kind="push" identifier="toHelp" id="IO9-iw-SpF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMy-en-7uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
