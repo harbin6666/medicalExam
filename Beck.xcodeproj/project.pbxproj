@@ -24,14 +24,12 @@
 		3D0EFBA719FFC9FF0017A539 /* EnterCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA219FFC9FF0017A539 /* EnterCodeVC.m */; };
 		3D0EFBA819FFC9FF0017A539 /* EnterPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA419FFC9FF0017A539 /* EnterPasswordVC.m */; };
 		3D0EFBA919FFC9FF0017A539 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0EFBA619FFC9FF0017A539 /* RegisterVC.m */; };
-		3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
 		3D1782601A02626F00F6904C /* FavorateEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17825F1A02626F00F6904C /* FavorateEntity.m */; };
 		3D1782631A02630100F6904C /* WrongItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782621A02630100F6904C /* WrongItemEntity.m */; };
 		3D1782661A02630100F6904C /* ItemInSqlEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782651A02630100F6904C /* ItemInSqlEntity.m */; };
 		3D1782691A02630100F6904C /* ExamEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1782681A02630100F6904C /* ExamEntity.m */; };
 		3D17826C1A02630200F6904C /* ItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17826B1A02630200F6904C /* ItemEntity.m */; };
 		3D17826F1A02630200F6904C /* NoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D17826E1A02630200F6904C /* NoteEntity.m */; };
-		3D1AF4FE1A3F26C7005321BF /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DC1A010EA70079CC01 /* RennSDK.framework */; };
 		3D2521B919F526AE00FC72A7 /* BeckTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521B819F526AE00FC72A7 /* BeckTVC.m */; };
 		3D2521BC19F526C500FC72A7 /* BeckVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521BB19F526C500FC72A7 /* BeckVC.m */; };
 		3D2521C319F52A6F00FC72A7 /* ExamModePVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2521C019F52A6F00FC72A7 /* ExamModePVC.m */; };
@@ -100,19 +98,15 @@
 		3DB238D119FE8026002CD73D /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238D019FE8026002CD73D /* More.storyboard */; };
 		3DB238D319FE803E002CD73D /* MyAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238D219FE803E002CD73D /* MyAccount.storyboard */; };
 		3DB238D419FE8AC3002CD73D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6819EAB86800B7B5FF /* Foundation.framework */; };
+		3DB2FFE71A792CA7001E9D00 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6C19EAB87A00B7B5FF /* libsqlite3.dylib */; };
 		3DC1C57719E645FD004F23E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57619E645FD004F23E1 /* main.m */; };
 		3DC1C57A19E645FD004F23E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C57919E645FD004F23E1 /* AppDelegate.m */; };
 		3DC1C59419E645FD004F23E1 /* BeckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC1C59319E645FD004F23E1 /* BeckTests.m */; };
 		3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E7819EAB8AB00B7B5FF /* UIKit.framework */; };
 		3DC68AB519F54820003DB313 /* PersionalFileTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68AB419F54820003DB313 /* PersionalFileTVC.m */; };
 		3DC68ABC19F54A6A003DB313 /* BeckLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68ABB19F54A6A003DB313 /* BeckLoginVC.m */; };
-		3DCB50E11A010EA70079CC01 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50D91A010EA70079CC01 /* TencentOpenAPI.framework */; };
 		3DCB50E21A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DCB50DA1A010EA70079CC01 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50DE1A010EA70079CC01 /* libWeiboSDK.a */; };
 		3DCB50E51A010EA70079CC01 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3DCB50DF1A010EA70079CC01 /* WeiboSDK.bundle */; };
-		3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E61A010ECE0079CC01 /* CoreTelephony.framework */; };
-		3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC36E6E19EAB88500B7B5FF /* libstdc++.dylib */; };
-		3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCB50E91A010F3C0079CC01 /* libz.dylib */; };
 		3DE60AA51A79078F00C330A6 /* PointRuleTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE60AA41A79078F00C330A6 /* PointRuleTVC.m */; };
 		3DE60AA81A790ED300C330A6 /* HelpCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE60AA71A790ED300C330A6 /* HelpCVCell.m */; };
 		3DF5B86219E8E5E10050165F /* Beck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5B86019E8E5E10050165F /* Beck.xcdatamodeld */; };
@@ -353,15 +347,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DCB50EA1A010F3C0079CC01 /* libz.dylib in Frameworks */,
-				3DCB50E81A010EFC0079CC01 /* libstdc++.dylib in Frameworks */,
-				3DCB50E71A010ECE0079CC01 /* CoreTelephony.framework in Frameworks */,
-				3DCB50E11A010EA70079CC01 /* TencentOpenAPI.framework in Frameworks */,
-				3D0EFBB719FFD4B90017A539 /* libsqlite3.dylib in Frameworks */,
-				3DCB50E41A010EA70079CC01 /* libWeiboSDK.a in Frameworks */,
+				3DB2FFE71A792CA7001E9D00 /* libsqlite3.dylib in Frameworks */,
 				3DB238D419FE8AC3002CD73D /* Foundation.framework in Frameworks */,
 				3DC36E7919EAB8AB00B7B5FF /* UIKit.framework in Frameworks */,
-				3D1AF4FE1A3F26C7005321BF /* RennSDK.framework in Frameworks */,
 				8FBB980D12324F68B9B0059F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
