@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C99d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TSO-DH-PCG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TSO-DH-PCG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -539,45 +539,41 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2nS-9B-XeI" id="PA5-nK-ucY">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F3h-ez-eop">
-                                            <rect key="frame" x="0.0" y="-1" width="320" height="100"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="9gS-ZV-IWk">
-                                                <size key="itemSize" width="69" height="89"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                            <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sBr-Fd-hxl" customClass="HonorCVCell">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69" height="89"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHP-Sn-AYr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="69" height="89"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    </view>
-                                                    <constraints>
-                                                        <constraint firstItem="GHP-Sn-AYr" firstAttribute="top" secondItem="sBr-Fd-hxl" secondAttribute="top" id="Da8-vm-6ik"/>
-                                                        <constraint firstAttribute="trailing" secondItem="GHP-Sn-AYr" secondAttribute="trailing" id="OdM-6D-vJY"/>
-                                                        <constraint firstItem="GHP-Sn-AYr" firstAttribute="leading" secondItem="sBr-Fd-hxl" secondAttribute="leading" id="ca3-Hy-fVo"/>
-                                                        <constraint firstAttribute="bottom" secondItem="GHP-Sn-AYr" secondAttribute="bottom" id="fBL-GZ-lSi"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <outlet property="imageView" destination="GHP-Sn-AYr" id="MiC-6H-ogT"/>
-                                                    </connections>
-                                                </collectionViewCell>
-                                            </cells>
-                                        </collectionView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xunzhang1_gray" highlightedImage="xunzhang1_red" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-tA-dcE">
+                                            <rect key="frame" x="18.5" y="5" width="70" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="51W-34-Y7K"/>
+                                                <constraint firstAttribute="height" constant="90" id="tf5-xm-deN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xunzhang2_gray" highlightedImage="xunzhang2_red" translatesAutoresizingMaskIntoConstraints="NO" id="8K7-G8-TkH">
+                                            <rect key="frame" x="125" y="5" width="70" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="jLJ-Jf-oBb"/>
+                                                <constraint firstAttribute="height" constant="90" id="kAu-rC-coq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xunzhang3_gray" highlightedImage="xunzhang3_red" translatesAutoresizingMaskIntoConstraints="NO" id="Aqb-Bl-yvM">
+                                            <rect key="frame" x="231.5" y="5" width="70" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="p0h-xM-qbm"/>
+                                                <constraint firstAttribute="height" constant="90" id="q1B-3O-70A"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="kgA-tA-dcE" secondAttribute="centerY" id="3if-Dy-YZH"/>
+                                        <constraint firstAttribute="centerY" secondItem="Aqb-Bl-yvM" secondAttribute="centerY" id="fVX-QM-cMS"/>
+                                        <constraint firstItem="Aqb-Bl-yvM" firstAttribute="centerX" secondItem="PA5-nK-ucY" secondAttribute="centerX" multiplier="5/3" id="iQS-kt-PRs"/>
+                                        <constraint firstAttribute="centerX" secondItem="8K7-G8-TkH" secondAttribute="centerX" id="nC2-XL-8RE"/>
+                                        <constraint firstItem="kgA-tA-dcE" firstAttribute="centerX" secondItem="PA5-nK-ucY" secondAttribute="centerX" multiplier="1/3" id="swI-ik-Gym"/>
+                                        <constraint firstAttribute="centerY" secondItem="8K7-G8-TkH" secondAttribute="centerY" id="wzd-u5-OCn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="collectionView" destination="PA5-nK-ucY" id="ocO-Pn-DQq"/>
+                                    <outlet property="xunzhang1" destination="kgA-tA-dcE" id="nbC-Bc-Gsr"/>
+                                    <outlet property="xunzhang2" destination="8K7-G8-TkH" id="zbn-Hf-wiV"/>
+                                    <outlet property="xunzhang3" destination="Aqb-Bl-yvM" id="wXk-mi-ml9"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="StatisticCell" textLabel="W3T-0g-w1T" style="IBUITableViewCellStyleDefault" id="WJL-Ms-ZMr">
@@ -1171,6 +1167,12 @@
         <image name="tab3" width="33" height="29"/>
         <image name="tab4" width="33" height="29"/>
         <image name="uncheckbox" width="24" height="24"/>
+        <image name="xunzhang1_gray" width="70" height="90"/>
+        <image name="xunzhang1_red" width="70" height="90"/>
+        <image name="xunzhang2_gray" width="70" height="90"/>
+        <image name="xunzhang2_red" width="70" height="90"/>
+        <image name="xunzhang3_gray" width="70" height="90"/>
+        <image name="xunzhang3_red" width="70" height="90"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

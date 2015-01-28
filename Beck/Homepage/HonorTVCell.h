@@ -10,4 +10,6 @@
 
 @interface HonorTVCell : UITableViewCell
 
+- (void)updateWithPoint:(NSNumber *)point;
+
 @end

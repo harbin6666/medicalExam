@@ -8,6 +8,8 @@
 
 #import "BeckAchievementTVC.h"
 
+#import "HonorTVCell.h"
+
 @interface BeckAchievementTVC ()
 
 @property (nonatomic, strong) NSArray *sectionNames;
@@ -35,7 +37,7 @@
             }
             else {
                 self.infos = aResponseObject;
-                self.sectionNames = @[@"    我的宣章", @"    我的统计", @"    我的积分"];
+                self.sectionNames = @[@"    我的勋章", @"    我的统计", @"    我的积分"];
                 self.tableView.tableFooterView = self.footerView;
                 [self.tableView reloadData];
             }
@@ -90,7 +92,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     if (indexPath.section == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"HonorCell" forIndexPath:indexPath];
+        HonorTVCell *tempCell = [tableView dequeueReusableCellWithIdentifier:@"HonorCell" forIndexPath:indexPath];
+        [tempCell updateWithPoint:self.infos[@"integral"]];
+        cell = tempCell;
     }
     else if (indexPath.section == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticCell" forIndexPath:indexPath];
