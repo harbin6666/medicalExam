@@ -285,12 +285,15 @@
     NSIndexPath *path = [self.tableView indexPathForRowAtPoint:point];
     [self.itemVO setAnswer:nil andIndex:path.row];
     [self.tableView reloadData];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"jumpNext" object:nil];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 2) {
         [self.itemVO setAnswer:nil andIndex:indexPath.row];
+        [self.tableView reloadData];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"jumpNext" object:nil];
     }
 }
 

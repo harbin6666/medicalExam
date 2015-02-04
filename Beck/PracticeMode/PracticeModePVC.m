@@ -223,4 +223,42 @@
     }];
 }
 
+- (void)jumpToNext
+{
+    if ([self.currentTVC.itemVO isNeedGoToNext]) {
+        self.currentTVC.itemVO.showAnswer = YES;
+        [self.currentTVC.tableView reloadData];
+        [self configTabBar];
+        
+        if (![self.currentTVC.itemVO isRight]) {
+            return ;
+        }
+    }
+    else {
+        return ;
+    }
+    
+    ItemVO *vo = self.items[[self.items indexOfObject:self.currentTVC.itemVO] + 1];
+    
+    if (!vo) {
+        return;
+    }
+    
+    ItemTVC *vc = [ItemTVC createWitleItemVO:vo];
+    
+    if (!vc) {
+        return;
+    }
+    
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:YES
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configTabBar];
+                  }];
+}
+
 @end

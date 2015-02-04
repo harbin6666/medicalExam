@@ -99,6 +99,15 @@
     return right;
 }
 
+- (BOOL)isNeedGoToNext
+{
+    if (self.userAnswers.count == self.itemAnswers.count) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 - (void)setAnswerString:(NSString *)answerString
 {
     _answerString = answerString;

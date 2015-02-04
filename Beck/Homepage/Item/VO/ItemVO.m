@@ -104,6 +104,11 @@
     return NO;
 }
 
+- (BOOL)isNeedGoToNext
+{
+    return NO;
+}
+
 - (NSNumber *)getScore
 {
     return self.score;

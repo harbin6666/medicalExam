@@ -60,6 +60,7 @@
     NSArray *answer = answers[[self.pv selectedRowInComponent:0]];
     [self.itemVO setAnswer:answer andIndex:self.answerIndex];
     [self setTitle:answer[1] forState:UIControlStateNormal];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"jumpNext" object:nil];
 }
 
 - (void)setItemVO:(ItemVO *)itemVO

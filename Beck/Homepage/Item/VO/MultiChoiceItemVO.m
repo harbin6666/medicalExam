@@ -60,6 +60,24 @@
     return right;
 }
 
+- (BOOL)isNeedGoToNext
+{
+    int count = 0;
+    
+    for (NSArray *itemAnswer in self.itemAnswers) {
+        NSNumber *isAnswer = itemAnswer[5];
+        if (isAnswer.boolValue) {
+            count++;
+        }
+    }
+    
+    if (self.userAnswers.count == count) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 - (void)setAnswerString:(NSString *)answerString
 {
     _answerString = answerString;

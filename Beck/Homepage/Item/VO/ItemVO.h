@@ -60,6 +60,8 @@ typedef enum ItemType
 
 - (BOOL)isRight;
 
+- (BOOL)isNeedGoToNext;
+
 - (id)getUserAnswerAtIndex:(NSInteger)index;
 - (BOOL)isUserAnswerAtIndex:(NSInteger)index;
 

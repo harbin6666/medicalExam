@@ -49,6 +49,11 @@
         [self.currentTVC.tableView reloadData];
     }];
     
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"jumpNext" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        STRONG_SELF;
+        [self jumpToNext];
+    }];
+    
     self.jumpBtn.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.jumpBtn];
     
@@ -344,6 +349,11 @@
 }
 
 - (void)setTabBarItemImage:(NSString *)image index:(NSInteger)index
+{
+    
+}
+
+- (void)jumpToNext
 {
     
 }

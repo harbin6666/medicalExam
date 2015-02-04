@@ -210,7 +210,11 @@
 
 - (void)jumpToNext
 {
-    ItemVO *vo = self.items[[self.items indexOfObject:self.currentTVC.itemVO]];
+    if (![self.currentTVC.itemVO isNeedGoToNext]) {
+        return ;
+    }
+    
+    ItemVO *vo = self.items[[self.items indexOfObject:self.currentTVC.itemVO] + 1];
     
     if (!vo) {
         return;
@@ -225,7 +229,7 @@
     WEAK_SELF;
     [self setViewControllers:@[vc]
                    direction:UIPageViewControllerNavigationDirectionForward
-                    animated:NO
+                    animated:YES
                   completion:^(BOOL finished) {
                       STRONG_SELF;
                       self.currentTVC = vc;

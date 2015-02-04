@@ -55,6 +55,15 @@
     return [isAnswer boolValue];
 }
 
+- (BOOL)isNeedGoToNext
+{
+    if (self.userAnswers.count == 1) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 - (BOOL)isAnswerAtIndex:(NSInteger)index
 {
     NSArray *answer = self.itemAnswers[index];

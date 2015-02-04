@@ -33,5 +33,6 @@
 
 - (void)doFavorate;
 - (IBAction)doJumpToItem;
+- (void)jumpToNext;
 
 @end
