@@ -208,4 +208,29 @@
     }];
 }
 
+- (void)jumpToNext
+{
+    ItemVO *vo = self.items[[self.items indexOfObject:self.currentTVC.itemVO]];
+    
+    if (!vo) {
+        return;
+    }
+    
+    ItemTVC *vc = [ItemTVC createWitleItemVO:vo];
+    
+    if (!vc) {
+        return;
+    }
+    
+    WEAK_SELF;
+    [self setViewControllers:@[vc]
+                   direction:UIPageViewControllerNavigationDirectionForward
+                    animated:NO
+                  completion:^(BOOL finished) {
+                      STRONG_SELF;
+                      self.currentTVC = vc;
+                      [self configTabBar];
+                  }];
+}
+
 @end
