@@ -54,7 +54,7 @@
         self.label.text = [NSString stringWithFormat:@"%d％",(int)(self.slider.value * 100)];
     }
     else {
-        self.slider.maximumValue = 20.f;
+        self.slider.maximumValue = 25.f;
         self.slider.minimumValue = 10.f;
         self.slider.value = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
         self.label.text = [NSString stringWithFormat:@"%d",(int)self.slider.value];

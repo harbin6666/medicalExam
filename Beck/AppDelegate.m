@@ -61,6 +61,14 @@
     
     NSInteger fontValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontValue"];
     if (!fontValue) {
+        NSInteger fontValue = 17;
+        if (ISIPHONE5_5) {
+            fontValue += 2;
+        }
+        else if (ISIPHONE4_7) {
+            fontValue += 1;
+        }
+        
         [[NSUserDefaults standardUserDefaults] setInteger:17 forKey:@"fontValue"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
