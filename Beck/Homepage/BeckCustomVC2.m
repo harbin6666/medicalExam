@@ -121,6 +121,7 @@
             }
             else {
                 [[NSUserDefaults standardUserDefaults] setObject:self.position[@"id"] forKey:@"subjectId"];
+                [[NSUserDefaults standardUserDefaults] setObject:self.position[@"titleName"] forKey:@"subjectTitleName"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 
                 [self performSegueWithIdentifier:@"toHome" sender:self];

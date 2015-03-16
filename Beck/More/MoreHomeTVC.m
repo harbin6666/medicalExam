@@ -25,6 +25,15 @@
         [[NSUserDefaults standardUserDefaults] setObject:@"1.0" forKey:@"value"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    UILabel *lab=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+    lab.text=@"Copyright © 武汉贝英信息技术有限公司\nAll Rights Reserved  版权所有";
+    lab.numberOfLines=0;
+    lab.font=[UIFont systemFontOfSize:14];
+    lab.backgroundColor=[UIColor clearColor];
+    lab.textColor=[UIColor grayColor];
+    lab.textAlignment=NSTextAlignmentCenter;
+    self.tableView.tableFooterView=lab;
+
 }
 
 - (void)didReceiveMemoryWarning {

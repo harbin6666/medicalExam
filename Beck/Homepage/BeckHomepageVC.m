@@ -27,6 +27,8 @@
     self.tabbar.selectedItem = nil;
     
     [super viewDidAppear:animated];
+    self.title=[[NSUserDefaults standardUserDefaults] stringForKey:@"subjectTitleName"];
+
     WEAK_SELF;
     [self getValueWithBeckUrl:@"/front/examSubjectAct.htm" params:@{@"token":@"countdown",@"loginName":[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]} CompleteBlock:^(id aResponseObject, NSError *anError) {
         STRONG_SELF;
