@@ -58,11 +58,13 @@
     cell.textLabel.text = self.names[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"more%li",(long)indexPath.row]];
     
-    if (indexPath.row == 0 || indexPath.row == 8) {
+    if (indexPath.row == 0 || indexPath.row == 8||indexPath.row ==5) {
         cell.contentView.hidden = YES;
+        cell.accessoryType=UITableViewCellAccessoryNone;
     }
     else {
         cell.contentView.hidden = NO;
+        cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
     }
     
     return cell;
@@ -70,7 +72,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0 || indexPath.row == 8) {
+    if (indexPath.row == 0 || indexPath.row == 8||indexPath.row ==5) {
         return 0.f;
     }
     else {
