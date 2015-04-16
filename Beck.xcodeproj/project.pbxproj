@@ -1177,7 +1177,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ddd12799-c2ac-4659-9007-fde5396ed16f";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
@@ -1205,7 +1205,7 @@
 					"$(PROJECT_DIR)/Beck/ThirdParty/Sina",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ddd12799-c2ac-4659-9007-fde5396ed16f";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
